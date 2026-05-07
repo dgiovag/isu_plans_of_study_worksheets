@@ -1,0 +1,122 @@
+{
+  "$schema_version": "1.0",
+
+  "program": {
+    "id": "nursing-rn-bsn",
+    "title": "Nursing",
+    "sequence": "RN to BSN",
+    "degree": "B.S.N.",
+    "department": "Nursing",
+    "college": "Mennonite College of Nursing",
+    "catalog_year": "2025-2026",
+    "catalog_url": "https://illinoisstate.edu/catalog/undergraduate/nursing/rn-bsn-course-requirements/",
+    "minimum_major_hours": 65,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40,
+    "delivery_format": "Fully online, asynchronous",
+    "program_type": "completion",
+    "admission_requirements": [
+      "Active RN license",
+      "Completed Associate Degree (A.A. or A.S.) or equivalent IAI GECC coursework",
+      "Compliance with health and immunization requirements",
+      "Criminal background screening"
+    ],
+    "progression_rules": [
+      "Must follow approved plan of study established at admission",
+      "Deviation from plan requires reapplication",
+      "D or F in any two nursing courses = dismissal from program",
+      "D or F in same nursing course twice = dismissal from program"
+    ]
+  },
+
+  "courses": [
+    { "id": "NUR223", "code": "NUR 223", "credits": 3, "fulfills": ["major.required"] },
+    { "id": "NUR226", "code": "NUR 226", "credits": 3, "fulfills": ["major.required"] },
+    { "id": "NUR227", "code": "NUR 227", "credits": 3, "fulfills": ["major.required"] },
+    { "id": "NUR236", "code": "NUR 236", "credits": 3, "fulfills": ["major.required"] },
+    { "id": "NUR238", "code": "NUR 238", "credits": 3, "fulfills": ["major.required"] },
+    { "id": "NUR240", "code": "NUR 240", "credits": 3, "fulfills": ["major.required"] },
+    { "id": "NUR330", "code": "NUR 330", "credits": 3, "fulfills": ["major.required"] },
+    { "id": "NUR340", "code": "NUR 340", "credits": 3, "fulfills": ["major.required"] },
+    { "id": "NUR341", "code": "NUR 341", "credits": 3, "fulfills": ["major.required"] },
+
+    { "id": "NUR229_ESCROW", "code": "NUR 229", "credits": 6, "fulfills": ["major.escrow"], "course_type": "escrow" },
+    { "id": "NUR231_ESCROW", "code": "NUR 231", "credits": 6, "fulfills": ["major.escrow"], "course_type": "escrow" },
+    { "id": "NUR314_ESCROW", "code": "NUR 314", "credits": 5, "fulfills": ["major.escrow"], "course_type": "escrow" },
+    { "id": "NUR316_ESCROW", "code": "NUR 316", "credits": 5, "fulfills": ["major.escrow"], "course_type": "escrow" },
+    { "id": "NUR317_ESCROW", "code": "NUR 317", "credits": 6, "fulfills": ["major.escrow"], "course_type": "escrow" },
+    { "id": "NUR325_ESCROW", "code": "NUR 325", "credits": 6, "fulfills": ["major.escrow"], "course_type": "escrow" }
+  ],
+
+  "major": {
+    "title": "RN to BSN Completion",
+    "minimum_hours": 65,
+    "groups": [
+      {
+        "id": "major.required",
+        "title": "Required BSN Courses (taken at ISU)",
+        "fill": "fixed",
+        "slots": [
+          { "course_id": "NUR223" },
+          { "course_id": "NUR226" },
+          { "course_id": "NUR227" },
+          { "course_id": "NUR236" },
+          { "course_id": "NUR238" },
+          { "course_id": "NUR240" },
+          { "course_id": "NUR330" },
+          { "course_id": "NUR340" },
+          { "course_id": "NUR341" }
+        ]
+      },
+      {
+        "id": "major.escrow",
+        "title": "Escrow Credits (granted upon completion of NUR 223, 227, 236)",
+        "fill": "escrow",
+        "total_credits": 34,
+        "trigger_courses": ["NUR223", "NUR227", "NUR236"],
+        "granted_courses": ["NUR229_ESCROW", "NUR231_ESCROW", "NUR314_ESCROW", "NUR316_ESCROW", "NUR317_ESCROW", "NUR325_ESCROW"],
+        "note": "34 credit hours placed on transcript once all three trigger courses are successfully completed. Represents prior RN education validated through upper-division coursework."
+      }
+    ]
+  },
+
+  "general_education": {
+    "assumed_complete": true,
+    "assumed_via": "admission_requirement",
+    "tracks": [
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree (required for admission)",
+        "type": "metadata_only",
+        "pre_selected": true,
+        "fields": [
+          { "id": "degree_type", "label": "Degree type", "type": "select", "options": ["A.A.", "A.S."], "required": true },
+          { "id": "field", "label": "Field of study", "type": "text" },
+          { "id": "institution", "label": "Institution", "type": "text", "required": true },
+          { "id": "date_awarded", "label": "Date awarded", "type": "text" },
+          { "id": "includes_iai_gecc", "label": "Includes IAI GECC", "type": "select", "options": ["yes", "no"] }
+        ]
+      }
+    ]
+  },
+
+  "graduation_requirements": {
+    "trackable": [
+      { "id": "hours_120", "title": "120 minimum total credit hours", "note": "Includes escrow credits + associate's degree credits + ISU courses" },
+      { "id": "hours_40_senior", "title": "40 senior college hours", "note": "Of the 120, at least 40 must be 200-300 level" },
+      { "id": "amali", "title": "AMALI requirement" },
+      { "id": "ideas", "title": "IDEAS requirement" }
+    ],
+    "narrative": [
+      "B.S.N. does not require additional Science, Math & Technology beyond Gen Ed.",
+      "Must follow approved plan of study; deviation requires reapplication.",
+      "Program is fully online and asynchronous."
+    ]
+  },
+
+  "compliance_requirements": [
+    { "id": "rn_license", "title": "Active RN license", "category": "licensure" },
+    { "id": "background_check", "title": "Criminal background screening", "category": "background" },
+    { "id": "immunizations", "title": "Health and immunization compliance", "category": "health" }
+  ]
+}

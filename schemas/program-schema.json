@@ -1,0 +1,671 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cipd.illinoisstate.edu/schemas/program-schema.json",
+  "title": "ISU Degree Program Requirements",
+  "description": "Schema for expressing undergraduate degree program requirements at Illinois State University. Designed to support all undergraduate program structures including B.S., B.A., B.M., B.S.N., B.S. in Ed., and B.M.E. degrees across all colleges.",
+  "type": "object",
+  "required": ["$schema_version", "program", "courses", "major", "general_education", "graduation_requirements"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema_version": {
+      "type": "string",
+      "const": "1.0",
+      "description": "Schema version identifier"
+    },
+    "program": { "$ref": "#/$defs/Program" },
+    "courses": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Course" },
+      "minItems": 1,
+      "description": "First-class course objects. Each course is defined once and referenced by ID throughout the schema."
+    },
+    "major": { "$ref": "#/$defs/Major" },
+    "general_education": { "$ref": "#/$defs/GeneralEducation" },
+    "college_requirements": { "$ref": "#/$defs/CollegeRequirements" },
+    "graduation_requirements": { "$ref": "#/$defs/GraduationRequirements" },
+    "compliance_requirements": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ComplianceRequirement" },
+      "description": "Non-course, non-credit requirements (background checks, health screenings, licensure tests, etc.)"
+    }
+  },
+
+  "$defs": {
+
+    "Program": {
+      "type": "object",
+      "required": ["id", "title", "degree", "department", "college", "catalog_year", "catalog_url", "minimum_major_hours", "minimum_total_hours", "minimum_senior_hours"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Stable program identifier used in filenames and URLs"
+        },
+        "title": {
+          "type": "string",
+          "description": "Program title (e.g., 'Accounting', 'Physics', 'Music')"
+        },
+        "sequence": {
+          "type": "string",
+          "description": "Sequence or emphasis within the program (e.g., 'Financial Accounting', 'Teacher Education')"
+        },
+        "degree": {
+          "type": "string",
+          "description": "Degree type: B.S., B.A., B.M., B.S.N., B.S. in Ed., B.M.E., etc."
+        },
+        "department": { "type": "string" },
+        "college": { "type": "string" },
+        "catalog_year": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{4}$",
+          "description": "Academic year in YYYY-YYYY format (e.g., '2025-2026')"
+        },
+        "catalog_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "minimum_major_hours": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "minimum_total_hours": {
+          "type": "integer",
+          "minimum": 120,
+          "description": "University minimum is 120; some programs may require more"
+        },
+        "minimum_senior_hours": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Hours at 200-300 level. University minimum is 40."
+        },
+        "minimum_grade": {
+          "type": "string",
+          "description": "Blanket minimum grade required (e.g., 'C')"
+        },
+        "minimum_grade_scope": {
+          "type": "string",
+          "enum": ["all_major_courses", "all_courses", "professional_education"],
+          "description": "Which courses the minimum_grade applies to"
+        },
+        "teacher_education": {
+          "type": "boolean",
+          "description": "Whether this sequence leads to teacher licensure or includes professional education coursework"
+        },
+        "licensure_area": {
+          "type": "string",
+          "description": "Content area for teacher licensure (e.g., 'Physics (Secondary Education)')"
+        },
+        "delivery_format": {
+          "type": "string",
+          "description": "Delivery mode if non-standard (e.g., 'Fully online, asynchronous')"
+        },
+        "program_type": {
+          "type": "string",
+          "enum": ["standard", "completion"],
+          "default": "standard",
+          "description": "Standard = full undergraduate program. Completion = for students with prior credentials (e.g., RN-to-BSN)."
+        },
+        "admission_requirements": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Prerequisites to enter the program (auditions, credentials, GPA, health screenings)"
+        },
+        "progression_rules": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Academic standing and progression policies specific to this program"
+        },
+        "related_sequences": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/RelatedSequence" },
+          "description": "Sibling sequences in the same major (e.g., Pedagogy vs Licensure in ECE)"
+        },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "General program notes for display"
+        }
+      }
+    },
+
+    "RelatedSequence": {
+      "type": "object",
+      "required": ["id", "title", "degree"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "degree": { "type": "string" },
+        "catalog_url": { "type": "string", "format": "uri" },
+        "note": { "type": "string" }
+      }
+    },
+
+    "Course": {
+      "type": "object",
+      "required": ["id", "code", "credits", "fulfills"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Z0-9_]+$",
+          "description": "Stable course identifier (no spaces, uppercase: ACC131, NUR222A01)"
+        },
+        "code": {
+          "type": "string",
+          "description": "Human-readable course code with space (ACC 131, NUR 222a01)"
+        },
+        "title": {
+          "type": "string",
+          "description": "Course title for display (optional; renderers may look this up)"
+        },
+        "credits": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Credit hours. Use 0 for zero-credit requirements (e.g., recital attendance)."
+        },
+        "fulfills": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Array of group/slot IDs this course can satisfy (e.g., ['major.required', 'isu.natural_science'])"
+        },
+        "equivalents": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Course IDs that are interchangeable for all requirement purposes (section variants like TCH 210 / TCH 210a01)"
+        },
+        "co_requisite": {
+          "type": "string",
+          "description": "Course ID that must be taken in the same semester (e.g., clinical paired with lecture)"
+        },
+        "topic_course": {
+          "type": "boolean",
+          "description": "True if any section/decimalization of this course satisfies the requirement (rotating topics)"
+        },
+        "course_type": {
+          "type": "string",
+          "enum": ["lecture", "clinical", "lab", "applied", "ensemble", "escrow", "field_experience", "student_teaching"],
+          "description": "Course delivery type. Affects rendering and grouping."
+        },
+        "note": {
+          "type": "string",
+          "description": "Display note (e.g., 'no more than 3 credit hours')"
+        }
+      }
+    },
+
+    "Major": {
+      "type": "object",
+      "required": ["title", "minimum_hours"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "minimum_hours": { "type": "integer", "minimum": 0 },
+        "groups": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Group" },
+          "description": "Flat list of requirement groups (use when no temporal phasing exists)"
+        },
+        "phases": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Phase" },
+          "description": "Ordered phases with prerequisite gates (use when program has temporal structure)"
+        },
+        "constraints": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Constraint" },
+          "description": "Cross-group relationship constraints"
+        }
+      },
+      "oneOf": [
+        { "required": ["groups"] },
+        { "required": ["phases"] }
+      ]
+    },
+
+    "Phase": {
+      "type": "object",
+      "required": ["id", "title", "phase", "groups"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "phase": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Phase ordinal (1, 2, 3...). Lower phases must complete before higher phases begin."
+        },
+        "prerequisite_phase": {
+          "type": "integer",
+          "description": "Phase number that must be completed before this phase can start"
+        },
+        "groups": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Group" },
+          "minItems": 1
+        }
+      }
+    },
+
+    "Constraint": {
+      "type": "object",
+      "required": ["type", "groups"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["same_selection"],
+          "description": "same_selection = choices across listed groups must be from the same discipline/language/family"
+        },
+        "groups": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 2,
+          "description": "Group IDs that are bound by this constraint"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable explanation of the constraint"
+        }
+      }
+    },
+
+    "Group": {
+      "type": "object",
+      "required": ["id", "title", "fill"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stable group identifier using dot notation (major.required, isu.natural_science)"
+        },
+        "title": { "type": "string" },
+        "fill": {
+          "type": "string",
+          "enum": ["fixed", "choose_one", "choose_n", "choose_n_grouped", "choose_one_track", "open", "open_constrained", "repeat", "escrow"],
+          "description": "How this requirement group is satisfied"
+        },
+        "group_type": {
+          "type": "string",
+          "enum": ["content", "professional_education"],
+          "default": "content",
+          "description": "Renderer hint: professional_education groups are visually separated from content"
+        },
+
+        "slots": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Slot" },
+          "description": "For fill=fixed: the specific course slots to complete"
+        },
+
+        "options": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SlotOption" },
+          "description": "For fill=choose_one/choose_n: available choices"
+        },
+        "n": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "For fill=choose_n/choose_n_grouped: how many to select"
+        },
+
+        "sub_groups": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SubGroup" },
+          "description": "For fill=choose_n_grouped: sub-groups with per-group minimum picks"
+        },
+
+        "tracks": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Track" },
+          "description": "For fill=choose_one_track: mutually exclusive course bundles"
+        },
+
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "For fill=open/open_constrained: how many courses needed"
+        },
+        "constraint": {
+          "type": "string",
+          "description": "For fill=open/open_constrained: human-readable constraint text"
+        },
+        "department": {
+          "type": "string",
+          "description": "For fill=open_constrained: department filter (e.g., 'CHE')"
+        },
+        "level": {
+          "type": "string",
+          "description": "For fill=open_constrained: course level filter (e.g., '200')"
+        },
+
+        "semesters": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "For fill=repeat: number of semesters to take this course/pool"
+        },
+        "credits_per_semester": {
+          "type": "number",
+          "minimum": 0,
+          "description": "For fill=repeat: credit hours each semester"
+        },
+        "course_id": {
+          "type": "string",
+          "description": "For fill=repeat: the course taken each semester (when from a fixed course)"
+        },
+        "pool_description": {
+          "type": "string",
+          "description": "For fill=repeat: described pool when specific courses aren't enumerable (e.g., 'Approved Performance Ensembles')"
+        },
+        "level_progression": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/LevelProgression" },
+          "description": "For fill=repeat: minimum semesters at higher levels"
+        },
+
+        "trigger_courses": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "For fill=escrow: course IDs that must be completed to unlock escrow credit"
+        },
+        "granted_courses": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "For fill=escrow: course IDs for which credit is granted upon trigger completion"
+        },
+        "total_credits": {
+          "type": "number",
+          "minimum": 0,
+          "description": "For fill=escrow/repeat: total credit hours granted or accumulated"
+        },
+
+        "minimum_hours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Minimum credit hours this group must contribute"
+        },
+        "auto_fulfilled_by": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Course or group IDs from the major that automatically satisfy this requirement. Hours count toward major only; this gen-ed/graduation slot is marked complete without adding hours."
+        },
+        "exempt": {
+          "type": "boolean",
+          "description": "True if this requirement is waived entirely (e.g., Fine Arts for Art majors)"
+        },
+        "exempt_reason": {
+          "type": "string",
+          "description": "Why the requirement is exempt"
+        },
+        "note": { "type": "string" }
+      }
+    },
+
+    "Slot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "course_id": {
+          "type": "string",
+          "description": "Fixed course for this slot"
+        },
+        "fill": {
+          "type": "string",
+          "enum": ["choose_one", "choose_one_set"],
+          "description": "Inline choice within a fixed group"
+        },
+        "options": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SlotOption" },
+          "description": "Options for inline choose_one/choose_one_set slots"
+        },
+        "co_requisite_of": {
+          "type": "string",
+          "description": "Course ID this slot's course must be co-enrolled with"
+        },
+        "note": { "type": "string" }
+      }
+    },
+
+    "SlotOption": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Simple course ID"
+        },
+        {
+          "type": "object",
+          "required": ["type", "course_ids"],
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "set",
+              "description": "Multiple courses that together fill one slot"
+            },
+            "course_ids": {
+              "type": "array",
+              "items": { "type": "string" },
+              "minItems": 2
+            },
+            "note": { "type": "string" }
+          }
+        }
+      ]
+    },
+
+    "SubGroup": {
+      "type": "object",
+      "required": ["id", "title", "minimum_picks", "options"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "minimum_picks": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Minimum courses that must come from this sub-group"
+        },
+        "options": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        }
+      }
+    },
+
+    "Track": {
+      "type": "object",
+      "required": ["id", "title", "courses"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "courses": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Slot" },
+          "minItems": 1,
+          "description": "Courses in this track (may include inline choices)"
+        }
+      }
+    },
+
+    "LevelProgression": {
+      "type": "object",
+      "required": ["course_id", "minimum_semesters"],
+      "additionalProperties": false,
+      "properties": {
+        "course_id": {
+          "type": "string",
+          "description": "Higher-level course variant"
+        },
+        "minimum_semesters": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Minimum semesters that must be at this level"
+        },
+        "note": { "type": "string" }
+      }
+    },
+
+    "GeneralEducation": {
+      "type": "object",
+      "required": ["tracks"],
+      "additionalProperties": false,
+      "properties": {
+        "assumed_complete": {
+          "type": "boolean",
+          "description": "True if gen-ed is presumed satisfied at admission (e.g., RN-to-BSN with associate's degree)"
+        },
+        "assumed_via": {
+          "type": "string",
+          "description": "How gen-ed completion is assumed (e.g., 'admission_requirement')"
+        },
+        "tracks": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/GenEdTrack" },
+          "minItems": 1
+        }
+      }
+    },
+
+    "GenEdTrack": {
+      "type": "object",
+      "required": ["id", "title"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": ["isu", "iai", "associates"],
+          "description": "Track identifier: ISU Gen Ed, IAI Transferable Core, or Completed Associate's"
+        },
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "eligibility_note": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["course_based", "metadata_only"],
+          "description": "course_based = has requirement groups; metadata_only = just fields (associate's track)"
+        },
+        "pre_selected": {
+          "type": "boolean",
+          "description": "True if this track should be auto-selected (e.g., associates for RN-to-BSN)"
+        },
+        "groups": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Group" },
+          "description": "Requirement groups for this gen-ed track"
+        },
+        "fields": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/MetadataField" },
+          "description": "Input fields for metadata_only tracks (associate's degree info)"
+        }
+      }
+    },
+
+    "MetadataField": {
+      "type": "object",
+      "required": ["id", "label", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["text", "select"]
+        },
+        "options": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "For type=select: available options"
+        },
+        "required": { "type": "boolean" },
+        "note": { "type": "string" }
+      }
+    },
+
+    "CollegeRequirements": {
+      "type": "object",
+      "required": ["title", "groups"],
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "College name and requirement label"
+        },
+        "applies_when": {
+          "type": "object",
+          "additionalProperties": { "type": "string" },
+          "description": "Conditions under which these requirements apply"
+        },
+        "groups": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Group" },
+          "minItems": 1
+        },
+        "constraints": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Constraint" }
+        }
+      }
+    },
+
+    "GraduationRequirements": {
+      "type": "object",
+      "required": ["trackable"],
+      "additionalProperties": false,
+      "properties": {
+        "trackable": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/GraduationReq" },
+          "description": "Requirements that can be checked off (hours, AMALI, IDEAS, degree-specific)"
+        },
+        "narrative": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Informational text (policies, notes) displayed but not checkable"
+        }
+      }
+    },
+
+    "GraduationReq": {
+      "type": "object",
+      "required": ["id", "title"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "note": { "type": "string" },
+        "auto_fulfilled_by": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Course or group IDs that automatically satisfy this requirement"
+        },
+        "applies_when": {
+          "type": "object",
+          "additionalProperties": { "type": "string" },
+          "description": "Conditions for this requirement to apply (e.g., {\"degree\": \"B.S.\"}). If absent, requirement is universal."
+        }
+      }
+    },
+
+    "ComplianceRequirement": {
+      "type": "object",
+      "required": ["id", "title"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "category": {
+          "type": "string",
+          "enum": ["teacher_education", "health", "licensure", "background", "other"],
+          "description": "Category for grouping in renderer"
+        },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}

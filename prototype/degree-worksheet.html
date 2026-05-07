@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Degree Progress Worksheet — Accounting (Financial Accounting), B.S.</title>
+<style>
+  :root {
+    --red: #CE1126;
+    --gray-bg: #f4f4f4;
+    --gray-border: #d0d0d0;
+    --gray-text: #555;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: var(--gray-bg);
+    color: #222;
+  }
+  header { max-width: 1400px; margin: 0 auto 16px; }
+  h1 {
+    margin: 0 0 4px;
+    color: var(--red);
+    font-size: 1.4em;
+  }
+  .subtitle {
+    color: var(--gray-text);
+    font-size: 0.9em;
+    margin-bottom: 12px;
+  }
+  .summary {
+    background: white;
+    border: 1px solid var(--gray-border);
+    border-radius: 4px;
+    padding: 10px 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 0.9em;
+    align-items: center;
+  }
+  .summary strong { color: var(--red); }
+  .controls {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+    font-size: 0.85em;
+  }
+  .controls button {
+    padding: 4px 10px;
+    border: 1px solid var(--gray-border);
+    background: white;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  .controls button:hover { background: #f0f0f0; }
+
+  .student-info, .track-selector {
+    max-width: 1400px;
+    margin: 0 auto 12px;
+    background: white;
+    border: 1px solid var(--gray-border);
+    border-radius: 4px;
+    padding: 10px 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 0.85em;
+    align-items: center;
+  }
+  .student-info label, .track-selector label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--gray-text);
+  }
+  .student-info input, .track-selector input {
+    padding: 3px 6px;
+    border: 1px solid var(--gray-border);
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 0.95em;
+  }
+  .track-selector .track-label {
+    font-weight: 600;
+    color: #222;
+    margin-right: 4px;
+  }
+  .track-selector .radio-group {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .track-selector .radio-group label {
+    color: #222;
+    cursor: pointer;
+  }
+  #associates-detail {
+    width: 100%;
+    display: none;
+    padding-top: 8px;
+    border-top: 1px dashed var(--gray-border);
+    margin-top: 4px;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  #associates-detail.active { display: flex; }
+
+  .columns {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 1100px) {
+    .columns { grid-template-columns: 1fr; }
+  }
+  .column {
+    background: white;
+    border: 1px solid var(--gray-border);
+    border-radius: 4px;
+    padding: 14px;
+  }
+  .column h2 {
+    margin: 0 0 4px;
+    font-size: 1.1em;
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+    padding-bottom: 4px;
+  }
+  .column .col-meta {
+    font-size: 0.8em;
+    color: var(--gray-text);
+    margin-bottom: 10px;
+  }
+  /* Track panels (left column, swap based on selection) */
+  .track-panel { display: none; }
+  .track-panel.active { display: block; }
+  .associates-panel-content {
+    background: #f7faff;
+    border: 1px dashed #b0c8de;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  .associates-panel-content strong { color: var(--red); }
+
+  .group {
+    margin-top: 12px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .group-label {
+    font-weight: 600;
+    font-size: 0.85em;
+    color: #333;
+    margin-bottom: 4px;
+    background: #efefef;
+    padding: 4px 6px;
+    border-left: 3px solid var(--red);
+  }
+  .group-note {
+    font-size: 0.75em;
+    color: var(--gray-text);
+    font-style: italic;
+    font-weight: normal;
+    margin-left: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82em;
+    table-layout: fixed;
+  }
+  th, td {
+    text-align: left;
+    padding: 4px 5px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+  }
+  th {
+    font-weight: 600;
+    font-size: 0.72em;
+    text-transform: uppercase;
+    color: var(--gray-text);
+  }
+  td.req { white-space: normal; }
+  .req-code { font-weight: 600; }
+  .req-desc { color: var(--gray-text); font-size: 0.85em; }
+  input[type="text"] {
+    width: 100%;
+    padding: 3px 4px;
+    border: 1px solid var(--gray-border);
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-family: inherit;
+  }
+  select {
+    width: 100%;
+    padding: 2px 2px;
+    border: 1px solid var(--gray-border);
+    border-radius: 3px;
+    font-size: 0.85em;
+    background: white;
+    font-family: inherit;
+  }
+  tr.completed { background: #eaf5ec; }
+  tr.in-progress { background: #fdf6e3; }
+  tr.transferred-row { background: #eef4fb; }
+
+  .col-check { width: 22px; text-align: center; }
+  .col-req { width: auto; }
+  .col-course { width: 80px; }
+  .col-grade { width: 42px; }
+  .col-term { width: 80px; }
+  .col-status { width: 100px; }
+
+  tr.transfer-detail td {
+    border-bottom: 1px solid #eee;
+    padding: 2px 5px 6px;
+    background: #f7faff;
+  }
+
+  /* Graduation requirements panel */
+  .grad-panel {
+    max-width: 1400px;
+    margin: 16px auto 0;
+    background: white;
+    border: 1px solid var(--gray-border);
+    border-radius: 4px;
+    padding: 14px;
+  }
+  .grad-panel h2 {
+    margin: 0 0 8px;
+    font-size: 1.1em;
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+    padding-bottom: 4px;
+  }
+  .grad-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 10px;
+  }
+  @media (max-width: 800px) { .grad-grid { grid-template-columns: 1fr; } }
+  .grad-trackable, .grad-narrative {
+    font-size: 0.85em;
+  }
+  .grad-trackable h3, .grad-narrative h3 {
+    margin: 0 0 6px;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    color: var(--gray-text);
+    letter-spacing: 0.03em;
+  }
+  .grad-trackable ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .grad-trackable li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 4px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .grad-trackable li:last-child { border-bottom: none; }
+  .grad-trackable input[type="checkbox"] { margin-top: 3px; }
+  .grad-trackable .item-text { flex: 1; }
+  .grad-trackable .item-note {
+    color: var(--gray-text);
+    font-size: 0.9em;
+    font-style: italic;
+  }
+  .grad-narrative p {
+    margin: 0 0 6px;
+    color: #333;
+    line-height: 1.45;
+  }
+  .grad-narrative .ba-bs-conditional {
+    background: #f7faff;
+    border-left: 3px solid #b0c8de;
+    padding: 6px 10px;
+    margin-top: 6px;
+  }
+
+  /* ================= PRINT ================= */
+  @media print {
+    @page { size: letter landscape; margin: 0.4in; }
+    body { background: white; padding: 0; font-size: 9pt; }
+    header, .student-info, .track-selector, .columns, .grad-panel { max-width: none; }
+    .controls, button { display: none !important; }
+    h1 { color: black; font-size: 13pt; margin-bottom: 2px; }
+    .subtitle { font-size: 8pt; margin-bottom: 6px; }
+    .summary, .student-info, .track-selector, .grad-panel {
+      border: 1px solid #999;
+      padding: 4px 8px;
+      font-size: 8pt;
+      page-break-inside: avoid;
+    }
+    .summary strong { color: black; }
+    .student-info input, .track-selector input {
+      border: none;
+      border-bottom: 1px solid #666;
+      border-radius: 0;
+      background: transparent;
+    }
+    /* Hide unchosen tracks on print */
+    .track-panel:not(.active) { display: none !important; }
+    /* Hide track radio buttons; show only the chosen one as text */
+    .track-selector .radio-group label { display: none; }
+    .track-selector .radio-group label.selected-print {
+      display: inline-block;
+      font-weight: 600;
+    }
+    .track-selector .radio-group input[type="radio"] { display: none; }
+
+    .columns { gap: 10px; }
+    .column { border: 1px solid #999; padding: 8px; }
+    .column h2 { color: black; border-bottom: 1.5pt solid black; font-size: 10pt; }
+    .group-label {
+      background: white;
+      border-left: 2px solid black;
+      border-bottom: 1px solid #999;
+      padding: 2px 4px;
+      font-size: 8.5pt;
+    }
+    table { font-size: 8pt; }
+    th { font-size: 6.5pt; border-bottom: 1px solid #666; }
+    td { padding: 2px 3px; }
+    tr.completed, tr.in-progress, tr.transferred-row { background: white !important; }
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 10pt;
+      height: 10pt;
+      border: 1px solid black;
+      border-radius: 0;
+      background: white;
+      vertical-align: middle;
+      position: relative;
+    }
+    input[type="checkbox"]:checked::after {
+      content: "✓";
+      position: absolute;
+      top: -3pt;
+      left: 0.5pt;
+      font-size: 11pt;
+      font-weight: bold;
+      color: black;
+    }
+    input[type="text"] {
+      border: none;
+      border-bottom: 1px solid #999;
+      border-radius: 0;
+      padding: 0 2px;
+      background: transparent;
+    }
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: none;
+      border-bottom: 1px solid #999;
+      border-radius: 0;
+      padding: 0 2px;
+      background: transparent;
+      color: black;
+    }
+    select::-ms-expand { display: none; }
+    tr.transfer-detail td { background: white !important; border-bottom: 1px solid #ddd; }
+    .associates-panel-content {
+      background: white;
+      border: 1px solid #999;
+    }
+    .grad-panel h2 { color: black; border-bottom: 1.5pt solid black; font-size: 10pt; }
+    .grad-narrative .ba-bs-conditional { background: white; border-left: 2px solid #666; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Degree Progress Worksheet</h1>
+  <div class="subtitle">
+    Accounting — Financial Accounting Sequence, B.S. · Illinois State University · 2025–2026 Catalog
+  </div>
+  <div class="summary" id="summary">
+    <span>Total: <strong id="total-done">0</strong> / <span id="total-all">0</span> requirements complete</span>
+    <span>Gen Ed: <strong id="gened-done">0</strong> / <span id="gened-all">0</span></span>
+    <span>Major: <strong id="major-done">0</strong> / <span id="major-all">0</span></span>
+    <span>Graduation: <strong id="grad-done">0</strong> / <span id="grad-all">0</span></span>
+    <span class="controls">
+      <button onclick="window.print()">Print</button>
+      <button onclick="resetAll()">Reset all</button>
+    </span>
+  </div>
+</header>
+
+<div class="student-info">
+  <label>Student name: <input type="text" id="stu-name" style="width: 200px;"></label>
+  <label>UID: <input type="text" id="stu-uid" style="width: 120px;"></label>
+  <label>Advisor: <input type="text" id="stu-advisor" style="width: 180px;"></label>
+  <label>Date: <input type="text" id="stu-date" style="width: 110px;"></label>
+</div>
+
+<div class="track-selector">
+  <span class="track-label">General Education Track:</span>
+  <div class="radio-group">
+    <label><input type="radio" name="track" value="isu" checked> ISU Gen Ed Program</label>
+    <label><input type="radio" name="track" value="iai"> IAI Transferable Core</label>
+    <label><input type="radio" name="track" value="associates"> Completed Associate's Degree</label>
+  </div>
+  <div id="associates-detail">
+    <label>Degree type:
+      <select id="aa-type" style="width: 100px;">
+        <option value="">—</option>
+        <option value="A.A.">A.A.</option>
+        <option value="A.S.">A.S.</option>
+      </select>
+    </label>
+    <label>Field of study: <input type="text" id="aa-field" placeholder="e.g. Business" style="width: 180px;"></label>
+    <label>Institution: <input type="text" id="aa-institution" placeholder="e.g. Heartland Community College" style="width: 240px;"></label>
+    <label>Date awarded: <input type="text" id="aa-date" placeholder="May 2025" style="width: 110px;"></label>
+    <label>Includes IAI GECC?
+      <select id="aa-gecc" style="width: 80px;">
+        <option value="">—</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </label>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column" id="gened-col">
+    <!-- Three swappable panels live here -->
+    <div class="track-panel active" id="panel-isu">
+      <h2>General Education Requirements</h2>
+      <div class="col-meta">ISU General Education Program · 13 courses / 39 hours</div>
+      <div class="panel-body" data-prefix="isu"></div>
+    </div>
+
+    <div class="track-panel" id="panel-iai">
+      <h2>IAI Transferable General Education Core</h2>
+      <div class="col-meta">12–13 courses / 37–41 credit hours · Five-category designation</div>
+      <div class="panel-body" data-prefix="iai"></div>
+    </div>
+
+    <div class="track-panel" id="panel-associates">
+      <h2>Associate's Degree (Gen Ed Satisfied)</h2>
+      <div class="col-meta">Baccalaureate-oriented A.A. or A.S. from a regionally accredited institution</div>
+      <div class="associates-panel-content">
+        <p>A baccalaureate-oriented A.A. or A.S. degree fulfills Illinois State's General Education requirement.
+        Use the panel above to record degree details.</p>
+        <p><strong>Important:</strong> If transferring from an Illinois college or university, the A.S. degree
+        must include the complete IAI General Education Core Curriculum (GECC), or the student must complete
+        the GECC to fulfill ISU's General Education requirement.</p>
+        <p>The advisor should attach or reference the official transcript and verify the receiving institution's
+        regional accreditation. No further course-level tracking required in this column.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column" id="major-col">
+    <h2>Major Requirements</h2>
+    <div class="col-meta">Financial Accounting Sequence · 74 minimum credit hours</div>
+    <div class="panel-body" data-prefix="major"></div>
+  </div>
+</div>
+
+<!-- ============== GRADUATION REQUIREMENTS PANEL ============== -->
+<div class="grad-panel">
+  <h2>Graduation Requirements</h2>
+  <div style="font-size: 0.8em; color: var(--gray-text); margin-bottom: 4px;">
+    General requirements for all students. Some may be satisfied through Gen Ed and/or major coursework.
+  </div>
+  <div class="grad-grid">
+    <div class="grad-trackable">
+      <h3>Trackable Requirements</h3>
+      <ul id="grad-list">
+        <li>
+          <input type="checkbox" data-grad="hours-120">
+          <span class="item-text">
+            <strong>120 minimum total credit hours</strong>
+            <div class="item-note">Total earned hours toward the degree</div>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-grad="hours-40-senior">
+          <span class="item-text">
+            <strong>40 senior college hours</strong>
+            <div class="item-note">Of the 120 total, at least 40 must be 200–300 level</div>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-grad="amali">
+          <span class="item-text">
+            <strong>AMALI requirement</strong>
+            <div class="item-note">May be fulfilled by certain Gen Ed and/or major courses</div>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-grad="ideas">
+          <span class="item-text">
+            <strong>IDEAS requirement</strong>
+            <div class="item-note">Inclusion, Diversity, Equity & Access in U.S. Society — may be fulfilled by Gen Ed or major</div>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-grad="bs-smt">
+          <span class="item-text">
+            <strong>B.S. — Science, Math, &amp; Technology</strong>
+            <div class="item-note">Required beyond Gen Ed for B.S. degree</div>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="grad-narrative">
+      <h3>Notes &amp; Conditional Requirements</h3>
+      <p>Students may apply for and receive two bachelor's degrees at the same time. Refer to the Academic
+      Policies and Practices section of the catalog for details.</p>
+      <div class="ba-bs-conditional">
+        <p><strong>Bachelor of Arts (B.A.) only:</strong> world language degree requirement —
+        LAN/FRE/GER/SPA/ITA/JPN/POR 115 (or equivalent). <em>Not applicable to this B.S. program.</em></p>
+      </div>
+      <p style="font-size: 0.85em; color: var(--gray-text); margin-top: 8px;">Some majors complete other degree
+      types (e.g., B.S. in Ed., B.S.N.) that do not include additional graduation requirements.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// Requirements data
+// ============================================================
+
+const isuGroups = [
+  {
+    label: "Communication & Composition", note: "2 courses",
+    items: [
+      { code: "COM 110", desc: "Communication as Critical Inquiry" },
+      { code: "ENG 101", desc: "Composition as Critical Inquiry (or ENG 101A10)" },
+    ]
+  },
+  { label: "Mathematics", note: "1 course — fulfilled by major (MAT 121 or 145)",
+    items: [{ code: "Math (Gen Ed)", desc: "Satisfied by MAT 121/145 in major" }] },
+  {
+    label: "Natural Science", note: "2 courses, 2 different sciences",
+    items: [
+      { code: "Nat Sci #1", desc: "First natural science course" },
+      { code: "Nat Sci #2", desc: "Second (different) natural science" },
+    ]
+  },
+  { label: "United States Traditions", note: "1 course",
+    items: [{ code: "U.S. Traditions", desc: "" }] },
+  { label: "Individuals & Civic Life", note: "1 course",
+    items: [{ code: "Indiv. & Civic Life", desc: "" }] },
+  { label: "Fine Arts", note: "1 course / 3 credit hours",
+    items: [{ code: "Fine Arts", desc: "" }] },
+  { label: "Humanities", note: "1 course",
+    items: [{ code: "Humanities", desc: "" }] },
+  { label: "Language in the Humanities", note: "1 course",
+    items: [{ code: "Lang. in Humanities", desc: "" }] },
+  { label: "Quantitative Reasoning", note: "1 course — fulfilled by major (MGT 100)",
+    items: [{ code: "Quant. Reasoning", desc: "Satisfied by MGT 100 in major" }] },
+  { label: "Science, Math, & Technology", note: "1 course",
+    items: [{ code: "Sci/Math/Tech", desc: "" }] },
+  { label: "Social Sciences", note: "Exempt — disciplinary expertise gained in major",
+    items: [{ code: "Social Sciences", desc: "Exempt for this major" }] },
+];
+
+const iaiGroups = [
+  {
+    label: "Communication & Composition",
+    note: "3 courses · grade of C or better required in ENG 101 and 145 or equivalents",
+    items: [
+      { code: "Comm/Comp #1", desc: "ENG 101 or equivalent (C or better)" },
+      { code: "Comm/Comp #2", desc: "ENG 145 or equivalent (C or better)" },
+      { code: "Comm/Comp #3", desc: "Third communication course" },
+    ]
+  },
+  {
+    label: "Mathematics",
+    note: "1 course — fulfilled by major (MAT 121 or 145)",
+    items: [{ code: "IAI Math", desc: "Satisfied by MAT 121/145 in major" }]
+  },
+  {
+    label: "Physical & Life Sciences",
+    note: "2 courses / 7–8 hrs · 1 life + 1 physical · at least 1 with lab",
+    items: [
+      { code: "Life Science", desc: "" },
+      { code: "Physical Science", desc: "(at least one of the two must include a lab)" },
+    ]
+  },
+  {
+    label: "Humanities & Fine Arts",
+    note: "3 courses · at least 1 humanities + 1 fine arts",
+    items: [
+      { code: "Humanities #1", desc: "" },
+      { code: "Fine Arts #1", desc: "" },
+      { code: "H/FA #3", desc: "Additional humanities or fine arts course" },
+    ]
+  },
+  {
+    label: "Social & Behavioral Sciences",
+    note: "3 courses · 2 different disciplines required · ECO 101 & ECO 102 from major fulfill 2",
+    items: [
+      { code: "Soc/Beh Sci #1", desc: "ECO 101 (from major) — Social & Behavioral Sciences" },
+      { code: "Soc/Beh Sci #2", desc: "ECO 102 (from major) — Social & Behavioral Sciences" },
+      { code: "Soc/Beh Sci #3", desc: "Additional course from a different discipline" },
+    ]
+  },
+];
+
+const majorGroups = [
+  {
+    label: "Required Major Courses", note: "",
+    items: [
+      { code: "ACC 131", desc: "" }, { code: "ACC 132", desc: "" },
+      { code: "ACC 230", desc: "" }, { code: "ACC 231", desc: "" },
+      { code: "ACC 232", desc: "" }, { code: "ACC 233", desc: "" },
+      { code: "ACC 235", desc: "" }, { code: "ACC 263", desc: "" },
+      { code: "BIS 270", desc: "" }, { code: "BUS 100", desc: "" },
+      { code: "BUS 285", desc: "" }, { code: "ECO 101", desc: "" },
+      { code: "ECO 102", desc: "" }, { code: "FIL 185", desc: "" },
+      { code: "FIL 240", desc: "" }, { code: "FIL 375", desc: "" },
+      { code: "MKT 230", desc: "" },
+      { code: "MGT 100*", desc: "*or ECO 138 / POL 138 / PSY 138" },
+      { code: "MGT 220", desc: "" }, { code: "MGT 227", desc: "" },
+      { code: "MGT 385", desc: "" },
+    ]
+  },
+  { label: "Mathematics", note: "Take 1",
+    items: [{ code: "MAT 121 or 145", desc: "" }] },
+  { label: "Writing", note: "Take 1",
+    items: [{ code: "ENG 145 or 145A13", desc: "" }] },
+  { label: "Information Technology", note: "Take 1",
+    items: [{ code: "BIS 167 or IT 150", desc: "" }] },
+  {
+    label: "Senior Financial Accounting Electives",
+    note: "Take 2 (6 hrs) — see advisor",
+    items: [
+      { code: "Elective #1", desc: "ACC 298, 303, 330, 334, 336, 337, 340, 353, 398" },
+      { code: "Elective #2", desc: "ACC 298, 303, 330, 334, 336, 337, 340, 353, 398" },
+    ]
+  },
+];
+
+// ============================================================
+// Render
+// ============================================================
+
+function renderPanel(container, groups, prefix) {
+  groups.forEach((group, gi) => {
+    const groupDiv = document.createElement('div');
+    groupDiv.className = 'group';
+
+    const label = document.createElement('div');
+    label.className = 'group-label';
+    label.innerHTML = group.label +
+      (group.note ? ` <span class="group-note">— ${group.note}</span>` : '');
+    groupDiv.appendChild(label);
+
+    const table = document.createElement('table');
+    table.innerHTML = `
+      <thead>
+        <tr>
+          <th class="col-check"></th>
+          <th class="col-req">Requirement</th>
+          <th class="col-course">Course Taken</th>
+          <th class="col-grade">Grade</th>
+          <th class="col-term">Term</th>
+          <th class="col-status">Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    `;
+    const tbody = table.querySelector('tbody');
+
+    group.items.forEach((item, ii) => {
+      const id = `${prefix}-${gi}-${ii}`;
+      const tr = document.createElement('tr');
+      tr.id = `row-${id}`;
+      tr.innerHTML = `
+        <td class="col-check">
+          <input type="checkbox" id="chk-${id}" data-id="${id}" data-prefix="${prefix}">
+        </td>
+        <td class="req">
+          <div class="req-code">${item.code}</div>
+          ${item.desc ? `<div class="req-desc">${item.desc}</div>` : ''}
+        </td>
+        <td><input type="text" placeholder="e.g. ENG 101" data-id="${id}" data-field="course"></td>
+        <td><input type="text" placeholder="—" data-id="${id}" data-field="grade" maxlength="3"></td>
+        <td><input type="text" placeholder="Fa 25" data-id="${id}" data-field="term"></td>
+        <td>
+          <select data-id="${id}" data-prefix="${prefix}" data-field="status">
+            <option value="">—</option>
+            <option value="planned">Planned</option>
+            <option value="in-progress">In Progress</option>
+            <option value="completed">Completed</option>
+            <option value="transferred">Transferred</option>
+            <option value="waived">Waived/Exempt</option>
+          </select>
+        </td>
+      `;
+      tbody.appendChild(tr);
+
+      const trDetail = document.createElement('tr');
+      trDetail.id = `transfer-${id}`;
+      trDetail.className = 'transfer-detail';
+      trDetail.style.display = 'none';
+      trDetail.innerHTML = `
+        <td></td>
+        <td colspan="5">
+          <span style="font-size: 0.78em; color: var(--gray-text); font-style: italic; margin-right: 6px;">
+            Transferred from:
+          </span>
+          <input type="text" placeholder="Institution name"
+                 data-id="${id}" data-field="from"
+                 style="width: 70%; max-width: 400px;">
+        </td>
+      `;
+      tbody.appendChild(trDetail);
+    });
+
+    groupDiv.appendChild(table);
+    container.appendChild(groupDiv);
+  });
+}
+
+// Render each panel
+renderPanel(document.querySelector('#panel-isu .panel-body'), isuGroups, 'isu');
+renderPanel(document.querySelector('#panel-iai .panel-body'), iaiGroups, 'iai');
+renderPanel(document.querySelector('#major-col .panel-body'), majorGroups, 'major');
+
+// ============================================================
+// Track selection
+// ============================================================
+
+function setTrack(track) {
+  document.querySelectorAll('.track-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(`panel-${track}`).classList.add('active');
+
+  const detail = document.getElementById('associates-detail');
+  if (track === 'associates') detail.classList.add('active');
+  else detail.classList.remove('active');
+
+  // Mark selected radio label for print stylesheet
+  document.querySelectorAll('.radio-group label').forEach(l => l.classList.remove('selected-print'));
+  const checkedRadio = document.querySelector(`input[name="track"][value="${track}"]`);
+  if (checkedRadio && checkedRadio.parentElement) {
+    checkedRadio.parentElement.classList.add('selected-print');
+  }
+
+  updateSummary();
+}
+
+document.querySelectorAll('input[name="track"]').forEach(r => {
+  r.addEventListener('change', e => setTrack(e.target.value));
+});
+setTrack('isu'); // initialize
+
+// ============================================================
+// Row interaction
+// ============================================================
+
+function updateRow(id) {
+  const chk = document.getElementById(`chk-${id}`);
+  const status = document.querySelector(`select[data-id="${id}"]`);
+  const row = document.getElementById(`row-${id}`);
+  const transferRow = document.getElementById(`transfer-${id}`);
+
+  const doneStatuses = ['completed', 'transferred', 'waived'];
+  const isDone = chk.checked || doneStatuses.includes(status.value);
+
+  row.classList.remove('completed', 'in-progress', 'transferred-row');
+  if (status.value === 'transferred') row.classList.add('transferred-row');
+  else if (isDone) row.classList.add('completed');
+  else if (status.value === 'in-progress') row.classList.add('in-progress');
+
+  transferRow.style.display = (status.value === 'transferred') ? '' : 'none';
+}
+
+function getActiveTrack() {
+  const r = document.querySelector('input[name="track"]:checked');
+  return r ? r.value : 'isu';
+}
+
+function updateSummary() {
+  const activeTrack = getActiveTrack();
+  let totals = {
+    gened: { done: 0, all: 0 },
+    major: { done: 0, all: 0 },
+    grad: { done: 0, all: 0 },
+  };
+
+  // Course rows: only count the active gen ed track + major
+  document.querySelectorAll('input[type="checkbox"][data-prefix]').forEach(chk => {
+    const prefix = chk.dataset.prefix;
+    const id = chk.dataset.id;
+    const sel = document.querySelector(`select[data-id="${id}"]`);
+    const status = sel ? sel.value : '';
+    const doneStatuses = ['completed', 'transferred', 'waived'];
+    const isDone = chk.checked || doneStatuses.includes(status);
+
+    if (prefix === 'major') {
+      totals.major.all += 1;
+      if (isDone) totals.major.done += 1;
+    } else if (prefix === activeTrack) {
+      // Only count the active gen ed track
+      totals.gened.all += 1;
+      if (isDone) totals.gened.done += 1;
+    }
+  });
+
+  // Associate's track: gen ed satisfied as a single block when degree info filled
+  if (activeTrack === 'associates') {
+    const aaType = document.getElementById('aa-type').value;
+    const aaInst = document.getElementById('aa-institution').value.trim();
+    totals.gened.all = 1;
+    totals.gened.done = (aaType && aaInst) ? 1 : 0;
+  }
+
+  // Graduation requirements
+  document.querySelectorAll('input[type="checkbox"][data-grad]').forEach(chk => {
+    totals.grad.all += 1;
+    if (chk.checked) totals.grad.done += 1;
+  });
+
+  document.getElementById('gened-done').textContent = totals.gened.done;
+  document.getElementById('gened-all').textContent = totals.gened.all;
+  document.getElementById('major-done').textContent = totals.major.done;
+  document.getElementById('major-all').textContent = totals.major.all;
+  document.getElementById('grad-done').textContent = totals.grad.done;
+  document.getElementById('grad-all').textContent = totals.grad.all;
+  document.getElementById('total-done').textContent =
+    totals.gened.done + totals.major.done + totals.grad.done;
+  document.getElementById('total-all').textContent =
+    totals.gened.all + totals.major.all + totals.grad.all;
+}
+
+document.addEventListener('change', (e) => {
+  const t = e.target;
+
+  // Associate's degree fields
+  if (t.id && t.id.startsWith('aa-')) {
+    updateSummary();
+    return;
+  }
+
+  // Graduation requirement checkboxes
+  if (t.dataset && t.dataset.grad) {
+    updateSummary();
+    return;
+  }
+
+  if (!t.dataset || !t.dataset.id) return;
+  const id = t.dataset.id;
+
+  if (t.tagName === 'SELECT' && t.dataset.field === 'status') {
+    const doneStatuses = ['completed', 'transferred', 'waived'];
+    if (doneStatuses.includes(t.value)) {
+      document.getElementById(`chk-${id}`).checked = true;
+    }
+  }
+
+  if (t.type === 'checkbox' && !t.checked) {
+    const sel = document.querySelector(`select[data-id="${id}"]`);
+    const doneStatuses = ['completed', 'transferred', 'waived'];
+    if (doneStatuses.includes(sel.value)) sel.value = '';
+  }
+
+  updateRow(id);
+  updateSummary();
+});
+
+function resetAll() {
+  if (!confirm('Clear all entries on this worksheet?')) return;
+  document.querySelectorAll('input[type="checkbox"]').forEach(c => c.checked = false);
+  document.querySelectorAll('input[type="text"]').forEach(i => i.value = '');
+  document.querySelectorAll('select').forEach(s => s.value = '');
+  document.querySelectorAll('tr').forEach(r => {
+    r.classList.remove('completed', 'in-progress', 'transferred-row');
+    if (r.classList.contains('transfer-detail')) r.style.display = 'none';
+  });
+  // Reset track to ISU
+  document.querySelector('input[name="track"][value="isu"]').checked = true;
+  setTrack('isu');
+  updateSummary();
+}
+
+updateSummary();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+{
+  "$schema_version": "1.0",
+
+  "program": {
+    "id": "physics-teacher-ed-bs",
+    "title": "Physics",
+    "sequence": "Teacher Education",
+    "degree": "B.S.",
+    "department": "Physics",
+    "college": "College of Arts and Sciences",
+    "catalog_year": "2025-2026",
+    "catalog_url": "https://illinoisstate.edu/catalog/undergraduate/physics/teacher-education-course-requirements/",
+    "minimum_major_hours": 87,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40,
+    "teacher_education": true,
+    "licensure_area": "Physics (Secondary Education)",
+    "notes": [
+      "Students must also meet University-Wide Teacher Education Requirements",
+      "Professional education hours (19 cr) are included within the 87 major hours"
+    ]
+  },
+
+  "courses": [
+    { "id": "PHY107", "code": "PHY 107", "credits": 1, "fulfills": ["major.physics_core"] },
+    { "id": "PHY110", "code": "PHY 110", "credits": 4, "fulfills": ["major.physics_core", "isu.natural_science"] },
+    { "id": "PHY111", "code": "PHY 111", "credits": 4, "fulfills": ["major.physics_core"] },
+    { "id": "PHY112", "code": "PHY 112", "credits": 4, "fulfills": ["major.physics_core"] },
+    { "id": "PHY205", "code": "PHY 205", "credits": 3, "fulfills": ["major.physics_core"] },
+    { "id": "PHY209", "code": "PHY 209", "credits": 3, "fulfills": ["major.physics_core"] },
+    { "id": "PHY217", "code": "PHY 217", "credits": 3, "fulfills": ["major.physics_core"] },
+    { "id": "PHY220", "code": "PHY 220", "credits": 3, "fulfills": ["major.physics_core"] },
+    { "id": "PHY270", "code": "PHY 270", "credits": 3, "fulfills": ["major.physics_core"] },
+    { "id": "PHY302", "code": "PHY 302", "credits": 3, "fulfills": ["major.physics_core"] },
+    { "id": "PHY307", "code": "PHY 307", "credits": 3, "fulfills": ["major.physics_core"] },
+    { "id": "PHY310", "code": "PHY 310", "credits": 3, "fulfills": ["major.physics_core"] },
+    { "id": "PHY311", "code": "PHY 311", "credits": 3, "fulfills": ["major.physics_core"] },
+    { "id": "PHY312", "code": "PHY 312", "credits": 3, "fulfills": ["major.physics_core"] },
+    { "id": "PHY353", "code": "PHY 353", "credits": 3, "fulfills": ["major.physics_core"] },
+
+    { "id": "PHY240", "code": "PHY 240", "credits": 3, "fulfills": ["major.physics_elective"] },
+    { "id": "PHY284", "code": "PHY 284", "credits": 3, "fulfills": ["major.physics_elective"] },
+
+    { "id": "CHE140", "code": "CHE 140", "credits": 4, "fulfills": ["major.supporting_science", "isu.natural_science"] },
+    { "id": "CHE141", "code": "CHE 141", "credits": 4, "fulfills": ["major.supporting_science"] },
+    { "id": "BSC101", "code": "BSC 101", "credits": 3, "fulfills": ["major.supporting_science"] },
+    { "id": "GEO100", "code": "GEO 100", "credits": 3, "fulfills": ["major.supporting_science"] },
+
+    { "id": "MAT145", "code": "MAT 145", "credits": 4, "fulfills": ["major.mathematics", "isu.mathematics"] },
+    { "id": "MAT146", "code": "MAT 146", "credits": 4, "fulfills": ["major.mathematics", "isu.quantitative_reasoning"] },
+    { "id": "MAT147", "code": "MAT 147", "credits": 4, "fulfills": ["major.mathematics"] },
+
+    { "id": "PSY215", "code": "PSY 215", "credits": 3, "fulfills": ["major.professional_education"] },
+    { "id": "SED344", "code": "SED 344", "credits": 3, "fulfills": ["major.professional_education"] },
+    { "id": "TCH212", "code": "TCH 212", "credits": 3, "fulfills": ["major.professional_education"] },
+    { "id": "TCH216", "code": "TCH 216", "credits": 2, "fulfills": ["major.professional_education"] },
+    { "id": "STT399A72", "code": "STT 399a72", "credits": 8, "fulfills": ["major.student_teaching"], "course_type": "student_teaching" },
+
+    { "id": "LAN111", "code": "LAN 111", "credits": 4, "fulfills": ["college.world_language_1"] },
+    { "id": "FRE111", "code": "FRE 111", "credits": 4, "fulfills": ["college.world_language_1"] },
+    { "id": "GER111", "code": "GER 111", "credits": 4, "fulfills": ["college.world_language_1"] },
+    { "id": "SPA111", "code": "SPA 111", "credits": 4, "fulfills": ["college.world_language_1"] },
+    { "id": "ITA111", "code": "ITA 111", "credits": 4, "fulfills": ["college.world_language_1"] },
+    { "id": "JPN111", "code": "JPN 111", "credits": 4, "fulfills": ["college.world_language_1"] },
+    { "id": "POR111", "code": "POR 111", "credits": 4, "fulfills": ["college.world_language_1"] },
+    { "id": "LAN112", "code": "LAN 112", "credits": 4, "fulfills": ["college.world_language_2"] },
+    { "id": "FRE112", "code": "FRE 112", "credits": 4, "fulfills": ["college.world_language_2"] },
+    { "id": "GER112", "code": "GER 112", "credits": 4, "fulfills": ["college.world_language_2"] },
+    { "id": "SPA112", "code": "SPA 112", "credits": 4, "fulfills": ["college.world_language_2"] },
+    { "id": "ITA112", "code": "ITA 112", "credits": 4, "fulfills": ["college.world_language_2"] },
+    { "id": "JPN112", "code": "JPN 112", "credits": 4, "fulfills": ["college.world_language_2"] },
+    { "id": "POR112", "code": "POR 112", "credits": 4, "fulfills": ["college.world_language_2"] },
+
+    { "id": "COM110", "code": "COM 110", "credits": 3, "fulfills": ["isu.communication_composition"] },
+    { "id": "ENG101", "code": "ENG 101", "credits": 3, "fulfills": ["isu.communication_composition", "iai.communication"] },
+    { "id": "ENG101A10", "code": "ENG 101A10", "credits": 3, "fulfills": ["isu.communication_composition", "iai.communication"] }
+  ],
+
+  "major": {
+    "title": "Physics — Teacher Education Sequence",
+    "minimum_hours": 87,
+    "groups": [
+      {
+        "id": "major.physics_core",
+        "title": "Physics Core",
+        "fill": "fixed",
+        "group_type": "content",
+        "slots": [
+          { "course_id": "PHY107" }, { "course_id": "PHY110" },
+          { "course_id": "PHY111" }, { "course_id": "PHY112" },
+          { "course_id": "PHY205" }, { "course_id": "PHY209" },
+          { "course_id": "PHY217" }, { "course_id": "PHY220" },
+          { "course_id": "PHY270" }, { "course_id": "PHY302" },
+          { "course_id": "PHY307" }, { "course_id": "PHY310" },
+          { "course_id": "PHY311" }, { "course_id": "PHY312" },
+          { "course_id": "PHY353" }
+        ]
+      },
+      {
+        "id": "major.physics_elective",
+        "title": "Physics Elective",
+        "fill": "choose_one",
+        "group_type": "content",
+        "options": ["PHY240", "PHY284"]
+      },
+      {
+        "id": "major.supporting_science",
+        "title": "Supporting Sciences",
+        "fill": "fixed",
+        "group_type": "content",
+        "slots": [
+          { "course_id": "CHE140" },
+          { "course_id": "CHE141" },
+          { "course_id": "BSC101" },
+          { "course_id": "GEO100" }
+        ]
+      },
+      {
+        "id": "major.advanced_science_elective",
+        "title": "Advanced Science Elective",
+        "fill": "open_constrained",
+        "count": 1,
+        "group_type": "content",
+        "constraint": "Any single 200-level CHE course OR any single 200-level BSC course"
+      },
+      {
+        "id": "major.mathematics",
+        "title": "Mathematics",
+        "fill": "fixed",
+        "group_type": "content",
+        "slots": [
+          { "course_id": "MAT145" },
+          { "course_id": "MAT146" },
+          { "course_id": "MAT147" }
+        ]
+      },
+      {
+        "id": "major.professional_education",
+        "title": "Professional Education",
+        "fill": "fixed",
+        "group_type": "professional_education",
+        "slots": [
+          { "course_id": "PSY215" },
+          { "course_id": "SED344" },
+          { "course_id": "TCH212" },
+          { "course_id": "TCH216" }
+        ],
+        "note": "Pedagogy and educational foundations courses required for teacher licensure"
+      },
+      {
+        "id": "major.student_teaching",
+        "title": "Student Teaching",
+        "fill": "fixed",
+        "group_type": "professional_education",
+        "slots": [
+          { "course_id": "STT399A72", "note": "8 credit hours; discipline-specific (Physics)" }
+        ]
+      }
+    ]
+  },
+
+  "college_requirements": {
+    "title": "College of Arts & Sciences World Language Requirement",
+    "applies_when": { "college": "College of Arts and Sciences" },
+    "groups": [
+      {
+        "id": "college.world_language_1",
+        "title": "World Language I (111)",
+        "fill": "choose_one",
+        "options": ["LAN111", "FRE111", "GER111", "SPA111", "ITA111", "JPN111", "POR111"]
+      },
+      {
+        "id": "college.world_language_2",
+        "title": "World Language II (112)",
+        "fill": "choose_one",
+        "options": ["LAN112", "FRE112", "GER112", "SPA112", "ITA112", "JPN112", "POR112"]
+      }
+    ],
+    "constraints": [
+      {
+        "type": "same_selection",
+        "groups": ["college.world_language_1", "college.world_language_2"],
+        "description": "Must be the same language for both 111 and 112"
+      }
+    ]
+  },
+
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          { "id": "isu.communication_composition", "title": "Communication & Composition", "fill": "fixed", "slots": [{ "course_id": "COM110" }, { "fill": "choose_one", "options": ["ENG101", "ENG101A10"] }] },
+          { "id": "isu.mathematics", "title": "Mathematics", "fill": "open", "count": 1, "auto_fulfilled_by": ["MAT145"] },
+          { "id": "isu.natural_science", "title": "Natural Science", "fill": "open", "count": 2, "auto_fulfilled_by": ["PHY110", "CHE140"] },
+          { "id": "isu.us_traditions", "title": "United States Traditions", "fill": "open", "count": 1 },
+          { "id": "isu.individuals_civic_life", "title": "Individuals & Civic Life", "fill": "open", "count": 1 },
+          { "id": "isu.fine_arts", "title": "Fine Arts", "fill": "open", "count": 1, "minimum_hours": 3 },
+          { "id": "isu.humanities", "title": "Humanities", "fill": "open", "count": 1 },
+          { "id": "isu.language_humanities", "title": "Language in the Humanities", "fill": "open", "count": 1 },
+          { "id": "isu.quantitative_reasoning", "title": "Quantitative Reasoning", "fill": "open", "count": 1, "auto_fulfilled_by": ["MAT146"] },
+          { "id": "isu.science_math_technology", "title": "Science, Math, & Technology", "fill": "open", "count": 1 },
+          { "id": "isu.social_sciences", "title": "Social Sciences", "fill": "open", "count": 1 }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          { "id": "iai.communication", "title": "Communication & Composition", "fill": "open", "count": 3 },
+          { "id": "iai.mathematics", "title": "Mathematics", "fill": "open", "count": 1, "auto_fulfilled_by": ["MAT145"] },
+          { "id": "iai.physical_life_sciences", "title": "Physical & Life Sciences", "fill": "open", "count": 2, "minimum_hours": 7, "constraint": "1 life science + 1 physical science; at least 1 with lab" },
+          { "id": "iai.humanities_fine_arts", "title": "Humanities & Fine Arts", "fill": "open", "count": 3, "constraint": "At least 1 humanities + 1 fine arts" },
+          { "id": "iai.social_sciences", "title": "Social & Behavioral Sciences", "fill": "open", "count": 3, "constraint": "Two different disciplines required" }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "type": "metadata_only",
+        "fields": [
+          { "id": "degree_type", "label": "Degree type", "type": "select", "options": ["A.A.", "A.S."], "required": true },
+          { "id": "field", "label": "Field of study", "type": "text" },
+          { "id": "institution", "label": "Institution", "type": "text", "required": true },
+          { "id": "date_awarded", "label": "Date awarded", "type": "text" },
+          { "id": "includes_iai_gecc", "label": "Includes IAI GECC", "type": "select", "options": ["yes", "no"], "note": "Required for A.S. degrees from Illinois institutions" }
+        ]
+      }
+    ]
+  },
+
+  "graduation_requirements": {
+    "trackable": [
+      { "id": "hours_120", "title": "120 minimum total credit hours" },
+      { "id": "hours_40_senior", "title": "40 senior college hours", "note": "Of the 120, at least 40 must be 200-300 level" },
+      { "id": "amali", "title": "AMALI requirement" },
+      { "id": "ideas", "title": "IDEAS requirement" },
+      { "id": "bs_smt", "title": "B.S. — Science, Math, & Technology", "note": "Required beyond Gen Ed for B.S. degree", "applies_when": { "degree": "B.S." } }
+    ],
+    "narrative": [
+      "Students must also meet University-Wide Teacher Education Requirements.",
+      "Completion leads to eligibility for Illinois teacher licensure in Physics (secondary)."
+    ]
+  },
+
+  "compliance_requirements": [
+    { "id": "background_check", "title": "National Criminal Background Check", "category": "background" },
+    { "id": "sex_offender_check", "title": "Illinois Sexual Offender Registry clearance", "category": "background" },
+    { "id": "violence_registry", "title": "Violence Against Youth Registry clearance", "category": "background" },
+    { "id": "tb_test", "title": "TB Test", "category": "health" },
+    { "id": "mandatory_reporter", "title": "Mandatory Reporter of Child Abuse Training", "category": "teacher_education" },
+    { "id": "safety_assessment", "title": "Safety Education Assessment", "category": "teacher_education" },
+    { "id": "content_test", "title": "ISBE State Content Test (Physics)", "category": "licensure" },
+    { "id": "per_review", "title": "Professional Expectation Review (PER)", "category": "teacher_education" }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "$schema_version": "1.0",
+
+  "program": {
+    "id": "music-comp-theory-bm",
+    "title": "Music",
+    "sequence": "Composition/Theory Emphasis",
+    "degree": "B.M.",
+    "department": "Music",
+    "college": "College of Fine Arts",
+    "catalog_year": "2025-2026",
+    "catalog_url": "https://illinoisstate.edu/catalog/undergraduate/music/music-composition-theory-emphasis-course-requirements/",
+    "minimum_major_hours": 79,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40,
+    "minimum_grade": "C",
+    "minimum_grade_scope": "all_major_courses",
+    "admission_requirements": [
+      "Performance audition on major instrument or voice required prior to acceptance as a Music major"
+    ]
+  },
+
+  "courses": [
+    { "id": "IDS121A03", "code": "IDS 121a03", "credits": 3, "fulfills": ["major.required", "isu.language_humanities"] },
+    { "id": "MUS100A01", "code": "MUS 100a01", "credits": 1, "fulfills": ["major.required"] },
+    { "id": "MUS100A02", "code": "MUS 100a02", "credits": 1, "fulfills": ["major.required"] },
+    { "id": "MUS101", "code": "MUS 101", "credits": 3, "fulfills": ["major.theory_core"] },
+    { "id": "MUS102", "code": "MUS 102", "credits": 3, "fulfills": ["major.theory_core"] },
+    { "id": "MUS107", "code": "MUS 107", "credits": 1, "fulfills": ["major.theory_core"] },
+    { "id": "MUS108", "code": "MUS 108", "credits": 1, "fulfills": ["major.theory_core"] },
+    { "id": "MUS122A10", "code": "MUS 122a10", "credits": 1, "fulfills": ["major.required"] },
+    { "id": "MUS122A20", "code": "MUS 122a20", "credits": 1, "fulfills": ["major.required"] },
+    { "id": "MUS122A30", "code": "MUS 122a30", "credits": 1, "fulfills": ["major.required"] },
+    { "id": "MUS122A40", "code": "MUS 122a40", "credits": 1, "fulfills": ["major.required"] },
+    { "id": "MUS167", "code": "MUS 167", "credits": 3, "fulfills": ["major.required"] },
+    { "id": "MUS201", "code": "MUS 201", "credits": 3, "fulfills": ["major.theory_core"] },
+    { "id": "MUS207", "code": "MUS 207", "credits": 1, "fulfills": ["major.theory_core"] },
+    { "id": "MUS253", "code": "MUS 253", "credits": 3, "fulfills": ["major.required"] },
+    { "id": "MUS254", "code": "MUS 254", "credits": 3, "fulfills": ["major.required"] },
+    { "id": "MUS275A01", "code": "MUS 275a01", "credits": 3, "fulfills": ["major.required", "graduation.amali"] },
+    { "id": "MUS303", "code": "MUS 303", "credits": 3, "fulfills": ["major.composition_core"] },
+    { "id": "MUS304", "code": "MUS 304", "credits": 3, "fulfills": ["major.composition_core"] },
+    { "id": "MUS305", "code": "MUS 305", "credits": 3, "fulfills": ["major.composition_core"] },
+    { "id": "MUS342", "code": "MUS 342", "credits": 3, "fulfills": ["major.required"] },
+
+    { "id": "MUS213", "code": "MUS 213", "credits": 3, "fulfills": ["major.history_elective_1"] },
+    { "id": "MUS214", "code": "MUS 214", "credits": 3, "fulfills": ["major.history_elective_1"] },
+    { "id": "MUS219", "code": "MUS 219", "credits": 3, "fulfills": ["major.history_elective_1"] },
+    { "id": "MUS220", "code": "MUS 220", "credits": 3, "fulfills": ["major.history_elective_2"] },
+    { "id": "MUS221", "code": "MUS 221", "credits": 3, "fulfills": ["major.history_elective_2"] },
+    { "id": "MUS222", "code": "MUS 222", "credits": 3, "fulfills": ["major.history_elective_2"] },
+
+    { "id": "MUS355", "code": "MUS 355", "credits": 3, "fulfills": ["major.advanced_elective"], "topic_course": true },
+    { "id": "MUS356", "code": "MUS 356", "credits": 3, "fulfills": ["major.advanced_elective"], "topic_course": true },
+    { "id": "MUS392", "code": "MUS 392", "credits": 3, "fulfills": ["major.advanced_elective"] },
+    { "id": "MUS394", "code": "MUS 394", "credits": 3, "fulfills": ["major.advanced_elective"] },
+    { "id": "MUS395", "code": "MUS 395", "credits": 3, "fulfills": ["major.advanced_elective"] },
+    { "id": "MUS396", "code": "MUS 396", "credits": 3, "fulfills": ["major.advanced_elective"] },
+
+    { "id": "MUS205A01", "code": "MUS 205a01", "credits": 2, "fulfills": ["major.applied_music"], "course_type": "applied" },
+    { "id": "MUS205A02", "code": "MUS 205a02", "credits": 2, "fulfills": ["major.applied_music"], "course_type": "applied" },
+    { "id": "MUS110", "code": "MUS 110", "credits": 0, "fulfills": ["major.recital_attendance"] },
+
+    { "id": "COM110", "code": "COM 110", "credits": 3, "fulfills": ["isu.communication_composition"] },
+    { "id": "ENG101", "code": "ENG 101", "credits": 3, "fulfills": ["isu.communication_composition", "iai.communication"] },
+    { "id": "ENG101A10", "code": "ENG 101A10", "credits": 3, "fulfills": ["isu.communication_composition", "iai.communication"] }
+  ],
+
+  "major": {
+    "title": "Composition/Theory Emphasis",
+    "minimum_hours": 79,
+    "groups": [
+      {
+        "id": "major.required",
+        "title": "Required Core",
+        "fill": "fixed",
+        "slots": [
+          { "course_id": "IDS121A03" },
+          { "course_id": "MUS100A01" },
+          { "course_id": "MUS100A02" },
+          { "course_id": "MUS122A10" },
+          { "course_id": "MUS122A20" },
+          { "course_id": "MUS122A30" },
+          { "course_id": "MUS122A40" },
+          { "course_id": "MUS167" },
+          { "course_id": "MUS253" },
+          { "course_id": "MUS254" },
+          { "course_id": "MUS275A01" },
+          { "course_id": "MUS342" }
+        ]
+      },
+      {
+        "id": "major.theory_core",
+        "title": "Music Theory Sequence",
+        "fill": "fixed",
+        "slots": [
+          { "course_id": "MUS101" },
+          { "course_id": "MUS102" },
+          { "course_id": "MUS107" },
+          { "course_id": "MUS108" },
+          { "course_id": "MUS201" },
+          { "course_id": "MUS207" }
+        ]
+      },
+      {
+        "id": "major.composition_core",
+        "title": "Composition Sequence",
+        "fill": "fixed",
+        "slots": [
+          { "course_id": "MUS303" },
+          { "course_id": "MUS304" },
+          { "course_id": "MUS305" }
+        ]
+      },
+      {
+        "id": "major.history_elective_1",
+        "title": "Music History Elective I",
+        "fill": "choose_one",
+        "options": ["MUS213", "MUS214", "MUS219"]
+      },
+      {
+        "id": "major.history_elective_2",
+        "title": "Music History Elective II",
+        "fill": "choose_one",
+        "options": ["MUS220", "MUS221", "MUS222"]
+      },
+      {
+        "id": "major.advanced_elective",
+        "title": "Advanced Theory/Composition Electives",
+        "fill": "choose_n",
+        "n": 2,
+        "minimum_hours": 6,
+        "options": ["MUS355", "MUS356", "MUS392", "MUS394", "MUS395", "MUS396"],
+        "note": "MUS 355 and 356 are topic courses — any decimalization counts"
+      },
+      {
+        "id": "major.applied_music",
+        "title": "Applied Music (Private Lessons)",
+        "fill": "repeat",
+        "semesters": 7,
+        "credits_per_semester": 2,
+        "total_credits": 14,
+        "course_id": "MUS205A01",
+        "level_progression": [
+          { "course_id": "MUS205A02", "minimum_semesters": 2, "note": "At least 2 semesters must be 200-level" }
+        ]
+      },
+      {
+        "id": "major.recital_attendance",
+        "title": "Recital Attendance",
+        "fill": "repeat",
+        "semesters": 6,
+        "credits_per_semester": 0,
+        "total_credits": 0,
+        "course_id": "MUS110"
+      },
+      {
+        "id": "major.ensemble",
+        "title": "Performance Ensembles",
+        "fill": "repeat",
+        "semesters": 8,
+        "credits_per_semester": 1,
+        "total_credits": 8,
+        "pool_description": "Approved Performance Ensembles (varies by primary instrument/voice)",
+        "constraint": "Only one ensemble per semester counts toward degree requirements"
+      }
+    ]
+  },
+
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "fixed",
+            "slots": [
+              { "course_id": "COM110" },
+              { "fill": "choose_one", "options": ["ENG101", "ENG101A10"] }
+            ]
+          },
+          { "id": "isu.mathematics", "title": "Mathematics", "fill": "open", "count": 1 },
+          { "id": "isu.natural_science", "title": "Natural Science", "fill": "open", "count": 2, "constraint": "Must be from 2 different sciences" },
+          { "id": "isu.us_traditions", "title": "United States Traditions", "fill": "open", "count": 1 },
+          { "id": "isu.individuals_civic_life", "title": "Individuals & Civic Life", "fill": "open", "count": 1 },
+          { "id": "isu.fine_arts", "title": "Fine Arts", "fill": "open", "count": 1, "minimum_hours": 3, "exempt": true, "exempt_reason": "Disciplinary expertise gained in the major" },
+          { "id": "isu.humanities", "title": "Humanities", "fill": "open", "count": 1 },
+          { "id": "isu.language_humanities", "title": "Language in the Humanities", "fill": "open", "count": 1, "auto_fulfilled_by": ["IDS121A03"], "note": "Satisfied by IDS 121a03 in major" },
+          { "id": "isu.quantitative_reasoning", "title": "Quantitative Reasoning", "fill": "open", "count": 1 },
+          { "id": "isu.science_math_technology", "title": "Science, Math, & Technology", "fill": "open", "count": 1 },
+          { "id": "isu.social_sciences", "title": "Social Sciences", "fill": "open", "count": 1 }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          { "id": "iai.communication", "title": "Communication & Composition", "fill": "open", "count": 3 },
+          { "id": "iai.mathematics", "title": "Mathematics", "fill": "open", "count": 1 },
+          { "id": "iai.physical_life_sciences", "title": "Physical & Life Sciences", "fill": "open", "count": 2, "minimum_hours": 7, "constraint": "1 life science + 1 physical science; at least 1 with lab" },
+          { "id": "iai.humanities_fine_arts", "title": "Humanities & Fine Arts", "fill": "open", "count": 3, "constraint": "At least 1 humanities + 1 fine arts" },
+          { "id": "iai.social_sciences", "title": "Social & Behavioral Sciences", "fill": "open", "count": 3, "constraint": "Two different disciplines required" }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "type": "metadata_only",
+        "fields": [
+          { "id": "degree_type", "label": "Degree type", "type": "select", "options": ["A.A.", "A.S."], "required": true },
+          { "id": "field", "label": "Field of study", "type": "text" },
+          { "id": "institution", "label": "Institution", "type": "text", "required": true },
+          { "id": "date_awarded", "label": "Date awarded", "type": "text" },
+          { "id": "includes_iai_gecc", "label": "Includes IAI GECC", "type": "select", "options": ["yes", "no"], "note": "Required for A.S. degrees from Illinois institutions" }
+        ]
+      }
+    ]
+  },
+
+  "graduation_requirements": {
+    "trackable": [
+      { "id": "hours_120", "title": "120 minimum total credit hours" },
+      { "id": "hours_40_senior", "title": "40 senior college hours", "note": "Of the 120, at least 40 must be 200-300 level" },
+      { "id": "amali", "title": "AMALI requirement", "auto_fulfilled_by": ["MUS275A01"], "note": "Fulfilled by MUS 275a01 in major" },
+      { "id": "ideas", "title": "IDEAS requirement", "note": "Inclusion, Diversity, Equity & Access" }
+    ],
+    "narrative": [
+      "A grade of C or better is required in all courses required in the major.",
+      "All students must pass a performance audition prior to acceptance as a Music major.",
+      "Only one ensemble per semester counts toward degree requirements."
+    ]
+  }
+}
