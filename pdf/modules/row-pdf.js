@@ -4,35 +4,59 @@ const L = require('../layout');
 
 const LINE_H = L.FONT.tableBody + 2.5; // vertical step between wrapped label lines
 
+// y at which column content begins on a continuation page
+const CONTINUATION_Y = L.PAGE_HEIGHT - 25;
+
+/**
+ * If `y - neededH` would fall below the bottom margin, adds a new page to
+ * ctx.doc, updates ctx.page, and returns the reset y for the new page.
+ * Otherwise returns y unchanged.
+ */
+function breakIfNeeded(ctx, y, neededH, fonts) {
+  if (y - neededH >= L.MARGIN.bottom) return y;
+
+  ctx.page = ctx.doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
+
+  // Minimal continuation header
+  ctx.page.drawRectangle({ x: 0, y: L.PAGE_HEIGHT - 5, width: L.PAGE_WIDTH, height: 5, color: L.RED });
+  ctx.page.drawText('(continued)', {
+    x: L.MARGIN.left, y: L.PAGE_HEIGHT - 17,
+    size: 7, font: fonts.reg, color: L.GRAY_TEXT,
+  });
+
+  return CONTINUATION_Y;
+}
+
 /**
  * Draws one worksheet row (checkbox + label + course/grade/term fields).
- * Row height expands automatically when the requirement label wraps.
+ * Triggers a page break automatically when there is not enough room.
  *
- * @param {PDFPage}  page
- * @param {PDFForm}  form
- * @param {number}   x       left edge of column
- * @param {number}   y       top of row (pdf-lib coords: y=0 at bottom)
- * @param {object}   widths  COL_WIDTHS.left or COL_WIDTHS.right
- * @param {string}   rowId   unique AcroForm field name prefix
- * @param {string}   label   text shown in the requirement column
- * @param {object}   fonts   { reg, bold }
- * @param {object}   opts    { preChecked, exempt, autoFulfilled }
- * @returns {number}         y coordinate below this row
+ * @param {object}  ctx     { doc, page, form } — ctx.page may be replaced on break
+ * @param {number}  x       left edge of column
+ * @param {number}  y       top of row (pdf-lib coords: y=0 at bottom)
+ * @param {object}  widths  COL_WIDTHS.left or COL_WIDTHS.right
+ * @param {string}  rowId   unique AcroForm field name prefix
+ * @param {string}  label   text shown in the requirement column
+ * @param {object}  fonts   { reg, bold }
+ * @param {object}  opts    { preChecked, exempt, autoFulfilled }
+ * @returns {number}        y coordinate below this row
  */
-function makeRow(page, form, x, y, widths, rowId, label, fonts, opts = {}) {
+function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
   const colW = totalWidth(widths);
 
-  // Word-wrap the label to fit the req column; row grows to fit.
+  // Word-wrap the label; row height expands to fit.
   const labelLines = wrapText(fonts.reg, label, L.FONT.tableBody, widths.req - 3);
   const rowHeight  = Math.max(L.ROW_H, labelLines.length * LINE_H + 3);
-  const bot        = y - rowHeight;
 
-  // Background for exempt rows
+  y = breakIfNeeded(ctx, y, rowHeight, fonts);
+
+  const { page, form } = ctx;
+  const bot = y - rowHeight;
+
   if (opts.exempt) {
     page.drawRectangle({ x, y: bot, width: colW, height: rowHeight, color: L.GRAY_BG });
   }
 
-  // Bottom separator
   page.drawLine({
     start: { x, y: bot }, end: { x: x + colW, y: bot },
     thickness: 0.3, color: L.GRAY_BORDER,
@@ -40,7 +64,7 @@ function makeRow(page, form, x, y, widths, rowId, label, fonts, opts = {}) {
 
   // Checkbox / exempt indicator — vertically centered
   const cbSize = 9;
-  const cbY = bot + (rowHeight - cbSize) / 2;
+  const cbY    = bot + (rowHeight - cbSize) / 2;
   if (opts.exempt) {
     page.drawRectangle({ x: x + 1, y: cbY, width: cbSize, height: cbSize, color: L.GRAY_BORDER });
   } else {
@@ -52,7 +76,7 @@ function makeRow(page, form, x, y, widths, rowId, label, fonts, opts = {}) {
     });
   }
 
-  // Label lines — top-aligned within the row
+  // Label lines — top-aligned
   const labelX = x + widths.check + 2;
   for (let i = 0; i < labelLines.length; i++) {
     page.drawText(labelLines[i], {
@@ -90,7 +114,6 @@ function makeRow(page, form, x, y, widths, rowId, label, fonts, opts = {}) {
   return bot;
 }
 
-// Word-wraps text into lines that fit within maxWidth at size.
 function wrapText(font, text, size, maxWidth) {
   const words = text.split(' ');
   const lines = [];
@@ -108,7 +131,6 @@ function wrapText(font, text, size, maxWidth) {
   return lines.length ? lines : [''];
 }
 
-// Converts a dotted group ID to a safe AcroForm field name prefix.
 function sanitizeId(id) {
   return id.replace(/\./g, '_').replace(/[^a-zA-Z0-9_-]/g, '_');
 }
@@ -117,7 +139,6 @@ function totalWidth(widths) {
   return widths.check + widths.req + widths.course + widths.grade + widths.term;
 }
 
-// Format a single option value: course ID string or choose_one_set object.
 function formatOption(opt, courseMap) {
   if (typeof opt === 'string') {
     const c = courseMap[opt];
@@ -131,4 +152,4 @@ function formatOption(opt, courseMap) {
   return String(opt);
 }
 
-module.exports = { makeRow, wrapText, sanitizeId, totalWidth, formatOption };
+module.exports = { makeRow, breakIfNeeded, wrapText, sanitizeId, totalWidth, formatOption };

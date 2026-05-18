@@ -1,35 +1,34 @@
 'use strict';
 
 const L = require('../layout');
-const { wrapText, sanitizeId, totalWidth } = require('./row-pdf');
+const { wrapText, sanitizeId, totalWidth, breakIfNeeded } = require('./row-pdf');
 
-function renderEscrow(page, form, x, y, widths, group, courseMap, fonts) {
+function renderEscrow(ctx, x, y, widths, group, courseMap, fonts) {
   const colW = totalWidth(widths);
 
-  const triggerCodes  = (group.trigger_courses || []).map(id => { const c = courseMap[id]; return c ? c.code : id; });
-  const grantedCodes  = (group.granted_courses || []).map(id => { const c = courseMap[id]; return c ? c.code : id; });
-  const crText        = group.total_credits ? ` (${group.total_credits} cr)` : '';
-  const bodyText      = `Completing ${triggerCodes.join(' or ')} grants credit for ${grantedCodes.join(', ')}${crText}.`;
-  const noteText      = group.note || '';
+  const triggerCodes = (group.trigger_courses || []).map(id => { const c = courseMap[id]; return c ? c.code : id; });
+  const grantedCodes = (group.granted_courses || []).map(id => { const c = courseMap[id]; return c ? c.code : id; });
+  const crText       = group.total_credits ? ` (${group.total_credits} cr)` : '';
+  const bodyText     = `Completing ${triggerCodes.join(' or ')} grants credit for ${grantedCodes.join(', ')}${crText}.`;
+  const noteText     = group.note || '';
 
-  // Measure height
   const bodyLines = wrapText(fonts.reg, bodyText, L.FONT.footnote, colW - 10);
   const noteLines = noteText ? wrapText(fonts.reg, noteText, L.FONT.footnote, colW - 10) : [];
   const checkRowH = 14;
   const blockH    = 8 + bodyLines.length * 8 + (noteLines.length ? noteLines.length * 8 + 3 : 0) + checkRowH + 6;
 
-  // Yellow background
-  page.drawRectangle({ x, y: y - blockH, width: colW, height: blockH, color: L.YELLOW_BG });
-  page.drawRectangle({ x, y: y - 2, width: colW, height: 2, color: L.RED });
+  y = breakIfNeeded(ctx, y, blockH, fonts);
+  const { page, form } = ctx;
 
-  // "ESCROW CREDIT" header
+  page.drawRectangle({ x, y: y - blockH, width: colW, height: blockH, color: L.YELLOW_BG });
+  page.drawRectangle({ x, y: y - 2,      width: colW, height: 2,      color: L.RED });
+
   page.drawText('ESCROW CREDIT', {
     x: x + 5, y: y - L.FONT.groupTitle - 3,
     size: L.FONT.groupTitle, font: fonts.bold, color: L.BLACK,
   });
 
   let ty = y - L.FONT.groupTitle - 3 - 8;
-
   for (const line of bodyLines) {
     page.drawText(line, { x: x + 5, y: ty, size: L.FONT.footnote, font: fonts.reg, color: L.BLACK });
     ty -= 8;
@@ -42,7 +41,6 @@ function renderEscrow(page, form, x, y, widths, group, courseMap, fonts) {
     }
   }
 
-  // Checkbox for "escrow credit applied"
   const cbY = ty - checkRowH + (checkRowH - 9) / 2;
   const cb  = form.createCheckBox(sanitizeId(group.id) + '_escrow_check');
   cb.addToPage(page, {

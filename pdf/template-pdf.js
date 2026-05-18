@@ -37,18 +37,19 @@ async function buildOnePDF(program, track) {
 
   const page = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
   const form = doc.getForm();
+  const ctx  = { doc, page, form };
 
-  const afterHeader = drawHeader(page, prog, track, fonts);
-  const bodyY = drawStudentInfo(page, form, afterHeader, fonts);
+  const afterHeader = drawHeader(ctx.page, prog, track, fonts);
+  const bodyY = drawStudentInfo(ctx.page, form, afterHeader, fonts);
 
   // Gen-ed column stub (Chunk 5)
-  page.drawText('[ gen-ed column ]', {
+  ctx.page.drawText('[ gen-ed column ]', {
     x: L.MARGIN.left, y: bodyY - 16,
     size: 8, font: fontReg, color: L.GRAY_TEXT,
   });
 
   // Major column
-  renderMajor(page, form, bodyY, program, courseMap, fonts);
+  renderMajor(ctx, bodyY, program, courseMap, fonts);
 
   return doc.save();
 }
