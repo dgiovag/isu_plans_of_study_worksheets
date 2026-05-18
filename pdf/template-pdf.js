@@ -53,22 +53,29 @@ async function buildOnePDF(program, track) {
   const finalGenEdY = renderGenEd(leftCtx,  bodyY, program, track, courseMap, fonts);
   const finalMajorY = renderMajor(rightCtx, bodyY, program, courseMap, fonts);
 
-  // Place panels below the columns if they ended on the same page,
-  // otherwise start a fresh page.
-  let gradPage, gradY;
-  if (leftCtx.page === rightCtx.page) {
-    gradPage = leftCtx.page;
-    gradY    = Math.min(finalGenEdY, finalMajorY) - 8;
-  } else {
-    gradPage = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
-    gradY    = L.PAGE_HEIGHT - L.MARGIN.top;
+  // Graduation goes in the left column below gen-ed (narrow, no note column).
+  const leftX        = L.MARGIN.left;
+  const gradLeftY    = renderGraduation(leftCtx, leftX, finalGenEdY, L.COL_LEFT_WIDTH, program, fonts);
+
+  // College and compliance are full-width panels below both columns.
+  // Only render them if either is present for this program.
+  const hasCollegeReq    = !!program.college_requirements;
+  const hasComplianceReq = !!(program.compliance_requirements && program.compliance_requirements.length);
+
+  if (hasCollegeReq || hasComplianceReq) {
+    let gradPage, gradY;
+    if (leftCtx.page === rightCtx.page) {
+      gradPage = leftCtx.page;
+      gradY    = Math.min(gradLeftY, finalMajorY) - 8;
+    } else {
+      gradPage = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
+      gradY    = L.PAGE_HEIGHT - L.MARGIN.top;
+    }
+
+    const gradCtx = { doc, page: gradPage, form };
+    let panelY = renderCollege(gradCtx, gradY, program, courseMap, fonts);
+    renderCompliance(gradCtx, panelY, program, fonts);
   }
-
-  const gradCtx = { doc, page: gradPage, form };
-
-  let panelY = renderGraduation(gradCtx, gradY, program, fonts);
-  panelY     = renderCollege(gradCtx, panelY, program, courseMap, fonts);
-  renderCompliance(gradCtx, panelY, program, fonts);
 
   return doc.save();
 }

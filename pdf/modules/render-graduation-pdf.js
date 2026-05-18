@@ -4,20 +4,22 @@ const L = require('../layout');
 const { breakIfNeeded, sanitizeId, wrapText } = require('./row-pdf');
 const { drawSectionTitle }                    = require('./table-pdf');
 
-const CHECK_W = 10;
-const TITLE_W = 270;
+const CHECK_W  = 10;
+// Notes are only shown when there is enough horizontal room (full-width mode).
+const NOTE_MIN_WIDTH = 400;
+const TITLE_W  = 270; // space reserved for title before the note column
 
-function renderGraduation(ctx, y, program, fonts) {
-  const x    = L.MARGIN.left;
-  const colW = L.CONTENT_WIDTH;
+function renderGraduation(ctx, x, y, colWidth, program, fonts) {
   const grad = program.graduation_requirements;
   if (!grad) return y;
 
-  y = drawSectionTitle(ctx.page, x, y, 'Graduation Requirements', colW, fonts);
+  const showNotes = colWidth >= NOTE_MIN_WIDTH;
+
+  y = drawSectionTitle(ctx.page, x, y, 'Graduation Requirements', colWidth, fonts);
 
   // Top border for the item list
   ctx.page.drawLine({
-    start: { x, y }, end: { x: x + colW, y },
+    start: { x, y }, end: { x: x + colWidth, y },
     thickness: 0.4, color: L.GRAY_BORDER,
   });
 
@@ -27,7 +29,7 @@ function renderGraduation(ctx, y, program, fonts) {
     const { page, form } = ctx;
 
     page.drawLine({
-      start: { x, y: bot }, end: { x: x + colW, y: bot },
+      start: { x, y: bot }, end: { x: x + colWidth, y: bot },
       thickness: 0.3, color: L.GRAY_BORDER,
     });
 
@@ -45,7 +47,7 @@ function renderGraduation(ctx, y, program, fonts) {
       size: L.FONT.tableBody, font: fonts.bold, color: L.BLACK,
     });
 
-    if (item.note) {
+    if (showNotes && item.note) {
       page.drawText(item.note, {
         x: x + CHECK_W + 2 + TITLE_W, y: textY,
         size: L.FONT.footnote, font: fonts.reg, color: L.GRAY_TEXT,
@@ -58,7 +60,7 @@ function renderGraduation(ctx, y, program, fonts) {
   // Narrative paragraphs
   const lineH = L.FONT.footnote + 2.5;
   for (const para of grad.narrative || []) {
-    const lines = wrapText(fonts.reg, para, L.FONT.footnote, colW - 8);
+    const lines = wrapText(fonts.reg, para, L.FONT.footnote, colWidth - 8);
     y -= 4;
     for (const line of lines) {
       y = breakIfNeeded(ctx, y, lineH, fonts);
