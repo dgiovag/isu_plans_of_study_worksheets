@@ -2,6 +2,8 @@
 
 const { PDFDocument, StandardFonts } = require('pdf-lib');
 const L = require('./layout');
+const resolveCourses = require('../renderer/modules/resolve-courses');
+const { renderMajor } = require('./modules/render-major-pdf');
 
 const TRACKS = ['isu', 'iai', 'ad'];
 
@@ -31,21 +33,22 @@ async function buildOnePDF(program, track) {
   const fontBold = await doc.embedFont(StandardFonts.HelveticaBold);
   const fonts = { reg: fontReg, bold: fontBold };
 
+  const courseMap = resolveCourses(program);
+
   const page = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
   const form = doc.getForm();
 
   const afterHeader = drawHeader(page, prog, track, fonts);
   const bodyY = drawStudentInfo(page, form, afterHeader, fonts);
 
-  // Column stubs — replaced in Chunk 3+
+  // Gen-ed column stub (Chunk 5)
   page.drawText('[ gen-ed column ]', {
     x: L.MARGIN.left, y: bodyY - 16,
     size: 8, font: fontReg, color: L.GRAY_TEXT,
   });
-  page.drawText('[ major column ]', {
-    x: L.MARGIN.left + L.COL_LEFT_WIDTH + L.COL_GAP, y: bodyY - 16,
-    size: 8, font: fontReg, color: L.GRAY_TEXT,
-  });
+
+  // Major column
+  renderMajor(page, form, bodyY, program, courseMap, fonts);
 
   return doc.save();
 }
