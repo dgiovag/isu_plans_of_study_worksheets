@@ -1,7 +1,7 @@
 'use strict';
 
 const L = require('../layout');
-const { breakIfNeeded, sanitizeId, wrapText } = require('./row-pdf');
+const { breakIfNeeded, sanitizeId } = require('./row-pdf');
 const { drawSectionTitle }                    = require('./table-pdf');
 
 const CHECK_W  = 10;
@@ -55,21 +55,6 @@ function renderGraduation(ctx, x, y, colWidth, program, fonts) {
     }
 
     y = bot;
-  }
-
-  // Narrative paragraphs
-  const lineH = L.FONT.footnote + 2.5;
-  for (const para of grad.narrative || []) {
-    const lines = wrapText(fonts.reg, para, L.FONT.footnote, colWidth - 8);
-    y -= 4;
-    for (const line of lines) {
-      y = breakIfNeeded(ctx, y, lineH, fonts);
-      y -= lineH;
-      ctx.page.drawText(line, {
-        x: x + 4, y,
-        size: L.FONT.footnote, font: fonts.reg, color: L.GRAY_TEXT,
-      });
-    }
   }
 
   return y - 6;
