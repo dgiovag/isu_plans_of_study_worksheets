@@ -61,10 +61,14 @@ const COL_WIDTHS = {
   },
 };
 
+// Full-content-width column for graduation/college/compliance panels
+const FULL_WIDTHS = { check: 10, req: 80, course: 294, grade: 78, term: 78 };
+// check+req+course+grade+term = 10+80+294+78+78 = 540 = CONTENT_WIDTH
+
 module.exports = {
   PAGE_WIDTH, PAGE_HEIGHT, MARGIN, CONTENT_WIDTH,
   COL_GAP, COL_LEFT_WIDTH, COL_RIGHT_WIDTH,
   RED, BLACK, WHITE, GRAY_BORDER, GRAY_BG, GRAY_TEXT, YELLOW_BG,
   FONT, ROW_H, SECTION_HDR_H, GROUP_TITLE_H, TABLE_HDR_H,
-  COL_WIDTHS,
+  COL_WIDTHS, FULL_WIDTHS,
 };

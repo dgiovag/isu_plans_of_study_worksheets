@@ -2,9 +2,12 @@
 
 const { PDFDocument, StandardFonts } = require('pdf-lib');
 const L = require('./layout');
-const resolveCourses    = require('../renderer/modules/resolve-courses');
-const { renderMajor }   = require('./modules/render-major-pdf');
-const { renderGenEd }   = require('./modules/render-gened-pdf');
+const resolveCourses        = require('../renderer/modules/resolve-courses');
+const { renderMajor }       = require('./modules/render-major-pdf');
+const { renderGenEd }       = require('./modules/render-gened-pdf');
+const { renderGraduation }  = require('./modules/render-graduation-pdf');
+const { renderCollege }     = require('./modules/render-college-pdf');
+const { renderCompliance }  = require('./modules/render-compliance-pdf');
 
 const TRACKS = ['isu', 'iai', 'ad'];
 
@@ -47,8 +50,25 @@ async function buildOnePDF(program, track) {
   const leftCtx  = { doc, page, form };
   const rightCtx = { doc, page, form };
 
-  renderGenEd(leftCtx,  bodyY, program, track, courseMap, fonts);
-  renderMajor(rightCtx, bodyY, program, courseMap, fonts);
+  const finalGenEdY = renderGenEd(leftCtx,  bodyY, program, track, courseMap, fonts);
+  const finalMajorY = renderMajor(rightCtx, bodyY, program, courseMap, fonts);
+
+  // Place panels below the columns if they ended on the same page,
+  // otherwise start a fresh page.
+  let gradPage, gradY;
+  if (leftCtx.page === rightCtx.page) {
+    gradPage = leftCtx.page;
+    gradY    = Math.min(finalGenEdY, finalMajorY) - 8;
+  } else {
+    gradPage = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
+    gradY    = L.PAGE_HEIGHT - L.MARGIN.top;
+  }
+
+  const gradCtx = { doc, page: gradPage, form };
+
+  let panelY = renderGraduation(gradCtx, gradY, program, fonts);
+  panelY     = renderCollege(gradCtx, panelY, program, courseMap, fonts);
+  renderCompliance(gradCtx, panelY, program, fonts);
 
   return doc.save();
 }
