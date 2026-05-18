@@ -22,13 +22,13 @@ module.exports = function renderOpen(group, courseMap, prefix, opts) {
 
     if (o.autoFulfilled) {
       const label = count === 1 ? esc(group.title) : `${esc(group.title)} #${i + 1}`;
-      rows.push(makeRow(rowId, prefix, label, rowDesc, { autoFulfilled: true, preChecked: true }));
+      rows.push(makeRow(rowId, prefix, label, rowDesc, { autoFulfilled: true }));
 
     } else if (o.autoFulfilledCourses && i < o.autoFulfilledCourses.length) {
       const courseId = o.autoFulfilledCourses[i];
       const course   = courseMap[courseId];
       const label    = course ? esc(course.code) : esc(courseId);
-      rows.push(makeRow(rowId, prefix, label, rowDesc, { autoFulfilled: true, preChecked: true }));
+      rows.push(makeRow(rowId, prefix, label, rowDesc, { autoFulfilled: true }));
 
     } else {
       const label = count === 1 ? esc(group.title) : `${esc(group.title)} #${i + 1}`;

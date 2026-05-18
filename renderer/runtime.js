@@ -150,6 +150,37 @@ function updateSummary() {
     totals.gened.all  + totals.major.all  + totals.grad.all  + compAll;
 }
 
+// ── Cross-reference propagation ───────────────────────────────────────────────
+
+var _xrefPropagating = false;
+
+function propagateXref(id, checked) {
+  if (_xrefPropagating) return;
+  if (typeof window.XREF === 'undefined') return;
+  var linked = window.XREF[id];
+  if (!linked || !linked.length) return;
+
+  _xrefPropagating = true;
+  try {
+    linked.forEach(function(linkedId) {
+      var linkedRow = document.getElementById('row-' + linkedId);
+      if (linkedRow && linkedRow.classList.contains('exempt')) return;
+
+      var linkedChk = document.getElementById('chk-' + linkedId);
+      if (!linkedChk || linkedChk.checked === checked) return;
+
+      linkedChk.checked = checked;
+      if (!checked) {
+        var sel = document.querySelector('select[data-id="' + linkedId + '"][data-field="status"]');
+        if (sel && DONE_STATUSES.indexOf(sel.value) !== -1) sel.value = '';
+      }
+      updateRow(linkedId);
+    });
+  } finally {
+    _xrefPropagating = false;
+  }
+}
+
 // ── Event delegation ──────────────────────────────────────────────────────────
 
 document.addEventListener('change', function(e) {
@@ -185,6 +216,14 @@ document.addEventListener('change', function(e) {
   }
 
   updateRow(id);
+
+  if (t.type === 'checkbox') {
+    propagateXref(id, t.checked);
+  } else if (t.tagName === 'SELECT' && t.dataset.field === 'status') {
+    var chkEl = document.getElementById('chk-' + id);
+    if (chkEl) propagateXref(id, chkEl.checked);
+  }
+
   updateSummary();
 });
 
@@ -194,8 +233,7 @@ function resetAll() {
   if (!confirm('Clear all entries on this worksheet?')) return;
   document.querySelectorAll('input[type="checkbox"]').forEach(function(c) {
     // Don't uncheck pre-set auto-fulfilled/exempt items.
-    if (c.closest('tr.auto-fulfilled') || c.closest('tr.exempt') ||
-        c.closest('li.auto-fulfilled-grad')) return;
+    if (c.closest('tr.exempt') || c.closest('li.auto-fulfilled-grad')) return;
     c.checked = false;
   });
   document.querySelectorAll('input[type="text"]').forEach(function(i) { i.value = ''; });
@@ -207,7 +245,7 @@ function resetAll() {
     if (r.classList.contains('transfer-detail')) r.style.display = 'none';
   });
   // Re-apply completed class for pre-set exempt/auto-fulfilled rows.
-  document.querySelectorAll('tr.exempt, tr.auto-fulfilled').forEach(function(r) {
+  document.querySelectorAll('tr.exempt').forEach(function(r) {
     r.classList.add('completed');
   });
 

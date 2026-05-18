@@ -3,6 +3,7 @@
 const css = require('./css');
 const runtime = require('./runtime');
 const resolveCourses   = require('./modules/resolve-courses');
+const buildXrefMap     = require('./modules/build-xref-map');
 const renderGenEd      = require('./modules/render-gened');
 const renderMajor      = require('./modules/render-major');
 const renderGraduation = require('./modules/render-graduation');
@@ -154,6 +155,7 @@ function columnsHTML(program, courseMap) {
 function buildHTML(program) {
   const p = program.program;
   const courseMap  = resolveCourses(program);
+  const xrefMap    = buildXrefMap(program);
   const isCompletion = program.general_education.assumed_complete === true;
 
   const title      = programTitle(p);
@@ -208,6 +210,7 @@ ${collegeHTML}
 ${complianceHTML}
 
 <script>
+window.XREF = ${JSON.stringify(xrefMap)};
 ${runtime}
 </script>
 </body>

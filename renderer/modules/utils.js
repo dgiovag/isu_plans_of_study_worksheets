@@ -30,7 +30,7 @@ const STATUS_OPTIONS_WAIVED = `<option value="">—</option>
 // opts: { autoFulfilled, exempt, preChecked, preWaived }
 function makeRow(rowId, prefix, codeHTML, descHTML, opts) {
   const o = opts || {};
-  const isChecked  = o.autoFulfilled || o.exempt || o.preChecked;
+  const isChecked  = o.exempt || o.preChecked;
   const isWaived   = o.exempt || o.preWaived;
 
   const classes = [];
