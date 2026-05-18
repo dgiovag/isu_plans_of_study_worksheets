@@ -11,8 +11,8 @@ Interactive advising worksheets for Illinois State University transfer students.
 
 ## Project Phases
 
-1. **Schema** (complete) — JSON Schema v1.0 validated against 6 structurally different programs
-2. **HTML Renderer** — Generalize the existing prototype to consume any program JSON
+1. **Schema** (complete) — JSON Schema v1.0 validated against 7 structurally different programs
+2. **HTML Renderer** (in progress) — Generalize the existing prototype to consume any program JSON
 3. **PDF Renderer** — Fillable AcroForm PDFs (no PDF JavaScript), one per gen-ed track
 4. **Catalog Scraper** — Biannual pipeline: scrape catalog → validate → diff → human review
 5. **CC Articulation (stretch)** — Per-community-college worksheets for all 48 Illinois CCs
@@ -45,6 +45,15 @@ The **schema is the contract** between the scraper and both renderers. All compo
 │       ├── nursing-prelicensure-bsn.json
 │       ├── nursing-rn-bsn.json
 │       └── physics-teacher-ed-bs.json
+├── renderer/
+│   ├── build.js               # CLI: node renderer/build.js --all | --program <id>
+│   ├── template.js            # HTML document assembly
+│   ├── runtime.js             # Client-side JS (inlined into every worksheet)
+│   ├── css.js                 # Styles (inlined)
+│   └── modules/               # One file per fill type + utilities
+│       ├── build-xref-map.js  # Computes cross-reference row links at build time
+│       └── ...
+├── output/                    # Generated HTML worksheets (gitignored)
 ├── prototype/
 │   └── degree-worksheet.html  # Working HTML prototype (single-file, hardcoded data)
 └── docs/
@@ -78,6 +87,13 @@ The **schema is the contract** between the scraper and both renderers. All compo
 - Schema must support multiple active catalog years simultaneously
 - Every requirement slot needs a stable ID for Phase 5 articulation references
 
+## Phase 2 HTML Renderer — Completed Features
+
+- Two-column layout (gen-ed / major), track toggle, per-row fields, live progress totals
+- All 10 fill types rendered
+- Cross-reference propagation: checking a row that satisfies both major and gen-ed automatically checks the linked row in the other column (`build-xref-map.js` + `propagateXref()` in runtime)
+- `auto_fulfilled_by` rows show a visual indicator but are NOT pre-checked — only `exempt` rows start checked
+
 ## Running the Prototype
 
 Open `prototype/degree-worksheet.html` directly in a browser — no build step or server required.
@@ -88,7 +104,17 @@ Open `prototype/degree-worksheet.html` directly in a browser — no build step o
 npx ajv-cli validate -s schemas/program-schema.json -d "data/programs/*.json" --spec=draft2020 --strict=false
 ```
 
-## Schema Test Programs (6 validated)
+## Working Instructions
+
+These apply to every session — follow them strictly.
+
+1. **Always propose a plan before editing code.** For any non-trivial task, write out the approach and wait for explicit approval before touching files. One or two sentences per step is enough; the goal is alignment, not a novel.
+
+2. **Chunk multi-step work.** Break implementation into named chunks (e.g., "Chunk 1: new module", "Chunk 2: template change", "Chunk 3: runtime update"). Complete one chunk, confirm the output looks right, then ask before proceeding. Never batch all chunks into a single turn.
+
+3. **Never switch to Opus.** Always use Sonnet. Long uninterrupted tool-call sequences cause session resets, which trigger a model switch to Opus. Chunking prevents this. If the user has not explicitly asked for Opus, do not use it.
+
+## Schema Test Programs (7 validated)
 
 1. **Accounting (Financial Accounting), B.S.** — choice groups, exempt gen-ed, senior elective bucket
 2. **Art (Art History), B.A.** — language sequence consistency, grouped electives, world-language graduation req
