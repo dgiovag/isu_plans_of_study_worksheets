@@ -1,9 +1,17 @@
 'use strict';
 
-const { totalWidth } = require('./row-pdf');
-const { drawGroupTitle, drawNote } = require('./table-pdf');
-const { renderFixed } = require('./render-fixed-pdf');
 const L = require('../layout');
+const { totalWidth } = require('./row-pdf');
+const { drawGroupTitle, drawNote }           = require('./table-pdf');
+const { renderFixed }                        = require('./render-fixed-pdf');
+const { renderChooseOne }                    = require('./render-choose-one-pdf');
+const { renderChooseN }                      = require('./render-choose-n-pdf');
+const { renderChooseNGrouped }               = require('./render-choose-n-grouped-pdf');
+const { renderChooseOneTrack }               = require('./render-choose-one-track-pdf');
+const { renderOpen }                         = require('./render-open-pdf');
+const { renderOpenConstrained }              = require('./render-open-constrained-pdf');
+const { renderRepeat }                       = require('./render-repeat-pdf');
+const { renderEscrow }                       = require('./render-escrow-pdf');
 
 /**
  * Dispatches a group to its fill-type renderer.
@@ -12,7 +20,7 @@ const L = require('../layout');
 function renderGroup(page, form, x, y, widths, group, courseMap, fonts) {
   const colW = totalWidth(widths);
 
-  // Exempt groups: gray title bar only, no interactive rows
+  // Exempt groups: gray title bar, no interactive rows
   if (group.exempt) {
     y = drawGroupTitle(page, x, y, group.title, colW, fonts);
     page.drawText('EXEMPT — satisfied by major coursework', {
@@ -22,7 +30,10 @@ function renderGroup(page, form, x, y, widths, group, courseMap, fonts) {
     return y - 14;
   }
 
-  y = drawGroupTitle(page, x, y, group.title, colW, fonts);
+  // Escrow has its own header — skip drawGroupTitle
+  if (group.fill !== 'escrow') {
+    y = drawGroupTitle(page, x, y, group.title, colW, fonts);
+  }
 
   if (group.note) {
     y = drawNote(page, x, y, group.note, colW, fonts);
@@ -30,21 +41,33 @@ function renderGroup(page, form, x, y, widths, group, courseMap, fonts) {
 
   switch (group.fill) {
     case 'fixed':
-      y = renderFixed(page, form, x, y, widths, group, courseMap, fonts);
-      break;
-
-    // Stubs for fill types implemented in Chunk 4
+      return renderFixed(page, form, x, y, widths, group, courseMap, fonts);
+    case 'choose_one':
+    case 'choose_one_set':
+      return renderChooseOne(page, form, x, y, widths, group, courseMap, fonts);
+    case 'choose_n':
+      return renderChooseN(page, form, x, y, widths, group, courseMap, fonts);
+    case 'choose_n_grouped':
+      return renderChooseNGrouped(page, form, x, y, widths, group, courseMap, fonts);
+    case 'choose_one_track':
+      return renderChooseOneTrack(page, form, x, y, widths, group, courseMap, fonts);
+    case 'open':
+      return renderOpen(page, form, x, y, widths, group, courseMap, fonts);
+    case 'open_constrained':
+      return renderOpenConstrained(page, form, x, y, widths, group, courseMap, fonts);
+    case 'repeat':
+      return renderRepeat(page, form, x, y, widths, group, courseMap, fonts);
+    case 'escrow':
+      return renderEscrow(page, form, x, y, widths, group, courseMap, fonts);
     default:
-      y = renderStub(page, x, y, widths, group.fill, fonts);
+      return renderUnknown(page, x, y, widths, group.fill, fonts);
   }
-
-  return y;
 }
 
-function renderStub(page, x, y, widths, fillType, fonts) {
+function renderUnknown(page, x, y, widths, fillType, fonts) {
   const colW = totalWidth(widths);
   page.drawRectangle({ x, y: y - 14, width: colW, height: 14, color: L.YELLOW_BG });
-  page.drawText(`[ ${fillType} — coming in Chunk 4 ]`, {
+  page.drawText(`[ unknown fill type: ${fillType} ]`, {
     x: x + 4, y: y - 10,
     size: L.FONT.footnote, font: fonts.reg, color: L.GRAY_TEXT,
   });

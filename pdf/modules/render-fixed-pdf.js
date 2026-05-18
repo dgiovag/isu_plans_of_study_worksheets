@@ -1,43 +1,48 @@
 'use strict';
 
-const { makeRow, totalWidth } = require('./row-pdf');
+const L = require('../layout');
+const { makeRow, totalWidth, formatOption } = require('./row-pdf');
 const { drawTableHeaders } = require('./table-pdf');
 
 /**
  * Renders a `fixed` fill group: one row per slot.
- * Inline choose_one slots are rendered as a single row with joined options.
+ * Inline choose_one / choose_one_set slots become a single row with joined options.
  */
 function renderFixed(page, form, x, y, widths, group, courseMap, fonts) {
   y = drawTableHeaders(page, x, y, widths, fonts);
+  y = renderSlots(page, form, x, y, widths, group.slots || [], group.id, courseMap, fonts, {
+    exempt: group.exempt,
+  });
+  return closeTable(page, x, y, widths);
+}
 
-  const slots = group.slots || [];
+/**
+ * Shared slot renderer used by renderFixed and renderChooseOneTrack.
+ * Each slot is either { course_id } or an inline fill ({ fill, options }).
+ */
+function renderSlots(page, form, x, y, widths, slots, groupId, courseMap, fonts, opts = {}) {
   for (let i = 0; i < slots.length; i++) {
-    const slot = slots[i];
-    const rowId = `${group.id}.${i}`;
+    const slot  = slots[i];
+    const rowId = `${groupId}.${i}`;
 
     if (slot.course_id) {
-      const course = courseMap[slot.course_id];
-      const label = course ? course.code : slot.course_id;
-      y = makeRow(page, form, x, y, widths, rowId, label, fonts, {
-        exempt: group.exempt,
-      });
+      const c = courseMap[slot.course_id];
+      y = makeRow(page, form, x, y, widths, rowId, c ? c.code : slot.course_id, fonts, opts);
 
     } else if (slot.fill === 'choose_one' || slot.fill === 'choose_one_set') {
-      const label = (slot.options || [])
-        .map(id => { const c = courseMap[id]; return c ? c.code : id; })
-        .join(' or ');
-      y = makeRow(page, form, x, y, widths, rowId, label, fonts);
+      const label = (slot.options || []).map(o => formatOption(o, courseMap)).join(' or ');
+      y = makeRow(page, form, x, y, widths, rowId, label, fonts, opts);
     }
   }
-
-  // Close table with a bottom border
-  const colW = totalWidth(widths);
-  page.drawLine({
-    start: { x, y }, end: { x: x + colW, y },
-    thickness: 0.4, color: require('../layout').GRAY_BORDER,
-  });
-
   return y;
 }
 
-module.exports = { renderFixed };
+function closeTable(page, x, y, widths) {
+  page.drawLine({
+    start: { x, y }, end: { x: x + totalWidth(widths), y },
+    thickness: 0.4, color: L.GRAY_BORDER,
+  });
+  return y;
+}
+
+module.exports = { renderFixed, renderSlots, closeTable };

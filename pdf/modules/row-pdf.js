@@ -117,4 +117,18 @@ function totalWidth(widths) {
   return widths.check + widths.req + widths.course + widths.grade + widths.term;
 }
 
-module.exports = { makeRow, wrapText, sanitizeId, totalWidth };
+// Format a single option value: course ID string or choose_one_set object.
+function formatOption(opt, courseMap) {
+  if (typeof opt === 'string') {
+    const c = courseMap[opt];
+    return c ? c.code : opt;
+  }
+  if (opt && opt.type === 'set') {
+    return '(' + (opt.course_ids || []).map(id => {
+      const c = courseMap[id]; return c ? c.code : id;
+    }).join(' + ') + ')';
+  }
+  return String(opt);
+}
+
+module.exports = { makeRow, wrapText, sanitizeId, totalWidth, formatOption };
