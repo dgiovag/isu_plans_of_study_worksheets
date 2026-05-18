@@ -57,10 +57,10 @@ function drawTableHeaders(page, x, y, widths, fonts) {
 
   const textY = y - H + 3;
   const headers = [
-    { label: 'Requirement', x: x + widths.check + 2 },
-    { label: 'Course',      x: x + widths.check + widths.req },
-    { label: 'Gr',          x: x + widths.check + widths.req + widths.course },
-    { label: 'Term',        x: x + widths.check + widths.req + widths.course + widths.grade },
+    ...(widths.req > 0 ? [{ label: 'Requirement', x: x + widths.check + 2 }] : []),
+    { label: 'Course', x: x + widths.check + widths.req },
+    { label: 'Gr',     x: x + widths.check + widths.req + widths.course },
+    { label: 'Term',   x: x + widths.check + widths.req + widths.course + widths.grade },
   ];
   for (const h of headers) {
     page.drawText(h.label, { x: h.x, y: textY, size: L.FONT.tableHeader, font: fonts.bold, color: L.BLACK });

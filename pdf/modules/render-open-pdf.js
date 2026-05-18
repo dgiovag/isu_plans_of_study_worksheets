@@ -1,16 +1,18 @@
 'use strict';
 
-const { makeRow } = require('./row-pdf');
-const { drawTableHeaders } = require('./table-pdf');
-const { closeTable } = require('./render-fixed-pdf');
+const { makeRow, noReqWidths } = require('./row-pdf');
+const { drawTableHeaders }     = require('./table-pdf');
+const { closeTable }           = require('./render-fixed-pdf');
 
 function renderOpen(ctx, x, y, widths, group, courseMap, fonts) {
   const count = group.count || 1;
-  y = drawTableHeaders(ctx.page, x, y, widths, fonts);
+  const w     = noReqWidths(widths);
+
+  y = drawTableHeaders(ctx.page, x, y, w, fonts);
   for (let i = 0; i < count; i++) {
-    y = makeRow(ctx, x, y, widths, `${group.id}.${i}`, `Open Elective #${i + 1}`, fonts);
+    y = makeRow(ctx, x, y, w, `${group.id}.${i}`, '', fonts);
   }
-  return closeTable(ctx.page, x, y, widths);
+  return closeTable(ctx.page, x, y, w);
 }
 
 module.exports = { renderOpen };

@@ -76,14 +76,16 @@ function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
     });
   }
 
-  // Label lines — top-aligned
-  const labelX = x + widths.check + 2;
-  for (let i = 0; i < labelLines.length; i++) {
-    page.drawText(labelLines[i], {
-      x: labelX, y: y - L.FONT.tableBody - 1.5 - i * LINE_H,
-      size: L.FONT.tableBody, font: fonts.reg,
-      color: opts.exempt ? L.GRAY_TEXT : L.BLACK,
-    });
+  // Label lines — omitted when req column is collapsed (widths.req === 0)
+  if (widths.req > 0) {
+    const labelX = x + widths.check + 2;
+    for (let i = 0; i < labelLines.length; i++) {
+      page.drawText(labelLines[i], {
+        x: labelX, y: y - L.FONT.tableBody - 1.5 - i * LINE_H,
+        size: L.FONT.tableBody, font: fonts.reg,
+        color: opts.exempt ? L.GRAY_TEXT : L.BLACK,
+      });
+    }
   }
 
   // AcroForm fields — vertically centered, fixed height
@@ -152,4 +154,10 @@ function formatOption(opt, courseMap) {
   return String(opt);
 }
 
-module.exports = { makeRow, breakIfNeeded, wrapText, sanitizeId, totalWidth, formatOption };
+// Returns a copy of widths with the req column collapsed into course.
+// Use for open/open_constrained groups where no requirement label is shown.
+function noReqWidths(widths) {
+  return { ...widths, req: 0, course: widths.course + widths.req };
+}
+
+module.exports = { makeRow, breakIfNeeded, wrapText, sanitizeId, totalWidth, formatOption, noReqWidths };
