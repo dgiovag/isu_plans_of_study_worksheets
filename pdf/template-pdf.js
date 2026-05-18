@@ -1,11 +1,15 @@
 'use strict';
 
-const { PDFDocument, rgb } = require('pdf-lib');
+const { PDFDocument, StandardFonts } = require('pdf-lib');
+const L = require('./layout');
 
 const TRACKS = ['isu', 'iai', 'ad'];
 
-// ISU red
-const RED = rgb(0.808, 0.067, 0.149);
+const TRACK_LABELS = {
+  isu: 'ISU General Education',
+  iai: 'IAI Transferable Core',
+  ad:  "Associate's Degree (IAI)",
+};
 
 async function buildPDFs(program) {
   const result = {};
@@ -17,28 +21,113 @@ async function buildPDFs(program) {
 
 async function buildOnePDF(program, track) {
   const doc = await PDFDocument.create();
-  doc.setTitle(`${program.program.title} — ${program.program.degree} Plan of Study`);
+  const prog = program.program;
+
+  doc.setTitle(`${prog.title}${prog.sequence ? ' — ' + prog.sequence : ''}, ${prog.degree} — Plan of Study`);
   doc.setAuthor('Illinois State University');
+  doc.setSubject(`Gen-Ed Track: ${TRACK_LABELS[track]}`);
 
-  const page = doc.addPage([612, 792]); // letter portrait
-  const { width, height } = page.getSize();
+  const fontReg  = await doc.embedFont(StandardFonts.Helvetica);
+  const fontBold = await doc.embedFont(StandardFonts.HelveticaBold);
+  const fonts = { reg: fontReg, bold: fontBold };
 
-  // Placeholder content so we can verify the file opens
-  page.drawRectangle({ x: 0, y: height - 6, width, height: 6, color: RED });
+  const page = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
+  const form = doc.getForm();
 
-  page.drawText(
-    `${program.program.title}${program.program.sequence ? ' — ' + program.program.sequence : ''}, ${program.program.degree}`,
-    { x: 36, y: height - 28, size: 14, color: RED }
-  );
+  const afterHeader = drawHeader(page, prog, track, fonts);
+  const bodyY = drawStudentInfo(page, form, afterHeader, fonts);
 
-  page.drawText(
-    `Gen-Ed Track: ${track.toUpperCase()} | Catalog ${program.program.catalog_year}`,
-    { x: 36, y: height - 46, size: 10 }
-  );
+  // Column stubs — replaced in Chunk 3+
+  page.drawText('[ gen-ed column ]', {
+    x: L.MARGIN.left, y: bodyY - 16,
+    size: 8, font: fontReg, color: L.GRAY_TEXT,
+  });
+  page.drawText('[ major column ]', {
+    x: L.MARGIN.left + L.COL_LEFT_WIDTH + L.COL_GAP, y: bodyY - 16,
+    size: 8, font: fontReg, color: L.GRAY_TEXT,
+  });
 
-  page.drawText('(stub — Chunk 2 will render full content)', { x: 36, y: height - 70, size: 9 });
-
-  return await doc.save();
+  return doc.save();
 }
 
-module.exports = { buildPDFs };
+// Draws the top header block; returns the y-coordinate immediately below it.
+function drawHeader(page, prog, track, fonts) {
+  const W = L.PAGE_WIDTH;
+  const H = L.PAGE_HEIGHT;
+
+  // Red bar
+  page.drawRectangle({ x: 0, y: H - 5, width: W, height: 5, color: L.RED });
+
+  // Institution label
+  page.drawText('Illinois State University', {
+    x: L.MARGIN.left, y: H - 17,
+    size: L.FONT.institution, font: fonts.reg, color: L.RED,
+  });
+
+  // Program title + degree
+  const titleText = prog.sequence
+    ? `${prog.title} — ${prog.sequence}, ${prog.degree}`
+    : `${prog.title}, ${prog.degree}`;
+  page.drawText(titleText, {
+    x: L.MARGIN.left, y: H - 31,
+    size: L.FONT.programTitle, font: fonts.bold, color: L.BLACK,
+  });
+
+  // Track + catalog year
+  page.drawText(`Gen-Ed Track: ${TRACK_LABELS[track]}   ·   Catalog Year: ${prog.catalog_year}`, {
+    x: L.MARGIN.left, y: H - 44,
+    size: 8, font: fonts.reg, color: L.BLACK,
+  });
+
+  // Horizontal rule
+  const ruleY = H - 53;
+  drawRule(page, ruleY);
+
+  return ruleY - 4;
+}
+
+// Draws student info labels + AcroForm text fields; returns body start y.
+function drawStudentInfo(page, form, topY, fonts) {
+  const FIELDS = [
+    { name: 'student.name',    label: 'Student Name', x: L.MARGIN.left,       width: 178 },
+    { name: 'student.id',      label: 'Student ID',   x: L.MARGIN.left + 188, width: 100 },
+    { name: 'student.advisor', label: 'Advisor',      x: L.MARGIN.left + 298, width: 148 },
+    { name: 'student.date',    label: 'Date',         x: L.MARGIN.left + 456, width:  84 },
+  ];
+
+  const FIELD_H   = 16;
+  const labelY    = topY - 9;
+  const fieldY    = labelY - FIELD_H - 1; // bottom of field widget
+
+  for (const f of FIELDS) {
+    page.drawText(f.label, {
+      x: f.x, y: labelY,
+      size: L.FONT.label, font: fonts.reg, color: L.BLACK,
+    });
+
+    const tf = form.createTextField(f.name);
+    tf.addToPage(page, {
+      x: f.x, y: fieldY,
+      width: f.width, height: FIELD_H,
+      borderWidth: 0.5,
+      borderColor: L.GRAY_BORDER,
+      backgroundColor: L.WHITE,
+    });
+  }
+
+  const ruleY = fieldY - 5;
+  drawRule(page, ruleY);
+
+  return ruleY - 5;
+}
+
+function drawRule(page, y) {
+  page.drawLine({
+    start: { x: L.MARGIN.left, y },
+    end:   { x: L.PAGE_WIDTH - L.MARGIN.right, y },
+    thickness: 0.5,
+    color: L.GRAY_BORDER,
+  });
+}
+
+module.exports = { buildPDFs, drawRule, TRACK_LABELS };
