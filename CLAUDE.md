@@ -13,7 +13,7 @@ Interactive advising worksheets for Illinois State University transfer students.
 
 1. **Schema** (complete) — JSON Schema v1.0 validated against 7 structurally different programs
 2. **HTML Renderer** (in progress) — Generalize the existing prototype to consume any program JSON
-3. **PDF Renderer** — Fillable AcroForm PDFs (no PDF JavaScript), one per gen-ed track
+3. **PDF Renderer** (substantially complete) — Fillable AcroForm PDFs (no PDF JavaScript), one per gen-ed track
 4. **Catalog Scraper** — Biannual pipeline: scrape catalog → validate → diff → human review
 5. **CC Articulation (stretch)** — Per-community-college worksheets for all 48 Illinois CCs
 
@@ -53,7 +53,29 @@ The **schema is the contract** between the scraper and both renderers. All compo
 │   └── modules/               # One file per fill type + utilities
 │       ├── build-xref-map.js  # Computes cross-reference row links at build time
 │       └── ...
-├── output/                    # Generated HTML worksheets (gitignored)
+├── pdf/
+│   ├── build-pdf.js           # CLI: node pdf/build-pdf.js --all | --program <id>
+│   ├── layout.js              # All layout constants (dimensions, colors, fonts, column widths)
+│   ├── template-pdf.js        # Document assembly, header, student info fields, panel placement
+│   └── modules/
+│       ├── row-pdf.js                    # Core row primitive, page-break logic, wrapText
+│       ├── table-pdf.js                  # Section/group title bars, table headers, notes
+│       ├── render-group-pdf.js           # Fill-type dispatch + whole-table page-break estimation
+│       ├── render-fixed-pdf.js
+│       ├── render-choose-one-pdf.js
+│       ├── render-choose-n-pdf.js
+│       ├── render-choose-n-grouped-pdf.js
+│       ├── render-choose-one-track-pdf.js
+│       ├── render-open-pdf.js
+│       ├── render-open-constrained-pdf.js
+│       ├── render-repeat-pdf.js
+│       ├── render-escrow-pdf.js
+│       ├── render-gened-pdf.js           # Left column: gen-ed track rendering + associates fields
+│       ├── render-major-pdf.js           # Right column: major groups (handles phased programs)
+│       ├── render-graduation-pdf.js      # Below gen-ed in left column: trackable checklist
+│       ├── render-college-pdf.js         # Full-width: college-level requirements
+│       └── render-compliance-pdf.js      # Full-width: compliance checklist grouped by category
+├── output/                    # Generated HTML worksheets and PDFs (gitignored)
 ├── prototype/
 │   └── degree-worksheet.html  # Working HTML prototype (single-file, hardcoded data)
 └── docs/
@@ -93,6 +115,27 @@ The **schema is the contract** between the scraper and both renderers. All compo
 - All 10 fill types rendered
 - Cross-reference propagation: checking a row that satisfies both major and gen-ed automatically checks the linked row in the other column (`build-xref-map.js` + `propagateXref()` in runtime)
 - `auto_fulfilled_by` rows show a visual indicator but are NOT pre-checked — only `exempt` rows start checked
+
+## Phase 3 PDF Renderer — Completed Features
+
+- Portrait letter (8.5"×11"), 0.5" margins, two-column layout (gen-ed left / major right)
+- All 10 fill types rendered with AcroForm checkboxes + text fields (no PDF JavaScript)
+- Three gen-ed tracks per program: `isu`, `iai`, `ad` (AD track shows IAI groups + associates credential fields)
+- Page breaks: independent pagination per column (`leftCtx`/`rightCtx` share doc/form, separate page refs); whole-table break estimation prevents headers from being orphaned at page bottom
+- `open` / `open_constrained` groups collapse the Requirement column (no label needed)
+- Graduation requirements panel: in left column below gen-ed, narrow mode (no note column)
+- College requirements panel: full-width, only rendered when program has `college_requirements`
+- Compliance requirements panel: full-width, grouped by category, only when present
+- Tested against all 7 schema programs — 21 PDFs (3 per program) build without errors
+
+## Building PDFs
+
+```bash
+node pdf/build-pdf.js --all                    # all programs
+node pdf/build-pdf.js --program acc-financial-bs  # one program
+```
+
+Output goes to `output/<program-id>-<track>.pdf`.
 
 ## Running the Prototype
 
