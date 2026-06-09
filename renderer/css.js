@@ -365,6 +365,12 @@ tr.sub-group-header td {
   border-bottom: 2px solid var(--red);
   padding-bottom: 4px;
 }
+.college-constraint-note {
+  font-size: 0.8em;
+  color: var(--gray-text);
+  font-style: italic;
+  margin: 0 0 8px;
+}
 .compliance-grid {
   display: flex;
   flex-wrap: wrap;
