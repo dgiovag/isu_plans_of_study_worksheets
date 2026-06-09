@@ -1,5 +1,7 @@
 'use strict';
 
+const fs   = require('fs');
+const path = require('path');
 const { PDFDocument, StandardFonts } = require('pdf-lib');
 const L = require('./layout');
 const resolveCourses        = require('../renderer/modules/resolve-courses');
@@ -38,12 +40,15 @@ async function buildOnePDF(program, track) {
   const fontBold = await doc.embedFont(StandardFonts.HelveticaBold);
   const fonts = { reg: fontReg, bold: fontBold };
 
+  const wordmarkBytes = fs.readFileSync(path.join(__dirname, '../images/ISU-wordmark.png'));
+  const wordmarkImage = await doc.embedPng(wordmarkBytes);
+
   const courseMap = resolveCourses(program);
 
   const page = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
   const form = doc.getForm();
 
-  const afterHeader     = drawHeader(page, prog, track, fonts);
+  const afterHeader     = drawHeader(page, prog, track, fonts, wordmarkImage);
   const afterDisclaimer = drawDisclaimer(page, afterHeader, prog, fonts);
   const bodyY           = drawStudentInfo(page, form, afterDisclaimer, fonts);
 
@@ -85,31 +90,34 @@ async function buildOnePDF(program, track) {
 }
 
 // Draws the top header block; returns the y-coordinate immediately below it.
-function drawHeader(page, prog, track, fonts) {
+function drawHeader(page, prog, track, fonts, wordmarkImage) {
   const W = L.PAGE_WIDTH;
   const H = L.PAGE_HEIGHT;
 
   // Red bar
   page.drawRectangle({ x: 0, y: H - 5, width: W, height: 5, color: L.RED });
 
-  // Institution label
-  page.drawText('Illinois State University', {
-    x: L.MARGIN.left, y: H - 17,
-    size: L.FONT.institution, font: fonts.reg, color: L.RED,
+  // Wordmark image — left-aligned, 40pt tall, scaled proportionally
+  const IMG_H = 40;
+  const IMG_W = Math.round(IMG_H * (wordmarkImage.width / wordmarkImage.height));
+  page.drawImage(wordmarkImage, {
+    x: L.MARGIN.left, y: H - 5 - IMG_H - 3,
+    width: IMG_W, height: IMG_H,
   });
 
-  // Program title + degree
+  // Program title + degree — to the right of wordmark
+  const textX = L.MARGIN.left + IMG_W + 12;
   const titleText = prog.sequence
     ? `${prog.title} — ${prog.sequence}, ${prog.degree}`
     : `${prog.title}, ${prog.degree}`;
   page.drawText(titleText, {
-    x: L.MARGIN.left, y: H - 31,
+    x: textX, y: H - 20,
     size: L.FONT.programTitle, font: fonts.bold, color: L.BLACK,
   });
 
   // Track + catalog year
   page.drawText(`Gen-Ed Track: ${TRACK_LABELS[track]}   ·   Catalog Year: ${prog.catalog_year}`, {
-    x: L.MARGIN.left, y: H - 44,
+    x: textX, y: H - 35,
     size: 8, font: fonts.reg, color: L.BLACK,
   });
 
