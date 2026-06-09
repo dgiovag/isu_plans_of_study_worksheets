@@ -106,21 +106,48 @@ function buildSlots(rule, coursesMap) {
 // Major groups from a sequence block
 // ---------------------------------------------------------------------------
 
+// Convert a rule name to a stable group ID slug: "Required courses" → "required_courses"
+function ruleSlug(name) {
+  return (name || 'group')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .slice(0, 32);
+}
+
+// Try to parse a course count and credit minimum from a freeformText value string.
+// "Complete 5 (15 credit hours)…" → { count: 5, minimum_hours: 15 }
+function parseFreeformCounts(text) {
+  const countMatch = (text || '').match(/complete\s+(\d+)/i);
+  const creditsMatch = (text || '').match(/\((\d+)\s+credit\s+hours?\)/i);
+  return {
+    count:         countMatch   ? parseInt(countMatch[1],   10) : null,
+    minimum_hours: creditsMatch ? parseInt(creditsMatch[1], 10) : null,
+  };
+}
+
 // Returns { groups: [...schema group objects], courseGroupIds: Set<string> }
-function buildMajorGroups(seqBlock, coursesMap) {
+function buildMajorGroups(seqBlock, coursesMap, warnings) {
   const groups = [];
   const allGroupIds = new Set();
-  let electiveIndex = 0;
+  // Track used slugs within this sequence to ensure unique group IDs
+  const usedSlugs = new Map();
+
+  function uniqueId(name) {
+    const slug = ruleSlug(name);
+    const n = usedSlugs.get(slug) ?? 0;
+    usedSlugs.set(slug, n + 1);
+    return n === 0 ? `major.${slug}` : `major.${slug}_${n + 1}`;
+  }
 
   for (const rule of (seqBlock.rules ?? [])) {
-    if (rule.value?.condition !== 'courses') continue;
-
-    if (rule.condition === 'completedAllOf') {
+    // --- completedAllOf: fixed required courses ---
+    if (rule.condition === 'completedAllOf' && rule.value?.condition === 'courses') {
       const { slots, courseGroupIds } = buildSlots(rule, coursesMap);
       courseGroupIds.forEach(id => allGroupIds.add(id));
 
       const group = {
-        id: 'major.required',
+        id: uniqueId(rule.name || 'Required Courses'),
         title: rule.name || 'Required Courses',
         fill: 'fixed',
         slots,
@@ -128,8 +155,10 @@ function buildMajorGroups(seqBlock, coursesMap) {
       if (rule.notes) group.note = stripHtml(rule.notes);
       groups.push(group);
 
-    } else if (rule.condition === 'completeVariableCoursesAndVariableCredits'
-            || rule.condition === 'completedAtLeastXOf') {
+    // --- completeVariableCoursesAndVariableCredits / completedAtLeastXOf: choose_n ---
+    } else if ((rule.condition === 'completeVariableCoursesAndVariableCredits'
+             || rule.condition === 'completedAtLeastXOf')
+            && rule.value?.condition === 'courses') {
 
       const options = [];
       for (const entry of (rule.value?.values ?? [])) {
@@ -140,18 +169,59 @@ function buildMajorGroups(seqBlock, coursesMap) {
         }
       }
 
-      const suffix = electiveIndex > 0 ? String(electiveIndex) : '';
       const group = {
-        id: `major.electives${suffix}`,
+        id: uniqueId(rule.name || 'Electives'),
         title: rule.name || 'Electives',
         fill: 'choose_n',
         n: rule.minCourses ?? rule.restriction,
-        minimum_hours: rule.minCredits,
         options,
       };
+      if (rule.minCredits != null) group.minimum_hours = rule.minCredits;
       if (rule.notes) group.note = stripHtml(rule.notes);
       groups.push(group);
-      electiveIndex++;
+
+    // --- minimumCredits: choose_n pool with credit-hour floor ---
+    } else if (rule.condition === 'minimumCredits' && rule.value?.condition === 'courses') {
+      const options = [];
+      for (const entry of (rule.value?.values ?? [])) {
+        for (const id of (entry.value ?? [])) {
+          allGroupIds.add(id);
+          const c = coursesMap.get(id);
+          if (c) options.push(c.normId);
+        }
+      }
+
+      const minHrs = rule.restriction ?? null;
+      const group = {
+        id: uniqueId(rule.name || 'Pool'),
+        title: rule.name || 'Pool',
+        fill: 'choose_n',
+        options,
+      };
+      if (minHrs != null) group.minimum_hours = minHrs;
+      if (rule.notes) group.note = stripHtml(rule.notes);
+      groups.push(group);
+
+      if (minHrs == null) {
+        warnings.push(`REVIEW ${group.id}: minimumCredits rule has no restriction value — set minimum_hours manually`);
+      }
+
+    // --- freeformText: open group with note text (no structured course list) ---
+    } else if (rule.condition === 'freeformText') {
+      const { count, minimum_hours } = parseFreeformCounts(String(rule.value ?? ''));
+      const noteText = rule.notes ? stripHtml(rule.notes) : String(rule.value ?? '').trim();
+
+      const group = {
+        id: uniqueId(rule.name || 'Freeform'),
+        title: rule.name || 'Requirements',
+        fill: 'open',
+      };
+      if (count         != null) group.count         = count;
+      if (minimum_hours != null) group.minimum_hours = minimum_hours;
+      if (noteText)              group.note           = noteText;
+      groups.push(group);
+
+      warnings.push(`REVIEW ${group.id}: freeformText rule — no structured course list; course options must be added manually`);
     }
   }
 
@@ -381,7 +451,7 @@ function transformProgram(program, rawCourses, opts = {}) {
 
   // --- Build major groups ---
   const { groups: majorGroups, courseGroupIds } = seqBlock
-    ? buildMajorGroups(seqBlock, coursesMap)
+    ? buildMajorGroups(seqBlock, coursesMap, warnings)
     : { groups: [], courseGroupIds: new Set() };
 
   // --- Collect required courses for gen-ed overlay ---
