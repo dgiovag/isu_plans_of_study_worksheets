@@ -211,17 +211,24 @@ For the scraper's purpose (knowing whether a program is exempt from a gen-ed cat
 3. Scan each course's `attributes` array for the `GE14 - *` pattern.
 4. Any `GE14` attribute on a required course means that gen-ed category is satisfied by the major.
 
-### Known `GE14` attribute → schema gen-ed ID mappings (partial)
+### Known `GE14` attribute → schema gen-ed ID mappings
 
-These were observed across the Accounting BS course data. A full inventory requires a scan across all programs.
+Observed across Accounting BS, Art History BA, and Physics Teacher Ed BS course data. A full inventory across all programs may surface additional values.
 
-| Course attribute | ISU gen-ed category |
-|---|---|
-| `GE14 - SS` | Social Sciences (`isu.social_sciences`) |
-| `GE14 - QR` | Quantitative Reasoning (`isu.quantitative_reasoning` or similar) |
-| `GE14 - MAT` | Mathematics (`isu.mathematics`) |
+| Course attribute | ISU gen-ed category | Notes |
+|---|---|---|
+| `GE14 - MAT` | Mathematics (`isu.mathematics`) | |
+| `GE14 - QR` | Quantitative Reasoning (`isu.quantitative_reasoning`) | |
+| `GE14 - QR-B.A.DEG` | Quantitative Reasoning (`isu.quantitative_reasoning`) | B.A. programs only; seen on language 115 courses in Art History |
+| `GE14 - SS` | Social Sciences (`isu.social_sciences`) | |
+| `GE14 - FA` | Fine Arts (`isu.fine_arts`) | |
+| `GE14 - HUM` | Humanities (`isu.humanities`) | |
+| `GE14 - NSB` | Natural Science — Biology (`isu.natural_science`) | |
+| `GE14 - NSAC` | Natural Science — Chemistry (`isu.natural_science`) | "Alternate" NS designator |
+| `GE14 - NSAP` | Natural Science — Physics (`isu.natural_science`) | "Alternate" NS designator |
+| `GE14 - SCMT` | Science, Math, & Technology (`isu.science_math_technology`) | |
 
-Additional `GE14 - *` values (FA = Fine Arts, NS = Natural Sciences, HL = Humanities/Literature, etc.) will surface when scanning programs with those exemptions (e.g. Music for Fine Arts). A one-time scan of all program courses will produce the complete mapping.
+The `NSAC`/`NSAP` "alternate" NS codes appear on courses in majors that require discipline-specific lab sciences (e.g., Physics Teacher Ed). They map to the same `isu.natural_science` gen-ed category as the plain `NSB` code.
 
 Note: `GE27 - *` attributes also exist (seen on PSY 138). These likely correspond to a newer catalog year's gen-ed structure and may need separate handling.
 

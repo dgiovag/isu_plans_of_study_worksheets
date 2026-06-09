@@ -15,6 +15,9 @@ Interactive advising worksheets for Illinois State University transfer students.
 2. **HTML Renderer** (in progress) — Generalize the existing prototype to consume any program JSON
 3. **PDF Renderer** (substantially complete) — Fillable AcroForm PDFs (no PDF JavaScript), one per gen-ed track
 4. **Catalog Scraper** — Biannual pipeline: scrape catalog → validate → diff → human review
+   - API research complete: see `docs/coursedog-api.md` (CourseDog, no auth required, GE14-* attribute strategy confirmed)
+   - Gen-ed attribute verification done for 3 of 7 programs: ACC (Financial Accounting), Art History, Physics Teacher Ed
+   - **Open item:** MAT 121 in Accounting carries `GE14 - QR` (not `GE14 - MAT`) in CourseDog, but the JSON has it satisfying `isu.mathematics`. Needs human/catalog verification — MAT 121 may presuppose the math gen-ed requirement rather than satisfy it.
 5. **CC Articulation (stretch)** — Per-community-college worksheets for all 48 Illinois CCs
 
 ## Architecture
