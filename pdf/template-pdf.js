@@ -4,6 +4,7 @@ const { PDFDocument, StandardFonts } = require('pdf-lib');
 const L = require('./layout');
 const resolveCourses        = require('../renderer/modules/resolve-courses');
 const { renderMajor }       = require('./modules/render-major-pdf');
+const { wrapText }          = require('./modules/row-pdf');
 const { renderGenEd }       = require('./modules/render-gened-pdf');
 const { renderGraduation }  = require('./modules/render-graduation-pdf');
 const { renderCollege }     = require('./modules/render-college-pdf');
@@ -42,8 +43,9 @@ async function buildOnePDF(program, track) {
   const page = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
   const form = doc.getForm();
 
-  const afterHeader = drawHeader(page, prog, track, fonts);
-  const bodyY       = drawStudentInfo(page, form, afterHeader, fonts);
+  const afterHeader     = drawHeader(page, prog, track, fonts);
+  const afterDisclaimer = drawDisclaimer(page, afterHeader, prog, fonts);
+  const bodyY           = drawStudentInfo(page, form, afterDisclaimer, fonts);
 
   // Two independent rendering contexts — same doc/form, separate page refs
   // so each column's page breaks don't interfere with each other.
@@ -114,6 +116,29 @@ function drawHeader(page, prog, track, fonts) {
   drawRule(page, ruleY);
 
   return ruleY - 4;
+}
+
+// Draws the planning disclaimer below the header rule; returns y below the block.
+function drawDisclaimer(page, topY, prog, fonts) {
+  const SIZE   = L.FONT.footnote; // 6.5pt
+  const LINE_H = 9;
+  const PAD    = 4;
+
+  const text =
+    'This worksheet is for planning purposes only and is not an authoritative document. ' +
+    'If you have questions about your degree progress, please consult with your advisor. ' +
+    'For accurate, current degree requirements, consult the University Catalog: ' +
+    prog.coursedog_url;
+
+  const lines = wrapText(fonts.reg, text, SIZE, L.CONTENT_WIDTH);
+
+  let y = topY - PAD - SIZE;
+  for (const line of lines) {
+    page.drawText(line, { x: L.MARGIN.left, y, size: SIZE, font: fonts.reg, color: L.GRAY_TEXT });
+    y -= LINE_H;
+  }
+
+  return y - PAD;
 }
 
 // Draws student info labels + AcroForm text fields; returns body start y.
