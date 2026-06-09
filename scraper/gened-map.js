@@ -23,10 +23,13 @@ const GE14 = {
   'LH':          'isu.language_humanities',
   'UST':         'isu.us_traditions',
   'ICL':         'isu.individuals_civic_life',
+  'COM':         'isu.communication_composition',  // Alt CC: Communication courses (COM 110)
+  'ENG':         'isu.communication_composition',  // Alt CC: English courses (ENG 101)
   'NSB':         'isu.natural_science',
   'NSAB':        'isu.natural_science',           // Alt NS: Biology (BSC)
   'NSC':         'isu.natural_science',           // Alt NS: Chemistry (CHE)
   'NSAC':        'isu.natural_science',           // Alt NS: Chemistry (legacy)
+  'NSG':         'isu.natural_science',           // Alt NS: Geology/Earth Science (GEO)
   'NSP':         'isu.natural_science',           // Alt NS: Physics (PHY)
   'NSAP':        'isu.natural_science',           // Alt NS: Physics (legacy)
   'SCMT':        'isu.science_math_technology',
@@ -37,6 +40,8 @@ const GE14 = {
 // Only QL confirmed so far; mapped by parallel structure to GE14 equivalents.
 const GE27 = {
   'QL':  'isu.quantitative_reasoning',  // Seen on PSY 138 alongside GE14-QR; treat as equivalent
+  'IS':  'isu.individuals_civic_life',  // Individuals and Society
+  'CA':  'isu.fine_arts',               // Creative Arts
 };
 
 // IAI attribute prefix (first letter(s) after "IAI - I") → schema IAI group ID.
@@ -113,7 +118,7 @@ function isBsmtAttr(attr) {
 // for use during scraper development to surface unmapped codes.
 function unknownAttrs(attrs) {
   // Non-gen-ed prefixes that are valid but don't map to any gen-ed group
-  const known = new Set(['GE14', 'GE27', 'IAI', 'MIAI', 'BSMT', 'AMAL', 'IDEA', 'WLDR', 'CLIN', 'STTC', 'CRSS']);
+  const known = new Set(['GE14', 'GE27', 'IAI', 'MIAI', 'BSMT', 'AMAL', 'IDEA', 'WLDR', 'CLIN', 'STTC', 'CRSS', 'HON']);
   return attrs.filter(a => {
     const parsed = parseAttr(a);
     if (!parsed) return true;

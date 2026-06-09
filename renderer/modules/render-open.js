@@ -24,10 +24,16 @@ module.exports = function renderOpen(group, courseMap, prefix, opts) {
       const label = count === 1 ? esc(group.title) : `${esc(group.title)} #${i + 1}`;
       rows.push(makeRow(rowId, prefix, label, rowDesc, { autoFulfilled: true }));
 
-    } else if (o.autoFulfilledCourses && i < o.autoFulfilledCourses.length) {
-      const courseId = o.autoFulfilledCourses[i];
-      const course   = courseMap[courseId];
-      const label    = course ? esc(course.code) : esc(courseId);
+    } else if (o.autoFulfilledCourses && o.autoFulfilledCourses.length > 0 && i < count) {
+      // More courses than slots: show all on every row so either side of the
+      // worksheet matches what the major side lists (e.g. FRE/GER/ITA/SPA 115).
+      // Exact 1:1 match: show the course for this slot index as before.
+      const courseIds = o.autoFulfilledCourses.length > count
+        ? o.autoFulfilledCourses
+        : [o.autoFulfilledCourses[i]];
+      const label = courseIds
+        .map(id => { const c = courseMap[id]; return c ? esc(c.code) : esc(id); })
+        .join(' / ');
       rows.push(makeRow(rowId, prefix, label, rowDesc, { autoFulfilled: true }));
 
     } else {

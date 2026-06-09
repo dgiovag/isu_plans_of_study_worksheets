@@ -67,9 +67,10 @@ function buildCoursesMap(rawCourses) {
     if (!gid) continue;
     const normId = (c.subjectCode + c.courseNumber).toUpperCase();
     const code   = c.subjectCode + ' ' + c.courseNumber;
-    const credits = c.credits?.numberOfCredits
-      ?? c.credits?.creditHours?.min
-      ?? 0;
+    const raw = c.credits?.numberOfCredits;
+    const credits = (raw != null && raw !== 99)
+      ? raw
+      : (c.credits?.creditHours?.min ?? 0);
     map.set(gid, { normId, code, credits, attributes: c.attributes ?? [] });
   }
   return map;
@@ -363,6 +364,9 @@ function buildCoursesSection(majorGroups, coursesMap, warnings) {
     for (const gid of c.attributes.flatMap(a => attributeToGenedIds(a))) {
       if (!fulfills.includes(gid)) fulfills.push(gid);
     }
+    if (c.credits === 0) {
+      warnings.push(`REVIEW ${courseId}: credits resolved to 0 — CourseDog may store variable credits; set manually`);
+    }
     courses.push({ id: courseId, code: c.code, credits: c.credits, fulfills });
   }
 
@@ -425,24 +429,33 @@ function transformProgram(program, rawCourses, opts = {}) {
   const coursesMap = buildCoursesMap(rawCourses);
 
   // --- Find the target sequence block ---
+  // Multi-sequence programs use requirementLevel "sequence (subplan)".
+  // Single-sequence programs store requirements at "plan (major/program)" instead.
   const seqBlocks = (program.requisites?.requisitesSimple ?? [])
     .filter(b => b.requirementLevel === 'sequence (subplan)' && b.showInCatalog !== false);
 
+  const planBlocks = (program.requisites?.requisitesSimple ?? [])
+    .filter(b => b.requirementLevel === 'plan (major/program)' && b.showInCatalog !== false);
+
   let seqBlock;
-  if (seqBlocks.length === 0) {
-    warnings.push('No sequence (subplan) blocks found — major groups will be empty');
-  } else if (opts.sequenceName) {
-    seqBlock = seqBlocks.find(b =>
-      b.name.toLowerCase().includes(opts.sequenceName.toLowerCase()));
-    if (!seqBlock) {
-      const names = seqBlocks.map(b => `"${b.name}"`).join(', ');
-      throw new Error(`Sequence "${opts.sequenceName}" not found.\nAvailable: ${names}`);
+  if (seqBlocks.length > 0) {
+    if (opts.sequenceName) {
+      seqBlock = seqBlocks.find(b =>
+        b.name.toLowerCase().includes(opts.sequenceName.toLowerCase()));
+      if (!seqBlock) {
+        const names = seqBlocks.map(b => `"${b.name}"`).join(', ');
+        throw new Error(`Sequence "${opts.sequenceName}" not found.\nAvailable: ${names}`);
+      }
+    } else if (seqBlocks.length === 1) {
+      seqBlock = seqBlocks[0];
+    } else {
+      warnings.push(`Multiple sequences: ${seqBlocks.map(b => b.name).join(' | ')} — using first. Pass opts.sequenceName to select.`);
+      seqBlock = seqBlocks[0];
     }
-  } else if (seqBlocks.length === 1) {
-    seqBlock = seqBlocks[0];
+  } else if (planBlocks.length > 0) {
+    seqBlock = planBlocks[0];
   } else {
-    warnings.push(`Multiple sequences: ${seqBlocks.map(b => b.name).join(' | ')} — using first. Pass opts.sequenceName to select.`);
-    seqBlock = seqBlocks[0];
+    warnings.push('No sequence (subplan) or plan (major/program) blocks found — major groups will be empty');
   }
 
   // --- Parse sequence metadata ---

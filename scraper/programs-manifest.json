@@ -1,0 +1,2102 @@
+[
+  {
+    "code": "ACCNTCYBS",
+    "degree": "BS",
+    "displayName": "Accountancy - Bachelor of Science",
+    "sequence": "Accounting Information Systems Sequence",
+    "programId": "accntcybs-accounting-information-systems"
+  },
+  {
+    "code": "ACCNTCYBS",
+    "degree": "BS",
+    "displayName": "Accountancy - Bachelor of Science",
+    "sequence": "Accounting Business Analytics Sequence",
+    "programId": "accntcybs-accounting-business-analytics"
+  },
+  {
+    "code": "ACCNTCYBS",
+    "degree": "BS",
+    "displayName": "Accountancy - Bachelor of Science",
+    "sequence": "Financial Accounting Sequence",
+    "programId": "accntcybs-financial-accounting"
+  },
+  {
+    "code": "ACCNTCYBS",
+    "degree": "BS",
+    "displayName": "Accountancy - Bachelor of Science",
+    "sequence": "Business Information Systems Accounting Sequence",
+    "programId": "accntcybs-business-information-systems-accounting"
+  },
+  {
+    "code": "AGRIBS",
+    "degree": "BS",
+    "displayName": "Agriculture - Bachelor of Science",
+    "sequence": "Agribusiness Sequence",
+    "programId": "agribs-agribusiness"
+  },
+  {
+    "code": "AGRIBS",
+    "degree": "BS",
+    "displayName": "Agriculture - Bachelor of Science",
+    "sequence": "Agriculture Communication and Leadership Sequence",
+    "programId": "agribs-agriculture-communication-and-leadership"
+  },
+  {
+    "code": "AGRIBS",
+    "degree": "BS",
+    "displayName": "Agriculture - Bachelor of Science",
+    "sequence": "Agronomy Management Sequence",
+    "programId": "agribs-agronomy-management"
+  },
+  {
+    "code": "AGRIBS",
+    "degree": "BS",
+    "displayName": "Agriculture - Bachelor of Science",
+    "sequence": "Animal Industry Management Sequence",
+    "programId": "agribs-animal-industry-management"
+  },
+  {
+    "code": "AGRIBS",
+    "degree": "BS",
+    "displayName": "Agriculture - Bachelor of Science",
+    "sequence": "Animal Science Sequence",
+    "programId": "agribs-animal-science"
+  },
+  {
+    "code": "AGRIBS",
+    "degree": "BS",
+    "displayName": "Agriculture - Bachelor of Science",
+    "sequence": "Crop and Soil Sequence",
+    "programId": "agribs-crop-and-soil"
+  },
+  {
+    "code": "AGRIBS",
+    "degree": "BS",
+    "displayName": "Agriculture - Bachelor of Science",
+    "sequence": "Food Industry Management Sequence",
+    "programId": "agribs-food-industry-management"
+  },
+  {
+    "code": "AGRIBS",
+    "degree": "BS",
+    "displayName": "Agriculture - Bachelor of Science",
+    "sequence": "Horticulture and Landscape Management",
+    "programId": "agribs-horticulture-and-landscape-management"
+  },
+  {
+    "code": "AGRIBS",
+    "degree": "BS",
+    "displayName": "Agriculture - Bachelor of Science",
+    "sequence": "Pre-Veterinary Medicine Sequence",
+    "programId": "agribs-pre-veterinary-medicine"
+  },
+  {
+    "code": "AGRIBS",
+    "degree": "BS",
+    "displayName": "Agriculture - Bachelor of Science",
+    "sequence": "Agriculture Teacher Education Sequence",
+    "programId": "agribs-agriculture-teacher-education"
+  },
+  {
+    "code": "ANTBA",
+    "degree": "BA",
+    "displayName": "Anthropology - Bachelor of Arts",
+    "sequence": "Anthropology Sequence",
+    "programId": "antba-anthropology"
+  },
+  {
+    "code": "ANTBA",
+    "degree": "BA",
+    "displayName": "Anthropology - Bachelor of Arts",
+    "sequence": "Accelerated Anthropology Sequence",
+    "programId": "antba-accelerated-anthropology"
+  },
+  {
+    "code": "ANTBS",
+    "degree": "BS",
+    "displayName": "Anthropology - Bachelor of Science",
+    "sequence": "Anthropology Sequence",
+    "programId": "antbs-anthropology"
+  },
+  {
+    "code": "ANTBS",
+    "degree": "BS",
+    "displayName": "Anthropology - Bachelor of Science",
+    "sequence": "Accelerated Anthropology Sequence",
+    "programId": "antbs-accelerated-anthropology"
+  },
+  {
+    "code": "ARTBA",
+    "degree": "BA",
+    "displayName": "Art - Bachelor of Arts",
+    "sequence": "Art and Design Sequence",
+    "programId": "artba-art-and-design"
+  },
+  {
+    "code": "ARTBA",
+    "degree": "BA",
+    "displayName": "Art - Bachelor of Arts",
+    "sequence": "Art History Sequence",
+    "programId": "artba-art-history"
+  },
+  {
+    "code": "ARTBA",
+    "degree": "BA",
+    "displayName": "Art - Bachelor of Arts",
+    "sequence": "Graphic Design sequence",
+    "programId": "artba-graphic-design"
+  },
+  {
+    "code": "ARTBFA",
+    "degree": "BFA",
+    "displayName": "Art - Bachelor of Fine Arts",
+    "sequence": "Studio Arts Sequence",
+    "programId": "artbfa-studio-arts"
+  },
+  {
+    "code": "ARTBFA",
+    "degree": "BFA",
+    "displayName": "Art - Bachelor of Fine Arts",
+    "sequence": "Graphic Design Sequence",
+    "programId": "artbfa-graphic-design"
+  },
+  {
+    "code": "ARTBS",
+    "degree": "BS",
+    "displayName": "Art - Bachelor of Science",
+    "sequence": "Art and Design Sequence",
+    "programId": "artbs-art-and-design"
+  },
+  {
+    "code": "ARTBS",
+    "degree": "BS",
+    "displayName": "Art - Bachelor of Science",
+    "sequence": "Art Teacher Education Sequence",
+    "programId": "artbs-art-teacher-education"
+  },
+  {
+    "code": "ARTBS",
+    "degree": "BS",
+    "displayName": "Art - Bachelor of Science",
+    "sequence": "Graphic Design Sequence",
+    "programId": "artbs-graphic-design"
+  },
+  {
+    "code": "CHEBICHMBS",
+    "degree": "BS",
+    "displayName": "Biochemistry - Bachelor of Science",
+    "sequence": null,
+    "programId": "chebichmbs"
+  },
+  {
+    "code": "BSCBS",
+    "degree": "BS",
+    "displayName": "Biological Sciences - Bachelor of Science",
+    "sequence": "General Biology Sequence",
+    "programId": "bscbs-general-biology"
+  },
+  {
+    "code": "BSCBS",
+    "degree": "BS",
+    "displayName": "Biological Sciences - Bachelor of Science",
+    "sequence": "Conservation Biology Sequence",
+    "programId": "bscbs-conservation-biology"
+  },
+  {
+    "code": "BSCBS",
+    "degree": "BS",
+    "displayName": "Biological Sciences - Bachelor of Science",
+    "sequence": "Physiology, Neuroscience and Behavior Sequence",
+    "programId": "bscbs-physiology-neuroscience-and-behavior"
+  },
+  {
+    "code": "BSCBS",
+    "degree": "BS",
+    "displayName": "Biological Sciences - Bachelor of Science",
+    "sequence": "Plant Biology Sequence",
+    "programId": "bscbs-plant-biology"
+  },
+  {
+    "code": "BSCBS",
+    "degree": "BS",
+    "displayName": "Biological Sciences - Bachelor of Science",
+    "sequence": "Zoology Sequence",
+    "programId": "bscbs-zoology"
+  },
+  {
+    "code": "BSCTEBS",
+    "degree": "BS",
+    "displayName": "Biological Sciences Teacher Education - Bachelor of Science",
+    "sequence": null,
+    "programId": "bsctebs"
+  },
+  {
+    "code": "BUSADMINBS",
+    "degree": "BS",
+    "displayName": "Business Administration - Bachelor of Science",
+    "sequence": "Traditional Business Administration Sequence",
+    "programId": "busadminbs-traditional-business-administration"
+  },
+  {
+    "code": "BUSADMINBS",
+    "degree": "BS",
+    "displayName": "Business Administration - Bachelor of Science",
+    "sequence": "Online Business Administration Sequence",
+    "programId": "busadminbs-online-business-administration"
+  },
+  {
+    "code": "BEBA",
+    "degree": "BA",
+    "displayName": "Business Education - Bachelor of Arts",
+    "sequence": "Business Teacher Education Sequence",
+    "programId": "beba-business-teacher-education"
+  },
+  {
+    "code": "BEBA",
+    "degree": "BA",
+    "displayName": "Business Education - Bachelor of Arts",
+    "sequence": "Training and Development Sequence",
+    "programId": "beba-training-and-development"
+  },
+  {
+    "code": "BEBS",
+    "degree": "BS",
+    "displayName": "Business Education - Bachelor of Science",
+    "sequence": "Business Teacher Education Sequence",
+    "programId": "bebs-business-teacher-education"
+  },
+  {
+    "code": "BEBS",
+    "degree": "BS",
+    "displayName": "Business Education - Bachelor of Science",
+    "sequence": "Training and Development Sequence",
+    "programId": "bebs-training-and-development"
+  },
+  {
+    "code": "BEBSED",
+    "degree": "BSED",
+    "displayName": "Business Education - Bachelor of Science in Education",
+    "sequence": "Business Teacher Education Sequence",
+    "programId": "bebsed"
+  },
+  {
+    "code": "BUSINFSYBS",
+    "degree": "BS",
+    "displayName": "Business Information Systems - Bachelor of Science",
+    "sequence": "General Business Information Systems Sequence",
+    "programId": "businfsybs-general-business-information-systems"
+  },
+  {
+    "code": "BUSINFSYBS",
+    "degree": "BS",
+    "displayName": "Business Information Systems - Bachelor of Science",
+    "sequence": "Business Analytics Sequence",
+    "programId": "businfsybs-business-analytics"
+  },
+  {
+    "code": "CHEBS",
+    "degree": "BS",
+    "displayName": "Chemistry - Bachelor of Science",
+    "sequence": "Chemistry Teacher Education Sequence",
+    "programId": "chebs-chemistry-teacher-education"
+  },
+  {
+    "code": "CHEBS",
+    "degree": "BS",
+    "displayName": "Chemistry - Bachelor of Science",
+    "sequence": "ACS Certified Chemistry Sequence",
+    "programId": "chebs-acs-certified-chemistry"
+  },
+  {
+    "code": "CHEBS",
+    "degree": "BS",
+    "displayName": "Chemistry - Bachelor of Science",
+    "sequence": "General Chemistry Sequence",
+    "programId": "chebs-general-chemistry"
+  },
+  {
+    "code": "CSDBS",
+    "degree": "BS",
+    "displayName": "Communication Sciences and Disorders - Bachelor of Science",
+    "sequence": null,
+    "programId": "csdbs"
+  },
+  {
+    "code": "COMSTBA",
+    "degree": "BA",
+    "displayName": "Communication Studies - Bachelor of Arts",
+    "sequence": "Interpersonal Communication Sequence",
+    "programId": "comstba-interpersonal-communication"
+  },
+  {
+    "code": "COMSTBA",
+    "degree": "BA",
+    "displayName": "Communication Studies - Bachelor of Arts",
+    "sequence": "Organizational and Leadership Communication Sequence",
+    "programId": "comstba-organizational-and-leadership-communication"
+  },
+  {
+    "code": "COMSTBA",
+    "degree": "BA",
+    "displayName": "Communication Studies - Bachelor of Arts",
+    "sequence": "Public Culture and Advocacy Communication Sequence",
+    "programId": "comstba-public-culture-and-advocacy-communication"
+  },
+  {
+    "code": "COMSTBS",
+    "degree": "BS",
+    "displayName": "Communication Studies - Bachelor of Science",
+    "sequence": "Interpersonal Communication Sequence",
+    "programId": "comstbs-interpersonal-communication"
+  },
+  {
+    "code": "COMSTBS",
+    "degree": "BS",
+    "displayName": "Communication Studies - Bachelor of Science",
+    "sequence": "Organizational and Leadership Communication Sequence",
+    "programId": "comstbs-organizational-and-leadership-communication"
+  },
+  {
+    "code": "COMSTBS",
+    "degree": "BS",
+    "displayName": "Communication Studies - Bachelor of Science",
+    "sequence": "Public Culture and Advocacy Communication Sequence",
+    "programId": "comstbs-public-culture-and-advocacy-communication"
+  },
+  {
+    "code": "ITNTCMNBS",
+    "degree": "BS",
+    "displayName": "Computer Networking - Bachelor of Science",
+    "sequence": null,
+    "programId": "itntcmnbs"
+  },
+  {
+    "code": "ITCOMPSCBS",
+    "degree": "BS",
+    "displayName": "Computer Science - Bachelor of Science",
+    "sequence": "General Computer Science Sequence",
+    "programId": "itcompscbs-general-computer-science"
+  },
+  {
+    "code": "ITCOMPSCBS",
+    "degree": "BS",
+    "displayName": "Computer Science - Bachelor of Science",
+    "sequence": "General Computer Science Accelerated Sequence",
+    "programId": "itcompscbs-general-computer-science-accelerated"
+  },
+  {
+    "code": "ITCOMPSCBS",
+    "degree": "BS",
+    "displayName": "Computer Science - Bachelor of Science",
+    "sequence": "Web Computing Sequence",
+    "programId": "itcompscbs-web-computing"
+  },
+  {
+    "code": "TECCSTBS",
+    "degree": "BS",
+    "displayName": "Computer Systems Technology - Bachelor of Science",
+    "sequence": null,
+    "programId": "teccstbs"
+  },
+  {
+    "code": "TECCONMNBS",
+    "degree": "BS",
+    "displayName": "Construction Management - Bachelor of Science",
+    "sequence": null,
+    "programId": "tecconmnbs"
+  },
+  {
+    "code": "CTKBA",
+    "degree": "BA",
+    "displayName": "Creative Technologies - Bachelor of Arts",
+    "sequence": "Creative Technologies Accelerated Sequence",
+    "programId": "ctkba-creative-technologies-accelerated"
+  },
+  {
+    "code": "CTKBA",
+    "degree": "BA",
+    "displayName": "Creative Technologies - Bachelor of Arts",
+    "sequence": "Animation + Entertainment Arts Sequence",
+    "programId": "ctkba-animation-entertainment-arts"
+  },
+  {
+    "code": "CTKBA",
+    "degree": "BA",
+    "displayName": "Creative Technologies - Bachelor of Arts",
+    "sequence": "Audio and Music Production Sequence",
+    "programId": "ctkba-audio-and-music-production"
+  },
+  {
+    "code": "CTKBA",
+    "degree": "BA",
+    "displayName": "Creative Technologies - Bachelor of Arts",
+    "sequence": "Game Design Sequence",
+    "programId": "ctkba-game-design"
+  },
+  {
+    "code": "CTKBA",
+    "degree": "BA",
+    "displayName": "Creative Technologies - Bachelor of Arts",
+    "sequence": "Interdisciplinary Technologies Sequence",
+    "programId": "ctkba-interdisciplinary-technologies"
+  },
+  {
+    "code": "CTKBS",
+    "degree": "BS",
+    "displayName": "Creative Technologies - Bachelor of Science",
+    "sequence": "Accelerated Sequence",
+    "programId": "ctkbs-accelerated"
+  },
+  {
+    "code": "CTKBS",
+    "degree": "BS",
+    "displayName": "Creative Technologies - Bachelor of Science",
+    "sequence": "Animation + Entertainment Arts Sequence",
+    "programId": "ctkbs-animation-entertainment-arts"
+  },
+  {
+    "code": "CTKBS",
+    "degree": "BS",
+    "displayName": "Creative Technologies - Bachelor of Science",
+    "sequence": "Audio and Music Production Sequence",
+    "programId": "ctkbs-audio-and-music-production"
+  },
+  {
+    "code": "CTKBS",
+    "degree": "BS",
+    "displayName": "Creative Technologies - Bachelor of Science",
+    "sequence": "Game Design Sequence",
+    "programId": "ctkbs-game-design"
+  },
+  {
+    "code": "CTKBS",
+    "degree": "BS",
+    "displayName": "Creative Technologies - Bachelor of Science",
+    "sequence": "Interdisciplinary Technologies Sequence",
+    "programId": "ctkbs-interdisciplinary-technologies"
+  },
+  {
+    "code": "CJSBA",
+    "degree": "BA",
+    "displayName": "Criminal Justice Sciences - Bachelor of Arts",
+    "sequence": "Criminal Justice Sciences Sequence",
+    "programId": "cjsba-criminal-justice-sciences"
+  },
+  {
+    "code": "CJSBA",
+    "degree": "BA",
+    "displayName": "Criminal Justice Sciences - Bachelor of Arts",
+    "sequence": "Accelerated Sequence",
+    "programId": "cjsba-accelerated"
+  },
+  {
+    "code": "CJSBA",
+    "degree": "BA",
+    "displayName": "Criminal Justice Sciences - Bachelor of Arts",
+    "sequence": "Forensic Investigations Sequence",
+    "programId": "cjsba-forensic-investigations"
+  },
+  {
+    "code": "CJSBS",
+    "degree": "BS",
+    "displayName": "Criminal Justice Sciences - Bachelor of Science",
+    "sequence": "Criminal Justice Sciences Sequence",
+    "programId": "cjsbs-criminal-justice-sciences"
+  },
+  {
+    "code": "CJSBS",
+    "degree": "BS",
+    "displayName": "Criminal Justice Sciences - Bachelor of Science",
+    "sequence": "Criminal Justice Sciences Accelerated Sequence",
+    "programId": "cjsbs-criminal-justice-sciences-accelerated"
+  },
+  {
+    "code": "CJSBS",
+    "degree": "BS",
+    "displayName": "Criminal Justice Sciences - Bachelor of Science",
+    "sequence": "Forensic Investigations Sequence",
+    "programId": "cjsbs-forensic-investigations"
+  },
+  {
+    "code": "ITCYSBS",
+    "degree": "BS",
+    "displayName": "Cybersecurity - Bachelor of Science",
+    "sequence": null,
+    "programId": "itcysbs"
+  },
+  {
+    "code": "TCHECEBS",
+    "degree": "BS",
+    "displayName": "Early Childhood Education - Bachelor of Science",
+    "sequence": "Licensure Sequence",
+    "programId": "tchecebs-licensure"
+  },
+  {
+    "code": "TCHECEBS",
+    "degree": "BS",
+    "displayName": "Early Childhood Education - Bachelor of Science",
+    "sequence": "Pedagogy Sequence",
+    "programId": "tchecebs-pedagogy"
+  },
+  {
+    "code": "TCHECEBS",
+    "degree": "BS",
+    "displayName": "Early Childhood Education - Bachelor of Science",
+    "sequence": "Online Licensure Sequence",
+    "programId": "tchecebs-online-licensure"
+  },
+  {
+    "code": "TCHECEBS",
+    "degree": "BS",
+    "displayName": "Early Childhood Education - Bachelor of Science",
+    "sequence": "Online Pedagogy Sequence",
+    "programId": "tchecebs-online-pedagogy"
+  },
+  {
+    "code": "TCHECEBSE",
+    "degree": "BSED",
+    "displayName": "Early Childhood Education - Bachelor of Science in Education",
+    "sequence": "Licensure Sequence",
+    "programId": "tchecebse-licensure"
+  },
+  {
+    "code": "TCHECEBSE",
+    "degree": "BSED",
+    "displayName": "Early Childhood Education - Bachelor of Science in Education",
+    "sequence": "Online Licensure Sequence",
+    "programId": "tchecebse-online-licensure"
+  },
+  {
+    "code": "TCHECEBSE",
+    "degree": "BSED",
+    "displayName": "Early Childhood Education - Bachelor of Science in Education",
+    "sequence": "Online Pedagogy Sequence",
+    "programId": "tchecebse-online-pedagogy"
+  },
+  {
+    "code": "ECOBA",
+    "degree": "BA",
+    "displayName": "Economics - Bachelor of Arts",
+    "sequence": "General Economics Sequence",
+    "programId": "ecoba-general-economics"
+  },
+  {
+    "code": "ECOBA",
+    "degree": "BA",
+    "displayName": "Economics - Bachelor of Arts",
+    "sequence": "Managerial Economics Sequence",
+    "programId": "ecoba-managerial-economics"
+  },
+  {
+    "code": "ECOBA",
+    "degree": "BA",
+    "displayName": "Economics - Bachelor of Arts",
+    "sequence": "Applied Economics Accelerated Sequence",
+    "programId": "ecoba-applied-economics-accelerated"
+  },
+  {
+    "code": "ECOBA",
+    "degree": "BA",
+    "displayName": "Economics - Bachelor of Arts",
+    "sequence": "Economics/MBA Accelerated Sequence",
+    "programId": "ecoba-economics-mba-accelerated"
+  },
+  {
+    "code": "ECOBS",
+    "degree": "BS",
+    "displayName": "Economics - Bachelor of Science",
+    "sequence": "General Economics Sequence",
+    "programId": "ecobs-general-economics"
+  },
+  {
+    "code": "ECOBS",
+    "degree": "BS",
+    "displayName": "Economics - Bachelor of Science",
+    "sequence": "Managerial Economics Sequence",
+    "programId": "ecobs-managerial-economics"
+  },
+  {
+    "code": "ECOBS",
+    "degree": "BS",
+    "displayName": "Economics - Bachelor of Science",
+    "sequence": "Applied Economics Accelerated Sequence",
+    "programId": "ecobs-applied-economics-accelerated"
+  },
+  {
+    "code": "ECOBS",
+    "degree": "BS",
+    "displayName": "Economics - Bachelor of Science",
+    "sequence": "Economics/MBA Accelerated Sequence",
+    "programId": "ecobs-economics-mba-accelerated"
+  },
+  {
+    "code": "ELEENGINBS",
+    "degree": "BS",
+    "displayName": "Electrical Engineering - Bachelor of Science",
+    "sequence": null,
+    "programId": "eleenginbs"
+  },
+  {
+    "code": "TCHELEBS",
+    "degree": "BS",
+    "displayName": "Elementary Education - Bachelor of Science",
+    "sequence": "General Elementary Education Sequence",
+    "programId": "tchelebs-general-elementary-education"
+  },
+  {
+    "code": "TCHELEBS",
+    "degree": "BS",
+    "displayName": "Elementary Education - Bachelor of Science",
+    "sequence": "Bilingual/Bicultural Sequence",
+    "programId": "tchelebs-bilingual-bicultural"
+  },
+  {
+    "code": "TCHELEBSED",
+    "degree": "BSED",
+    "displayName": "Elementary Education - Bachelor of Science in Education",
+    "sequence": "General Elementary Education Sequence",
+    "programId": "tchelebsed-general-elementary-education"
+  },
+  {
+    "code": "TCHELEBSED",
+    "degree": "BSED",
+    "displayName": "Elementary Education - Bachelor of Science in Education",
+    "sequence": "Bilingual/Bicultural Sequence",
+    "programId": "tchelebsed-bilingual-bicultural"
+  },
+  {
+    "code": "EGRENGINBS",
+    "degree": "BS",
+    "displayName": "Engineering - Bachelor of Science",
+    "sequence": null,
+    "programId": "egrenginbs"
+  },
+  {
+    "code": "TECENGTCBS",
+    "degree": "BS",
+    "displayName": "Engineering Technology - Bachelor of Science",
+    "sequence": null,
+    "programId": "tecengtcbs"
+  },
+  {
+    "code": "ENGBA",
+    "degree": "BA",
+    "displayName": "English - Bachelor of Arts",
+    "sequence": "Creative Writing Sequence",
+    "programId": "engba-creative-writing"
+  },
+  {
+    "code": "ENGBA",
+    "degree": "BA",
+    "displayName": "English - Bachelor of Arts",
+    "sequence": "Accelerated English Teacher Education Sequence",
+    "programId": "engba-accelerated-english-teacher-education"
+  },
+  {
+    "code": "ENGBA",
+    "degree": "BA",
+    "displayName": "English - Bachelor of Arts",
+    "sequence": "English Teacher Education Sequence",
+    "programId": "engba-english-teacher-education"
+  },
+  {
+    "code": "ENGBA",
+    "degree": "BA",
+    "displayName": "English - Bachelor of Arts",
+    "sequence": "General Sequence",
+    "programId": "engba-general"
+  },
+  {
+    "code": "ENGBA",
+    "degree": "BA",
+    "displayName": "English - Bachelor of Arts",
+    "sequence": "Literary and Cultural Studies Sequence",
+    "programId": "engba-literary-and-cultural-studies"
+  },
+  {
+    "code": "ENGBA",
+    "degree": "BA",
+    "displayName": "English - Bachelor of Arts",
+    "sequence": "Publishing Studies Sequence",
+    "programId": "engba-publishing-studies"
+  },
+  {
+    "code": "ENGBA",
+    "degree": "BA",
+    "displayName": "English - Bachelor of Arts",
+    "sequence": "Technical Writing and Rhetorics Sequence",
+    "programId": "engba-technical-writing-and-rhetorics"
+  },
+  {
+    "code": "ENGBS",
+    "degree": "BS",
+    "displayName": "English - Bachelor of Science",
+    "sequence": "Technical Writing and Rhetorics Sequence",
+    "programId": "engbs"
+  },
+  {
+    "code": "HSCENVHLBS",
+    "degree": "BS",
+    "displayName": "Environmental Health and Sustainability - Bachelor of Science",
+    "sequence": null,
+    "programId": "hscenvhlbs"
+  },
+  {
+    "code": "GEOENSYSBS",
+    "degree": "BS",
+    "displayName": "Environmental Systems Science and Sustainability - Bachelor of Science",
+    "sequence": "Traditional Sequence",
+    "programId": "geoensysbs-traditional"
+  },
+  {
+    "code": "GEOENSYSBS",
+    "degree": "BS",
+    "displayName": "Environmental Systems Science and Sustainability - Bachelor of Science",
+    "sequence": "Accelerated Sequence",
+    "programId": "geoensysbs-accelerated"
+  },
+  {
+    "code": "KNREXSCIBS",
+    "degree": "BS",
+    "displayName": "Exercise Science - Bachelor of Science",
+    "sequence": "Allied Health Professions Sequence",
+    "programId": "knrexscibs-allied-health-professions"
+  },
+  {
+    "code": "KNREXSCIBS",
+    "degree": "BS",
+    "displayName": "Exercise Science - Bachelor of Science",
+    "sequence": "Health and Human Performance Sequence",
+    "programId": "knrexscibs-health-and-human-performance"
+  },
+  {
+    "code": "KNREXSCIBS",
+    "degree": "BS",
+    "displayName": "Exercise Science - Bachelor of Science",
+    "sequence": "Athletic Training Accelerated Sequence",
+    "programId": "knrexscibs-athletic-training-accelerated"
+  },
+  {
+    "code": "FCSBA",
+    "degree": "BA",
+    "displayName": "Family and Consumer Sciences - Bachelor of Arts",
+    "sequence": "Teacher Education Sequence",
+    "programId": "fcsba-teacher-education"
+  },
+  {
+    "code": "FCSBA",
+    "degree": "BA",
+    "displayName": "Family and Consumer Sciences - Bachelor of Arts",
+    "sequence": "General Sequence",
+    "programId": "fcsba-general"
+  },
+  {
+    "code": "FCSBS",
+    "degree": "BS",
+    "displayName": "Family and Consumer Sciences - Bachelor of Science",
+    "sequence": "Teacher Education Sequence",
+    "programId": "fcsbs-teacher-education"
+  },
+  {
+    "code": "FCSBS",
+    "degree": "BS",
+    "displayName": "Family and Consumer Sciences - Bachelor of Science",
+    "sequence": "General Sequence",
+    "programId": "fcsbs-general"
+  },
+  {
+    "code": "FCSFDMBA",
+    "degree": "BA",
+    "displayName": "Fashion Design & Merchandising - Bachelor of Arts",
+    "sequence": "Fashion Design and Product Development Sequence",
+    "programId": "fcsfdmba-fashion-design-and-product-development"
+  },
+  {
+    "code": "FCSFDMBA",
+    "degree": "BA",
+    "displayName": "Fashion Design & Merchandising - Bachelor of Arts",
+    "sequence": "Fashion Design and Product Development Accelerated Sequence",
+    "programId": "fcsfdmba-fashion-design-and-product-development-accelerated"
+  },
+  {
+    "code": "FCSFDMBA",
+    "degree": "BA",
+    "displayName": "Fashion Design & Merchandising - Bachelor of Arts",
+    "sequence": "Fashion Merchandising Sequence",
+    "programId": "fcsfdmba-fashion-merchandising"
+  },
+  {
+    "code": "FCSFDMBA",
+    "degree": "BA",
+    "displayName": "Fashion Design & Merchandising - Bachelor of Arts",
+    "sequence": "Fashion Merchandising Accelerated Sequence",
+    "programId": "fcsfdmba-fashion-merchandising-accelerated"
+  },
+  {
+    "code": "FCSFDMBS",
+    "degree": "BS",
+    "displayName": "Fashion Design & Merchandising - Bachelor of Science",
+    "sequence": "Fashion Design and Product Development Sequence",
+    "programId": "fcsfdmbs-fashion-design-and-product-development"
+  },
+  {
+    "code": "FCSFDMBS",
+    "degree": "BS",
+    "displayName": "Fashion Design & Merchandising - Bachelor of Science",
+    "sequence": "Fashion Design and Product Development Accelerated Sequence",
+    "programId": "fcsfdmbs-fashion-design-and-product-development-accelerated"
+  },
+  {
+    "code": "FCSFDMBS",
+    "degree": "BS",
+    "displayName": "Fashion Design & Merchandising - Bachelor of Science",
+    "sequence": "Fashion Merchandising Sequence",
+    "programId": "fcsfdmbs-fashion-merchandising"
+  },
+  {
+    "code": "FCSFDMBS",
+    "degree": "BS",
+    "displayName": "Fashion Design & Merchandising - Bachelor of Science",
+    "sequence": "Fashion Merchandising Accelerated Sequence",
+    "programId": "fcsfdmbs-fashion-merchandising-accelerated"
+  },
+  {
+    "code": "FINANCEBS",
+    "degree": "BS",
+    "displayName": "Finance - Bachelor of Science",
+    "sequence": "General Finance Sequence",
+    "programId": "financebs"
+  },
+  {
+    "code": "FCSFNDBA",
+    "degree": "BA",
+    "displayName": "Food, Nutrition, and Dietetics - Bachelor of Arts",
+    "sequence": "Dietetics Sequence",
+    "programId": "fcsfndba-dietetics"
+  },
+  {
+    "code": "FCSFNDBA",
+    "degree": "BA",
+    "displayName": "Food, Nutrition, and Dietetics - Bachelor of Arts",
+    "sequence": "Dietetics Accelerated Sequence",
+    "programId": "fcsfndba-dietetics-accelerated"
+  },
+  {
+    "code": "FCSFNDBA",
+    "degree": "BA",
+    "displayName": "Food, Nutrition, and Dietetics - Bachelor of Arts",
+    "sequence": "Food and Beverage Management Sequence",
+    "programId": "fcsfndba-food-and-beverage-management"
+  },
+  {
+    "code": "FCSFNDBA",
+    "degree": "BA",
+    "displayName": "Food, Nutrition, and Dietetics - Bachelor of Arts",
+    "sequence": "Food and Beverage Management Accelerated Sequence",
+    "programId": "fcsfndba-food-and-beverage-management-accelerated"
+  },
+  {
+    "code": "FCSFNDBS",
+    "degree": "BS",
+    "displayName": "Food, Nutrition, and Dietetics - Bachelor of Science",
+    "sequence": "Dietetics Sequence",
+    "programId": "fcsfndbs-dietetics"
+  },
+  {
+    "code": "FCSFNDBS",
+    "degree": "BS",
+    "displayName": "Food, Nutrition, and Dietetics - Bachelor of Science",
+    "sequence": "Dietetics Accelerated Sequence",
+    "programId": "fcsfndbs-dietetics-accelerated"
+  },
+  {
+    "code": "FCSFNDBS",
+    "degree": "BS",
+    "displayName": "Food, Nutrition, and Dietetics - Bachelor of Science",
+    "sequence": "Food and Beverage Management Sequence",
+    "programId": "fcsfndbs-food-and-beverage-management"
+  },
+  {
+    "code": "FCSFNDBS",
+    "degree": "BS",
+    "displayName": "Food, Nutrition, and Dietetics - Bachelor of Science",
+    "sequence": "Food and Beverage Management Accelerated Sequence",
+    "programId": "fcsfndbs-food-and-beverage-management-accelerated"
+  },
+  {
+    "code": "FREBA",
+    "degree": "BA",
+    "displayName": "French and Francophone Studies - Bachelor of Arts",
+    "sequence": "General Sequence",
+    "programId": "freba-general"
+  },
+  {
+    "code": "FREBA",
+    "degree": "BA",
+    "displayName": "French and Francophone Studies - Bachelor of Arts",
+    "sequence": "French Teacher Education Sequence",
+    "programId": "freba-french-teacher-education"
+  },
+  {
+    "code": "GEOBA",
+    "degree": "BA",
+    "displayName": "Geography - Bachelor of Arts",
+    "sequence": "Geography Traditional Sequence",
+    "programId": "geoba-geography-traditional"
+  },
+  {
+    "code": "GEOBA",
+    "degree": "BA",
+    "displayName": "Geography - Bachelor of Arts",
+    "sequence": "Geography Social Science Teacher Education Sequence",
+    "programId": "geoba-geography-social-science-teacher-education"
+  },
+  {
+    "code": "GEOBS",
+    "degree": "BS",
+    "displayName": "Geography - Bachelor of Science",
+    "sequence": "Geography Traditional Sequence",
+    "programId": "geobs-geography-traditional"
+  },
+  {
+    "code": "GEOBS",
+    "degree": "BS",
+    "displayName": "Geography - Bachelor of Science",
+    "sequence": "Geography Social Science Teacher Education Sequence",
+    "programId": "geobs-geography-social-science-teacher-education"
+  },
+  {
+    "code": "GEOLBS",
+    "degree": "BS",
+    "displayName": "Geology - Bachelor of Science",
+    "sequence": "Traditional Sequence",
+    "programId": "geolbs-traditional"
+  },
+  {
+    "code": "GEOLBS",
+    "degree": "BS",
+    "displayName": "Geology - Bachelor of Science",
+    "sequence": "Accelerated Sequence",
+    "programId": "geolbs-accelerated"
+  },
+  {
+    "code": "GEOLBS",
+    "degree": "BS",
+    "displayName": "Geology - Bachelor of Science",
+    "sequence": "Earth and Space Science Teacher Education Sequence",
+    "programId": "geolbs-earth-and-space-science-teacher-education"
+  },
+  {
+    "code": "GERBA",
+    "degree": "BA",
+    "displayName": "German - Bachelor of Arts",
+    "sequence": "General Sequence",
+    "programId": "gerba-general"
+  },
+  {
+    "code": "GERBA",
+    "degree": "BA",
+    "displayName": "German - Bachelor of Arts",
+    "sequence": "Teacher Education Sequence",
+    "programId": "gerba-teacher-education"
+  },
+  {
+    "code": "TECGRCMBS",
+    "degree": "BS",
+    "displayName": "Graphic Communications Technology - Bachelor of Science",
+    "sequence": null,
+    "programId": "tecgrcmbs"
+  },
+  {
+    "code": "HSCHIMBS",
+    "degree": "BS",
+    "displayName": "Health Informatics and Management - Bachelor of Science",
+    "sequence": "Health Informatics Sequence",
+    "programId": "hschimbs-health-informatics"
+  },
+  {
+    "code": "HSCHIMBS",
+    "degree": "BS",
+    "displayName": "Health Informatics and Management - Bachelor of Science",
+    "sequence": "Registered Health Information Technician to Health Informatics and Management (RHIT – HIM) Online Sequence",
+    "programId": "hschimbs-registered-health-information-technician-to-health-informatics-and-management-rhit-him-online"
+  },
+  {
+    "code": "HSCHIMBS",
+    "degree": "BS",
+    "displayName": "Health Informatics and Management - Bachelor of Science",
+    "sequence": "Healthcare Leadership Sequence",
+    "programId": "hschimbs-healthcare-leadership"
+  },
+  {
+    "code": "HSCHLTEDBS",
+    "degree": "BS",
+    "displayName": "Health Promotion and Education - Bachelor of Science",
+    "sequence": "Applied Health Sciences Sequence",
+    "programId": "hschltedbs-applied-health-sciences"
+  },
+  {
+    "code": "HSCHLTEDBS",
+    "degree": "BS",
+    "displayName": "Health Promotion and Education - Bachelor of Science",
+    "sequence": "Integrative Health and Wellness Sequence",
+    "programId": "hschltedbs-integrative-health-and-wellness"
+  },
+  {
+    "code": "HSCHLTEDBS",
+    "degree": "BS",
+    "displayName": "Health Promotion and Education - Bachelor of Science",
+    "sequence": "Public Health Sequence",
+    "programId": "hschltedbs-public-health"
+  },
+  {
+    "code": "HSCHLTEDBS",
+    "degree": "BS",
+    "displayName": "Health Promotion and Education - Bachelor of Science",
+    "sequence": "Public Health Accelerated Sequence",
+    "programId": "hschltedbs-public-health-accelerated"
+  },
+  {
+    "code": "HSCHEBSED",
+    "degree": "BSED",
+    "displayName": "Health Promotion and Education - Bachelor of Science in Education",
+    "sequence": "School Health Education Sequence",
+    "programId": "hschebsed"
+  },
+  {
+    "code": "HISBA",
+    "degree": "BA",
+    "displayName": "History - Bachelor of Arts",
+    "sequence": "General History Sequence",
+    "programId": "hisba-general-history"
+  },
+  {
+    "code": "HISBA",
+    "degree": "BA",
+    "displayName": "History - Bachelor of Arts",
+    "sequence": "General History Accelerated Sequence",
+    "programId": "hisba-general-history-accelerated"
+  },
+  {
+    "code": "HISBA",
+    "degree": "BA",
+    "displayName": "History - Bachelor of Arts",
+    "sequence": "History-Social Sciences Teacher Education Sequence",
+    "programId": "hisba-history-social-sciences-teacher-education"
+  },
+  {
+    "code": "HISBA",
+    "degree": "BA",
+    "displayName": "History - Bachelor of Arts",
+    "sequence": "Social Science Teacher Education Accelerated Sequence",
+    "programId": "hisba-social-science-teacher-education-accelerated"
+  },
+  {
+    "code": "HISBS",
+    "degree": "BS",
+    "displayName": "History - Bachelor of Science",
+    "sequence": "General History Sequence",
+    "programId": "hisbs-general-history"
+  },
+  {
+    "code": "HISBS",
+    "degree": "BS",
+    "displayName": "History - Bachelor of Science",
+    "sequence": "General History Accelerated Sequence",
+    "programId": "hisbs-general-history-accelerated"
+  },
+  {
+    "code": "HISBS",
+    "degree": "BS",
+    "displayName": "History - Bachelor of Science",
+    "sequence": "History-Social Sciences Teacher Education Sequence",
+    "programId": "hisbs-history-social-sciences-teacher-education"
+  },
+  {
+    "code": "HISBS",
+    "degree": "BS",
+    "displayName": "History - Bachelor of Science",
+    "sequence": "Social Science Teacher Education Accelerated Sequence",
+    "programId": "hisbs-social-science-teacher-education-accelerated"
+  },
+  {
+    "code": "FCSHDFSBA",
+    "degree": "BA",
+    "displayName": "Human Development and Family Science - Bachelor of Arts",
+    "sequence": "Human Development and Family Science Sequence",
+    "programId": "fcshdfsba-human-development-and-family-science"
+  },
+  {
+    "code": "FCSHDFSBA",
+    "degree": "BA",
+    "displayName": "Human Development and Family Science - Bachelor of Arts",
+    "sequence": "Human Development and Family Science/Child Life Accelerated Sequence",
+    "programId": "fcshdfsba-human-development-and-family-science-child-life-accelerated"
+  },
+  {
+    "code": "FCSHDFSBS",
+    "degree": "BS",
+    "displayName": "Human Development and Family Science - Bachelor of Science",
+    "sequence": "Human Development and Family Science Sequence",
+    "programId": "fcshdfsbs-human-development-and-family-science"
+  },
+  {
+    "code": "FCSHDFSBS",
+    "degree": "BS",
+    "displayName": "Human Development and Family Science - Bachelor of Science",
+    "sequence": "Human Development and Family Science/Child Life Accelerated Sequence",
+    "programId": "fcshdfsbs-human-development-and-family-science-child-life-accelerated"
+  },
+  {
+    "code": "ITINFOSYBS",
+    "degree": "BS",
+    "displayName": "Information Systems - Bachelor of Science",
+    "sequence": "Artificial Intelligence and Decision Making Sequence",
+    "programId": "itinfosybs-artificial-intelligence-and-decision-making"
+  },
+  {
+    "code": "ITINFOSYBS",
+    "degree": "BS",
+    "displayName": "Information Systems - Bachelor of Science",
+    "sequence": "Integration of Enterprise Systems Sequence",
+    "programId": "itinfosybs-integration-of-enterprise-systems"
+  },
+  {
+    "code": "ITINFOSYBS",
+    "degree": "BS",
+    "displayName": "Information Systems - Bachelor of Science",
+    "sequence": "Systems Development/Analyst Sequence",
+    "programId": "itinfosybs-systems-development-analyst"
+  },
+  {
+    "code": "ITINFOSYBS",
+    "degree": "BS",
+    "displayName": "Information Systems - Bachelor of Science",
+    "sequence": "Web Application Development Sequence",
+    "programId": "itinfosybs-web-application-development"
+  },
+  {
+    "code": "ACCBSMPA",
+    "degree": "BS",
+    "displayName": "Integrated Bachelor of Science/Master of Professional Accountancy",
+    "sequence": "Accountancy and Information Systems Sequence",
+    "programId": "accbsmpa-accountancy-and-information-systems"
+  },
+  {
+    "code": "ACCBSMPA",
+    "degree": "BS",
+    "displayName": "Integrated Bachelor of Science/Master of Professional Accountancy",
+    "sequence": "Professional Accountancy Sequence",
+    "programId": "accbsmpa-professional-accountancy"
+  },
+  {
+    "code": "IDSBA",
+    "degree": "BA",
+    "displayName": "Interdisciplinary Studies - Bachelor of Arts",
+    "sequence": "Human and Education Services Sequence",
+    "programId": "idsba-human-and-education-services"
+  },
+  {
+    "code": "IDSBA",
+    "degree": "BA",
+    "displayName": "Interdisciplinary Studies - Bachelor of Arts",
+    "sequence": "Individualized Sequence",
+    "programId": "idsba-individualized"
+  },
+  {
+    "code": "IDSBA",
+    "degree": "BA",
+    "displayName": "Interdisciplinary Studies - Bachelor of Arts",
+    "sequence": "Liberal Studies Sequence",
+    "programId": "idsba-liberal-studies"
+  },
+  {
+    "code": "IDSBS",
+    "degree": "BS",
+    "displayName": "Interdisciplinary Studies - Bachelor of Science",
+    "sequence": "Human and Education Services Sequence",
+    "programId": "idsbs-human-and-education-services"
+  },
+  {
+    "code": "IDSBS",
+    "degree": "BS",
+    "displayName": "Interdisciplinary Studies - Bachelor of Science",
+    "sequence": "Individualized Sequence",
+    "programId": "idsbs-individualized"
+  },
+  {
+    "code": "IDSBS",
+    "degree": "BS",
+    "displayName": "Interdisciplinary Studies - Bachelor of Science",
+    "sequence": "Liberal Studies Sequence",
+    "programId": "idsbs-liberal-studies"
+  },
+  {
+    "code": "IDSDASCIBS",
+    "degree": "BS",
+    "displayName": "Interdisciplinary Studies Data Science - Bachelor of Science",
+    "sequence": "Big Data and Computational Intelligence Sequence",
+    "programId": "idsdascibs-big-data-and-computational-intelligence"
+  },
+  {
+    "code": "IDSDASCIBS",
+    "degree": "BS",
+    "displayName": "Interdisciplinary Studies Data Science - Bachelor of Science",
+    "sequence": "Business Analytics Sequence",
+    "programId": "idsdascibs-business-analytics"
+  },
+  {
+    "code": "IDSDASCIBS",
+    "degree": "BS",
+    "displayName": "Interdisciplinary Studies Data Science - Bachelor of Science",
+    "sequence": "Population Health Sequence",
+    "programId": "idsdascibs-population-health"
+  },
+  {
+    "code": "IDSDASCIBS",
+    "degree": "BS",
+    "displayName": "Interdisciplinary Studies Data Science - Bachelor of Science",
+    "sequence": "Social Demographic/Public Policy Analysis Sequence",
+    "programId": "idsdascibs-social-demographic-public-policy-analysis"
+  },
+  {
+    "code": "IDSDASCIBS",
+    "degree": "BS",
+    "displayName": "Interdisciplinary Studies Data Science - Bachelor of Science",
+    "sequence": "Individualized Plan Sequence",
+    "programId": "idsdascibs-individualized-plan"
+  },
+  {
+    "code": "FCSIDBA",
+    "degree": "BA",
+    "displayName": "Interior Design - Bachelor of Arts",
+    "sequence": "Interior Design Sequence",
+    "programId": "fcsidba-interior-design"
+  },
+  {
+    "code": "FCSIDBA",
+    "degree": "BA",
+    "displayName": "Interior Design - Bachelor of Arts",
+    "sequence": "Interior Design Accelerated Sequence",
+    "programId": "fcsidba-interior-design-accelerated"
+  },
+  {
+    "code": "FCSIDBS",
+    "degree": "BS",
+    "displayName": "Interior Design - Bachelor of Science",
+    "sequence": "Interior Design Sequence",
+    "programId": "fcsidbs-interior-design"
+  },
+  {
+    "code": "FCSIDBS",
+    "degree": "BS",
+    "displayName": "Interior Design - Bachelor of Science",
+    "sequence": "Interior Design Accelerated Sequence",
+    "programId": "fcsidbs-interior-design-accelerated"
+  },
+  {
+    "code": "INTLBUSBA",
+    "degree": "BA",
+    "displayName": "International Business - Bachelor of Arts",
+    "sequence": null,
+    "programId": "intlbusba"
+  },
+  {
+    "code": "INTLBUSBS",
+    "degree": "BS",
+    "displayName": "International Business - Bachelor of Science",
+    "sequence": null,
+    "programId": "intlbusbs"
+  },
+  {
+    "code": "COMJOURBA",
+    "degree": "BA",
+    "displayName": "Journalism - Bachelor of Arts",
+    "sequence": "Journalism Sequence",
+    "programId": "comjourba"
+  },
+  {
+    "code": "COMJOURBS",
+    "degree": "BS",
+    "displayName": "Journalism - Bachelor of Science",
+    "sequence": "Journalism Sequence",
+    "programId": "comjourbs"
+  },
+  {
+    "code": "POLLGLSTBA",
+    "degree": "BA",
+    "displayName": "Legal Studies - Bachelor of Arts",
+    "sequence": "General Legal Studies Sequence",
+    "programId": "pollglstba-general-legal-studies"
+  },
+  {
+    "code": "POLLGLSTBA",
+    "degree": "BA",
+    "displayName": "Legal Studies - Bachelor of Arts",
+    "sequence": "Language Integration Sequence",
+    "programId": "pollglstba-language-integration"
+  },
+  {
+    "code": "POLLGLSTBS",
+    "degree": "BS",
+    "displayName": "Legal Studies - Bachelor of Science",
+    "sequence": "General Legal Studies Sequence",
+    "programId": "pollglstbs-general-legal-studies"
+  },
+  {
+    "code": "POLLGLSTBS",
+    "degree": "BS",
+    "displayName": "Legal Studies - Bachelor of Science",
+    "sequence": "Language Integration Sequence",
+    "programId": "pollglstbs-language-integration"
+  },
+  {
+    "code": "MANAGMNTBS",
+    "degree": "BS",
+    "displayName": "Management - Bachelor of Science",
+    "sequence": "Entrepreneurship and Small Business Management Sequence",
+    "programId": "managmntbs-entrepreneurship-and-small-business-management"
+  },
+  {
+    "code": "MANAGMNTBS",
+    "degree": "BS",
+    "displayName": "Management - Bachelor of Science",
+    "sequence": "Human Resource Management Sequence",
+    "programId": "managmntbs-human-resource-management"
+  },
+  {
+    "code": "MANAGMNTBS",
+    "degree": "BS",
+    "displayName": "Management - Bachelor of Science",
+    "sequence": "Organizational Leadership Sequence",
+    "programId": "managmntbs-organizational-leadership"
+  },
+  {
+    "code": "MARKETNGBS",
+    "degree": "BS",
+    "displayName": "Marketing - Bachelor of Science",
+    "sequence": "Advanced Marketing Analytics Accelerated Sequence",
+    "programId": "marketngbs-advanced-marketing-analytics-accelerated"
+  },
+  {
+    "code": "MARKETNGBS",
+    "degree": "BS",
+    "displayName": "Marketing - Bachelor of Science",
+    "sequence": "Advanced Marketing Analytics Sequence",
+    "programId": "marketngbs-advanced-marketing-analytics"
+  },
+  {
+    "code": "MARKETNGBS",
+    "degree": "BS",
+    "displayName": "Marketing - Bachelor of Science",
+    "sequence": "General Sequence",
+    "programId": "marketngbs-general"
+  },
+  {
+    "code": "MARKETNGBS",
+    "degree": "BS",
+    "displayName": "Marketing - Bachelor of Science",
+    "sequence": "Integrated Marketing Communication Sequence",
+    "programId": "marketngbs-integrated-marketing-communication"
+  },
+  {
+    "code": "MARKETNGBS",
+    "degree": "BS",
+    "displayName": "Marketing - Bachelor of Science",
+    "sequence": "Professional Sales Sequence",
+    "programId": "marketngbs-professional-sales"
+  },
+  {
+    "code": "COMMSMEDBA",
+    "degree": "BA",
+    "displayName": "Mass Media - Bachelor of Arts",
+    "sequence": "Management, Promotion and Sales Sequence",
+    "programId": "commsmedba-management-promotion-and-sales"
+  },
+  {
+    "code": "COMMSMEDBA",
+    "degree": "BA",
+    "displayName": "Mass Media - Bachelor of Arts",
+    "sequence": "Media Arts Sequence",
+    "programId": "commsmedba-media-arts"
+  },
+  {
+    "code": "COMMSMEDBS",
+    "degree": "BS",
+    "displayName": "Mass Media - Bachelor of Science",
+    "sequence": "Management, Promotion and Sales Sequence",
+    "programId": "commsmedbs-management-promotion-and-sales"
+  },
+  {
+    "code": "COMMSMEDBS",
+    "degree": "BS",
+    "displayName": "Mass Media - Bachelor of Science",
+    "sequence": "Media Arts Sequence",
+    "programId": "commsmedbs-media-arts"
+  },
+  {
+    "code": "MATBA",
+    "degree": "BA",
+    "displayName": "Mathematics - Bachelor of Arts",
+    "sequence": "Actuarial Science Sequence",
+    "programId": "matba-actuarial-science"
+  },
+  {
+    "code": "MATBA",
+    "degree": "BA",
+    "displayName": "Mathematics - Bachelor of Arts",
+    "sequence": "Accelerated Sequence",
+    "programId": "matba-accelerated"
+  },
+  {
+    "code": "MATBA",
+    "degree": "BA",
+    "displayName": "Mathematics - Bachelor of Arts",
+    "sequence": "General Sequence",
+    "programId": "matba-general"
+  },
+  {
+    "code": "MATBA",
+    "degree": "BA",
+    "displayName": "Mathematics - Bachelor of Arts",
+    "sequence": "Teacher Education Sequence",
+    "programId": "matba-teacher-education"
+  },
+  {
+    "code": "MATBA",
+    "degree": "BA",
+    "displayName": "Mathematics - Bachelor of Arts",
+    "sequence": "Pedagogy Emphasis Sequence",
+    "programId": "matba-pedagogy-emphasis"
+  },
+  {
+    "code": "MATBA",
+    "degree": "BA",
+    "displayName": "Mathematics - Bachelor of Arts",
+    "sequence": "Statistics Sequence",
+    "programId": "matba-statistics"
+  },
+  {
+    "code": "MATBS",
+    "degree": "BS",
+    "displayName": "Mathematics - Bachelor of Science",
+    "sequence": "Actuarial Science Sequence",
+    "programId": "matbs-actuarial-science"
+  },
+  {
+    "code": "MATBS",
+    "degree": "BS",
+    "displayName": "Mathematics - Bachelor of Science",
+    "sequence": "Accelerated Sequence",
+    "programId": "matbs-accelerated"
+  },
+  {
+    "code": "MATBS",
+    "degree": "BS",
+    "displayName": "Mathematics - Bachelor of Science",
+    "sequence": "General Sequence",
+    "programId": "matbs-general"
+  },
+  {
+    "code": "MATBS",
+    "degree": "BS",
+    "displayName": "Mathematics - Bachelor of Science",
+    "sequence": "Teacher Education Sequence",
+    "programId": "matbs-teacher-education"
+  },
+  {
+    "code": "MATBS",
+    "degree": "BS",
+    "displayName": "Mathematics - Bachelor of Science",
+    "sequence": "Pedagogy Emphasis Sequence 80 Minimum Required Hours",
+    "programId": "matbs-pedagogy-emphasis-sequence-80-minimum-required-hours"
+  },
+  {
+    "code": "MATBS",
+    "degree": "BS",
+    "displayName": "Mathematics - Bachelor of Science",
+    "sequence": "Statistics Sequence",
+    "programId": "matbs-statistics"
+  },
+  {
+    "code": "MECENGINBS",
+    "degree": "BS",
+    "displayName": "Mechanical Engineering - Bachelor of Science",
+    "sequence": null,
+    "programId": "mecenginbs"
+  },
+  {
+    "code": "MEDLABSCBS",
+    "degree": "BS",
+    "displayName": "Medical Laboratory Science - Bachelor of Science",
+    "sequence": null,
+    "programId": "medlabscbs"
+  },
+  {
+    "code": "TCHMLEBS",
+    "degree": "BS",
+    "displayName": "Middle Level Teacher Education - Bachelor of Science",
+    "sequence": null,
+    "programId": "tchmlebs"
+  },
+  {
+    "code": "TCHMLEBSED",
+    "degree": "BSED",
+    "displayName": "Middle Level Teacher Education - Bachelor of Science in Education",
+    "sequence": null,
+    "programId": "tchmlebsed"
+  },
+  {
+    "code": "BMBMOLCLBS",
+    "degree": "BS",
+    "displayName": "Molecular and Cellular Biology - Bachelor of Science",
+    "sequence": null,
+    "programId": "bmbmolclbs"
+  },
+  {
+    "code": "MUSBA",
+    "degree": "BA",
+    "displayName": "Music - Bachelor of Arts",
+    "sequence": "Liberal Arts Sequence",
+    "programId": "musba"
+  },
+  {
+    "code": "MUSBM",
+    "degree": "BM",
+    "displayName": "Music - Bachelor of Music",
+    "sequence": "Music Therapy Sequence",
+    "programId": "musbm-music-therapy"
+  },
+  {
+    "code": "MUSBM",
+    "degree": "BM",
+    "displayName": "Music - Bachelor of Music",
+    "sequence": "Band and Orchestra Instruments Performance Sequence",
+    "programId": "musbm-band-and-orchestra-instruments-performance"
+  },
+  {
+    "code": "MUSBM",
+    "degree": "BM",
+    "displayName": "Music - Bachelor of Music",
+    "sequence": "Voice Performance Sequence",
+    "programId": "musbm-voice-performance"
+  },
+  {
+    "code": "MUSBM",
+    "degree": "BM",
+    "displayName": "Music - Bachelor of Music",
+    "sequence": "Piano Performance Sequence",
+    "programId": "musbm-piano-performance"
+  },
+  {
+    "code": "MUSBM",
+    "degree": "BM",
+    "displayName": "Music - Bachelor of Music",
+    "sequence": "Classical Guitar Performance Sequence",
+    "programId": "musbm-classical-guitar-performance"
+  },
+  {
+    "code": "MUSBM",
+    "degree": "BM",
+    "displayName": "Music - Bachelor of Music",
+    "sequence": "Jazz Studies Sequence",
+    "programId": "musbm-jazz-studies"
+  },
+  {
+    "code": "MUSBM",
+    "degree": "BM",
+    "displayName": "Music - Bachelor of Music",
+    "sequence": "Composition/Theory Emphasis Sequence",
+    "programId": "musbm-composition-theory-emphasis"
+  },
+  {
+    "code": "MUSBM",
+    "degree": "BM",
+    "displayName": "Music - Bachelor of Music",
+    "sequence": "Music Composition Sequence",
+    "programId": "musbm-music-composition"
+  },
+  {
+    "code": "MUSBM",
+    "degree": "BM",
+    "displayName": "Music - Bachelor of Music",
+    "sequence": "New Media Composition Sequence",
+    "programId": "musbm-new-media-composition"
+  },
+  {
+    "code": "MUSBMED",
+    "degree": "BME",
+    "displayName": "Music - Bachelor of Music Education",
+    "sequence": "Choral-General-Keyboard Sequence",
+    "programId": "musbmed-choral-general-keyboard"
+  },
+  {
+    "code": "MUSBMED",
+    "degree": "BME",
+    "displayName": "Music - Bachelor of Music Education",
+    "sequence": "Choral-General-Vocal Sequence",
+    "programId": "musbmed-choral-general-vocal"
+  },
+  {
+    "code": "MUSBMED",
+    "degree": "BME",
+    "displayName": "Music - Bachelor of Music Education",
+    "sequence": "Instrumental-Band Sequence",
+    "programId": "musbmed-instrumental-band"
+  },
+  {
+    "code": "MUSBMED",
+    "degree": "BME",
+    "displayName": "Music - Bachelor of Music Education",
+    "sequence": "Instrumental-Orchestra Sequence",
+    "programId": "musbmed-instrumental-orchestra"
+  },
+  {
+    "code": "MUSBS",
+    "degree": "BS",
+    "displayName": "Music - Bachelor of Science",
+    "sequence": "Liberal Arts Sequence",
+    "programId": "musbs-liberal-arts"
+  },
+  {
+    "code": "MUSBS",
+    "degree": "BS",
+    "displayName": "Music - Bachelor of Science",
+    "sequence": "Music Business Sequence",
+    "programId": "musbs-music-business"
+  },
+  {
+    "code": "NURBSN",
+    "degree": "BSN",
+    "displayName": "Nursing - Bachelor of Science in Nursing",
+    "sequence": "Accelerated Prelicensure Sequence",
+    "programId": "nurbsn-accelerated-prelicensure"
+  },
+  {
+    "code": "NURBSN",
+    "degree": "BSN",
+    "displayName": "Nursing - Bachelor of Science in Nursing",
+    "sequence": "R.N. to B.S.N. Sequence",
+    "programId": "nurbsn-r-n-to-b-s-n"
+  },
+  {
+    "code": "NURBSN",
+    "degree": "BSN",
+    "displayName": "Nursing - Bachelor of Science in Nursing",
+    "sequence": "Traditional Prelicensure Sequence",
+    "programId": "nurbsn-traditional-prelicensure"
+  },
+  {
+    "code": "SAFETYBS",
+    "degree": "BS",
+    "displayName": "Occupational Safety and Health - Bachelor of Science",
+    "sequence": null,
+    "programId": "safetybs"
+  },
+  {
+    "code": "PHIBA",
+    "degree": "BA",
+    "displayName": "Philosophy - Bachelor of Arts",
+    "sequence": null,
+    "programId": "phiba"
+  },
+  {
+    "code": "KNRBS",
+    "degree": "BS",
+    "displayName": "Physical Education - Bachelor of Science",
+    "sequence": "Physical Education Teacher Education Sequence",
+    "programId": "knrbs-physical-education-teacher-education"
+  },
+  {
+    "code": "KNRBS",
+    "degree": "BS",
+    "displayName": "Physical Education - Bachelor of Science",
+    "sequence": "Kinesiology Studies Sequence",
+    "programId": "knrbs-kinesiology-studies"
+  },
+  {
+    "code": "KNRBSED",
+    "degree": "BSED",
+    "displayName": "Physical Education - Bachelor of Science in Education",
+    "sequence": "Physical Education, Physical Education Teacher Education Sequence",
+    "programId": "knrbsed"
+  },
+  {
+    "code": "PHYBS",
+    "degree": "BS",
+    "displayName": "Physics - Bachelor of Science",
+    "sequence": "Biophysics Sequence",
+    "programId": "phybs-biophysics"
+  },
+  {
+    "code": "PHYBS",
+    "degree": "BS",
+    "displayName": "Physics - Bachelor of Science",
+    "sequence": "Computational Physics Sequence",
+    "programId": "phybs-computational-physics"
+  },
+  {
+    "code": "PHYBS",
+    "degree": "BS",
+    "displayName": "Physics - Bachelor of Science",
+    "sequence": "Engineering Physics Dual Degree Program Sequence",
+    "programId": "phybs-engineering-physics-dual-degree-program"
+  },
+  {
+    "code": "PHYBS",
+    "degree": "BS",
+    "displayName": "Physics - Bachelor of Science",
+    "sequence": "Accelerated Sequence",
+    "programId": "phybs-accelerated"
+  },
+  {
+    "code": "PHYBS",
+    "degree": "BS",
+    "displayName": "Physics - Bachelor of Science",
+    "sequence": "Physics Sequence",
+    "programId": "phybs-physics"
+  },
+  {
+    "code": "PHYBS",
+    "degree": "BS",
+    "displayName": "Physics - Bachelor of Science",
+    "sequence": "Physics Teacher Education Sequence",
+    "programId": "phybs-physics-teacher-education"
+  },
+  {
+    "code": "POLBA",
+    "degree": "BA",
+    "displayName": "Political Science - Bachelor of Arts",
+    "sequence": "General Sequence",
+    "programId": "polba-general"
+  },
+  {
+    "code": "POLBA",
+    "degree": "BA",
+    "displayName": "Political Science - Bachelor of Arts",
+    "sequence": "Accelerated Sequence",
+    "programId": "polba-accelerated"
+  },
+  {
+    "code": "POLBS",
+    "degree": "BS",
+    "displayName": "Political Science - Bachelor of Science",
+    "sequence": "General Sequence",
+    "programId": "polbs-general"
+  },
+  {
+    "code": "POLBS",
+    "degree": "BS",
+    "displayName": "Political Science - Bachelor of Science",
+    "sequence": "Accelerated Sequence",
+    "programId": "polbs-accelerated"
+  },
+  {
+    "code": "PSYBA",
+    "degree": "BA",
+    "displayName": "Psychology - Bachelor of Arts",
+    "sequence": null,
+    "programId": "psyba"
+  },
+  {
+    "code": "PSYBS",
+    "degree": "BS",
+    "displayName": "Psychology - Bachelor of Science",
+    "sequence": null,
+    "programId": "psybs"
+  },
+  {
+    "code": "COMPUBRLBA",
+    "degree": "BA",
+    "displayName": "Public Relations - Bachelor of Arts",
+    "sequence": null,
+    "programId": "compubrlba"
+  },
+  {
+    "code": "COMPUBRLBS",
+    "degree": "BS",
+    "displayName": "Public Relations - Bachelor of Science",
+    "sequence": null,
+    "programId": "compubrlbs"
+  },
+  {
+    "code": "KNRRCPKABS",
+    "degree": "BS",
+    "displayName": "Recreation and Sport Management - Bachelor of Science",
+    "sequence": "Therapeutic Recreation Sequence",
+    "programId": "knrrcpkabs-therapeutic-recreation"
+  },
+  {
+    "code": "KNRRCPKABS",
+    "degree": "BS",
+    "displayName": "Recreation and Sport Management - Bachelor of Science",
+    "sequence": "Recreation and Sport Sequence",
+    "programId": "knrrcpkabs-recreation-and-sport"
+  },
+  {
+    "code": "INSURANCBS",
+    "degree": "BS",
+    "displayName": "Risk Management and Insurance - Bachelor of Science",
+    "sequence": "Risk Management and Insurance Sequence",
+    "programId": "insurancbs-risk-management-and-insurance"
+  },
+  {
+    "code": "INSURANCBS",
+    "degree": "BS",
+    "displayName": "Risk Management and Insurance - Bachelor of Science",
+    "sequence": "Insurance-Business Information Systems (BIS) Sequence",
+    "programId": "insurancbs-insurance-business-information-systems-bis"
+  },
+  {
+    "code": "SOCBA",
+    "degree": "BA",
+    "displayName": "Sociology - Bachelor of Arts",
+    "sequence": "Social Research Sequence",
+    "programId": "socba-social-research"
+  },
+  {
+    "code": "SOCBA",
+    "degree": "BA",
+    "displayName": "Sociology - Bachelor of Arts",
+    "sequence": "Social Inquiry Sequence",
+    "programId": "socba-social-inquiry"
+  },
+  {
+    "code": "SOCBA",
+    "degree": "BA",
+    "displayName": "Sociology - Bachelor of Arts",
+    "sequence": "Sociology and Business Administration Sequence",
+    "programId": "socba-sociology-and-business-administration"
+  },
+  {
+    "code": "SOCBA",
+    "degree": "BA",
+    "displayName": "Sociology - Bachelor of Arts",
+    "sequence": "Sociology and MBA Accelerated Sequence",
+    "programId": "socba-sociology-and-mba-accelerated"
+  },
+  {
+    "code": "SOCBS",
+    "degree": "BS",
+    "displayName": "Sociology - Bachelor of Science",
+    "sequence": "Social Research Sequence",
+    "programId": "socbs-social-research"
+  },
+  {
+    "code": "SOCBS",
+    "degree": "BS",
+    "displayName": "Sociology - Bachelor of Science",
+    "sequence": "Social Inquiry Sequence",
+    "programId": "socbs-social-inquiry"
+  },
+  {
+    "code": "SOCBS",
+    "degree": "BS",
+    "displayName": "Sociology - Bachelor of Science",
+    "sequence": "Sociology and Business Administration Sequence",
+    "programId": "socbs-sociology-and-business-administration"
+  },
+  {
+    "code": "SOCBS",
+    "degree": "BS",
+    "displayName": "Sociology - Bachelor of Science",
+    "sequence": "Sociology and MBA Accelerated Sequence",
+    "programId": "socbs-sociology-and-mba-accelerated"
+  },
+  {
+    "code": "SPABA",
+    "degree": "BA",
+    "displayName": "Spanish - Bachelor of Arts",
+    "sequence": "General Sequence",
+    "programId": "spaba-general"
+  },
+  {
+    "code": "SPABA",
+    "degree": "BA",
+    "displayName": "Spanish - Bachelor of Arts",
+    "sequence": "Accelerated Sequence",
+    "programId": "spaba-accelerated"
+  },
+  {
+    "code": "SPABA",
+    "degree": "BA",
+    "displayName": "Spanish - Bachelor of Arts",
+    "sequence": "Teacher Education Sequence",
+    "programId": "spaba-teacher-education"
+  },
+  {
+    "code": "SPABA",
+    "degree": "BA",
+    "displayName": "Spanish - Bachelor of Arts",
+    "sequence": "Teacher Education Accelerated Sequence",
+    "programId": "spaba-teacher-education-accelerated"
+  },
+  {
+    "code": "SEDBSED",
+    "degree": "BSED",
+    "displayName": "Special Education - Bachelor of Science in Education",
+    "sequence": "Specialist in Learning and Behavior Sequence",
+    "programId": "sedbsed-specialist-in-learning-and-behavior"
+  },
+  {
+    "code": "SEDBSED",
+    "degree": "BSED",
+    "displayName": "Special Education - Bachelor of Science in Education",
+    "sequence": "Specialist in Deaf & Hard of Hearing Sequence",
+    "programId": "sedbsed-specialist-in-deaf-hard-of-hearing"
+  },
+  {
+    "code": "SEDBSED",
+    "degree": "BSED",
+    "displayName": "Special Education - Bachelor of Science in Education",
+    "sequence": "Specialist in Low Vision & Blindness Sequence",
+    "programId": "sedbsed-specialist-in-low-vision-blindness"
+  },
+  {
+    "code": "SEDBSED",
+    "degree": "BSED",
+    "displayName": "Special Education - Bachelor of Science in Education",
+    "sequence": "Specialist in Learning and Behavior Online Sequence",
+    "programId": "sedbsed-specialist-in-learning-and-behavior-online"
+  },
+  {
+    "code": "COMSPTCMBA",
+    "degree": "BA",
+    "displayName": "Sports Communication - Bachelor of Arts",
+    "sequence": null,
+    "programId": "comsptcmba"
+  },
+  {
+    "code": "COMSPTCMBS",
+    "degree": "BS",
+    "displayName": "Sports Communication - Bachelor of Science",
+    "sequence": null,
+    "programId": "comsptcmbs"
+  },
+  {
+    "code": "TECRNWENBS",
+    "degree": "BS",
+    "displayName": "Sustainable and Renewable Energy - Bachelor of Science",
+    "sequence": null,
+    "programId": "tecrnwenbs"
+  },
+  {
+    "code": "TECENGEDBS",
+    "degree": "BS",
+    "displayName": "Technology and Engineering Education - Bachelor of Science",
+    "sequence": null,
+    "programId": "tecengedbs"
+  },
+  {
+    "code": "THDBA",
+    "degree": "BA",
+    "displayName": "Theatre - Bachelor of Arts",
+    "sequence": "Acting Sequence",
+    "programId": "thdba-acting"
+  },
+  {
+    "code": "THDBA",
+    "degree": "BA",
+    "displayName": "Theatre - Bachelor of Arts",
+    "sequence": "Production Design and Technology Sequence",
+    "programId": "thdba-production-design-and-technology"
+  },
+  {
+    "code": "THDBA",
+    "degree": "BA",
+    "displayName": "Theatre - Bachelor of Arts",
+    "sequence": "Dance Sequence",
+    "programId": "thdba-dance"
+  },
+  {
+    "code": "THDBA",
+    "degree": "BA",
+    "displayName": "Theatre - Bachelor of Arts",
+    "sequence": "Dance Teacher Education Sequence",
+    "programId": "thdba-dance-teacher-education"
+  },
+  {
+    "code": "THDBA",
+    "degree": "BA",
+    "displayName": "Theatre - Bachelor of Arts",
+    "sequence": "Film and Digital Media Sequence",
+    "programId": "thdba-film-and-digital-media"
+  },
+  {
+    "code": "THDBA",
+    "degree": "BA",
+    "displayName": "Theatre - Bachelor of Arts",
+    "sequence": "Musical Theatre Sequence",
+    "programId": "thdba-musical-theatre"
+  },
+  {
+    "code": "THDBA",
+    "degree": "BA",
+    "displayName": "Theatre - Bachelor of Arts",
+    "sequence": "Theatre Education Sequence",
+    "programId": "thdba-theatre-education"
+  },
+  {
+    "code": "THDBA",
+    "degree": "BA",
+    "displayName": "Theatre - Bachelor of Arts",
+    "sequence": "Theatre Studies Sequence",
+    "programId": "thdba-theatre-studies"
+  },
+  {
+    "code": "THDBS",
+    "degree": "BS",
+    "displayName": "Theatre - Bachelor of Science",
+    "sequence": "Acting Sequence",
+    "programId": "thdbs-acting"
+  },
+  {
+    "code": "THDBS",
+    "degree": "BS",
+    "displayName": "Theatre - Bachelor of Science",
+    "sequence": "Production Design and Technology Sequence",
+    "programId": "thdbs-production-design-and-technology"
+  },
+  {
+    "code": "THDBS",
+    "degree": "BS",
+    "displayName": "Theatre - Bachelor of Science",
+    "sequence": "Dance Sequence",
+    "programId": "thdbs-dance"
+  },
+  {
+    "code": "THDBS",
+    "degree": "BS",
+    "displayName": "Theatre - Bachelor of Science",
+    "sequence": "Dance Teacher Education Sequence",
+    "programId": "thdbs-dance-teacher-education"
+  },
+  {
+    "code": "THDBS",
+    "degree": "BS",
+    "displayName": "Theatre - Bachelor of Science",
+    "sequence": "Film and Digital Media Sequence",
+    "programId": "thdbs-film-and-digital-media"
+  },
+  {
+    "code": "THDBS",
+    "degree": "BS",
+    "displayName": "Theatre - Bachelor of Science",
+    "sequence": "Musical Theatre Sequence",
+    "programId": "thdbs-musical-theatre"
+  },
+  {
+    "code": "THDBS",
+    "degree": "BS",
+    "displayName": "Theatre - Bachelor of Science",
+    "sequence": "Theatre Education Sequence",
+    "programId": "thdbs-theatre-education"
+  },
+  {
+    "code": "THDBS",
+    "degree": "BS",
+    "displayName": "Theatre - Bachelor of Science",
+    "sequence": "Theatre Studies Sequence",
+    "programId": "thdbs-theatre-studies"
+  }
+]
