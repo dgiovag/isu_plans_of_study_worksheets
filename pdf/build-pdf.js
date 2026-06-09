@@ -6,7 +6,7 @@ const path = require('path');
 const { buildPDFs } = require('./template-pdf');
 
 const DATA_DIR   = path.join(__dirname, '..', 'data', 'programs');
-const OUTPUT_DIR = path.join(__dirname, '..', 'output');
+const OUTPUT_DIR = path.join(__dirname, '..', 'output', 'pdf');
 
 function argVal(args, flag) {
   const i = args.indexOf(flag);

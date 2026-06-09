@@ -16,7 +16,7 @@ Interactive advising worksheets for Illinois State University transfer students.
 3. **PDF Renderer** (substantially complete) — Fillable AcroForm PDFs (no PDF JavaScript), one per gen-ed track
 4. **Catalog Scraper** (first-pass complete) — Biannual pipeline: scrape catalog → validate → diff → human review
    - Pipeline working end-to-end: `scraper/scrape.js` → `scraper/fetch.js` → `scraper/transform.js` + `scraper/gened-map.js`
-   - All 7 test programs scraped successfully; scraped HTML worksheets in `output/scraped/` for comparison
+   - All 7 test programs scraped successfully; full catalog (307 programs) now in `data/programs/`
    - API docs: `docs/coursedog-api.md` (CourseDog, CORS-only auth, GE14-* attribute strategy)
    - CourseDog codes: ACCNTCYBS, ARTBA, TCHECEBS, MUSBM, NURBSN (prelicensure + RN-to-BSN), PHYBS
    - **Human annotation required** (not encodeable from API — see "Scraper Known Gaps" section below)
@@ -42,14 +42,7 @@ The **schema is the contract** between the scraper and both renderers. All compo
 │   ├── program-schema.json    # Formal JSON Schema (draft 2020-12)
 │   └── SCHEMA-RATIONALE.md    # Design decisions and rejected alternatives
 ├── data/
-│   └── programs/              # One JSON file per program sequence
-│       ├── acc-financial-bs.json
-│       ├── art-history-ba.json
-│       ├── ece-pedagogy-bs.json
-│       ├── music-comp-theory-bm.json
-│       ├── nursing-prelicensure-bsn.json
-│       ├── nursing-rn-bsn.json
-│       └── physics-teacher-ed-bs.json
+│   └── programs/              # One JSON file per program sequence (307 total)
 ├── renderer/
 │   ├── build.js               # CLI: node renderer/build.js --all | --program <id>
 │   ├── template.js            # HTML document assembly
@@ -87,7 +80,9 @@ The **schema is the contract** between the scraper and both renderers. All compo
 │   ├── gened-map.js           # CourseDog attribute strings → schema gen-ed group IDs
 │   ├── inspect.js             # Dev tool: dump raw CourseDog data for one program
 │   └── raw/                   # Cached API responses (gitignored)
-├── output/                    # Generated HTML worksheets and PDFs (gitignored)
+├── output/                    # Generated artifacts (gitignored)
+│   ├── html/                  # Generated HTML worksheets (one per program)
+│   └── pdf/                   # Generated PDFs (three per program, one per track)
 ├── prototype/
 │   └── degree-worksheet.html  # Working HTML prototype (single-file, hardcoded data)
 └── docs/
@@ -140,14 +135,19 @@ The **schema is the contract** between the scraper and both renderers. All compo
 - Compliance requirements panel: full-width, grouped by category, only when present
 - Tested against all 7 schema programs — 21 PDFs (3 per program) build without errors
 
-## Building PDFs
+## Building Worksheets
 
 ```bash
-node pdf/build-pdf.js --all                    # all programs
+# HTML
+node renderer/build.js --all                      # all programs → output/html/
+node renderer/build.js --program acc-financial-bs # one program
+
+# PDF
+node pdf/build-pdf.js --all                       # all programs → output/pdf/
 node pdf/build-pdf.js --program acc-financial-bs  # one program
 ```
 
-Output goes to `output/<program-id>-<track>.pdf`.
+Both scripts accept `--out <dir>` to override the default output directory.
 
 ## Running the Prototype
 

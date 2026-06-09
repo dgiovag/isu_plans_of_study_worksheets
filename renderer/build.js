@@ -6,7 +6,7 @@ const path = require('path');
 const { buildHTML } = require('./template');
 
 const DEFAULT_PROGRAMS_DIR = path.join(__dirname, '..', 'data', 'programs');
-const DEFAULT_OUTPUT_DIR   = path.join(__dirname, '..', 'output');
+const DEFAULT_OUTPUT_DIR   = path.join(__dirname, '..', 'output', 'html');
 
 function parseArgs() {
   const args = process.argv.slice(2);
