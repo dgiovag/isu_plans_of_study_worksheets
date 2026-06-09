@@ -22,7 +22,7 @@ header { max-width: 1400px; margin: 0 auto 16px; }
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   padding: 0.45rem 1.2rem;
-  margin: 0 0 12px;
+  margin: 0 auto 12px;
   max-width: 1400px;
 }
 .disclaimer a { color: inherit; text-decoration: underline; }

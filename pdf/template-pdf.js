@@ -70,8 +70,10 @@ async function buildOnePDF(program, track) {
       gradPage = leftCtx.page;
       gradY    = Math.min(gradLeftY, finalMajorY) - 8;
     } else {
-      gradPage = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
-      gradY    = L.PAGE_HEIGHT - L.MARGIN.top;
+      // Left column ended before right — use the right column's last page
+      // so compliance stays on page 2 rather than forcing a new page 3.
+      gradPage = rightCtx.page;
+      gradY    = finalMajorY - 8;
     }
 
     const gradCtx = { doc, page: gradPage, form };
