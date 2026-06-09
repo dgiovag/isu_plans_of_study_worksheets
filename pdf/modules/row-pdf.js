@@ -117,7 +117,7 @@ function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
 }
 
 function wrapText(font, text, size, maxWidth) {
-  const words = text.split(' ');
+  const words = text.replace(/[\r\n]+/g, ' ').split(' ');
   const lines = [];
   let current = '';
   for (const word of words) {
