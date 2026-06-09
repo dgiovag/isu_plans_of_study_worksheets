@@ -2,10 +2,11 @@
 const { esc } = require('./utils');
 
 const CATEGORY_LABELS = {
-  health:     'Health & Medical',
-  background: 'Background Screening',
-  licensure:  'Licensure',
-  general:    'General',
+  health:            'Health & Immunization',
+  background:        'Background & Screening',
+  licensure:         'Licensure & Certification',
+  teacher_education: 'Teacher Education',
+  other:             'Other',
 };
 
 module.exports = function renderCompliance(program) {
@@ -16,7 +17,7 @@ module.exports = function renderCompliance(program) {
   const order = [];
   const byCategory = {};
   items.forEach(item => {
-    const cat = item.category || 'general';
+    const cat = item.category || 'other';
     if (!byCategory[cat]) { byCategory[cat] = []; order.push(cat); }
     byCategory[cat].push(item);
   });

@@ -9,11 +9,20 @@ const CHECK_W  = 10;
 const NOTE_MIN_WIDTH = 400;
 const TITLE_W  = 270; // space reserved for title before the note column
 
+function appliesToProgram(item, program) {
+  if (!item.applies_when) return true;
+  const aw = item.applies_when;
+  if (aw.degree  && aw.degree  !== program.program.degree)  return false;
+  if (aw.college && aw.college !== program.program.college) return false;
+  return true;
+}
+
 function renderGraduation(ctx, x, y, colWidth, program, fonts) {
   const grad = program.graduation_requirements;
   if (!grad) return y;
 
   const showNotes = colWidth >= NOTE_MIN_WIDTH;
+  const trackable = (grad.trackable || []).filter(item => appliesToProgram(item, program));
 
   y = drawSectionTitle(ctx.page, x, y, 'Graduation Requirements', colWidth, fonts);
 
@@ -23,7 +32,7 @@ function renderGraduation(ctx, x, y, colWidth, program, fonts) {
     thickness: 0.4, color: L.GRAY_BORDER,
   });
 
-  for (const item of grad.trackable || []) {
+  for (const item of trackable) {
     y = breakIfNeeded(ctx, y, L.ROW_H, fonts);
     const bot = y - L.ROW_H;
     const { page, form } = ctx;

@@ -9,6 +9,7 @@ const CATEGORY_LABELS = {
   background:        'Background & Screening',
   licensure:         'Licensure & Certification',
   teacher_education: 'Teacher Education',
+  other:             'Other',
 };
 
 const CHECK_W = 10;
