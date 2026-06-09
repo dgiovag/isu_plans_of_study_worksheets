@@ -24,8 +24,11 @@ const GE14 = {
   'UST':         'isu.us_traditions',
   'ICL':         'isu.individuals_civic_life',
   'NSB':         'isu.natural_science',
-  'NSAC':        'isu.natural_science',           // Alternate NS: Chemistry
-  'NSAP':        'isu.natural_science',           // Alternate NS: Physics
+  'NSAB':        'isu.natural_science',           // Alt NS: Biology (BSC)
+  'NSC':         'isu.natural_science',           // Alt NS: Chemistry (CHE)
+  'NSAC':        'isu.natural_science',           // Alt NS: Chemistry (legacy)
+  'NSP':         'isu.natural_science',           // Alt NS: Physics (PHY)
+  'NSAP':        'isu.natural_science',           // Alt NS: Physics (legacy)
   'SCMT':        'isu.science_math_technology',
 };
 
@@ -109,7 +112,8 @@ function isBsmtAttr(attr) {
 // Returns all unknown attribute prefixes found in a set of attribute strings,
 // for use during scraper development to surface unmapped codes.
 function unknownAttrs(attrs) {
-  const known = new Set(['GE14', 'GE27', 'IAI', 'MIAI', 'BSMT']);
+  // Non-gen-ed prefixes that are valid but don't map to any gen-ed group
+  const known = new Set(['GE14', 'GE27', 'IAI', 'MIAI', 'BSMT', 'AMAL', 'IDEA', 'WLDR', 'CLIN', 'STTC', 'CRSS']);
   return attrs.filter(a => {
     const parsed = parseAttr(a);
     if (!parsed) return true;
