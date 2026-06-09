@@ -49,7 +49,7 @@ async function buildOnePDF(program, track) {
   const form = doc.getForm();
 
   const afterHeader     = drawHeader(page, prog, track, fonts, wordmarkImage);
-  const afterDisclaimer = drawDisclaimer(page, afterHeader, prog, fonts);
+  const afterDisclaimer = drawDisclaimer(page, afterHeader, fonts);
   const bodyY           = drawStudentInfo(page, form, afterDisclaimer, fonts);
 
   // Two independent rendering contexts — same doc/form, separate page refs
@@ -127,7 +127,7 @@ function drawHeader(page, prog, track, fonts, wordmarkImage) {
 }
 
 // Draws the planning disclaimer below the header rule; returns y below the block.
-function drawDisclaimer(page, topY, prog, fonts) {
+function drawDisclaimer(page, topY, fonts) {
   const SIZE   = L.FONT.footnote; // 6.5pt
   const LINE_H = 9;
   const PAD    = 4;
@@ -135,8 +135,7 @@ function drawDisclaimer(page, topY, prog, fonts) {
   const text =
     'This worksheet is for planning purposes only and is not an authoritative document. ' +
     'If you have questions about your degree progress, please consult with your advisor. ' +
-    'For accurate, current degree requirements, consult the University Catalog: ' +
-    prog.coursedog_url;
+    'For accurate, current degree requirements, consult the University Catalog.';
 
   const lines = wrapText(fonts.reg, text, SIZE, L.CONTENT_WIDTH);
 

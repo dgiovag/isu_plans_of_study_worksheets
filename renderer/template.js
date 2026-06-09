@@ -200,8 +200,7 @@ ${css}
 <div class="disclaimer">
   This worksheet is for planning purposes only and is not an authoritative document.
   If you have questions about your degree progress, please consult with your advisor.
-  For accurate, current degree requirements, consult the
-  <a href="${esc(p.coursedog_url)}" target="_blank" rel="noopener">University Catalog</a>.
+  For accurate, current degree requirements, consult the University Catalog.
 </div>
 
 <div class="student-info">
