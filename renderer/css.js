@@ -15,6 +15,17 @@ body {
   color: #222;
 }
 header { max-width: 1400px; margin: 0 auto 16px; }
+.disclaimer {
+  font-size: 0.78rem;
+  color: #555;
+  background: #f9f9f6;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 0.45rem 1.2rem;
+  margin: 0 0 12px;
+  max-width: 1400px;
+}
+.disclaimer a { color: inherit; text-decoration: underline; }
 h1 {
   margin: 0 0 4px;
   color: var(--red);

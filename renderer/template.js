@@ -197,6 +197,13 @@ ${css}
   </div>
 </header>
 
+<div class="disclaimer">
+  This worksheet is for planning purposes only and is not an authoritative document.
+  If you have questions about your degree progress, please consult with your advisor.
+  For accurate, current degree requirements, consult the
+  <a href="${esc(p.coursedog_url)}" target="_blank" rel="noopener">University Catalog</a>.
+</div>
+
 <div class="student-info">
   <label>Student name: <input type="text" id="stu-name" style="width:200px;"></label>
   <label>UID: <input type="text" id="stu-uid" style="width:120px;"></label>

@@ -34,7 +34,7 @@
 
     "Program": {
       "type": "object",
-      "required": ["id", "title", "degree", "department", "college", "catalog_year", "catalog_url", "minimum_major_hours", "minimum_total_hours", "minimum_senior_hours"],
+      "required": ["id", "title", "degree", "department", "college", "catalog_year", "catalog_url", "coursedog_url", "minimum_major_hours", "minimum_total_hours", "minimum_senior_hours"],
       "additionalProperties": false,
       "properties": {
         "id": {
@@ -64,6 +64,11 @@
         "catalog_url": {
           "type": "string",
           "format": "uri"
+        },
+        "coursedog_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "CourseDog-hosted catalog page for this program (catalog.illinoisstate.edu/programs/<CODE>?tab=requirements)"
         },
         "minimum_major_hours": {
           "type": "integer",
