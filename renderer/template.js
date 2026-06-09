@@ -189,6 +189,7 @@ ${css}
     <span>Gen Ed: <strong id="gened-done">0</strong> / <span id="gened-all">0</span></span>
     <span>Major: <strong id="major-done">0</strong> / <span id="major-all">0</span></span>
     <span>Graduation: <strong id="grad-done">0</strong> / <span id="grad-all">0</span></span>
+    <span>Credits completed: <strong id="credits-done">0</strong> hrs</span>
     <span class="controls">
       <button onclick="window.print()">Print</button>
       <button onclick="resetAll()">Reset all</button>

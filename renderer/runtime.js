@@ -60,6 +60,18 @@ function updateRow(id) {
   else if (statusVal === 'in-progress') row.classList.add('in-progress');
 
   if (transferRow) transferRow.style.display = (statusVal === 'transferred') ? '' : 'none';
+
+  // Show "Course Taken" input only when there's a course to look up.
+  // Single-course rows (data-single) hide it unless it's an IAI row (always need the CC course)
+  // or the student is recording a transfer.
+  var courseInput = document.querySelector('input[data-id="' + id + '"][data-field="course"]');
+  if (courseInput) {
+    var courseTd = courseInput.parentElement;
+    if (courseTd && courseTd.dataset.single) {
+      var showCourse = chk.dataset.prefix === 'iai' || statusVal === 'transferred';
+      courseInput.style.display = showCourse ? '' : 'none';
+    }
+  }
 }
 
 // ── Summary counters ──────────────────────────────────────────────────────────
@@ -89,6 +101,7 @@ function rowIsVisible(chk) {
 
 function updateSummary() {
   var totals = { gened: {done:0,all:0}, major: {done:0,all:0}, grad: {done:0,all:0} };
+  var creditsDone = 0;
 
   // Course-row checkboxes (data-prefix present).
   document.querySelectorAll('input[type="checkbox"][data-prefix]').forEach(function(chk) {
@@ -105,6 +118,12 @@ function updateSummary() {
     } else {
       totals.gened.all  += 1;
       if (isDone) totals.gened.done += 1;
+    }
+
+    if (isDone) {
+      var hrsInput = document.querySelector('input[data-id="' + id + '"][data-field="hrs"]');
+      var hrs = hrsInput ? parseFloat(hrsInput.value) : 0;
+      creditsDone += isNaN(hrs) ? 0 : hrs;
     }
   });
 
@@ -148,6 +167,7 @@ function updateSummary() {
     totals.gened.done + totals.major.done + totals.grad.done + compDone;
   document.getElementById('total-all').textContent  =
     totals.gened.all  + totals.major.all  + totals.grad.all  + compAll;
+  document.getElementById('credits-done').textContent = creditsDone;
 }
 
 // ── Cross-reference propagation ───────────────────────────────────────────────
@@ -237,6 +257,7 @@ function resetAll() {
     c.checked = false;
   });
   document.querySelectorAll('input[type="text"]').forEach(function(i) { i.value = ''; });
+  document.querySelectorAll('input[data-field="hrs"]:not([readonly])').forEach(function(i) { i.value = ''; });
   document.querySelectorAll('select[data-field="status"]').forEach(function(s) {
     if (!s.closest('tr.exempt')) s.value = '';
   });
@@ -244,9 +265,9 @@ function resetAll() {
     r.classList.remove('completed', 'in-progress', 'transferred-row');
     if (r.classList.contains('transfer-detail')) r.style.display = 'none';
   });
-  // Re-apply completed class for pre-set exempt/auto-fulfilled rows.
-  document.querySelectorAll('tr.exempt').forEach(function(r) {
-    r.classList.add('completed');
+  // Re-apply row states (handles course-taken visibility and exempt/auto-fulfilled classes).
+  document.querySelectorAll('input[type="checkbox"][data-prefix]').forEach(function(chk) {
+    updateRow(chk.dataset.id);
   });
 
   var firstRadio = document.querySelector('input[name="track"]');

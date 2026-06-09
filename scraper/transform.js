@@ -509,7 +509,7 @@ function transformProgram(program, rawCourses, opts = {}) {
     courses,
     major: {
       title: seqTitle || title,
-      ...(minMajorHrs ? { minimum_hours: minMajorHrs } : {}),
+      minimum_hours: minMajorHrs ?? 0,
       groups: majorGroups,
     },
     general_education,
