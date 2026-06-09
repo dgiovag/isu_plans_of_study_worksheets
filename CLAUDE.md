@@ -14,10 +14,12 @@ Interactive advising worksheets for Illinois State University transfer students.
 1. **Schema** (complete) — JSON Schema v1.0 validated against 7 structurally different programs
 2. **HTML Renderer** (in progress) — Generalize the existing prototype to consume any program JSON
 3. **PDF Renderer** (substantially complete) — Fillable AcroForm PDFs (no PDF JavaScript), one per gen-ed track
-4. **Catalog Scraper** — Biannual pipeline: scrape catalog → validate → diff → human review
-   - API research complete: see `docs/coursedog-api.md` (CourseDog, no auth required, GE14-* attribute strategy confirmed)
-   - Gen-ed attribute verification done for 3 of 7 programs: ACC (Financial Accounting), Art History, Physics Teacher Ed
-   - **Open item:** MAT 121 in Accounting carries `GE14 - QR` (not `GE14 - MAT`) in CourseDog, but the JSON has it satisfying `isu.mathematics`. Needs human/catalog verification — MAT 121 may presuppose the math gen-ed requirement rather than satisfy it.
+4. **Catalog Scraper** (first-pass complete) — Biannual pipeline: scrape catalog → validate → diff → human review
+   - Pipeline working end-to-end: `scraper/scrape.js` → `scraper/fetch.js` → `scraper/transform.js` + `scraper/gened-map.js`
+   - All 7 test programs scraped successfully; scraped HTML worksheets in `output/scraped/` for comparison
+   - API docs: `docs/coursedog-api.md` (CourseDog, CORS-only auth, GE14-* attribute strategy)
+   - CourseDog codes: ACCNTCYBS, ARTBA, TCHECEBS, MUSBM, NURBSN (prelicensure + RN-to-BSN), PHYBS
+   - **Human annotation required** (not encodeable from API — see "Scraper Known Gaps" section below)
 5. **CC Articulation (stretch)** — Per-community-college worksheets for all 48 Illinois CCs
 
 ## Architecture
@@ -78,6 +80,13 @@ The **schema is the contract** between the scraper and both renderers. All compo
 │       ├── render-graduation-pdf.js      # Below gen-ed in left column: trackable checklist
 │       ├── render-college-pdf.js         # Full-width: college-level requirements
 │       └── render-compliance-pdf.js      # Full-width: compliance checklist grouped by category
+├── scraper/
+│   ├── scrape.js              # CLI: node scraper/scrape.js --program <CODE> [--sequence <name>] [--program-id <id>] [--dry-run] [--force]
+│   ├── fetch.js               # CourseDog API wrapper (caches to scraper/raw/, batches ≤50 IDs per courses request)
+│   ├── transform.js           # CourseDog program JSON → schema JSON
+│   ├── gened-map.js           # CourseDog attribute strings → schema gen-ed group IDs
+│   ├── inspect.js             # Dev tool: dump raw CourseDog data for one program
+│   └── raw/                   # Cached API responses (gitignored)
 ├── output/                    # Generated HTML worksheets and PDFs (gitignored)
 ├── prototype/
 │   └── degree-worksheet.html  # Working HTML prototype (single-file, hardcoded data)
@@ -149,6 +158,42 @@ Open `prototype/degree-worksheet.html` directly in a browser — no build step o
 ```bash
 npx ajv-cli validate -s schemas/program-schema.json -d "data/programs/*.json" --spec=draft2020 --strict=false
 ```
+
+## Running the Scraper
+
+```bash
+# List all active undergrad programs with their CourseDog codes
+node scraper/scrape.js --list
+
+# Scrape one program (--dry-run to preview without writing)
+node scraper/scrape.js --program ACCNTCYBS --sequence "Financial Accounting" --program-id acc-financial-bs
+node scraper/scrape.js --program ARTBA     --sequence "Art History"           --program-id art-history-ba
+node scraper/scrape.js --program TCHECEBS  --sequence "Pedagogy"              --program-id ece-pedagogy-bs
+node scraper/scrape.js --program MUSBM     --sequence "Composition/Theory"    --program-id music-comp-theory-bm
+node scraper/scrape.js --program NURBSN    --sequence "Traditional Prelicensure" --program-id nursing-prelicensure-bsn
+node scraper/scrape.js --program NURBSN    --sequence "R.N. to B.S.N."        --program-id nursing-rn-bsn
+node scraper/scrape.js --program PHYBS     --sequence "Physics Teacher Education" --program-id physics-teacher-ed-bs
+
+# --force overwrites existing files; --out <dir> redirects output (default: data/programs/)
+```
+
+Raw API responses are cached in `scraper/raw/` and reused on subsequent runs. To re-fetch, delete the relevant cache files.
+
+## Scraper Known Gaps (require human annotation)
+
+These structural features cannot be derived from CourseDog and must be added manually after scraping:
+
+| Program | Gap | What to add |
+|---|---|---|
+| acc-financial-bs | Inline choose_ones in the required block | Split `major.required_courses` into separate `choose_one` slots for math/writing/IT options |
+| art-history-ba | Language sequence courses | Add `major.language_111/112/115` groups with FRE/GER/ITA/SPA options |
+| ece-pedagogy-bs | Elective track | Replace generic `choose_n` groups with `choose_one_track` and proper slot labels |
+| music-comp-theory-bm | Applied music & ensembles | Change `open` groups to `repeat` with credit ranges; add course options from catalog |
+| nursing-prelicensure-bsn | Phase structure | Split flat `major.required_courses` into `phases: [{foundation}, {nursing_core}, {clinical}]` |
+| nursing-rn-bsn | Escrow group | Add `major.escrow` group for RN transfer credit |
+| physics-teacher-ed-bs | Advanced science elective | Add `open_constrained` group with discipline constraints |
+| ALL | exempt vs auto_fulfilled_by | Every `auto_fulfilled_by` warning needs catalog verification — some should become `exempt: true` |
+| ACC MAT 121 | Math gen-ed | MAT 121 carries `GE14-QR` (not `GE14-MAT`) in CourseDog — verify whether it satisfies or presupposes the math requirement |
 
 ## Working Instructions
 
