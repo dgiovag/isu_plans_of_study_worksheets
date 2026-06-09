@@ -4,8 +4,8 @@ const L = require('../layout');
 
 const LINE_H = L.FONT.tableBody + 2.5; // vertical step between wrapped label lines
 
-// y at which column content begins on a continuation page
-const CONTINUATION_Y = L.PAGE_HEIGHT - 25;
+// y at which column content begins on a continuation page (inside top margin)
+const CONTINUATION_Y = L.PAGE_HEIGHT - L.MARGIN.top - 16;
 
 /**
  * If `y - neededH` would fall below the bottom margin, adds a new page to
@@ -17,10 +17,8 @@ function breakIfNeeded(ctx, y, neededH, fonts) {
 
   ctx.page = ctx.doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
 
-  // Minimal continuation header
-  ctx.page.drawRectangle({ x: 0, y: L.PAGE_HEIGHT - 5, width: L.PAGE_WIDTH, height: 5, color: L.RED });
   ctx.page.drawText('(continued)', {
-    x: L.MARGIN.left, y: L.PAGE_HEIGHT - 17,
+    x: L.MARGIN.left, y: L.PAGE_HEIGHT - L.MARGIN.top - 8,
     size: 7, font: fonts.reg, color: L.GRAY_TEXT,
   });
 

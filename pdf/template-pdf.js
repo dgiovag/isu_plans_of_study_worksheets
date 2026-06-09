@@ -91,17 +91,15 @@ async function buildOnePDF(program, track) {
 
 // Draws the top header block; returns the y-coordinate immediately below it.
 function drawHeader(page, prog, track, fonts, wordmarkImage) {
-  const W = L.PAGE_WIDTH;
-  const H = L.PAGE_HEIGHT;
+  const W  = L.PAGE_WIDTH;
+  const H  = L.PAGE_HEIGHT;
+  const T  = H - L.MARGIN.top; // top of printable area
 
-  // Red bar
-  page.drawRectangle({ x: 0, y: H - 5, width: W, height: 5, color: L.RED });
-
-  // Wordmark image — left-aligned, 40pt tall, scaled proportionally
-  const IMG_H = 40;
+  // Wordmark image — left-aligned, flush with top margin, 36pt tall
+  const IMG_H = 36;
   const IMG_W = Math.round(IMG_H * (wordmarkImage.width / wordmarkImage.height));
   page.drawImage(wordmarkImage, {
-    x: L.MARGIN.left, y: H - 5 - IMG_H - 3,
+    x: L.MARGIN.left, y: T - IMG_H,
     width: IMG_W, height: IMG_H,
   });
 
@@ -111,18 +109,18 @@ function drawHeader(page, prog, track, fonts, wordmarkImage) {
     ? `${prog.title} — ${prog.sequence}, ${prog.degree}`
     : `${prog.title}, ${prog.degree}`;
   page.drawText(titleText, {
-    x: textX, y: H - 20,
+    x: textX, y: T - 14,
     size: L.FONT.programTitle, font: fonts.bold, color: L.BLACK,
   });
 
   // Track + catalog year
   page.drawText(`Gen-Ed Track: ${TRACK_LABELS[track]}   ·   Catalog Year: ${prog.catalog_year}`, {
-    x: textX, y: H - 35,
+    x: textX, y: T - 28,
     size: 8, font: fonts.reg, color: L.BLACK,
   });
 
   // Horizontal rule
-  const ruleY = H - 53;
+  const ruleY = T - 44;
   drawRule(page, ruleY);
 
   return ruleY - 4;

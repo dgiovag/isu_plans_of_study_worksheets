@@ -19,32 +19,34 @@ const MIN_GROUP_SPACE = L.GROUP_TITLE_H + L.TABLE_HDR_H + L.ROW_H;
 
 // Maximum height of a continuation column — anything taller can never fit on
 // a single page, so we fall back to MIN_GROUP_SPACE for those.
-const MAX_COL_H = L.PAGE_HEIGHT - L.MARGIN.bottom - 25; // 25 = continuation header
+// CONTINUATION_Y - MARGIN.bottom = available content height on a fresh page.
+const MAX_COL_H = L.PAGE_HEIGHT - L.MARGIN.top - 16 - L.MARGIN.bottom;
 
 function estimateGroupHeight(group) {
   if (group.exempt) return L.GROUP_TITLE_H + 14;
   if (group.fill === 'escrow') return L.ROW_H * 4;
 
-  const base = L.GROUP_TITLE_H + L.TABLE_HDR_H;
+  const base   = L.GROUP_TITLE_H + L.TABLE_HDR_H;
+  const noteH  = group.note ? 20 : 0; // buffer for wrapped note text
   switch (group.fill) {
-    case 'repeat':         return base + (group.semesters || 1) * L.ROW_H;
-    case 'open':           return base + (group.count || 1) * L.ROW_H;
-    case 'open_constrained': return base + (group.count || 1) * L.ROW_H + 10;
+    case 'repeat':         return base + noteH + (group.semesters || 1) * L.ROW_H;
+    case 'open':           return base + noteH + (group.count || 1) * L.ROW_H;
+    case 'open_constrained': return base + noteH + (group.count || 1) * L.ROW_H + 10;
     case 'choose_one':
-    case 'choose_one_set': return base + L.ROW_H;
-    case 'choose_n':       return base + (group.n || 1) * L.ROW_H;
-    case 'fixed':          return base + (group.slots || []).length * L.ROW_H;
+    case 'choose_one_set': return base + noteH + (group.options || []).length * L.ROW_H;
+    case 'choose_n':       return base + noteH + (group.options || []).length * L.ROW_H;
+    case 'fixed':          return base + noteH + (group.slots || []).length * L.ROW_H;
     case 'choose_n_grouped': {
       let rows = 0;
       for (const sg of group.groups || []) {
-        rows += 1 + (sg.minimum_picks || (sg.options || []).length || 1);
+        rows += 1 + (sg.options || []).length;
       }
-      return base + rows * L.ROW_H;
+      return base + noteH + rows * L.ROW_H;
     }
     case 'choose_one_track': {
       let rows = 0;
       for (const t of group.tracks || []) rows += 1 + (t.slots || []).length;
-      return base + rows * L.ROW_H;
+      return base + noteH + rows * L.ROW_H;
     }
     default: return MIN_GROUP_SPACE;
   }
