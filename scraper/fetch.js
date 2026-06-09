@@ -66,7 +66,10 @@ async function fetchPrograms(codes) {
 
 // POST /courses/search — resolves courseGroupIds to course objects.
 // groupIds: array of numeric string IDs (e.g. ["0072861", "0072871"]).
-// Results cached to raw/courses-<hash>.json.
+// Batches requests in chunks of COURSE_BATCH_SIZE (CourseDog returns max 50 per call).
+// Merged result cached to raw/courses-<hash>.json.
+const COURSE_BATCH_SIZE = 50;
+
 async function fetchCourses(groupIds) {
   if (!groupIds || groupIds.length === 0) return [];
 
@@ -85,10 +88,25 @@ async function fetchCourses(groupIds) {
     `&columns=name,code,subjectCode,courseNumber,credits,attributes,customFields`,
   ].join('');
 
-  console.error(`[fetch] GET courses (${sorted.length} group IDs)…`);
-  const data = await apiFetch(url, { method: 'POST', body: JSON.stringify({ courseGroupIds: sorted }) });
-  writeCache(cacheKey, data);
-  return data;
+  // Split into batches
+  const batches = [];
+  for (let i = 0; i < sorted.length; i += COURSE_BATCH_SIZE) {
+    batches.push(sorted.slice(i, i + COURSE_BATCH_SIZE));
+  }
+
+  const batchLabel = batches.length > 1 ? `, ${batches.length} batches` : '';
+  console.error(`[fetch] GET courses (${sorted.length} group IDs${batchLabel})…`);
+
+  const allCourses = [];
+  for (const batch of batches) {
+    const data = await apiFetch(url, { method: 'POST', body: JSON.stringify({ courseGroupIds: batch }) });
+    const arr  = Array.isArray(data) ? data : (data.data ?? data.courses ?? []);
+    allCourses.push(...arr);
+  }
+
+  console.error(`[fetch]   resolved ${allCourses.length} of ${sorted.length} group IDs`);
+  writeCache(cacheKey, allCourses);
+  return allCourses;
 }
 
 // GET /requisite-sets — resolves university-wide requisite set IDs to their rule structures.
