@@ -60,18 +60,6 @@ function updateRow(id) {
   else if (statusVal === 'in-progress') row.classList.add('in-progress');
 
   if (transferRow) transferRow.style.display = (statusVal === 'transferred') ? '' : 'none';
-
-  // Show "Course Taken" input only when there's a course to look up.
-  // Single-course rows (data-single) hide it unless it's an IAI row (always need the CC course)
-  // or the student is recording a transfer.
-  var courseInput = document.querySelector('input[data-id="' + id + '"][data-field="course"]');
-  if (courseInput) {
-    var courseTd = courseInput.parentElement;
-    if (courseTd && courseTd.dataset.single) {
-      var showCourse = chk.dataset.prefix === 'iai' || statusVal === 'transferred';
-      courseInput.style.display = showCourse ? '' : 'none';
-    }
-  }
 }
 
 // ── Summary counters ──────────────────────────────────────────────────────────

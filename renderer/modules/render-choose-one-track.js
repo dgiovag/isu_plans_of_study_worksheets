@@ -58,7 +58,7 @@ function slotRowOpts(slot, courseMap) {
   }
   if (slot.course_id) {
     const course = courseMap[slot.course_id];
-    return { credits: course?.credits ?? null, singleCourse: true };
+    return { credits: course?.credits ?? null };
   }
   return {};
 }

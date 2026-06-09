@@ -56,7 +56,7 @@ module.exports = function renderFixed(group, courseMap, prefix, opts) {
       codeHTML = course ? esc(course.code) : esc(slot.course_id);
       const noteText = slot.note || (course && course.note) || '';
       if (noteText) descHTML = esc(noteText);
-      slotOpts = { ...opts, credits: course?.credits ?? null, singleCourse: true };
+      slotOpts = { ...opts, credits: course?.credits ?? null };
     } else {
       codeHTML = '—';
       slotOpts = opts;

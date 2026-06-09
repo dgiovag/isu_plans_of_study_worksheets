@@ -212,7 +212,7 @@ tr.transferred-row { background: #eef4fb; }
 .col-req { width: auto; }
 .col-hrs { width: 38px; text-align: center; }
 .col-hrs input { text-align: center; padding: 2px 2px; }
-.col-hrs input[readonly] { background: var(--gray-bg); color: var(--gray-text); border-color: transparent; }
+.col-hrs input[readonly] { background: transparent; border-color: transparent; cursor: default; }
 .col-course { width: 80px; }
 .col-grade { width: 42px; }
 .col-term { width: 80px; }
