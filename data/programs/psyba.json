@@ -359,9 +359,7 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "PSY223"
-            ]
+            "exempt": true
           }
         ]
       },

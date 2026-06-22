@@ -508,15 +508,7 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "auto_fulfilled_by": [
-              "ART155",
-              "ART156",
-              "ART275",
-              "MUS152",
-              "MUS275",
-              "THE275A01",
-              "THE275A02"
-            ]
+            "exempt": true
           },
           {
             "id": "isu.humanities",

@@ -260,12 +260,7 @@
             "title": "Language in the Humanities",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "ENG124",
-              "ENG125",
-              "LAN125",
-              "IDS121A29"
-            ]
+            "exempt": true
           },
           {
             "id": "isu.quantitative_reasoning",

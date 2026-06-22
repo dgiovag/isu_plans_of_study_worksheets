@@ -471,10 +471,7 @@
             "title": "Quantitative Reasoning",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "ECO138",
-              "MGT100"
-            ]
+            "exempt": true
           },
           {
             "id": "isu.science_math_technology",

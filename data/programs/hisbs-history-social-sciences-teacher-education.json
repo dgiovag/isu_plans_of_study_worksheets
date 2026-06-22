@@ -866,11 +866,7 @@
             "title": "United States Traditions",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "GEO142",
-              "HIS135",
-              "HIS136"
-            ]
+            "exempt": true
           },
           {
             "id": "isu.individuals_civic_life",

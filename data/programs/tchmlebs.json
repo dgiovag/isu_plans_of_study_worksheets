@@ -809,12 +809,7 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "ENG143",
-              "GEO135",
-              "ECO101",
-              "ECO102"
-            ]
+            "exempt": true
           }
         ]
       },

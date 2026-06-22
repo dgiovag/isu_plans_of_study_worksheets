@@ -358,7 +358,8 @@
             "id": "isu.language_humanities",
             "title": "Language in the Humanities",
             "fill": "open",
-            "count": 1
+            "count": 1,
+            "exempt": true
           },
           {
             "id": "isu.quantitative_reasoning",

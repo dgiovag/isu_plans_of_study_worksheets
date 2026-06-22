@@ -540,10 +540,7 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "GEO207",
-              "GEO202"
-            ]
+            "exempt": true
           },
           {
             "id": "isu.social_sciences",

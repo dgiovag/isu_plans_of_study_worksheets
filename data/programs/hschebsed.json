@@ -308,7 +308,8 @@
             "id": "isu.individuals_civic_life",
             "title": "Individuals & Civic Life",
             "fill": "open",
-            "count": 1
+            "count": 1,
+            "exempt": true
           },
           {
             "id": "isu.fine_arts",

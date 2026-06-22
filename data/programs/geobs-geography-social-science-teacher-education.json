@@ -645,15 +645,7 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "ECO101",
-              "GEO135",
-              "GEO235A01",
-              "GEO235A02",
-              "GEO235A04",
-              "GEO235A07",
-              "PSY110"
-            ]
+            "exempt": true
           }
         ]
       },

@@ -536,14 +536,7 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "auto_fulfilled_by": [
-              "MUS153",
-              "MUS154",
-              "MUS157",
-              "MUS159",
-              "MUS275",
-              "MUS275A01"
-            ]
+            "exempt": true
           },
           {
             "id": "isu.humanities",

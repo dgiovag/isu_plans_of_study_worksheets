@@ -451,10 +451,7 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "auto_fulfilled_by": [
-              "THE176A02",
-              "THE275A02"
-            ]
+            "exempt": true
           },
           {
             "id": "isu.humanities",

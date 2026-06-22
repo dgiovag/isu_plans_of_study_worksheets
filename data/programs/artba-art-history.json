@@ -224,73 +224,97 @@
       "id": "ART240",
       "code": "ART 240",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     },
     {
       "id": "ART241",
       "code": "ART 241",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     },
     {
       "id": "ART242",
       "code": "ART 242",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     },
     {
       "id": "ART244",
       "code": "ART 244",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     },
     {
       "id": "ART263",
       "code": "ART 263",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     },
     {
       "id": "ART264",
       "code": "ART 264",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     },
     {
       "id": "ART265",
       "code": "ART 265",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     },
     {
       "id": "ART266",
       "code": "ART 266",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     },
     {
       "id": "ART267",
       "code": "ART 267",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     },
     {
       "id": "ART279",
       "code": "ART 279",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     },
     {
       "id": "ART280",
       "code": "ART 280",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     },
     {
       "id": "ART281",
       "code": "ART 281",
       "credits": 3,
-      "fulfills": ["major.art_history_elective_courses"]
+      "fulfills": [
+        "major.art_history_elective_courses"
+      ]
     }
   ],
   "major": {
@@ -435,11 +459,7 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "auto_fulfilled_by": [
-              "ART155",
-              "ART156",
-              "ART275"
-            ]
+            "exempt": true
           },
           {
             "id": "isu.humanities",

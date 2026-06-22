@@ -647,13 +647,7 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "CSD115",
-              "GEO135",
-              "ECO101",
-              "ECO102",
-              "ECO103"
-            ]
+            "exempt": true
           }
         ]
       },

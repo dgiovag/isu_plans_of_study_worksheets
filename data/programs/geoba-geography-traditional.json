@@ -486,12 +486,7 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "GEO135",
-              "GEO235A01",
-              "GEO235A02",
-              "GEO235A04"
-            ]
+            "exempt": true
           }
         ]
       },

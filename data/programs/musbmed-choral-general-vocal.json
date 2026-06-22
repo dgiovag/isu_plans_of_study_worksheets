@@ -601,7 +601,8 @@
             "id": "isu.social_sciences",
             "title": "Social Sciences",
             "fill": "open",
-            "count": 1
+            "count": 1,
+            "exempt": true
           }
         ]
       },

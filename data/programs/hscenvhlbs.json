@@ -500,12 +500,7 @@
             "title": "Quantitative Reasoning",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "HSC204",
-              "MGT100",
-              "ECO138",
-              "PSY138"
-            ]
+            "exempt": true
           },
           {
             "id": "isu.science_math_technology",

@@ -740,10 +740,7 @@
             "title": "Quantitative Reasoning",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "MAT121",
-              "MAT146"
-            ]
+            "exempt": true
           },
           {
             "id": "isu.science_math_technology",

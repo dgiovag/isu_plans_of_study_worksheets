@@ -673,10 +673,7 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "BSC170",
-              "BSC160"
-            ]
+            "exempt": true
           },
           {
             "id": "isu.social_sciences",

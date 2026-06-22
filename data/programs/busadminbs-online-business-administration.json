@@ -291,9 +291,7 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "auto_fulfilled_by": [
-              "MGT120"
-            ]
+            "exempt": true
           }
         ]
       },
