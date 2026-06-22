@@ -1,0 +1,403 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "nurbsn-r-n-to-b-s-n",
+    "title": "Nursing",
+    "sequence": "R.N. to B.S.N. Sequence",
+    "degree": "B.S.N.",
+    "department": "MCNAO",
+    "college": "Mennonite College of Nursing",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/NURBSN",
+    "minimum_major_hours": 65,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "NUR223",
+      "code": "NUR 223",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR226",
+      "code": "NUR 226",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR227",
+      "code": "NUR 227",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR236",
+      "code": "NUR 236",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR238",
+      "code": "NUR 238",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR240",
+      "code": "NUR 240",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR330",
+      "code": "NUR 330",
+      "credits": 5,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR340",
+      "code": "NUR 340",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR341",
+      "code": "NUR 341",
+      "credits": 6,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR229",
+      "code": "NUR 229",
+      "credits": 6,
+      "fulfills": [
+        "major.escrow"
+      ]
+    },
+    {
+      "id": "NUR231",
+      "code": "NUR 231",
+      "credits": 7,
+      "fulfills": [
+        "major.escrow"
+      ]
+    },
+    {
+      "id": "NUR314",
+      "code": "NUR 314",
+      "credits": 4,
+      "fulfills": [
+        "major.escrow"
+      ]
+    },
+    {
+      "id": "NUR316",
+      "code": "NUR 316",
+      "credits": 4,
+      "fulfills": [
+        "major.escrow"
+      ]
+    },
+    {
+      "id": "NUR317",
+      "code": "NUR 317",
+      "credits": 4,
+      "fulfills": [
+        "major.escrow"
+      ]
+    },
+    {
+      "id": "NUR325",
+      "code": "NUR 325",
+      "credits": 7,
+      "fulfills": [
+        "major.escrow"
+      ]
+    }
+  ],
+  "major": {
+    "title": "R.N. to B.S.N. Sequence",
+    "minimum_hours": 65,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "NUR223"
+          },
+          {
+            "course_id": "NUR226"
+          },
+          {
+            "course_id": "NUR227"
+          },
+          {
+            "course_id": "NUR236"
+          },
+          {
+            "course_id": "NUR238"
+          },
+          {
+            "course_id": "NUR240"
+          },
+          {
+            "course_id": "NUR330"
+          },
+          {
+            "course_id": "NUR340"
+          },
+          {
+            "course_id": "NUR341"
+          }
+        ],
+        "note": "To be admitted to the R.N. to B.S.N. Sequence students must have completed the Associate Degree in Arts (A.A.) or an Associated Degree in Science (A.S.) or a specified portion of the IAI General Education Core Curriculum. External Transfers into this sequence may use all of the following courses in combination to fulfill the IAI Life Science requirement: Microbiology- BSC 160 or BSC 260 ; Anatomy and Physiology I- BSC 181 or KNR 181 / KNR 183 ; Anatomy and Physiology II- BSC 182 or KNR 182 / KNR 184 . This waiver is also fulfilled if the student completed a Microbiology and two Anatomy/Physiology courses that transfer into Illinois State University as electives. RN to BSN students must maintain a 2.0 cumulative ISU GPA. Obtaining a D or F in any two nursing major courses or in the same nursing major course twice will result in a dismissal from the major and a major change to undeclared at ISU. Students in the RN to BSN Sequence are expected to follow an approved plan of study developed in consultation with the student at the time of admission. Any student who does not adhere to their approved plan of study, or who has been academically dismissed from the major, must reapply to the college. Readmission will be granted on a selective basis. Application timeframes and processes are available from the nursing academic advisor."
+      },
+      {
+        "id": "major.escrow",
+        "title": "Escrow credit",
+        "fill": "escrow",
+        "trigger_courses": [
+          "NUR223",
+          "NUR227",
+          "NUR236"
+        ],
+        "granted_courses": [
+          "NUR229",
+          "NUR231",
+          "NUR314",
+          "NUR316",
+          "NUR317",
+          "NUR325"
+        ],
+        "total_credits": 34,
+        "note": "Diploma school or Associate Degree nursing courses are held in escrow until successful completion of NUR 223, NUR 227, and NUR 236. Upon completion, 34 credits are placed on the transcript. ADVISOR NOTE: individual course credit totals from legacy data sum to 32 — verify total with Mennonite College of Nursing."
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required"
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}
