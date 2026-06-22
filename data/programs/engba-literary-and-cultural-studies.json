@@ -1,0 +1,423 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "engba-literary-and-cultural-studies",
+    "title": "English",
+    "sequence": "Literary and Cultural Studies Sequence",
+    "degree": "B.A.",
+    "department": "ENGAO",
+    "college": "College of Arts and Sciences",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/ENGBA",
+    "minimum_major_hours": 40,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "ENG100",
+      "code": "ENG 100",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ENG102",
+      "code": "ENG 102",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ENG110",
+      "code": "ENG 110",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_literary_and_cultur",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ENG124",
+      "code": "ENG 124",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_literary_and_cultur",
+        "isu.language_humanities"
+      ]
+    },
+    {
+      "id": "ENG125",
+      "code": "ENG 125",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_literary_and_cultur",
+        "isu.language_humanities"
+      ]
+    },
+    {
+      "id": "ENG130",
+      "code": "ENG 130",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_literary_and_cultur",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ENG150",
+      "code": "ENG 150",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_literary_and_cultur",
+        "isu.humanities"
+      ]
+    },
+    {
+      "id": "ENG160",
+      "code": "ENG 160",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_literary_and_cultur",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ENG165",
+      "code": "ENG 165",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_literary_and_cultur",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ENG170",
+      "code": "ENG 170",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_literary_and_cultur",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ENG300",
+      "code": "ENG 300",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "IDS121A29",
+      "code": "IDS 121A29",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_literary_and_cultur",
+        "isu.language_humanities"
+      ]
+    },
+    {
+      "id": "LAN125",
+      "code": "LAN 125",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_literary_and_cultur",
+        "isu.language_humanities"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Literary and Cultural Studies Sequence",
+    "minimum_hours": 40,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "ENG100"
+          },
+          {
+            "course_id": "ENG102"
+          },
+          {
+            "course_id": "ENG300"
+          }
+        ]
+      },
+      {
+        "id": "major.introductory_literary_and_cultur",
+        "title": "Introductory literary and cultural studies",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ENG110",
+          "ENG124",
+          "ENG125",
+          "LAN125",
+          "ENG130",
+          "ENG150",
+          "ENG160",
+          "ENG165",
+          "ENG170",
+          "IDS121A29"
+        ]
+      },
+      {
+        "id": "major.literary_and_cultural_studies_el",
+        "title": "Literary and cultural studies electives",
+        "fill": "open",
+        "count": 1,
+        "note": "British literary and cultural studies: ENG 110, ENG 213, ENG 214, ENG 216, ENG 217, ENG 218, ENG 219, ENG 222, ENG 311, ENG 320, ENG 322, ENG 329, ENG 378 American literary and cultural studies: ENG 130, ENG 165, ENG 231, ENG 232, ENG 233, ENG 234, ENG 236, ENG 265, ENG 266, ENG 267, ENG 332, ENG 365 Global literary and cultural studies: ENG 150, ENG/LAN 206A01, ENG/LAN 206A02, ENG/LAN 206A03, ENG/LAN 206A04, ENG 250, ENG 252, ENG 255, ENG 261, ENG 352 U.S. ethnic literary and cultural studies: ENG 165, ENG 265, ENG 266, ENG 267, ENG 365, IDS 121A29 Women's &amp; gender and/or queer &amp; transgender literary and cultural studies: ENG 160, ENG 260, ENG 261, ENG 262, ENG 360 Children's literary and cultural studies: ENG 170, ENG 271, ENG 272, ENG 370, ENG 372, ENG 373, ENG 374, ENG 375"
+      },
+      {
+        "id": "major.language_and_linguistics_and_adv",
+        "title": "Language and linguistics and advanced writing electives",
+        "fill": "open",
+        "count": 1,
+        "note": "Language and linguistics: ENG 241, ENG 243, ENG 244, ENG 245, ENG 290, ENG 310, ENG 311, ENG 341, ENG 342 Advanced writing or rhetoric: ENG 239, ENG 246, ENG 247A01, ENG 247A02, ENG 247A03, ENG 248, ENG 249, ENG 280, ENG 283, ENG 347A01, ENG 347A02, ENG 347A03, ENG/THE 348, ENG 349, ENG 350, ENG 351, ENG 357, ENG 385"
+      },
+      {
+        "id": "major.additional_literary_and_cultural",
+        "title": "Additional Literary and cultural studies electives",
+        "fill": "open",
+        "count": 9,
+        "note": "African American literary and cultural studies: ENG 165, ENG 265, ENG 365 British literary and cultural studies: ENG 110, ENG 213, ENG 214, ENG 216, ENG 217, ENG 218, ENG 219, ENG 222, ENG 311, ENG 320, ENG 322, ENG 324, ENG 329, ENG 378 American literary and cultural studies: ENG 130, ENG 231, ENG 232, ENG 233, ENG 234, ENG 236, ENG 262, ENG 332 Children's literature: ENG 170, ENG 271, ENG 272, ENG 370, ENG 372, ENG 373, ENG 375 Film studies: ENG 124, ENG 364 General literary and cultural studies: ENG/LAN 125, ENG 229, ENG 284, ENG 285, ENG 286, ENG 296, ENG 308, ENG 321, ENG 374, ENG 381 Global literary and cultural studies: ENG 150, ENG/LAN 206A01, ENG/LAN 206A02, ENG/LAN 206A03, ENG/LAN 206A04, ENG 250, ENG 252, ENG 255, ENG 261, ENG 352 Latinx literary and cultural studies: ENG 267 Native American literary and cultural studies: IDS 121A29, ENG 266 Queer and transgender literary and cultural studies: ENG 262 Theory/research methods: ENG 355, ENG 384 Women's literary and cultural studies: ENG 160, ENG 260, ENG 261, ENG 262, ENG 360"
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ENG110",
+              "ENG130",
+              "ENG150",
+              "ENG160",
+              "ENG165",
+              "ENG170"
+            ]
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ENG124",
+              "ENG125",
+              "LAN125",
+              "IDS121A29"
+            ]
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts",
+            "auto_fulfilled_by": [
+              "ENG110",
+              "ENG130",
+              "ENG160",
+              "ENG165",
+              "ENG170"
+            ]
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required"
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "ba_world_language",
+        "title": "B.A. — World Language",
+        "note": "Intermediate proficiency or equivalent required for B.A. degree",
+        "applies_when": {
+          "degree": "B.A."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

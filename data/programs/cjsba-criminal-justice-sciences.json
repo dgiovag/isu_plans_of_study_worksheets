@@ -1,0 +1,682 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "cjsba-criminal-justice-sciences",
+    "title": "Criminal Justice Sciences",
+    "sequence": "Criminal Justice Sciences Sequence",
+    "degree": "B.A.",
+    "department": "CJSAO",
+    "college": "Applied Science and Technology",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/CJSBA",
+    "minimum_major_hours": 51,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "CJS101",
+      "code": "CJS 101",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.social_sciences"
+      ]
+    },
+    {
+      "id": "CJS102",
+      "code": "CJS 102",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo",
+        "isu.individuals_civic_life"
+      ]
+    },
+    {
+      "id": "CJS103",
+      "code": "CJS 103",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS105",
+      "code": "CJS 105",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo",
+        "isu.individuals_civic_life"
+      ]
+    },
+    {
+      "id": "CJS200",
+      "code": "CJS 200",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "CJS201",
+      "code": "CJS 201",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "CJS206",
+      "code": "CJS 206",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS207",
+      "code": "CJS 207",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "CJS208",
+      "code": "CJS 208",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "CJS210",
+      "code": "CJS 210",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS212",
+      "code": "CJS 212",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS213",
+      "code": "CJS 213",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS214",
+      "code": "CJS 214",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_1_of_the_following_cjs_",
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS215",
+      "code": "CJS 215",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_1_of_the_following_cjs_",
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS216",
+      "code": "CJS 216",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS217",
+      "code": "CJS 217",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS218",
+      "code": "CJS 218",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS241",
+      "code": "CJS 241",
+      "credits": 1,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS287",
+      "code": "CJS 287",
+      "credits": 6,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS291",
+      "code": "CJS 291",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS299",
+      "code": "CJS 299",
+      "credits": 6,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS300",
+      "code": "CJS 300",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "CJS305",
+      "code": "CJS 305",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS306",
+      "code": "CJS 306",
+      "credits": 6,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS308",
+      "code": "CJS 308",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_1_of_the_following_cjs_",
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS310",
+      "code": "CJS 310",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS311",
+      "code": "CJS 311",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_1_of_the_following_cjs_",
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS312",
+      "code": "CJS 312",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS313",
+      "code": "CJS 313",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS314",
+      "code": "CJS 314",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS315",
+      "code": "CJS 315",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS316",
+      "code": "CJS 316",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS318",
+      "code": "CJS 318",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS322",
+      "code": "CJS 322",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS337",
+      "code": "CJS 337",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS338",
+      "code": "CJS 338",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_1_of_the_following_cjs_",
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS339",
+      "code": "CJS 339",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_1_of_the_following_cjs_",
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS342",
+      "code": "CJS 342",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS360",
+      "code": "CJS 360",
+      "credits": 6,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS369",
+      "code": "CJS 369",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "CJS398A01",
+      "code": "CJS 398A01",
+      "credits": 6,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "CJS398A02",
+      "code": "CJS 398A02",
+      "credits": 6,
+      "fulfills": [
+        "major.complete_21_hours_from_the_follo"
+      ]
+    },
+    {
+      "id": "SOC106",
+      "code": "SOC 106",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.individuals_civic_life",
+        "iai.social_sciences"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Criminal Justice Sciences Sequence",
+    "minimum_hours": 51,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required Courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "CJS101"
+          },
+          {
+            "course_id": "CJS200"
+          },
+          {
+            "course_id": "CJS201"
+          },
+          {
+            "course_id": "CJS207"
+          },
+          {
+            "course_id": "CJS208"
+          },
+          {
+            "course_id": "CJS300"
+          },
+          {
+            "course_id": "CJS398A01"
+          },
+          {
+            "course_id": "SOC106"
+          }
+        ]
+      },
+      {
+        "id": "major.complete_1_of_the_following_cjs_",
+        "title": "Complete 1 of the following CJS electives centered on diversity, equity, belonging and inclusion",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "CJS214",
+          "CJS215",
+          "CJS308",
+          "CJS311",
+          "CJS338",
+          "CJS339"
+        ]
+      },
+      {
+        "id": "major.complete_21_hours_from_the_follo",
+        "title": "Complete 21 hours from the following",
+        "fill": "choose_n",
+        "options": [
+          "CJS102",
+          "CJS103",
+          "CJS105",
+          "CJS206",
+          "CJS210",
+          "CJS212",
+          "CJS213",
+          "CJS214",
+          "CJS215",
+          "CJS216",
+          "CJS217",
+          "CJS218",
+          "CJS241",
+          "CJS287",
+          "CJS291",
+          "CJS299",
+          "CJS305",
+          "CJS306",
+          "CJS308",
+          "CJS310",
+          "CJS311",
+          "CJS312",
+          "CJS313",
+          "CJS314",
+          "CJS315",
+          "CJS316",
+          "CJS318",
+          "CJS322",
+          "CJS337",
+          "CJS338",
+          "CJS339",
+          "CJS342",
+          "CJS360",
+          "CJS369",
+          "CJS398A02"
+        ],
+        "note": "Students seeking enrollment in CJS 398A01 and CJS 398A02 must complete necessary paperwork for application to the internship which will be received during mandatory meetings set by the Internship Coordinator. To be eligible, the student must have: (1) completed 60 semester hours, (2) an overall and major GPA of 2.00 at the time referrals are made. Students who have significant professional experience in the criminal justice system or related field, may apply for an exemption to the internship requirement. If approved, students must take 6 hours of coursework approved by the academic advisor. Students eligible for an internship will, with the assistance of the internship coordinator, choose an agency from a list of approved agencies. Students may also participate in out-of-state internships. For additional information visit the CJS Department website."
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "SOC106",
+              "CJS102",
+              "CJS105"
+            ]
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "CJS101"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required",
+            "auto_fulfilled_by": [
+              "SOC106"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "ba_world_language",
+        "title": "B.A. — World Language",
+        "note": "Intermediate proficiency or equivalent required for B.A. degree",
+        "applies_when": {
+          "degree": "B.A."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

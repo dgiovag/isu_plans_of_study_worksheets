@@ -1,0 +1,606 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "tecrnwenbs",
+    "title": "Sustainable and Renewable Energy",
+    "sequence": "Major in Sustainable and Renewable Energy",
+    "degree": "B.S.",
+    "department": "TECAO",
+    "college": "Applied Science and Technology",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/TECRNWENBS",
+    "minimum_major_hours": 69,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "AGR225",
+      "code": "AGR 225",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "CHE102",
+      "code": "CHE 102",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "ECO101",
+      "code": "ECO 101",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "ECO102",
+      "code": "ECO 102",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "ECO236",
+      "code": "ECO 236",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "GEO211",
+      "code": "GEO 211",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.science_math_technology"
+      ]
+    },
+    {
+      "id": "HSC156",
+      "code": "HSC 156",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.science_math_technology"
+      ]
+    },
+    {
+      "id": "MAT120",
+      "code": "MAT 120",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses",
+        "isu.mathematics",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "MGT100",
+      "code": "MGT 100",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "PHI236",
+      "code": "PHI 236",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "PHY105",
+      "code": "PHY 105",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "PHY207",
+      "code": "PHY 207",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.science_math_technology"
+      ]
+    },
+    {
+      "id": "PSY110",
+      "code": "PSY 110",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "SOC330",
+      "code": "SOC 330",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "TEC100",
+      "code": "TEC 100",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TEC111",
+      "code": "TEC 111",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TEC116",
+      "code": "TEC 116",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "TEC117",
+      "code": "TEC 117",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "TEC160",
+      "code": "TEC 160",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TEC217",
+      "code": "TEC 217",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "TEC240",
+      "code": "TEC 240",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "TEC258",
+      "code": "TEC 258",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TEC259",
+      "code": "TEC 259",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TEC260",
+      "code": "TEC 260",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TEC262",
+      "code": "TEC 262",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TEC270",
+      "code": "TEC 270",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TEC320",
+      "code": "TEC 320",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "TEC360",
+      "code": "TEC 360",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TEC370",
+      "code": "TEC 370",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "TEC398A02",
+      "code": "TEC 398A02",
+      "credits": 16,
+      "fulfills": [
+        "major.electives"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Major in Sustainable and Renewable Energy",
+    "minimum_hours": 69,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "TEC100"
+          },
+          {
+            "course_id": "TEC111"
+          },
+          {
+            "course_id": "TEC160"
+          },
+          {
+            "course_id": "TEC258"
+          },
+          {
+            "course_id": "TEC259"
+          },
+          {
+            "course_id": "TEC260"
+          },
+          {
+            "course_id": "TEC262"
+          },
+          {
+            "course_id": "TEC270"
+          },
+          {
+            "course_id": "TEC360"
+          },
+          {
+            "course_id": "AGR225"
+          },
+          {
+            "course_id": "CHE102"
+          },
+          {
+            "course_id": "ECO101"
+          },
+          {
+            "course_id": "ECO102"
+          },
+          {
+            "course_id": "ECO236"
+          },
+          {
+            "course_id": "GEO211"
+          },
+          {
+            "course_id": "HSC156"
+          },
+          {
+            "course_id": "MAT120"
+          },
+          {
+            "course_id": "MGT100"
+          },
+          {
+            "course_id": "PHY105"
+          },
+          {
+            "course_id": "PHY207"
+          },
+          {
+            "course_id": "PSY110"
+          }
+        ]
+      },
+      {
+        "id": "major.electives",
+        "title": "Electives",
+        "fill": "choose_n",
+        "n": 2,
+        "options": [
+          "TEC116",
+          "TEC117",
+          "TEC217",
+          "TEC240",
+          "TEC320",
+          "TEC370",
+          "TEC398A02",
+          "PHI236",
+          "SOC330"
+        ],
+        "note": "Please consult with your academic advisor"
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MAT120"
+            ]
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences",
+            "auto_fulfilled_by": [
+              "CHE102",
+              "PHY105"
+            ]
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MGT100"
+            ]
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "GEO211",
+              "HSC156",
+              "PHY207"
+            ]
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ECO101",
+              "ECO102",
+              "PSY110"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MAT120",
+              "MGT100"
+            ]
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7,
+            "auto_fulfilled_by": [
+              "CHE102",
+              "PHY105"
+            ]
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required",
+            "auto_fulfilled_by": [
+              "ECO101",
+              "ECO102",
+              "PSY110"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

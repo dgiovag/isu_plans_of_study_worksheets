@@ -1,0 +1,689 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "artbs-art-teacher-education",
+    "title": "Art",
+    "sequence": "Art Teacher Education Sequence",
+    "degree": "B.S.",
+    "department": "ARTAO",
+    "college": "Wonsook Kim Coll of Fine Arts",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/ARTBS",
+    "minimum_major_hours": 83,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "ART103",
+      "code": "ART 103",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ART104",
+      "code": "ART 104",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ART109",
+      "code": "ART 109",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ART155",
+      "code": "ART 155",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.fine_arts",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ART156",
+      "code": "ART 156",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.fine_arts",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ART201",
+      "code": "ART 201",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ART211",
+      "code": "ART 211",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ART212",
+      "code": "ART 212",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ART213",
+      "code": "ART 213",
+      "credits": 3,
+      "fulfills": [
+        "major.drawing_animation"
+      ]
+    },
+    {
+      "id": "ART214",
+      "code": "ART 214",
+      "credits": 3,
+      "fulfills": [
+        "major.drawing_animation"
+      ]
+    },
+    {
+      "id": "ART217",
+      "code": "ART 217",
+      "credits": 3,
+      "fulfills": [
+        "major.drawing_animation"
+      ]
+    },
+    {
+      "id": "ART224",
+      "code": "ART 224",
+      "credits": 3,
+      "fulfills": [
+        "major.3d_media"
+      ]
+    },
+    {
+      "id": "ART228",
+      "code": "ART 228",
+      "credits": 3,
+      "fulfills": [
+        "major.ceramics"
+      ]
+    },
+    {
+      "id": "ART229",
+      "code": "ART 229",
+      "credits": 3,
+      "fulfills": [
+        "major.ceramics"
+      ]
+    },
+    {
+      "id": "ART232",
+      "code": "ART 232",
+      "credits": 3,
+      "fulfills": [
+        "major.3d_media"
+      ]
+    },
+    {
+      "id": "ART235",
+      "code": "ART 235",
+      "credits": 3,
+      "fulfills": [
+        "major.digital_media_video"
+      ]
+    },
+    {
+      "id": "ART236",
+      "code": "ART 236",
+      "credits": 3,
+      "fulfills": [
+        "major.digital_media_video"
+      ]
+    },
+    {
+      "id": "ART252",
+      "code": "ART 252",
+      "credits": 3,
+      "fulfills": [
+        "major.digital_media_video"
+      ]
+    },
+    {
+      "id": "ART255",
+      "code": "ART 255",
+      "credits": 3,
+      "fulfills": [
+        "major.3d_media"
+      ]
+    },
+    {
+      "id": "ART261",
+      "code": "ART 261",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ART280",
+      "code": "ART 280",
+      "credits": 3,
+      "fulfills": [
+        "major.art_history"
+      ]
+    },
+    {
+      "id": "ART281",
+      "code": "ART 281",
+      "credits": 3,
+      "fulfills": [
+        "major.art_history"
+      ]
+    },
+    {
+      "id": "ART283",
+      "code": "ART 283",
+      "credits": 3,
+      "fulfills": [
+        "major.art_history"
+      ]
+    },
+    {
+      "id": "ART284",
+      "code": "ART 284",
+      "credits": 3,
+      "fulfills": [
+        "major.3d_media"
+      ]
+    },
+    {
+      "id": "ART307",
+      "code": "ART 307",
+      "credits": 3,
+      "fulfills": [
+        "major.education_electives"
+      ]
+    },
+    {
+      "id": "ART309",
+      "code": "ART 309",
+      "credits": 6,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ART314",
+      "code": "ART 314",
+      "credits": 6,
+      "fulfills": [
+        "major.drawing_animation"
+      ]
+    },
+    {
+      "id": "ART399",
+      "code": "ART 399",
+      "credits": 16,
+      "fulfills": [
+        "major.professional_education_requireme"
+      ]
+    },
+    {
+      "id": "EAF228",
+      "code": "EAF 228",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_requireme"
+      ]
+    },
+    {
+      "id": "EAF231",
+      "code": "EAF 231",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_requireme"
+      ]
+    },
+    {
+      "id": "EAF235",
+      "code": "EAF 235",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_requireme"
+      ]
+    },
+    {
+      "id": "PSY215",
+      "code": "PSY 215",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_requireme"
+      ]
+    },
+    {
+      "id": "SED344",
+      "code": "SED 344",
+      "credits": 3,
+      "fulfills": [
+        "major.education_electives"
+      ]
+    },
+    {
+      "id": "TCH210",
+      "code": "TCH 210",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_requireme"
+      ]
+    },
+    {
+      "id": "TCH212",
+      "code": "TCH 212",
+      "credits": 2,
+      "fulfills": [
+        "major.professional_education_requireme"
+      ]
+    },
+    {
+      "id": "TCH216",
+      "code": "TCH 216",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_requireme"
+      ]
+    },
+    {
+      "id": "TCH219",
+      "code": "TCH 219",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_requireme"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Art Teacher Education Sequence",
+    "minimum_hours": 83,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "ART103"
+          },
+          {
+            "course_id": "ART104"
+          },
+          {
+            "course_id": "ART109"
+          },
+          {
+            "course_id": "ART155"
+          },
+          {
+            "course_id": "ART156"
+          },
+          {
+            "course_id": "ART201"
+          },
+          {
+            "course_id": "ART211"
+          },
+          {
+            "course_id": "ART212"
+          },
+          {
+            "course_id": "ART261"
+          },
+          {
+            "course_id": "ART309"
+          }
+        ],
+        "note": "Students must complete 6 hours of ART 309."
+      },
+      {
+        "id": "major.200_level_art_history_electives",
+        "title": "200-level art history electives",
+        "fill": "open",
+        "count": 1,
+        "note": "Complete 1 additional 200-level Art History elective"
+      },
+      {
+        "id": "major.300_level_art_history_seminar_el",
+        "title": "300-level art history seminar electives",
+        "fill": "open",
+        "count": 1,
+        "note": "Complete 1 additional 300-level Art History seminar elective"
+      },
+      {
+        "id": "major.drawing_animation",
+        "title": "Drawing/Animation",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ART213",
+          "ART214",
+          "ART217",
+          "ART314"
+        ]
+      },
+      {
+        "id": "major.ceramics",
+        "title": "Ceramics",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ART228",
+          "ART229"
+        ]
+      },
+      {
+        "id": "major.digital_media_video",
+        "title": "Digital Media/Video",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ART235",
+          "ART236",
+          "ART252"
+        ]
+      },
+      {
+        "id": "major.art_history",
+        "title": "Art history",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ART280",
+          "ART281",
+          "ART283"
+        ]
+      },
+      {
+        "id": "major.education_electives",
+        "title": "Education electives",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ART307",
+          "SED344"
+        ]
+      },
+      {
+        "id": "major.professional_education_requireme",
+        "title": "Professional education requirements",
+        "fill": "fixed",
+        "slots": [
+          {
+            "fill": "choose_one",
+            "options": [
+              "PSY215",
+              "TCH210"
+            ]
+          },
+          {
+            "course_id": "TCH212"
+          },
+          {
+            "course_id": "TCH216"
+          },
+          {
+            "course_id": "TCH219"
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "EAF228",
+              "EAF231",
+              "EAF235"
+            ]
+          },
+          {
+            "course_id": "ART399"
+          }
+        ],
+        "note": "Student must complete 12 hours of student teaching (STT 399A02). For additional requirements for teaching majors, see University-wide Teacher Education Requirements&nbsp; ."
+      },
+      {
+        "id": "major.3d_media",
+        "title": "3D Media",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ART224",
+          "ART232",
+          "ART255",
+          "ART284"
+        ]
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3,
+            "auto_fulfilled_by": [
+              "ART155",
+              "ART156"
+            ]
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts",
+            "auto_fulfilled_by": [
+              "ART155",
+              "ART156"
+            ]
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required"
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

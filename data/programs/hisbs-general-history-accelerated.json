@@ -1,0 +1,928 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "hisbs-general-history-accelerated",
+    "title": "History",
+    "sequence": "General History Accelerated Sequence",
+    "degree": "B.S.",
+    "department": "HISAO",
+    "college": "College of Arts and Sciences",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/HISBS",
+    "minimum_major_hours": 39,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "HIS100",
+      "code": "HIS 100",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "HIS101",
+      "code": "HIS 101",
+      "credits": 3,
+      "fulfills": [
+        "major.required_100_level_surveys",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS102",
+      "code": "HIS 102",
+      "credits": 3,
+      "fulfills": [
+        "major.required_100_level_surveys",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS104A01",
+      "code": "HIS 104A01",
+      "credits": 3,
+      "fulfills": [
+        "major.required_100_level_surveys",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS104A02",
+      "code": "HIS 104A02",
+      "credits": 3,
+      "fulfills": [
+        "major.required_100_level_surveys",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS104A03",
+      "code": "HIS 104A03",
+      "credits": 3,
+      "fulfills": [
+        "major.required_100_level_surveys",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS104A04",
+      "code": "HIS 104A04",
+      "credits": 3,
+      "fulfills": [
+        "major.required_100_level_surveys",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS104A05",
+      "code": "HIS 104A05",
+      "credits": 3,
+      "fulfills": [
+        "major.required_100_level_surveys",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS104A06",
+      "code": "HIS 104A06",
+      "credits": 3,
+      "fulfills": [
+        "major.required_100_level_surveys",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS105",
+      "code": "HIS 105",
+      "credits": 3,
+      "fulfills": [
+        "major.required_100_level_surveys",
+        "isu.humanities"
+      ]
+    },
+    {
+      "id": "HIS135",
+      "code": "HIS 135",
+      "credits": 3,
+      "fulfills": [
+        "major.required_100_level_surveys",
+        "isu.us_traditions",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS136",
+      "code": "HIS 136",
+      "credits": 3,
+      "fulfills": [
+        "major.required_100_level_surveys",
+        "isu.us_traditions",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS200",
+      "code": "HIS 200",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "HIS210",
+      "code": "HIS 210",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS215",
+      "code": "HIS 215",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS217",
+      "code": "HIS 217",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS239",
+      "code": "HIS 239",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS241",
+      "code": "HIS 241",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS242",
+      "code": "HIS 242",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS243",
+      "code": "HIS 243",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS244",
+      "code": "HIS 244",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS245",
+      "code": "HIS 245",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS246",
+      "code": "HIS 246",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS247",
+      "code": "HIS 247",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS248",
+      "code": "HIS 248",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS249",
+      "code": "HIS 249",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS257",
+      "code": "HIS 257",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS258",
+      "code": "HIS 258",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS259",
+      "code": "HIS 259",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS261",
+      "code": "HIS 261",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS262",
+      "code": "HIS 262",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS263",
+      "code": "HIS 263",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS265",
+      "code": "HIS 265",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS266",
+      "code": "HIS 266",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS267",
+      "code": "HIS 267",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS272",
+      "code": "HIS 272",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS275",
+      "code": "HIS 275",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS276",
+      "code": "HIS 276",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS278",
+      "code": "HIS 278",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS279",
+      "code": "HIS 279",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS282",
+      "code": "HIS 282",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS283",
+      "code": "HIS 283",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS284",
+      "code": "HIS 284",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS307",
+      "code": "HIS 307",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS309",
+      "code": "HIS 309",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS310",
+      "code": "HIS 310",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS311",
+      "code": "HIS 311",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS315",
+      "code": "HIS 315",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS320",
+      "code": "HIS 320",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS323",
+      "code": "HIS 323",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS324",
+      "code": "HIS 324",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS328",
+      "code": "HIS 328",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS330",
+      "code": "HIS 330",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS367",
+      "code": "HIS 367",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS373",
+      "code": "HIS 373",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS375",
+      "code": "HIS 375",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS377",
+      "code": "HIS 377",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS411",
+      "code": "HIS 411",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS412",
+      "code": "HIS 412",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS414",
+      "code": "HIS 414",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS417",
+      "code": "HIS 417",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS421",
+      "code": "HIS 421",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS424",
+      "code": "HIS 424",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS428",
+      "code": "HIS 428",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS432",
+      "code": "HIS 432",
+      "credits": 3,
+      "fulfills": [
+        "major.u_s_history_electives"
+      ]
+    },
+    {
+      "id": "HIS478",
+      "code": "HIS 478",
+      "credits": 3,
+      "fulfills": [
+        "major.non_western_history_electives"
+      ]
+    },
+    {
+      "id": "HIS497",
+      "code": "HIS 497",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    }
+  ],
+  "major": {
+    "title": "General History Accelerated Sequence",
+    "minimum_hours": 39,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "HIS100"
+          },
+          {
+            "course_id": "HIS200"
+          },
+          {
+            "course_id": "HIS497"
+          }
+        ]
+      },
+      {
+        "id": "major.required_100_level_surveys",
+        "title": "Required 100-level surveys",
+        "fill": "fixed",
+        "slots": [
+          {
+            "fill": "choose_one",
+            "options": [
+              "HIS135",
+              "HIS136"
+            ]
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "HIS101",
+              "HIS102",
+              "HIS105"
+            ]
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "HIS104A01",
+              "HIS104A02",
+              "HIS104A03",
+              "HIS104A04",
+              "HIS104A05",
+              "HIS104A06"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "major.non_western_history_electives",
+        "title": "Non-western history electives",
+        "fill": "choose_n",
+        "options": [
+          "HIS210",
+          "HIS263",
+          "HIS265",
+          "HIS266",
+          "HIS267",
+          "HIS272",
+          "HIS275",
+          "HIS276",
+          "HIS282",
+          "HIS283",
+          "HIS284",
+          "HIS307",
+          "HIS367",
+          "HIS373",
+          "HIS375",
+          "HIS478",
+          "HIS377"
+        ]
+      },
+      {
+        "id": "major.u_s_history_electives",
+        "title": "U.S. history electives",
+        "fill": "choose_n",
+        "options": [
+          "HIS215",
+          "HIS217",
+          "HIS239",
+          "HIS241",
+          "HIS242",
+          "HIS243",
+          "HIS244",
+          "HIS245",
+          "HIS246",
+          "HIS247",
+          "HIS248",
+          "HIS249",
+          "HIS257",
+          "HIS258",
+          "HIS259",
+          "HIS261",
+          "HIS262",
+          "HIS278",
+          "HIS279",
+          "HIS309",
+          "HIS310",
+          "HIS311",
+          "HIS315",
+          "HIS320",
+          "HIS323",
+          "HIS324",
+          "HIS328",
+          "HIS330",
+          "HIS411",
+          "HIS412",
+          "HIS414",
+          "HIS417",
+          "HIS421",
+          "HIS424",
+          "HIS428",
+          "HIS432"
+        ]
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "HIS135",
+              "HIS136"
+            ]
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "HIS101",
+              "HIS102",
+              "HIS105",
+              "HIS104A01",
+              "HIS104A02",
+              "HIS104A03",
+              "HIS104A04",
+              "HIS104A05",
+              "HIS104A06"
+            ]
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts",
+            "auto_fulfilled_by": [
+              "HIS135",
+              "HIS136",
+              "HIS101",
+              "HIS102",
+              "HIS104A01",
+              "HIS104A02",
+              "HIS104A03",
+              "HIS104A04",
+              "HIS104A05",
+              "HIS104A06"
+            ]
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required"
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

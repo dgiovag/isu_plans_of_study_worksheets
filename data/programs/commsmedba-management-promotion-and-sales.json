@@ -1,0 +1,485 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "commsmedba-management-promotion-and-sales",
+    "title": "Mass Media",
+    "sequence": "Management, Promotion and Sales Sequence",
+    "degree": "B.A.",
+    "department": "COMAO",
+    "college": "College of Arts and Sciences",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/COMMSMEDBA",
+    "minimum_major_hours": 52,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "COM101",
+      "code": "COM 101",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_the_following_31_credit"
+      ]
+    },
+    {
+      "id": "COM111",
+      "code": "COM 111",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_the_following_31_credit"
+      ]
+    },
+    {
+      "id": "COM160",
+      "code": "COM 160",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_the_following_31_credit"
+      ]
+    },
+    {
+      "id": "COM161",
+      "code": "COM 161",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_the_following_31_credit"
+      ]
+    },
+    {
+      "id": "COM162",
+      "code": "COM 162",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following"
+      ]
+    },
+    {
+      "id": "COM163",
+      "code": "COM 163",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following"
+      ]
+    },
+    {
+      "id": "COM264",
+      "code": "COM 264",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_the_following_31_credit"
+      ]
+    },
+    {
+      "id": "COM273",
+      "code": "COM 273",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_the_following_31_credit"
+      ]
+    },
+    {
+      "id": "COM284",
+      "code": "COM 284",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_the_following_31_credit"
+      ]
+    },
+    {
+      "id": "COM297",
+      "code": "COM 297",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_the_following_31_credit"
+      ]
+    },
+    {
+      "id": "COM320",
+      "code": "COM 320",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following_2"
+      ]
+    },
+    {
+      "id": "COM360",
+      "code": "COM 360",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following_2"
+      ]
+    },
+    {
+      "id": "COM361",
+      "code": "COM 361",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_the_following_31_credit"
+      ]
+    },
+    {
+      "id": "COM364",
+      "code": "COM 364",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_the_following_31_credit"
+      ]
+    },
+    {
+      "id": "COM367",
+      "code": "COM 367",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following_3"
+      ]
+    },
+    {
+      "id": "COM396",
+      "code": "COM 396",
+      "credits": 1,
+      "fulfills": [
+        "major.complete_the_following_31_credit"
+      ]
+    },
+    {
+      "id": "PHI232",
+      "code": "PHI 232",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following_3"
+      ]
+    },
+    {
+      "id": "PHI234",
+      "code": "PHI 234",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following_3"
+      ]
+    },
+    {
+      "id": "PHI238",
+      "code": "PHI 238",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following_3",
+        "isu.humanities"
+      ]
+    },
+    {
+      "id": "PHI240",
+      "code": "PHI 240",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following_3",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "PHI242",
+      "code": "PHI 242",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following_3"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Management, Promotion and Sales Sequence",
+    "minimum_hours": 52,
+    "groups": [
+      {
+        "id": "major.complete_the_following_31_credit",
+        "title": "Complete the following 31 credit hours",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "COM101"
+          },
+          {
+            "course_id": "COM111"
+          },
+          {
+            "course_id": "COM160"
+          },
+          {
+            "course_id": "COM161"
+          },
+          {
+            "course_id": "COM264"
+          },
+          {
+            "course_id": "COM273"
+          },
+          {
+            "course_id": "COM284"
+          },
+          {
+            "course_id": "COM297"
+          },
+          {
+            "course_id": "COM361"
+          },
+          {
+            "course_id": "COM364"
+          },
+          {
+            "course_id": "COM396"
+          }
+        ]
+      },
+      {
+        "id": "major.complete_one_of_the_following",
+        "title": "Complete one of the following",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "COM162",
+          "COM163"
+        ]
+      },
+      {
+        "id": "major.complete_one_of_the_following_2",
+        "title": "Complete one of the following",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "COM320",
+          "COM360"
+        ]
+      },
+      {
+        "id": "major.complete_one_of_the_following_3",
+        "title": "Complete one of the following",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "COM367",
+          "PHI232",
+          "PHI234",
+          "PHI238",
+          "PHI240",
+          "PHI242"
+        ]
+      },
+      {
+        "id": "major.additional_electives",
+        "title": "Additional electives",
+        "fill": "open",
+        "minimum_hours": 12,
+        "note": "One course (3 credit hours) must be at the 300-level. If a PHI course is completed instead of COM 367 (above) 6 credit hours must be taken at the 300-level to satisfy the overall minimum of 16 credit hours required in COM. A minimum of 31 credit hours in COM courses at the 200-300-level, including at least 16 credit hours at the 300-level (excluding COM 398axx) are required. Students may include a maximum of 6 credit hours of professional practice (COM 398axx) toward the major."
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "PHI238"
+            ]
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts",
+            "auto_fulfilled_by": [
+              "PHI240"
+            ]
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required"
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "ba_world_language",
+        "title": "B.A. — World Language",
+        "note": "Intermediate proficiency or equivalent required for B.A. degree",
+        "applies_when": {
+          "degree": "B.A."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

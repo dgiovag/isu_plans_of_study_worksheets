@@ -1,0 +1,603 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "fcsfdmbs-fashion-design-and-product-development-accelerated",
+    "title": "Fashion Design & Merchandising",
+    "sequence": "Fashion Design and Product Development Accelerated Sequence",
+    "degree": "B.S.",
+    "department": "FCSAO",
+    "college": "Applied Science and Technology",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/FCSFDMBS",
+    "minimum_major_hours": 57,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "FCS100",
+      "code": "FCS 100",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS122",
+      "code": "FCS 122",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS200",
+      "code": "FCS 200",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS221",
+      "code": "FCS 221",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS225",
+      "code": "FCS 225",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS226",
+      "code": "FCS 226",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS228",
+      "code": "FCS 228",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS261",
+      "code": "FCS 261",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS300A05",
+      "code": "FCS 300A05",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS321",
+      "code": "FCS 321",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS323",
+      "code": "FCS 323",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS324",
+      "code": "FCS 324",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS327",
+      "code": "FCS 327",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS328",
+      "code": "FCS 328",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS329",
+      "code": "FCS 329",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS362",
+      "code": "FCS 362",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS365",
+      "code": "FCS 365",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS366",
+      "code": "FCS 366",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS398A05",
+      "code": "FCS 398A05",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS421",
+      "code": "FCS 421",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS423",
+      "code": "FCS 423",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS425",
+      "code": "FCS 425",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS427",
+      "code": "FCS 427",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS428",
+      "code": "FCS 428",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS429",
+      "code": "FCS 429",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS462",
+      "code": "FCS 462",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS465",
+      "code": "FCS 465",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS466",
+      "code": "FCS 466",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "PSY110",
+      "code": "PSY 110",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "PSY223",
+      "code": "PSY 223",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "SOC223",
+      "code": "SOC 223",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Fashion Design and Product Development Accelerated Sequence",
+    "minimum_hours": 57,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "FCS100"
+          },
+          {
+            "course_id": "FCS122"
+          },
+          {
+            "course_id": "FCS200"
+          },
+          {
+            "course_id": "FCS221"
+          },
+          {
+            "course_id": "FCS225"
+          },
+          {
+            "course_id": "FCS226"
+          },
+          {
+            "course_id": "FCS228"
+          },
+          {
+            "course_id": "FCS261"
+          },
+          {
+            "course_id": "FCS300A05"
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "FCS321",
+              "FCS421"
+            ]
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "FCS323",
+              "FCS423"
+            ]
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "FCS324",
+              "FCS425"
+            ]
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "FCS327",
+              "FCS427"
+            ]
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "FCS328",
+              "FCS428"
+            ]
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "FCS329",
+              "FCS429"
+            ]
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "FCS362",
+              "FCS462"
+            ]
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "FCS365",
+              "FCS465"
+            ]
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "FCS366",
+              "FCS466"
+            ]
+          },
+          {
+            "course_id": "FCS398A05"
+          }
+        ]
+      },
+      {
+        "id": "major.complete_one_of_the_following",
+        "title": "Complete one of the following",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "PSY110",
+          "PSY223",
+          "SOC223"
+        ]
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "PSY110",
+              "PSY223",
+              "SOC223"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required",
+            "auto_fulfilled_by": [
+              "PSY110",
+              "PSY223",
+              "SOC223"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

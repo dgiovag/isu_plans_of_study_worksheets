@@ -1,0 +1,607 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "agribs-agriculture-teacher-education",
+    "title": "Agriculture",
+    "sequence": "Agriculture Teacher Education Sequence",
+    "degree": "B.S.",
+    "department": "AGRAO",
+    "college": "Applied Science and Technology",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/AGRIBS",
+    "minimum_major_hours": 78,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "AGR110",
+      "code": "AGR 110",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR120",
+      "code": "AGR 120",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.science_math_technology"
+      ]
+    },
+    {
+      "id": "AGR130",
+      "code": "AGR 130",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR150",
+      "code": "AGR 150",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR157",
+      "code": "AGR 157",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR170",
+      "code": "AGR 170",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR190",
+      "code": "AGR 190",
+      "credits": 2,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR191",
+      "code": "AGR 191",
+      "credits": 2,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR205",
+      "code": "AGR 205",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR231",
+      "code": "AGR 231",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR295",
+      "code": "AGR 295",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR390",
+      "code": "AGR 390",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR391",
+      "code": "AGR 391",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR394",
+      "code": "AGR 394",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR395",
+      "code": "AGR 395",
+      "credits": 2,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR399",
+      "code": "AGR 399",
+      "credits": 16,
+      "fulfills": [
+        "major.professional_education_courses"
+      ]
+    },
+    {
+      "id": "BSC101",
+      "code": "BSC 101",
+      "credits": 3,
+      "fulfills": [
+        "major.biology_options",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "BSC196",
+      "code": "BSC 196",
+      "credits": 4,
+      "fulfills": [
+        "major.biology_options",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "BSC197",
+      "code": "BSC 197",
+      "credits": 4,
+      "fulfills": [
+        "major.biology_options",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "CHE102",
+      "code": "CHE 102",
+      "credits": 3,
+      "fulfills": [
+        "major.chemistry_options",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "CHE110",
+      "code": "CHE 110",
+      "credits": 4,
+      "fulfills": [
+        "major.chemistry_options",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "CHE112",
+      "code": "CHE 112",
+      "credits": 1,
+      "fulfills": [
+        "major.chemistry_options",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "CHE140",
+      "code": "CHE 140",
+      "credits": 4,
+      "fulfills": [
+        "major.chemistry_options",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "PSY110",
+      "code": "PSY 110",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_courses",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "PSY215",
+      "code": "PSY 215",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_courses"
+      ]
+    },
+    {
+      "id": "SED344",
+      "code": "SED 344",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_courses"
+      ]
+    },
+    {
+      "id": "TCH212",
+      "code": "TCH 212",
+      "credits": 2,
+      "fulfills": [
+        "major.professional_education_courses"
+      ]
+    },
+    {
+      "id": "TCH216",
+      "code": "TCH 216",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_courses"
+      ]
+    },
+    {
+      "id": "TCH219",
+      "code": "TCH 219",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_courses"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Agriculture Teacher Education Sequence",
+    "minimum_hours": 78,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "AGR110"
+          },
+          {
+            "course_id": "AGR120"
+          },
+          {
+            "course_id": "AGR130"
+          },
+          {
+            "course_id": "AGR150"
+          },
+          {
+            "course_id": "AGR157"
+          },
+          {
+            "course_id": "AGR170"
+          },
+          {
+            "course_id": "AGR190"
+          },
+          {
+            "course_id": "AGR191"
+          },
+          {
+            "course_id": "AGR205"
+          },
+          {
+            "course_id": "AGR231"
+          },
+          {
+            "course_id": "AGR295"
+          },
+          {
+            "course_id": "AGR390"
+          },
+          {
+            "course_id": "AGR391"
+          },
+          {
+            "course_id": "AGR394"
+          },
+          {
+            "course_id": "AGR395"
+          }
+        ]
+      },
+      {
+        "id": "major.biology_options",
+        "title": "Biology Options",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "BSC101",
+          "BSC196",
+          "BSC197"
+        ]
+      },
+      {
+        "id": "major.chemistry_options",
+        "title": "Chemistry Options",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "CHE102",
+          "CHE110",
+          "CHE112",
+          "CHE140"
+        ]
+      },
+      {
+        "id": "major.professional_education_courses",
+        "title": "Professional Education courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "PSY110"
+          },
+          {
+            "course_id": "PSY215"
+          },
+          {
+            "course_id": "SED344"
+          },
+          {
+            "course_id": "AGR399"
+          },
+          {
+            "course_id": "TCH212"
+          },
+          {
+            "course_id": "TCH216"
+          },
+          {
+            "course_id": "TCH219"
+          }
+        ]
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences",
+            "auto_fulfilled_by": [
+              "BSC101",
+              "BSC196",
+              "BSC197",
+              "CHE102",
+              "CHE110",
+              "CHE112",
+              "CHE140"
+            ]
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "AGR120"
+            ]
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "PSY110"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7,
+            "auto_fulfilled_by": [
+              "BSC101",
+              "BSC196",
+              "BSC197",
+              "CHE102",
+              "CHE110",
+              "CHE112",
+              "CHE140"
+            ]
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required",
+            "auto_fulfilled_by": [
+              "PSY110"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

@@ -1,0 +1,971 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "tchmlebsed",
+    "title": "Middle Level Teacher Education",
+    "sequence": "Major in Middle Level Education",
+    "degree": "B.S.Ed.",
+    "department": "TCHAO",
+    "college": "College of Education",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/TCHMLEBSED",
+    "minimum_major_hours": 78,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "BSC101",
+      "code": "BSC 101",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_science",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "CHE102",
+      "code": "CHE 102",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_science_endorse",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "CHE110",
+      "code": "CHE 110",
+      "credits": 4,
+      "fulfills": [
+        "major.elective_for_the_science_endorse",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "CHE140",
+      "code": "CHE 140",
+      "credits": 4,
+      "fulfills": [
+        "major.elective_for_the_science_endorse",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "EAF228",
+      "code": "EAF 228",
+      "credits": 3,
+      "fulfills": [
+        "major.elective"
+      ]
+    },
+    {
+      "id": "EAF231",
+      "code": "EAF 231",
+      "credits": 3,
+      "fulfills": [
+        "major.elective"
+      ]
+    },
+    {
+      "id": "EAF235",
+      "code": "EAF 235",
+      "credits": 3,
+      "fulfills": [
+        "major.elective"
+      ]
+    },
+    {
+      "id": "ECO101",
+      "code": "ECO 101",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_social_science_",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "ECO102",
+      "code": "ECO 102",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_social_science_",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "ENG110",
+      "code": "ENG 110",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_english_languag",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ENG125",
+      "code": "ENG 125",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_english_languag",
+        "isu.language_humanities"
+      ]
+    },
+    {
+      "id": "ENG130",
+      "code": "ENG 130",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_english_languag",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ENG143",
+      "code": "ENG 143",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_english_languag_2",
+        "major.required_courses_for_the_english_2",
+        "isu.social_sciences"
+      ]
+    },
+    {
+      "id": "ENG165",
+      "code": "ENG 165",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_english_languag",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ENG170",
+      "code": "ENG 170",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_english_languag",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ENG239",
+      "code": "ENG 239",
+      "credits": 6,
+      "fulfills": [
+        "major.elective_for_the_english_languag"
+      ]
+    },
+    {
+      "id": "ENG243",
+      "code": "ENG 243",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_english_languag_2"
+      ]
+    },
+    {
+      "id": "ENG244",
+      "code": "ENG 244",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_english_languag_2"
+      ]
+    },
+    {
+      "id": "GEO102",
+      "code": "GEO 102",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_science",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "GEO135",
+      "code": "GEO 135",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_social_",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "HIS101",
+      "code": "HIS 101",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_social_science__2",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS102",
+      "code": "HIS 102",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_social_science__2",
+        "isu.humanities",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS105",
+      "code": "HIS 105",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_social_science__2",
+        "isu.humanities"
+      ]
+    },
+    {
+      "id": "HIS135",
+      "code": "HIS 135",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_social_science__2",
+        "isu.us_traditions",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "HIS136",
+      "code": "HIS 136",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_for_the_social_science__2",
+        "isu.us_traditions",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "MAT131",
+      "code": "MAT 131",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_mathema",
+        "isu.quantitative_reasoning"
+      ]
+    },
+    {
+      "id": "MAT202",
+      "code": "MAT 202",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses_for_the_mathema"
+      ]
+    },
+    {
+      "id": "MAT302",
+      "code": "MAT 302",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses_for_the_mathema"
+      ]
+    },
+    {
+      "id": "MAT309",
+      "code": "MAT 309",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses_for_the_mathema"
+      ]
+    },
+    {
+      "id": "MAT312",
+      "code": "MAT 312",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses_for_the_mathema"
+      ]
+    },
+    {
+      "id": "PHY105",
+      "code": "PHY 105",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses_for_the_science",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "POL106",
+      "code": "POL 106",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_social_",
+        "isu.individuals_civic_life",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "TCH110",
+      "code": "TCH 110",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_english_2"
+      ]
+    },
+    {
+      "id": "TCH130",
+      "code": "TCH 130",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TCH207",
+      "code": "TCH 207",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TCH233",
+      "code": "TCH 233",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TCH235",
+      "code": "TCH 235",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_english",
+        "major.required_courses_for_the_english_2"
+      ]
+    },
+    {
+      "id": "TCH236",
+      "code": "TCH 236",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_english"
+      ]
+    },
+    {
+      "id": "TCH237",
+      "code": "TCH 237",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_english"
+      ]
+    },
+    {
+      "id": "TCH238",
+      "code": "TCH 238",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_english"
+      ]
+    },
+    {
+      "id": "TCH239",
+      "code": "TCH 239",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_science"
+      ]
+    },
+    {
+      "id": "TCH248",
+      "code": "TCH 248",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_english_2"
+      ]
+    },
+    {
+      "id": "TCH296",
+      "code": "TCH 296",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TCH306",
+      "code": "TCH 306",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TCH320",
+      "code": "TCH 320",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_english_2"
+      ]
+    },
+    {
+      "id": "TCH333",
+      "code": "TCH 333",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TCH334",
+      "code": "TCH 334",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_english_2"
+      ]
+    },
+    {
+      "id": "TCH351",
+      "code": "TCH 351",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_science"
+      ]
+    },
+    {
+      "id": "TCH352",
+      "code": "TCH 352",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses_for_the_social_"
+      ]
+    },
+    {
+      "id": "TCH394",
+      "code": "TCH 394",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TCH395",
+      "code": "TCH 395",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TCH396",
+      "code": "TCH 396",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "TCH399A02",
+      "code": "TCH 399A02",
+      "credits": 16,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Major in Middle Level Education",
+    "minimum_hours": 78,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "TCH399A02"
+          },
+          {
+            "course_id": "TCH130"
+          },
+          {
+            "course_id": "TCH207"
+          },
+          {
+            "course_id": "TCH233"
+          },
+          {
+            "course_id": "TCH296"
+          },
+          {
+            "course_id": "TCH306"
+          },
+          {
+            "course_id": "TCH333"
+          },
+          {
+            "course_id": "TCH394"
+          },
+          {
+            "course_id": "TCH395"
+          },
+          {
+            "course_id": "TCH396"
+          }
+        ]
+      },
+      {
+        "id": "major.elective",
+        "title": "Elective",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "EAF228",
+          "EAF231",
+          "EAF235"
+        ]
+      },
+      {
+        "id": "major.required_endorsement_areas",
+        "title": "Required Endorsement Areas",
+        "fill": "open",
+        "note": "Complete all requirements for 2 of the following endorsement areas"
+      },
+      {
+        "id": "major.required_courses_for_the_english",
+        "title": "Required courses for the English Language Arts Endorsement Area",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "TCH235"
+          },
+          {
+            "course_id": "TCH236"
+          },
+          {
+            "course_id": "TCH237"
+          },
+          {
+            "course_id": "TCH238"
+          }
+        ]
+      },
+      {
+        "id": "major.elective_for_the_english_languag",
+        "title": "Elective for the English Language Arts Endorsement Area",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ENG110",
+          "ENG130",
+          "ENG170",
+          "ENG125",
+          "ENG165",
+          "ENG239"
+        ]
+      },
+      {
+        "id": "major.elective_for_the_english_languag_2",
+        "title": "Elective for the English Language Arts Endorsement Area",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ENG143",
+          "ENG243",
+          "ENG244"
+        ]
+      },
+      {
+        "id": "major.required_courses_for_the_english_2",
+        "title": "Required courses for the English Learner Endorsement Area",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "ENG143"
+          },
+          {
+            "course_id": "TCH110"
+          },
+          {
+            "course_id": "TCH235"
+          },
+          {
+            "course_id": "TCH248"
+          },
+          {
+            "course_id": "TCH320"
+          },
+          {
+            "course_id": "TCH334"
+          }
+        ]
+      },
+      {
+        "id": "major.required_courses_for_the_mathema",
+        "title": "Required courses for the Mathematics Endorsement Area",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "MAT131"
+          },
+          {
+            "course_id": "MAT202"
+          },
+          {
+            "course_id": "MAT302"
+          },
+          {
+            "course_id": "MAT309"
+          },
+          {
+            "course_id": "MAT312"
+          }
+        ]
+      },
+      {
+        "id": "major.required_courses_for_the_science",
+        "title": "Required courses for the Science Endorsement Area",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "BSC101"
+          },
+          {
+            "course_id": "GEO102"
+          },
+          {
+            "course_id": "PHY105"
+          },
+          {
+            "course_id": "TCH239"
+          },
+          {
+            "course_id": "TCH351"
+          }
+        ]
+      },
+      {
+        "id": "major.elective_for_the_science_endorse",
+        "title": "Elective for the Science Endorsement Area",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "CHE102",
+          "CHE110",
+          "CHE140"
+        ]
+      },
+      {
+        "id": "major.required_courses_for_the_social_",
+        "title": "Required courses for the Social Science Endorsement Area",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "GEO135"
+          },
+          {
+            "course_id": "POL106"
+          },
+          {
+            "course_id": "TCH352"
+          }
+        ]
+      },
+      {
+        "id": "major.elective_for_the_social_science_",
+        "title": "Elective for the Social Science Endorsement Area",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ECO101",
+          "ECO102"
+        ]
+      },
+      {
+        "id": "major.elective_for_the_social_science__2",
+        "title": "Elective for the Social Science Endorsement Area",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "HIS101",
+          "HIS102",
+          "HIS105",
+          "HIS135",
+          "HIS136"
+        ]
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences",
+            "auto_fulfilled_by": [
+              "BSC101",
+              "GEO102",
+              "PHY105",
+              "CHE102",
+              "CHE110",
+              "CHE140"
+            ]
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "HIS135",
+              "HIS136"
+            ]
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "POL106"
+            ]
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ENG110",
+              "ENG130",
+              "ENG170",
+              "ENG165",
+              "HIS101",
+              "HIS102",
+              "HIS105"
+            ]
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ENG125"
+            ]
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MAT131"
+            ]
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ENG143",
+              "GEO135",
+              "ECO101",
+              "ECO102"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7,
+            "auto_fulfilled_by": [
+              "BSC101",
+              "GEO102",
+              "PHY105",
+              "CHE102",
+              "CHE110",
+              "CHE140"
+            ]
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts",
+            "auto_fulfilled_by": [
+              "ENG110",
+              "ENG130",
+              "ENG170",
+              "ENG165",
+              "HIS101",
+              "HIS102",
+              "HIS135",
+              "HIS136"
+            ]
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required",
+            "auto_fulfilled_by": [
+              "GEO135",
+              "POL106",
+              "ECO101",
+              "ECO102"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

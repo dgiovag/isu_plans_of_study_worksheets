@@ -1,0 +1,633 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "agribs-food-industry-management",
+    "title": "Agriculture",
+    "sequence": "Food Industry Management Sequence",
+    "degree": "B.S.",
+    "department": "AGRAO",
+    "college": "Applied Science and Technology",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/AGRIBS",
+    "minimum_major_hours": 58,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "ACC131",
+      "code": "ACC 131",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR109",
+      "code": "AGR 109",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR110",
+      "code": "AGR 110",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR120",
+      "code": "AGR 120",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_agriculture_options",
+        "isu.science_math_technology"
+      ]
+    },
+    {
+      "id": "AGR130",
+      "code": "AGR 130",
+      "credits": 3,
+      "fulfills": [
+        "major.introductory_agriculture_options"
+      ]
+    },
+    {
+      "id": "AGR150",
+      "code": "AGR 150",
+      "credits": 4,
+      "fulfills": [
+        "major.introductory_agriculture_options"
+      ]
+    },
+    {
+      "id": "AGR170",
+      "code": "AGR 170",
+      "credits": 4,
+      "fulfills": [
+        "major.introductory_agriculture_options"
+      ]
+    },
+    {
+      "id": "AGR205",
+      "code": "AGR 205",
+      "credits": 3,
+      "fulfills": [
+        "major.microcomputer_options"
+      ]
+    },
+    {
+      "id": "AGR214",
+      "code": "AGR 214",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "AGR215",
+      "code": "AGR 215",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "AGR216",
+      "code": "AGR 216",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "AGR257",
+      "code": "AGR 257",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "AGR271",
+      "code": "AGR 271",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR285",
+      "code": "AGR 285",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "AGR311",
+      "code": "AGR 311",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "AGR315",
+      "code": "AGR 315",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR317",
+      "code": "AGR 317",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "AGR318",
+      "code": "AGR 318",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "AGR319",
+      "code": "AGR 319",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "AGR324",
+      "code": "AGR 324",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "AGR327",
+      "code": "AGR 327",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "AGR363",
+      "code": "AGR 363",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "ECO102",
+      "code": "ECO 102",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "ECO138",
+      "code": "ECO 138",
+      "credits": 3,
+      "fulfills": [
+        "major.statistics_options",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "FCS102",
+      "code": "FCS 102",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "FCS113",
+      "code": "FCS 113",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "FCS213",
+      "code": "FCS 213",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "FCS316",
+      "code": "FCS 316",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "FCS319",
+      "code": "FCS 319",
+      "credits": 4,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "FIL185",
+      "code": "FIL 185",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "IT150",
+      "code": "IT 150",
+      "credits": 3,
+      "fulfills": [
+        "major.microcomputer_options"
+      ]
+    },
+    {
+      "id": "MAT120",
+      "code": "MAT 120",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses",
+        "isu.mathematics",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "MGT100",
+      "code": "MGT 100",
+      "credits": 3,
+      "fulfills": [
+        "major.statistics_options",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "MGT328",
+      "code": "MGT 328",
+      "credits": 3,
+      "fulfills": [
+        "major.food_industry_management_electiv"
+      ]
+    },
+    {
+      "id": "MKT230",
+      "code": "MKT 230",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Food Industry Management Sequence",
+    "minimum_hours": 58,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "ACC131"
+          },
+          {
+            "course_id": "AGR109"
+          },
+          {
+            "course_id": "AGR110"
+          },
+          {
+            "course_id": "AGR271"
+          },
+          {
+            "course_id": "AGR315"
+          },
+          {
+            "course_id": "AGR317"
+          },
+          {
+            "course_id": "ECO102"
+          },
+          {
+            "course_id": "FIL185"
+          },
+          {
+            "course_id": "MKT230"
+          },
+          {
+            "course_id": "MAT120"
+          }
+        ]
+      },
+      {
+        "id": "major.introductory_agriculture_options",
+        "title": "Introductory Agriculture options ",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "AGR120",
+          "AGR130",
+          "AGR150",
+          "AGR170"
+        ]
+      },
+      {
+        "id": "major.microcomputer_options",
+        "title": "Microcomputer Options",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "AGR205",
+          "IT150"
+        ]
+      },
+      {
+        "id": "major.food_industry_management_electiv",
+        "title": "Food Industry Management electives",
+        "fill": "choose_n",
+        "n": 6,
+        "options": [
+          "AGR214",
+          "AGR215",
+          "AGR216",
+          "AGR257",
+          "AGR285",
+          "AGR311",
+          "AGR318",
+          "AGR319",
+          "AGR324",
+          "AGR327",
+          "AGR363",
+          "FCS102",
+          "FCS113",
+          "FCS213",
+          "FCS316",
+          "FCS319",
+          "MGT328"
+        ],
+        "minimum_hours": 18
+      },
+      {
+        "id": "major.statistics_options",
+        "title": "Statistics Options",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ECO138",
+          "MGT100"
+        ]
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MAT120"
+            ]
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ECO138",
+              "MGT100"
+            ]
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "AGR120"
+            ]
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ECO102"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MAT120",
+              "ECO138",
+              "MGT100"
+            ]
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required",
+            "auto_fulfilled_by": [
+              "ECO102"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

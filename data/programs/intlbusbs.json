@@ -1,0 +1,680 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "intlbusbs",
+    "title": "International Business",
+    "sequence": "International Business",
+    "degree": "B.S.",
+    "department": "MQMAO",
+    "college": "College of Business",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/INTLBUSBS",
+    "minimum_major_hours": 86,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "ACC131",
+      "code": "ACC 131",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ACC132",
+      "code": "ACC 132",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ACC340",
+      "code": "ACC 340",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_2",
+        "major.electives"
+      ]
+    },
+    {
+      "id": "BIS167",
+      "code": "BIS 167",
+      "credits": 1,
+      "fulfills": [
+        "major.elective"
+      ]
+    },
+    {
+      "id": "BIS270",
+      "code": "BIS 270",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BUS100",
+      "code": "BUS 100",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ECO101",
+      "code": "ECO 101",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "ECO102",
+      "code": "ECO 102",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "ECO138",
+      "code": "ECO 138",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "ECO245",
+      "code": "ECO 245",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ENG145",
+      "code": "ENG 145",
+      "credits": 3,
+      "fulfills": [
+        "major.english_elective",
+        "iai.communication"
+      ]
+    },
+    {
+      "id": "ENG145A13",
+      "code": "ENG 145A13",
+      "credits": 3,
+      "fulfills": [
+        "major.english_elective",
+        "iai.communication"
+      ]
+    },
+    {
+      "id": "FIL185",
+      "code": "FIL 185",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FIL240",
+      "code": "FIL 240",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FIL312",
+      "code": "FIL 312",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FIL344",
+      "code": "FIL 344",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_2",
+        "major.electives"
+      ]
+    },
+    {
+      "id": "IB225",
+      "code": "IB 225",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "IB340",
+      "code": "IB 340",
+      "credits": 6,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "IB346",
+      "code": "IB 346",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "IB398A01",
+      "code": "IB 398A01",
+      "credits": 6,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "IT150",
+      "code": "IT 150",
+      "credits": 3,
+      "fulfills": [
+        "major.elective"
+      ]
+    },
+    {
+      "id": "MAT121",
+      "code": "MAT 121",
+      "credits": 4,
+      "fulfills": [
+        "major.math_elective",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "MAT145",
+      "code": "MAT 145",
+      "credits": 4,
+      "fulfills": [
+        "major.math_elective",
+        "isu.mathematics",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "MGT100",
+      "code": "MGT 100",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "MGT220",
+      "code": "MGT 220",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "MGT227",
+      "code": "MGT 227",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "MGT349",
+      "code": "MGT 349",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "MGT350",
+      "code": "MGT 350",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_2",
+        "major.electives"
+      ]
+    },
+    {
+      "id": "MGT385",
+      "code": "MGT 385",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "MKT230",
+      "code": "MKT 230",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "MKT350",
+      "code": "MKT 350",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_2",
+        "major.electives"
+      ]
+    },
+    {
+      "id": "POL138",
+      "code": "POL 138",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.quantitative_reasoning"
+      ]
+    },
+    {
+      "id": "PSY138",
+      "code": "PSY 138",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    }
+  ],
+  "major": {
+    "title": "International Business",
+    "minimum_hours": 86,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "ACC131"
+          },
+          {
+            "course_id": "ACC132"
+          },
+          {
+            "course_id": "BIS270"
+          },
+          {
+            "course_id": "BUS100"
+          },
+          {
+            "course_id": "ECO101"
+          },
+          {
+            "course_id": "ECO102"
+          },
+          {
+            "course_id": "FIL185"
+          },
+          {
+            "course_id": "FIL240"
+          },
+          {
+            "course_id": "FIL312"
+          },
+          {
+            "course_id": "IB225"
+          },
+          {
+            "course_id": "MKT230"
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "MGT100",
+              "ECO138",
+              "POL138",
+              "PSY138"
+            ]
+          },
+          {
+            "course_id": "MGT220"
+          },
+          {
+            "course_id": "MGT227"
+          },
+          {
+            "course_id": "MGT349"
+          },
+          {
+            "course_id": "MGT385"
+          }
+        ]
+      },
+      {
+        "id": "major.required_courses_2",
+        "title": "Required courses",
+        "fill": "open",
+        "note": "Learn about equivalent route options to satisfy this requirement: https://business.illinoisstate.edu/academics/international-business-major/"
+      },
+      {
+        "id": "major.math_elective",
+        "title": "Math elective",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "MAT121",
+          "MAT145"
+        ]
+      },
+      {
+        "id": "major.english_elective",
+        "title": "English elective",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ENG145",
+          "ENG145A13"
+        ]
+      },
+      {
+        "id": "major.elective",
+        "title": "Elective",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "BIS167",
+          "IT150"
+        ]
+      },
+      {
+        "id": "major.elective_2",
+        "title": "Elective",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ACC340",
+          "FIL344",
+          "MKT350",
+          "MGT350"
+        ]
+      },
+      {
+        "id": "major.electives",
+        "title": "Electives",
+        "fill": "choose_n",
+        "n": 2,
+        "options": [
+          "ACC340",
+          "ECO245",
+          "FIL344",
+          "IB340",
+          "IB346",
+          "IB398A01",
+          "MKT350",
+          "MGT350"
+        ]
+      },
+      {
+        "id": "major.international_electives",
+        "title": "International electives",
+        "fill": "open",
+        "count": 2,
+        "note": "Languages, Literatures, &amp; Cultures Geography History Interdisciplinary Studies Politics &amp; Government Sociology and Anthropology Fine Arts"
+      },
+      {
+        "id": "major.complete_9_credit_hours_in_the_c",
+        "title": "Complete 9 credit hours in the College of Business that provide a focused area of functional specialization. ",
+        "fill": "open",
+        "note": "Students should see https://business.illinoisstate.edu/ib/specialization/ for examples including career paths and course combinations to consider. Students should get approval from their advisor before enrolling in their specialization."
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MAT145"
+            ]
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MGT100",
+              "ECO138",
+              "POL138",
+              "PSY138",
+              "MAT121"
+            ]
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ECO101",
+              "ECO102"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents",
+            "auto_fulfilled_by": [
+              "ENG145",
+              "ENG145A13"
+            ]
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MGT100",
+              "ECO138",
+              "PSY138",
+              "MAT121",
+              "MAT145"
+            ]
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required",
+            "auto_fulfilled_by": [
+              "ECO101",
+              "ECO102"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

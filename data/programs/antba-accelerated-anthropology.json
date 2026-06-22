@@ -1,0 +1,981 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "antba-accelerated-anthropology",
+    "title": "Anthropology",
+    "sequence": "Accelerated Anthropology Sequence",
+    "degree": "B.A.",
+    "department": "SOAAO",
+    "college": "College of Arts and Sciences",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/ANTBA",
+    "minimum_major_hours": 40,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "ANT102",
+      "code": "ANT 102",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.science_math_technology",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "ANT185",
+      "code": "ANT 185",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "ANT201",
+      "code": "ANT 201",
+      "credits": 3,
+      "fulfills": [
+        "major.electives",
+        "isu.science_math_technology"
+      ]
+    },
+    {
+      "id": "ANT210",
+      "code": "ANT 210",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT265",
+      "code": "ANT 265",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ANT270",
+      "code": "ANT 270",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT273",
+      "code": "ANT 273",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT274",
+      "code": "ANT 274",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ANT277",
+      "code": "ANT 277",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ANT278",
+      "code": "ANT 278",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT280",
+      "code": "ANT 280",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT281",
+      "code": "ANT 281",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ANT291",
+      "code": "ANT 291",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT292",
+      "code": "ANT 292",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ANT294",
+      "code": "ANT 294",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT301",
+      "code": "ANT 301",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT302",
+      "code": "ANT 302",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT303",
+      "code": "ANT 303",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT307",
+      "code": "ANT 307",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT308",
+      "code": "ANT 308",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT342",
+      "code": "ANT 342",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT343",
+      "code": "ANT 343",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT350",
+      "code": "ANT 350",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT351",
+      "code": "ANT 351",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT352",
+      "code": "ANT 352",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT353",
+      "code": "ANT 353",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT365",
+      "code": "ANT 365",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT368",
+      "code": "ANT 368",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT370",
+      "code": "ANT 370",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT371",
+      "code": "ANT 371",
+      "credits": 4,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT372",
+      "code": "ANT 372",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT373",
+      "code": "ANT 373",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT374",
+      "code": "ANT 374",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT375",
+      "code": "ANT 375",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT378",
+      "code": "ANT 378",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT379",
+      "code": "ANT 379",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT380",
+      "code": "ANT 380",
+      "credits": 3,
+      "fulfills": [
+        "major.elective"
+      ]
+    },
+    {
+      "id": "ANT381",
+      "code": "ANT 381",
+      "credits": 9,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT382",
+      "code": "ANT 382",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ANT383",
+      "code": "ANT 383",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT384",
+      "code": "ANT 384",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT385",
+      "code": "ANT 385",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT386",
+      "code": "ANT 386",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT393",
+      "code": "ANT 393",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT398",
+      "code": "ANT 398",
+      "credits": 16,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT400",
+      "code": "ANT 400",
+      "credits": 6,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT401",
+      "code": "ANT 401",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT402",
+      "code": "ANT 402",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT403",
+      "code": "ANT 403",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT407",
+      "code": "ANT 407",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT408",
+      "code": "ANT 408",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT423",
+      "code": "ANT 423",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT442",
+      "code": "ANT 442",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT443",
+      "code": "ANT 443",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT450",
+      "code": "ANT 450",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT452",
+      "code": "ANT 452",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT453",
+      "code": "ANT 453",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT461",
+      "code": "ANT 461",
+      "credits": 3,
+      "fulfills": [
+        "major.elective",
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT462",
+      "code": "ANT 462",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT465",
+      "code": "ANT 465",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT470",
+      "code": "ANT 470",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT471",
+      "code": "ANT 471",
+      "credits": 4,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT472",
+      "code": "ANT 472",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT473",
+      "code": "ANT 473",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT474",
+      "code": "ANT 474",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT475",
+      "code": "ANT 475",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT478",
+      "code": "ANT 478",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT479",
+      "code": "ANT 479",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT481",
+      "code": "ANT 481",
+      "credits": 6,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT483",
+      "code": "ANT 483",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT484",
+      "code": "ANT 484",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT485",
+      "code": "ANT 485",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT486",
+      "code": "ANT 486",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT488",
+      "code": "ANT 488",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT494",
+      "code": "ANT 494",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "ANT496",
+      "code": "ANT 496",
+      "credits": 3,
+      "fulfills": [
+        "major.electives"
+      ]
+    },
+    {
+      "id": "SOC292",
+      "code": "SOC 292",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Accelerated Anthropology Sequence",
+    "minimum_hours": 40,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required Courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "ANT102"
+          },
+          {
+            "course_id": "ANT185"
+          },
+          {
+            "course_id": "ANT265"
+          },
+          {
+            "course_id": "ANT274"
+          },
+          {
+            "course_id": "ANT277"
+          },
+          {
+            "course_id": "ANT281"
+          },
+          {
+            "course_id": "ANT382"
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "ANT292",
+              "SOC292"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "major.elective",
+        "title": "Elective",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ANT380",
+          "ANT461"
+        ]
+      },
+      {
+        "id": "major.electives",
+        "title": "Electives",
+        "fill": "choose_n",
+        "options": [
+          "ANT201",
+          "ANT210",
+          "ANT270",
+          "ANT273",
+          "ANT278",
+          "ANT280",
+          "ANT291",
+          "ANT294",
+          "ANT301",
+          "ANT302",
+          "ANT303",
+          "ANT307",
+          "ANT308",
+          "ANT342",
+          "ANT343",
+          "ANT350",
+          "ANT351",
+          "ANT352",
+          "ANT353",
+          "ANT365",
+          "ANT368",
+          "ANT370",
+          "ANT371",
+          "ANT372",
+          "ANT373",
+          "ANT374",
+          "ANT375",
+          "ANT378",
+          "ANT379",
+          "ANT381",
+          "ANT383",
+          "ANT384",
+          "ANT385",
+          "ANT386",
+          "ANT393",
+          "ANT398",
+          "ANT400",
+          "ANT401",
+          "ANT402",
+          "ANT403",
+          "ANT407",
+          "ANT408",
+          "ANT423",
+          "ANT442",
+          "ANT443",
+          "ANT450",
+          "ANT452",
+          "ANT453",
+          "ANT461",
+          "ANT462",
+          "ANT465",
+          "ANT470",
+          "ANT471",
+          "ANT472",
+          "ANT473",
+          "ANT474",
+          "ANT475",
+          "ANT478",
+          "ANT479",
+          "ANT481",
+          "ANT483",
+          "ANT484",
+          "ANT485",
+          "ANT486",
+          "ANT488",
+          "ANT494",
+          "ANT496"
+        ],
+        "note": "A maximum of 12 of the total 15 credit hours of elective courses may be taken for graduate credit. Students in the Accelerated Sequence who want to count a course toward their 12 credit hours of required graduate coursework, must enroll in a 400-level course in order for it to count. To graduate in this sequence, a student must take at least one course for graduate credit during the senior year. The student must consult with an advisor and the instructor prior to the start of each new course to ensure approval. The following anthropology courses may be taken by anthropology majors to fulfill General Education requirements but do not count towards electives for the major: ANT 143, ANT 176, ANT 197."
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ANT102",
+              "ANT201"
+            ]
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ANT185"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required",
+            "auto_fulfilled_by": [
+              "ANT102",
+              "ANT185"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "ba_world_language",
+        "title": "B.A. — World Language",
+        "note": "Intermediate proficiency or equivalent required for B.A. degree",
+        "applies_when": {
+          "degree": "B.A."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

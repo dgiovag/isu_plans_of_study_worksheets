@@ -1,0 +1,427 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "engba-technical-writing-and-rhetorics",
+    "title": "English",
+    "sequence": "Technical Writing and Rhetorics Sequence",
+    "degree": "B.A.",
+    "department": "ENGAO",
+    "college": "College of Arts and Sciences",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/ENGBA",
+    "minimum_major_hours": 40,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "ENG100",
+      "code": "ENG 100",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ENG102",
+      "code": "ENG 102",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ENG239",
+      "code": "ENG 239",
+      "credits": 6,
+      "fulfills": [
+        "major.visual_and_digital_rhetoric_elec"
+      ]
+    },
+    {
+      "id": "ENG243",
+      "code": "ENG 243",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ENG248",
+      "code": "ENG 248",
+      "credits": 3,
+      "fulfills": [
+        "major.writing_in_specific_contexts"
+      ]
+    },
+    {
+      "id": "ENG249",
+      "code": "ENG 249",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ENG280",
+      "code": "ENG 280",
+      "credits": 3,
+      "fulfills": [
+        "major.writing_in_specific_contexts"
+      ]
+    },
+    {
+      "id": "ENG283",
+      "code": "ENG 283",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ENG300",
+      "code": "ENG 300",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ENG349",
+      "code": "ENG 349",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ENG350",
+      "code": "ENG 350",
+      "credits": 3,
+      "fulfills": [
+        "major.visual_and_digital_rhetoric_elec"
+      ]
+    },
+    {
+      "id": "ENG351",
+      "code": "ENG 351",
+      "credits": 3,
+      "fulfills": [
+        "major.visual_and_digital_rhetoric_elec"
+      ]
+    },
+    {
+      "id": "ENG353",
+      "code": "ENG 353",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ENG391",
+      "code": "ENG 391",
+      "credits": 3,
+      "fulfills": [
+        "major.advanced_rhetorical_theory"
+      ]
+    },
+    {
+      "id": "ENG392",
+      "code": "ENG 392",
+      "credits": 3,
+      "fulfills": [
+        "major.advanced_rhetorical_theory"
+      ]
+    },
+    {
+      "id": "ENG398",
+      "code": "ENG 398",
+      "credits": 16,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Technical Writing and Rhetorics Sequence",
+    "minimum_hours": 40,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "ENG100"
+          },
+          {
+            "course_id": "ENG102"
+          },
+          {
+            "course_id": "ENG243"
+          },
+          {
+            "course_id": "ENG249"
+          },
+          {
+            "course_id": "ENG283"
+          },
+          {
+            "course_id": "ENG300"
+          },
+          {
+            "course_id": "ENG349"
+          },
+          {
+            "course_id": "ENG353"
+          },
+          {
+            "course_id": "ENG398"
+          }
+        ],
+        "note": "3 hours of ENG 398 are required."
+      },
+      {
+        "id": "major.visual_and_digital_rhetoric_elec",
+        "title": "Visual and digital rhetoric electives",
+        "fill": "choose_n",
+        "options": [
+          "ENG239",
+          "ENG350",
+          "ENG351"
+        ]
+      },
+      {
+        "id": "major.advanced_rhetorical_theory",
+        "title": "Advanced rhetorical theory",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ENG391",
+          "ENG392"
+        ]
+      },
+      {
+        "id": "major.writing_in_specific_contexts",
+        "title": "Writing in specific contexts",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ENG248",
+          "ENG280"
+        ]
+      },
+      {
+        "id": "major.literature_elective",
+        "title": "Literature Elective",
+        "fill": "open",
+        "note": "British literary and cultural studies: ENG 110, ENG 213, ENG 214, ENG 216, ENG 217, ENG 218, ENG 219, ENG 222, ENG 311, ENG 320, ENG 322, ENG 329, ENG 378 American literary and cultural studies: ENG 130, ENG 165, ENG 231, ENG 232, ENG 233, ENG 234, ENG 236, ENG 265, ENG 266, ENG 267, ENG 332, ENG 365 Global literary and cultural studies: ENG 150, ENG/LAN 206A01, ENG/LAN 206A02, ENG/LAN 206A03, ENG/LAN 206A04, ENG 252, ENG 255, ENG 261, ENG 352 U.S. ethnic literary and cultural studies: ENG 165, ENG 265, ENG 266, ENG 267, ENG 365, IDS 121A29 Women's &amp; gender and/or queer &amp; transgender literary and cultural studies: ENG 160, ENG/LAN 206A01, ENG/LAN 206A02, ENG/LAN 206A03, ENG/LAN 206A04, ENG 260, ENG 261, ENG 262, ENG 360 Children's literary and cultural studies: ENG 170, ENG 271, ENG 272, ENG 370, ENG 372, ENG 373, ENG 374, ENG 375"
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required"
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "ba_world_language",
+        "title": "B.A. — World Language",
+        "note": "Intermediate proficiency or equivalent required for B.A. degree",
+        "applies_when": {
+          "degree": "B.A."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

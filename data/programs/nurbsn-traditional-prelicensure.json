@@ -1,0 +1,724 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "nurbsn-traditional-prelicensure",
+    "title": "Nursing",
+    "sequence": "Traditional Prelicensure Sequence",
+    "degree": "B.S.N.",
+    "department": "MCNAO",
+    "college": "Mennonite College of Nursing",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/NURBSN",
+    "minimum_major_hours": 96,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "BSC160",
+      "code": "BSC 160",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses",
+        "isu.science_math_technology"
+      ]
+    },
+    {
+      "id": "BSC181",
+      "code": "BSC 181",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BSC182",
+      "code": "BSC 182",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "CHE110",
+      "code": "CHE 110",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "ECO138",
+      "code": "ECO 138",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "FCS102",
+      "code": "FCS 102",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "HSC105",
+      "code": "HSC 105",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "MAT150",
+      "code": "MAT 150",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses",
+        "isu.quantitative_reasoning"
+      ]
+    },
+    {
+      "id": "MGT100",
+      "code": "MGT 100",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "NUR138",
+      "code": "NUR 138",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.quantitative_reasoning"
+      ]
+    },
+    {
+      "id": "NUR222",
+      "code": "NUR 222",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR222A01",
+      "code": "NUR 222A01",
+      "credits": 0,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR224",
+      "code": "NUR 224",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR225",
+      "code": "NUR 225",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR225A01",
+      "code": "NUR 225A01",
+      "credits": 0,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR229",
+      "code": "NUR 229",
+      "credits": 6,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR229A01",
+      "code": "NUR 229A01",
+      "credits": 0,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR231",
+      "code": "NUR 231",
+      "credits": 7,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR231A01",
+      "code": "NUR 231A01",
+      "credits": 0,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR237",
+      "code": "NUR 237",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR239",
+      "code": "NUR 239",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR314",
+      "code": "NUR 314",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR314A01",
+      "code": "NUR 314A01",
+      "credits": 0,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR316",
+      "code": "NUR 316",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR316A01",
+      "code": "NUR 316A01",
+      "credits": 0,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR317",
+      "code": "NUR 317",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR317A01",
+      "code": "NUR 317A01",
+      "credits": 0,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR325",
+      "code": "NUR 325",
+      "credits": 7,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR325A01",
+      "code": "NUR 325A01",
+      "credits": 0,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR326",
+      "code": "NUR 326",
+      "credits": 2,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR327",
+      "code": "NUR 327",
+      "credits": 5,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR327A01",
+      "code": "NUR 327A01",
+      "credits": 0,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR329",
+      "code": "NUR 329",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR329A01",
+      "code": "NUR 329A01",
+      "credits": 0,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR336",
+      "code": "NUR 336",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "NUR390",
+      "code": "NUR 390",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "POL138",
+      "code": "POL 138",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.quantitative_reasoning"
+      ]
+    },
+    {
+      "id": "PSY110",
+      "code": "PSY 110",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "PSY138",
+      "code": "PSY 138",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "PSY213",
+      "code": "PSY 213",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "iai.social_sciences"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Traditional Prelicensure Sequence",
+    "minimum_hours": 96,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "BSC160"
+          },
+          {
+            "course_id": "BSC181"
+          },
+          {
+            "course_id": "BSC182"
+          },
+          {
+            "course_id": "FCS102"
+          },
+          {
+            "course_id": "HSC105"
+          },
+          {
+            "course_id": "NUR222"
+          },
+          {
+            "course_id": "NUR222A01"
+          },
+          {
+            "course_id": "NUR224"
+          },
+          {
+            "course_id": "NUR225"
+          },
+          {
+            "course_id": "NUR225A01"
+          },
+          {
+            "course_id": "NUR229"
+          },
+          {
+            "course_id": "NUR229A01"
+          },
+          {
+            "course_id": "NUR231"
+          },
+          {
+            "course_id": "NUR231A01"
+          },
+          {
+            "course_id": "NUR237"
+          },
+          {
+            "course_id": "NUR239"
+          },
+          {
+            "course_id": "NUR314"
+          },
+          {
+            "course_id": "NUR314A01"
+          },
+          {
+            "course_id": "NUR316"
+          },
+          {
+            "course_id": "NUR316A01"
+          },
+          {
+            "course_id": "NUR317"
+          },
+          {
+            "course_id": "NUR317A01"
+          },
+          {
+            "course_id": "NUR325"
+          },
+          {
+            "course_id": "NUR325A01"
+          },
+          {
+            "course_id": "NUR326"
+          },
+          {
+            "course_id": "NUR327"
+          },
+          {
+            "course_id": "NUR327A01"
+          },
+          {
+            "course_id": "NUR329"
+          },
+          {
+            "course_id": "NUR329A01"
+          },
+          {
+            "course_id": "NUR336"
+          },
+          {
+            "course_id": "NUR329"
+          },
+          {
+            "course_id": "NUR329A01"
+          },
+          {
+            "course_id": "NUR336"
+          },
+          {
+            "course_id": "NUR390"
+          },
+          {
+            "course_id": "PSY110"
+          },
+          {
+            "course_id": "PSY213"
+          },
+          {
+            "course_id": "CHE110"
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "ECO138",
+              "MAT150",
+              "MGT100",
+              "POL138",
+              "PSY138",
+              "NUR138"
+            ]
+          }
+        ],
+        "note": "Courses required prior to NUR 224 and NUR 237: COM 110, ENG 101 1 of the following: MAT 113, MAT 120, MAT 130, BSC 181, HSC 105 Courses prior to or concurrently with NUR 224 and NUR 237: BSC 160 BSC 182 FCS 102 PSY 110 PSY 213 1 of the following: ECO 138, POL 138, PSY 138, NUR 138, MAT 150 or MGT 100"
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences",
+            "auto_fulfilled_by": [
+              "CHE110",
+              "CHE112"
+            ]
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ECO138",
+              "MAT150",
+              "MGT100",
+              "POL138",
+              "PSY138",
+              "NUR138"
+            ]
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "BSC160"
+            ]
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "PSY110"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ECO138",
+              "MGT100",
+              "PSY138"
+            ]
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7,
+            "auto_fulfilled_by": [
+              "CHE110",
+              "CHE112"
+            ]
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required",
+            "auto_fulfilled_by": [
+              "PSY110",
+              "PSY213"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

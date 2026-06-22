@@ -1,0 +1,712 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "bebsed",
+    "title": "Business Education",
+    "sequence": "Business Teacher Education Sequence",
+    "degree": "B.S.Ed.",
+    "department": "MKTAO",
+    "college": "College of Business",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/BEBSED",
+    "minimum_major_hours": 92,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "ACC131",
+      "code": "ACC 131",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ACC132",
+      "code": "ACC 132",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE110",
+      "code": "BE 110",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE140",
+      "code": "BE 140",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE225",
+      "code": "BE 225",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE260",
+      "code": "BE 260",
+      "credits": 2,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE322",
+      "code": "BE 322",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE330",
+      "code": "BE 330",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE354",
+      "code": "BE 354",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE361",
+      "code": "BE 361",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE362",
+      "code": "BE 362",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE363",
+      "code": "BE 363",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE364",
+      "code": "BE 364",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BE399",
+      "code": "BE 399",
+      "credits": 16,
+      "fulfills": [
+        "major.professional_education_courses"
+      ]
+    },
+    {
+      "id": "BIS167",
+      "code": "BIS 167",
+      "credits": 1,
+      "fulfills": [
+        "major.elective_3"
+      ]
+    },
+    {
+      "id": "BIS270",
+      "code": "BIS 270",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "BUS100",
+      "code": "BUS 100",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "ECO101",
+      "code": "ECO 101",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "ECO102",
+      "code": "ECO 102",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.social_sciences",
+        "iai.social_sciences"
+      ]
+    },
+    {
+      "id": "ECO138",
+      "code": "ECO 138",
+      "credits": 3,
+      "fulfills": [
+        "major.elective",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "FIL185",
+      "code": "FIL 185",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FIL190",
+      "code": "FIL 190",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_2"
+      ]
+    },
+    {
+      "id": "FIL240",
+      "code": "FIL 240",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_2"
+      ]
+    },
+    {
+      "id": "IT150",
+      "code": "IT 150",
+      "credits": 3,
+      "fulfills": [
+        "major.elective_3"
+      ]
+    },
+    {
+      "id": "IT164",
+      "code": "IT 164",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "MAT120",
+      "code": "MAT 120",
+      "credits": 4,
+      "fulfills": [
+        "major.elective_4",
+        "isu.mathematics",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "MAT121",
+      "code": "MAT 121",
+      "credits": 4,
+      "fulfills": [
+        "major.elective_4",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "MAT144",
+      "code": "MAT 144",
+      "credits": 4,
+      "fulfills": [
+        "major.elective_4"
+      ]
+    },
+    {
+      "id": "MAT145",
+      "code": "MAT 145",
+      "credits": 4,
+      "fulfills": [
+        "major.elective_4",
+        "isu.mathematics",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "MGT100",
+      "code": "MGT 100",
+      "credits": 3,
+      "fulfills": [
+        "major.elective",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "MGT220",
+      "code": "MGT 220",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "MKT230",
+      "code": "MKT 230",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "POL138",
+      "code": "POL 138",
+      "credits": 3,
+      "fulfills": [
+        "major.elective",
+        "isu.quantitative_reasoning"
+      ]
+    },
+    {
+      "id": "PSY138",
+      "code": "PSY 138",
+      "credits": 3,
+      "fulfills": [
+        "major.elective",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "SED344",
+      "code": "SED 344",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_courses"
+      ]
+    },
+    {
+      "id": "TCH210",
+      "code": "TCH 210",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_courses"
+      ]
+    },
+    {
+      "id": "TCH212",
+      "code": "TCH 212",
+      "credits": 2,
+      "fulfills": [
+        "major.professional_education_courses"
+      ]
+    },
+    {
+      "id": "TCH216",
+      "code": "TCH 216",
+      "credits": 3,
+      "fulfills": [
+        "major.professional_education_courses"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Business Teacher Education Sequence",
+    "minimum_hours": 92,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "ACC131"
+          },
+          {
+            "course_id": "ACC132"
+          },
+          {
+            "course_id": "BIS270"
+          },
+          {
+            "course_id": "BUS100"
+          },
+          {
+            "course_id": "BE110"
+          },
+          {
+            "course_id": "BE140"
+          },
+          {
+            "course_id": "BE225"
+          },
+          {
+            "course_id": "BE260"
+          },
+          {
+            "course_id": "BE322"
+          },
+          {
+            "course_id": "BE330"
+          },
+          {
+            "course_id": "BE354"
+          },
+          {
+            "course_id": "BE361"
+          },
+          {
+            "course_id": "BE362"
+          },
+          {
+            "course_id": "BE363"
+          },
+          {
+            "course_id": "BE364"
+          },
+          {
+            "course_id": "ECO101"
+          },
+          {
+            "course_id": "ECO102"
+          },
+          {
+            "course_id": "FIL185"
+          },
+          {
+            "course_id": "IT164"
+          },
+          {
+            "course_id": "MKT230"
+          },
+          {
+            "course_id": "MGT220"
+          }
+        ]
+      },
+      {
+        "id": "major.elective",
+        "title": "Elective",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "MGT100",
+          "ECO138",
+          "POL138",
+          "PSY138"
+        ]
+      },
+      {
+        "id": "major.elective_2",
+        "title": "Elective",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "FIL190",
+          "FIL240"
+        ]
+      },
+      {
+        "id": "major.elective_3",
+        "title": "Elective",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "BIS167",
+          "IT150"
+        ]
+      },
+      {
+        "id": "major.elective_4",
+        "title": "Elective",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "MAT120",
+          "MAT121",
+          "MAT144",
+          "MAT145"
+        ]
+      },
+      {
+        "id": "major.professional_education_courses",
+        "title": "Professional education courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "SED344"
+          },
+          {
+            "course_id": "BE399"
+          },
+          {
+            "course_id": "TCH210"
+          },
+          {
+            "course_id": "TCH212"
+          },
+          {
+            "course_id": "TCH216"
+          }
+        ]
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MAT120",
+              "MAT145"
+            ]
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MGT100",
+              "ECO138",
+              "POL138",
+              "PSY138",
+              "MAT121"
+            ]
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "ECO101",
+              "ECO102"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MGT100",
+              "ECO138",
+              "PSY138",
+              "MAT120",
+              "MAT121",
+              "MAT145"
+            ]
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required",
+            "auto_fulfilled_by": [
+              "ECO101",
+              "ECO102"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}
