@@ -1,7 +1,7 @@
 'use strict';
 
 const L = require('../layout');
-const { makeRow, totalWidth, formatOption } = require('./row-pdf');
+const { makeRow, totalWidth, formatOption, breakIfNeeded } = require('./row-pdf');
 const { drawTableHeaders } = require('./table-pdf');
 
 function renderFixed(ctx, x, y, widths, group, courseMap, fonts) {
@@ -16,6 +16,10 @@ function renderSlots(ctx, x, y, widths, slots, groupId, courseMap, fonts, opts =
   for (let i = 0; i < slots.length; i++) {
     const slot  = slots[i];
     const rowId = `${groupId}.${i}`;
+
+    // Widow protection: keep last 2 rows together rather than splitting 1 onto a new page.
+    const remaining = slots.length - i;
+    if (remaining === 2) y = breakIfNeeded(ctx, y, 2 * L.ROW_H, fonts);
 
     if (slot.course_id) {
       const c = courseMap[slot.course_id];

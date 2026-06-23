@@ -14,8 +14,8 @@ const { renderRepeat }                           = require('./render-repeat-pdf'
 const { renderEscrow }                           = require('./render-escrow-pdf');
 
 // Minimum vertical space to reserve before starting a group:
-// group title bar + table header row + at least one data row.
-const MIN_GROUP_SPACE = L.GROUP_TITLE_H + L.TABLE_HDR_H + L.ROW_H;
+// group title bar + table header row + at least three data rows.
+const MIN_GROUP_SPACE = L.GROUP_TITLE_H + L.TABLE_HDR_H + 3 * L.ROW_H;
 
 // Maximum height of a continuation column — anything taller can never fit on
 // a single page, so we fall back to MIN_GROUP_SPACE for those.
