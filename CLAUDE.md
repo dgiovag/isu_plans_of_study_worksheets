@@ -129,13 +129,19 @@ The **schema is the contract** between the scraper and both renderers. All compo
 
 ## Phase 3 PDF Renderer — Completed Features
 
-- Portrait letter (8.5"×11"), 0.5" margins, two-column layout (gen-ed left / major right)
+- Landscape letter (11"×8.5"), 0.5" margins; student info row spans the full 720pt width
 - All 10 fill types rendered with AcroForm checkboxes + text fields (no PDF JavaScript)
 - Three gen-ed tracks per program: `isu`, `iai`, `ad` (AD track shows IAI groups + associates credential fields)
-- Page breaks: independent pagination per column (`leftCtx`/`rightCtx` share doc/form, separate page refs); whole-table break estimation prevents headers from being orphaned at page bottom
-- `open` / `open_constrained` groups collapse the Requirement column (no label needed)
-- Graduation requirements panel: in left column below gen-ed; requirements covered by a major course render as shaded reference rows ("via COURSE1, COURSE2") instead of checkboxes; a key legend is appended when any flags are present
-- College requirements panel: full-width, only rendered when program has `college_requirements`
+- **4-column layout:** each half (gen-ed left / major right) is split into two sub-columns (172pt each)
+  - Gen-ed: sequential height-balance split — groups divided at midpoint height, natural order preserved within each sub-column
+  - Major: semantic split — `fixed`/`repeat` (predetermined) groups in sub-col A, choice groups in sub-col B; falls back to height-balance when one bucket would be empty
+- Column structure: `Course | Hr | Gr | Term` (Requirement header dropped; Hours field pre-populated from `course.credits` for fixed/repeat rows)
+- Fixed and repeat rows omit the write-in course field — label area expands; only Hr/Gr/Term are fill-in fields
+- Cross-reference bold legend shown in major section header when any xref courses exist: "Bold = also satisfies a gen-ed requirement"
+- Page breaks: independent pagination per sub-column context; whole-table break estimation prevents headers from being orphaned at page bottom
+- `open` / `open_constrained` groups collapse the label column (no label needed)
+- Graduation requirements panel: below gen-ed in left half (full 352pt half-width); requirements covered by a major course render as shaded reference rows ("via COURSE1, COURSE2") instead of checkboxes; a key legend is appended when any flags are present
+- College requirements panel: full-width (720pt), only rendered when program has `college_requirements`
 - Compliance requirements panel: full-width, grouped by category, only when present
 - `graduation_flags` (AMALI/IDEAS/SMT/WL) displayed as small gray parenthetical tags on major course rows; filtered by degree type so B.A. programs never show SMT tags and vice versa
 - `choose_n` groups compute row count from `minimum_hours` when `n` is absent (`Math.ceil(hours/3)`), giving enough blank rows for hour-constrained elective blocks
@@ -201,6 +207,8 @@ These structural features cannot be derived from CourseDog and must be added man
 | musbm-composition-theory-emphasis | Applied music & ensembles | Change `open` groups to `repeat` with credit ranges; add course options from catalog |
 | nurbsn-traditional-prelicensure | Phase structure | Split flat `major.required_courses` into `phases: [{foundation}, {nursing_core}, {clinical}]` |
 | nurbsn-r-n-to-b-s-n | Escrow credit total | Escrow group added; individual course credits from legacy data sum to 32, catalog note says 34 — Mennonite College of Nursing must confirm |
+| all 300 programs | `graduation_flags` incomplete | CourseDog carries attribute codes for all four requirements: `BSMT` (B.S. SMT), `AMALI`, `IDEAS`, and likely a B.A. world-language attribute. The scraper's `transform.js` should map these to `graduation_flags` on each course entry during scrape. Currently only a handful of programs have flags manually annotated (e.g., `accbsmpa`); the rest are missing them. Priority fix: extend `gened-map.js` or `transform.js` to populate graduation_flags from attributes, then re-scrape all programs. This is critical for the double-count / time-to-degree reduction goal. |
+
 **Resolved gaps (no longer require annotation):**
 - `auto_fulfilled_by` vs `exempt` — 998 gen-ed groups verified by course-level `fulfills` data (CourseDog attributes confirm satisfaction). The `generate-review-workbook.py` script now skips verified groups automatically. Remaining issue log has 7 rows, all requiring advisor or catalog lookup.
 - `accntcybs` MAT 121 math gen-ed — confirmed correct: MAT 121 carries `GE14-QR` (quantitative_reasoning only); `isu.mathematics` is not satisfied by MAT 121 and requires a separate course. JSON encoding is accurate. Additionally, MAT 121 carries `BSMT` (B.S. SMT requirement); MAT 145 does not.

@@ -13,6 +13,14 @@ function renderMajor(ctx, startY, program, courseMap, fonts) {
   let y = drawSectionTitle(ctx.page, halfX, startY,
     program.major.title || 'Major Requirements', L.HALF_WIDTH, fonts);
 
+  if (ctx.xrefCourseIds && ctx.xrefCourseIds.size > 0) {
+    ctx.page.drawText('Bold = also satisfies a gen-ed requirement', {
+      x: halfX + 5, y: y - 8,
+      size: L.FONT.footnote, font: fonts.reg, color: L.GRAY_TEXT,
+    });
+    y -= 12;
+  }
+
   const groups = flattenMajorGroups(program.major);
   if (groups.length === 0) return y;
 
