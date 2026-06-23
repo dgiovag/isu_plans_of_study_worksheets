@@ -22,8 +22,10 @@ function renderSlots(ctx, x, y, widths, slots, groupId, courseMap, fonts, opts =
     if (remaining === 2) y = breakIfNeeded(ctx, y, 2 * L.ROW_H, fonts);
 
     if (slot.course_id) {
-      const c = courseMap[slot.course_id];
-      y = makeRow(ctx, x, y, widths, rowId, c ? c.code : slot.course_id, fonts, opts);
+      const c        = courseMap[slot.course_id];
+      const isXref   = ctx.xrefCourseIds && ctx.xrefCourseIds.has(slot.course_id);
+      const rowOpts  = isXref ? { ...opts, bold: true } : opts;
+      y = makeRow(ctx, x, y, widths, rowId, c ? c.code : slot.course_id, fonts, rowOpts);
 
     } else if (slot.fill === 'choose_one' || slot.fill === 'choose_one_set') {
       const label = (slot.options || []).map(o => formatOption(o, courseMap)).join(' or ');

@@ -52,10 +52,14 @@ async function buildOnePDF(program, track) {
   const afterDisclaimer = drawDisclaimer(page, afterHeader, fonts);
   const bodyY           = drawStudentInfo(page, form, afterDisclaimer, fonts);
 
+  // Course IDs that appear in any gen-ed auto_fulfilled_by — used by both
+  // renderers to bold cross-counted rows on each side of the chart.
+  const xrefCourseIds = buildXrefCourseIds(program);
+
   // Two independent rendering contexts — same doc/form, separate page refs
   // so each column's page breaks don't interfere with each other.
-  const leftCtx  = { doc, page, form };
-  const rightCtx = { doc, page, form };
+  const leftCtx  = { doc, page, form, xrefCourseIds };
+  const rightCtx = { doc, page, form, xrefCourseIds };
 
   const finalGenEdY = renderGenEd(leftCtx,  bodyY, program, track, courseMap, fonts);
   const finalMajorY = renderMajor(rightCtx, bodyY, program, courseMap, fonts);
@@ -181,6 +185,18 @@ function drawStudentInfo(page, form, topY, fonts) {
   drawRule(page, ruleY);
 
   return ruleY - 5;
+}
+
+function buildXrefCourseIds(program) {
+  const ids = new Set();
+  for (const track of (program.general_education?.tracks || [])) {
+    for (const group of (track.groups || [])) {
+      for (const ref of (group.auto_fulfilled_by || [])) {
+        if (!ref.includes('.')) ids.add(ref);
+      }
+    }
+  }
+  return ids;
 }
 
 function drawRule(page, y) {

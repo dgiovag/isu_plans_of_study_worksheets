@@ -34,7 +34,7 @@ function estimateGroupHeight(group) {
     case 'open_constrained': return base + noteH + (group.count || 1) * L.ROW_H + 10;
     case 'choose_one':
     case 'choose_one_set': return base + noteH + (group.options || []).length * L.ROW_H;
-    case 'choose_n':       return base + noteH + (group.options || []).length * L.ROW_H;
+    case 'choose_n':       return base + noteH + (group.n || 1) * L.ROW_H;
     case 'fixed':          return base + noteH + (group.slots || []).length * L.ROW_H;
     case 'choose_n_grouped': {
       let rows = 0;

@@ -25,9 +25,8 @@ function renderOpen(ctx, x, y, widths, group, courseMap, fonts) {
   if (ao.autoFulfilled) {
     y = drawTableHeaders(ctx.page, x, y, widths, fonts);
     for (let i = 0; i < count; i++) {
-      const base  = count === 1 ? group.title : `${group.title} #${i + 1}`;
-      const label = `${base} — also major`;
-      y = makeRow(ctx, x, y, widths, `${group.id}.${i}`, label, fonts);
+      const label = count === 1 ? group.title : `${group.title} #${i + 1}`;
+      y = makeRow(ctx, x, y, widths, `${group.id}.${i}`, label, fonts, { bold: true });
     }
     return closeTable(ctx.page, x, y, widths);
   }
@@ -36,16 +35,16 @@ function renderOpen(ctx, x, y, widths, group, courseMap, fonts) {
     const courseIds = ao.autoFulfilledCourses;
     y = drawTableHeaders(ctx.page, x, y, widths, fonts);
     for (let i = 0; i < count; i++) {
-      let base;
+      let label;
       if (courseIds.length > count) {
-        base = courseIds.map(id => { const c = courseMap[id]; return c ? c.code : id; }).join(' / ');
+        label = courseIds.map(id => { const c = courseMap[id]; return c ? c.code : id; }).join(' / ');
       } else if (i < courseIds.length) {
         const c = courseMap[courseIds[i]];
-        base = c ? c.code : courseIds[i];
+        label = c ? c.code : courseIds[i];
       } else {
-        base = group.title;
+        label = group.title;
       }
-      y = makeRow(ctx, x, y, widths, `${group.id}.${i}`, `${base} — also major`, fonts);
+      y = makeRow(ctx, x, y, widths, `${group.id}.${i}`, label, fonts, { bold: true });
     }
     return closeTable(ctx.page, x, y, widths);
   }

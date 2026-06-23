@@ -36,14 +36,15 @@ function breakIfNeeded(ctx, y, neededH, fonts) {
  * @param {string}  rowId   unique AcroForm field name prefix
  * @param {string}  label   text shown in the requirement column
  * @param {object}  fonts   { reg, bold }
- * @param {object}  opts    { exempt }
+ * @param {object}  opts    { exempt, bold }
  * @returns {number}        y coordinate below this row
  */
 function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
   const colW = totalWidth(widths);
 
   // Word-wrap the label; row height expands to fit.
-  const labelLines = wrapText(fonts.reg, label, L.FONT.tableBody, widths.req - 3);
+  const labelFont  = opts.bold ? fonts.bold : fonts.reg;
+  const labelLines = wrapText(labelFont, label, L.FONT.tableBody, widths.req - 3);
   const rowHeight  = Math.max(L.ROW_H, labelLines.length * LINE_H + 3);
 
   y = breakIfNeeded(ctx, y, rowHeight, fonts);
@@ -79,7 +80,7 @@ function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
     for (let i = 0; i < labelLines.length; i++) {
       page.drawText(labelLines[i], {
         x: labelX, y: y - L.FONT.tableBody - 1.5 - i * LINE_H,
-        size: L.FONT.tableBody, font: fonts.reg,
+        size: L.FONT.tableBody, font: labelFont,
         color: opts.exempt ? L.GRAY_TEXT : L.BLACK,
       });
     }
