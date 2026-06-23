@@ -45,7 +45,19 @@ function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
   // Word-wrap the label; row height expands to fit.
   const labelFont  = opts.bold ? fonts.bold : fonts.reg;
   const labelLines = wrapText(labelFont, label, L.FONT.tableBody, widths.req - 3);
-  const rowHeight  = Math.max(L.ROW_H, labelLines.length * LINE_H + 3);
+
+  // Graduation flag tag: fits inline with last label line, or drops to a new line.
+  let tagText = null, tagInline = false;
+  if (opts.flagTag && widths.req > 0) {
+    tagText = '(' + opts.flagTag + ')';
+    const lastLine  = labelLines[labelLines.length - 1] || '';
+    const lastLineW = labelFont.widthOfTextAtSize(lastLine, L.FONT.tableBody);
+    const tagW      = fonts.reg.widthOfTextAtSize(' ' + tagText, L.FONT.footnote);
+    tagInline = (lastLineW + tagW <= widths.req - 3);
+  }
+
+  const extraLines = (tagText && !tagInline) ? 1 : 0;
+  const rowHeight  = Math.max(L.ROW_H, (labelLines.length + extraLines) * LINE_H + 3);
 
   y = breakIfNeeded(ctx, y, rowHeight, fonts);
 
@@ -83,6 +95,24 @@ function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
         size: L.FONT.tableBody, font: labelFont,
         color: opts.exempt ? L.GRAY_TEXT : L.BLACK,
       });
+    }
+
+    if (tagText) {
+      const lastIdx   = labelLines.length - 1;
+      const lastLineY = y - L.FONT.tableBody - 1.5 - lastIdx * LINE_H;
+      if (tagInline) {
+        const lastLineW = labelFont.widthOfTextAtSize(labelLines[lastIdx] || '', L.FONT.tableBody);
+        page.drawText(' ' + tagText, {
+          x: labelX + lastLineW,
+          y: lastLineY + (L.FONT.tableBody - L.FONT.footnote) / 2,
+          size: L.FONT.footnote, font: fonts.reg, color: L.GRAY_TEXT,
+        });
+      } else {
+        page.drawText(tagText, {
+          x: labelX, y: lastLineY - LINE_H,
+          size: L.FONT.footnote, font: fonts.reg, color: L.GRAY_TEXT,
+        });
+      }
     }
   }
 

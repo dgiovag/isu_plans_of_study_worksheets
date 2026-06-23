@@ -484,7 +484,8 @@
           "IT164",
           "IT168"
         ],
-        "note": "Multiple enrollments are allowed in CTK 380 with different decimalized topic courses. See Course Finder for course options. A course cannot satisfy more than one requirement in the sequence."
+        "note": "Multiple enrollments are allowed in CTK 380 with different decimalized topic courses. See Course Finder for course options. A course cannot satisfy more than one requirement in the sequence.",
+        "minimum_hours": 12
       }
     ]
   },

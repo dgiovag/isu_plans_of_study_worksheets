@@ -5,7 +5,7 @@ const { totalWidth, breakIfNeeded }              = require('./row-pdf');
 const { drawGroupTitle, drawNote }               = require('./table-pdf');
 const { renderFixed }                            = require('./render-fixed-pdf');
 const { renderChooseOne }                        = require('./render-choose-one-pdf');
-const { renderChooseN }                          = require('./render-choose-n-pdf');
+const { renderChooseN, chooseNRowCount }          = require('./render-choose-n-pdf');
 const { renderChooseNGrouped }                   = require('./render-choose-n-grouped-pdf');
 const { renderChooseOneTrack }                   = require('./render-choose-one-track-pdf');
 const { renderOpen }                             = require('./render-open-pdf');
@@ -34,7 +34,7 @@ function estimateGroupHeight(group) {
     case 'open_constrained': return base + noteH + (group.count || 1) * L.ROW_H + 10;
     case 'choose_one':
     case 'choose_one_set': return base + noteH + (group.options || []).length * L.ROW_H;
-    case 'choose_n':       return base + noteH + (group.n || 1) * L.ROW_H;
+    case 'choose_n':       return base + noteH + chooseNRowCount(group) * L.ROW_H;
     case 'fixed':          return base + noteH + (group.slots || []).length * L.ROW_H;
     case 'choose_n_grouped': {
       let rows = 0;

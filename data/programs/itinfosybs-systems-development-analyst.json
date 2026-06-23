@@ -424,7 +424,8 @@
         "fill": "choose_n",
         "options": [
           "IT398"
-        ]
+        ],
+        "minimum_hours": 6
       },
       {
         "id": "major.complete_1_of_the_following",

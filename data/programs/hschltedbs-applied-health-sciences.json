@@ -530,7 +530,8 @@
           "HSC385",
           "HSC390",
           "HSC394"
-        ]
+        ],
+        "minimum_hours": 21
       },
       {
         "id": "major.complete_a_minimum_of_2_courses_",

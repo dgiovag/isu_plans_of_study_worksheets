@@ -286,7 +286,8 @@
           "FRE340",
           "FRE385",
           "FRE386"
-        ]
+        ],
+        "minimum_hours": 18
       },
       {
         "id": "major.required_professional_education_",

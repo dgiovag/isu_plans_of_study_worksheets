@@ -765,7 +765,8 @@
           "DAN106",
           "DAN119"
         ],
-        "note": "No more than 6 credit hours can be from one discipline."
+        "note": "No more than 6 credit hours can be from one discipline.",
+        "minimum_hours": 9
       },
       {
         "id": "major.complete_19_hours_of_the_followi",
@@ -783,7 +784,8 @@
           "CTK390",
           "CTK398"
         ],
-        "note": "Multiple enrollments are allowed in CTK 380 with different decimalized topic courses. See Course Finder for course options. A course cannot satisfy more than one requirement in the sequence."
+        "note": "Multiple enrollments are allowed in CTK 380 with different decimalized topic courses. See Course Finder for course options. A course cannot satisfy more than one requirement in the sequence.",
+        "minimum_hours": 19
       }
     ]
   },

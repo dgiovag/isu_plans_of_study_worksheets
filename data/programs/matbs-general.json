@@ -300,7 +300,8 @@
           "MAT362",
           "MAT363"
         ],
-        "note": "All electives cannot be from the same elective group. Elective groups are listed below. Please consult your academic advisor. Algebra MAT 330 MAT 336 MAT 337 MAT 338 Analysis MAT 340 MAT 341 MAT 345 MAT 347 MAT 349 Discrete MAT 361 MAT 362 MAT 363 Statistics MAT 351 Research MAT 268"
+        "note": "All electives cannot be from the same elective group. Elective groups are listed below. Please consult your academic advisor. Algebra MAT 330 MAT 336 MAT 337 MAT 338 Analysis MAT 340 MAT 341 MAT 345 MAT 347 MAT 349 Discrete MAT 361 MAT 362 MAT 363 Statistics MAT 351 Research MAT 268",
+        "minimum_hours": 11
       }
     ]
   },

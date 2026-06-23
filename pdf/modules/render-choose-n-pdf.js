@@ -4,8 +4,17 @@ const { makeRow, totalWidth, formatOption } = require('./row-pdf');
 const { drawTableHeaders, drawNote } = require('./table-pdf');
 const { closeTable } = require('./render-fixed-pdf');
 
+// Number of blank rows to render for a choose_n group.
+// Prefers the explicit course count; falls back to hours ÷ 3 (ceiling), so
+// an hour-based group always has enough boxes even if hours aren't divisible.
+function chooseNRowCount(group) {
+  if (group.n) return group.n;
+  if (group.minimum_hours) return Math.ceil(group.minimum_hours / 3);
+  return 1;
+}
+
 function renderChooseN(ctx, x, y, widths, group, courseMap, fonts) {
-  const n    = group.n || 1;
+  const n    = chooseNRowCount(group);
   const colW = totalWidth(widths);
 
   if (group.options && group.options.length > 0) {
@@ -22,4 +31,4 @@ function renderChooseN(ctx, x, y, widths, group, courseMap, fonts) {
   return closeTable(ctx.page, x, y, widths);
 }
 
-module.exports = { renderChooseN };
+module.exports = { renderChooseN, chooseNRowCount };

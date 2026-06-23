@@ -56,10 +56,13 @@ async function buildOnePDF(program, track) {
   // renderers to bold cross-counted rows on each side of the chart.
   const xrefCourseIds = buildXrefCourseIds(program);
 
+  // courseId → graduation_flags array, for inline tag rendering.
+  const gradFlagsMap = buildGradFlagsMap(program);
+
   // Two independent rendering contexts — same doc/form, separate page refs
   // so each column's page breaks don't interfere with each other.
-  const leftCtx  = { doc, page, form, xrefCourseIds };
-  const rightCtx = { doc, page, form, xrefCourseIds };
+  const leftCtx  = { doc, page, form, xrefCourseIds, gradFlagsMap };
+  const rightCtx = { doc, page, form, xrefCourseIds, gradFlagsMap };
 
   const finalGenEdY = renderGenEd(leftCtx,  bodyY, program, track, courseMap, fonts);
   const finalMajorY = renderMajor(rightCtx, bodyY, program, courseMap, fonts);
@@ -185,6 +188,24 @@ function drawStudentInfo(page, form, topY, fonts) {
   drawRule(page, ruleY);
 
   return ruleY - 5;
+}
+
+function buildGradFlagsMap(program) {
+  // Only show a flag if this program's degree actually requires it.
+  const trackable = new Set((program.graduation_requirements?.trackable || []).map(r => r.id));
+  const applicable = new Set([
+    'amali', 'ideas',
+    ...(trackable.has('bs_smt')            ? ['bs_smt'] : []),
+    ...(trackable.has('ba_world_language') ? ['ba_wl']  : []),
+  ]);
+
+  const map = new Map();
+  for (const c of (program.courses || [])) {
+    if (!c.graduation_flags?.length) continue;
+    const relevant = c.graduation_flags.filter(f => applicable.has(f));
+    if (relevant.length) map.set(c.id, relevant);
+  }
+  return map;
 }
 
 function buildXrefCourseIds(program) {

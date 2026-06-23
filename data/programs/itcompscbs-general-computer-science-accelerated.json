@@ -547,7 +547,8 @@
         "options": [
           "IT398",
           "IT398"
-        ]
+        ],
+        "minimum_hours": 6
       },
       {
         "id": "major.complete_6_hours_of_the_followin_2",
@@ -567,7 +568,8 @@
           "IT456",
           "IT388",
           "IT487"
-        ]
+        ],
+        "minimum_hours": 6
       },
       {
         "id": "major.complete_1_of_the_following",
@@ -611,7 +613,8 @@
           "CHE141",
           "PHY110",
           "PHY111"
-        ]
+        ],
+        "minimum_hours": 8
       }
     ]
   },

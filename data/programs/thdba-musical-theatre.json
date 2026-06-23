@@ -360,7 +360,8 @@
           "DAN307",
           "DAN319"
         ],
-        "note": "One course (2 credit hours) must be at the 200- or 300-level."
+        "note": "One course (2 credit hours) must be at the 200- or 300-level.",
+        "minimum_hours": 4
       }
     ]
   },

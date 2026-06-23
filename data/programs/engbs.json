@@ -189,7 +189,8 @@
           "ENG239",
           "ENG350",
           "ENG351"
-        ]
+        ],
+        "minimum_hours": 6
       },
       {
         "id": "major.complete_3_credit_hours_in_advan",

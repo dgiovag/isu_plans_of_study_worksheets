@@ -4,6 +4,8 @@ const L = require('../layout');
 const { makeRow, totalWidth, formatOption, breakIfNeeded } = require('./row-pdf');
 const { drawTableHeaders } = require('./table-pdf');
 
+const FLAG_LABELS = { amali: 'AMALI', ideas: 'IDEAS', bs_smt: 'SMT', ba_wl: 'WL' };
+
 function renderFixed(ctx, x, y, widths, group, courseMap, fonts) {
   y = drawTableHeaders(ctx.page, x, y, widths, fonts);
   y = renderSlots(ctx, x, y, widths, group.slots || [], group.id, courseMap, fonts, {
@@ -22,9 +24,13 @@ function renderSlots(ctx, x, y, widths, slots, groupId, courseMap, fonts, opts =
     if (remaining === 2) y = breakIfNeeded(ctx, y, 2 * L.ROW_H, fonts);
 
     if (slot.course_id) {
-      const c        = courseMap[slot.course_id];
-      const isXref   = ctx.xrefCourseIds && ctx.xrefCourseIds.has(slot.course_id);
-      const rowOpts  = isXref ? { ...opts, bold: true } : opts;
+      const c       = courseMap[slot.course_id];
+      const isXref  = ctx.xrefCourseIds && ctx.xrefCourseIds.has(slot.course_id);
+      const flags   = ctx.gradFlagsMap && ctx.gradFlagsMap.get(slot.course_id);
+      const flagTag = flags?.length ? flags.map(f => FLAG_LABELS[f]).join(' · ') : null;
+      const rowOpts = { ...opts };
+      if (isXref)  rowOpts.bold    = true;
+      if (flagTag) rowOpts.flagTag = flagTag;
       y = makeRow(ctx, x, y, widths, rowId, c ? c.code : slot.course_id, fonts, rowOpts);
 
     } else if (slot.fill === 'choose_one' || slot.fill === 'choose_one_set') {
