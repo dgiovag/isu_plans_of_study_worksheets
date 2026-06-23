@@ -763,7 +763,7 @@
         "id": "major.english_electives",
         "title": "English Electives",
         "fill": "open",
-        "count": 9,
+        "minimum_hours": 9,
         "note": "At least 3 credit hours must be in the study of historical texts (pre- 1900): ENG 150, 213, 214, 216, 217, 218, 222, 231, 232, 250, 252, 310, 311, 320, 372, 378, 391"
       }
     ]

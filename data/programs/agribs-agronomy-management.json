@@ -148,14 +148,14 @@
         "id": "major.agribusiness_elective",
         "title": "Agribusiness elective",
         "fill": "open",
-        "count": 12,
+        "minimum_hours": 12,
         "note": "Complete 12 credit hours of additional senior level Agribusiness electives (consult advisor)"
       },
       {
         "id": "major.agronomy_electives",
         "title": "Agronomy electives",
         "fill": "open",
-        "count": 6,
+        "minimum_hours": 6,
         "note": "Complete 6 credit hours of additional senior level Agronomy electives (consult advisor)"
       },
       {

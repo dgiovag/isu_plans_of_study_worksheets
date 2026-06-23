@@ -325,7 +325,7 @@
         "id": "major.additional_elective_courses",
         "title": "Additional elective courses",
         "fill": "open",
-        "count": 6,
+        "minimum_hours": 6,
         "note": "Complete 6 additional credit hours of music electives, including 3 credit hours of senior music electives"
       }
     ]

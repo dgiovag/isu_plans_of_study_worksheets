@@ -268,7 +268,7 @@
         "id": "major.agronomy_electives",
         "title": "Agronomy electives",
         "fill": "open",
-        "count": 3,
+        "minimum_hours": 3,
         "note": "Complete 3 credit hours of additional Agronomy electives (consult advisor)"
       },
       {

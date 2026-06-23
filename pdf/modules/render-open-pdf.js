@@ -4,6 +4,11 @@ const { makeRow, noReqWidths } = require('./row-pdf');
 const { drawTableHeaders }     = require('./table-pdf');
 const { closeTable }           = require('./render-fixed-pdf');
 
+function openRowCount(group) {
+  if (group.minimum_hours) return Math.ceil(group.minimum_hours / 3);
+  return group.count || 1;
+}
+
 // Mirrors the auto_fulfilled_by logic in renderer/modules/render-group.js.
 // Group refs (id contains '.') mean the whole group is satisfied.
 // Course refs (no '.') mean specific courses fill specific slots.
@@ -19,7 +24,7 @@ function autoFulfilledOpts(group) {
 }
 
 function renderOpen(ctx, x, y, widths, group, courseMap, fonts) {
-  const count = group.count || 1;
+  const count = openRowCount(group);
   const ao    = autoFulfilledOpts(group);
 
   if (ao.autoFulfilled) {

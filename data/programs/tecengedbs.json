@@ -253,7 +253,7 @@
         "id": "major.technology_engineering_education",
         "title": "Technology & Engineering Education electives",
         "fill": "open",
-        "count": 9,
+        "minimum_hours": 9,
         "note": "Please consult with your academic advisor"
       },
       {

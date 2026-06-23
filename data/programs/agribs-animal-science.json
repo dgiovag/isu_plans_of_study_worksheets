@@ -322,7 +322,7 @@
         "id": "major.animal_science_electives",
         "title": "Animal Science electives",
         "fill": "open",
-        "count": 6,
+        "minimum_hours": 6,
         "note": "Complete 6 credit hours of additional Animal Science electives (consult your advisor)"
       },
       {

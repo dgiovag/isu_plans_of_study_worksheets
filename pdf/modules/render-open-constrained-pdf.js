@@ -4,8 +4,13 @@ const { makeRow, totalWidth, noReqWidths } = require('./row-pdf');
 const { drawTableHeaders, drawNote }       = require('./table-pdf');
 const { closeTable }                       = require('./render-fixed-pdf');
 
+function openRowCount(group) {
+  if (group.minimum_hours) return Math.ceil(group.minimum_hours / 3);
+  return group.count || 1;
+}
+
 function renderOpenConstrained(ctx, x, y, widths, group, courseMap, fonts) {
-  const count = group.count || 1;
+  const count = openRowCount(group);
   const w     = noReqWidths(widths);
 
   if (group.constraint) {

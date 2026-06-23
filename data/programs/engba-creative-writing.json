@@ -346,7 +346,7 @@
         "id": "major.literature_electives",
         "title": "Literature electives",
         "fill": "open",
-        "count": 6,
+        "minimum_hours": 6,
         "note": "British Literature: ENG 110, ENG 213, ENG 214, ENG 216, ENG 217, ENG 218, ENG 219, ENG 222, ENG 311, ENG 320, ENG 322, ENG 329, ENG 378 American Literature: ENG 130, ENG 165, ENG 231, ENG 232, ENG 233, ENG 234, ENG 236, ENG 265, ENG 266, ENG 267, ENG 332, ENG 365 Global Literature: ENG 150, ENG 206, ENG206a01, ENG 206a02, ENG206a03, ENG206a04, ENG 250, ENG 252, ENG 255, ENG 261, ENG 352 Children's Literature: ENG 170, ENG 271, ENG 272, ENG 370, ENG 372, ENG 373, ENG 374, ENG 375 Women's Literature: ENG 160, ENG 260, ENG 261, ENG 262, ENG 360"
       },
       {
@@ -394,7 +394,7 @@
         "id": "major.english_electives",
         "title": "English electives",
         "fill": "open",
-        "count": 6,
+        "minimum_hours": 6,
         "note": "Complete 6 credit hours in additional 300-level English electives"
       }
     ]

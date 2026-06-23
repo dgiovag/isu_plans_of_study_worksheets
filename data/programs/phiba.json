@@ -178,6 +178,7 @@
         "id": "major.complete_6_courses_18_credit_hou",
         "title": "Complete 6 courses (18 credit hours) from the following groups - A, B, and C. ",
         "fill": "open",
+        "minimum_hours": 3,
         "note": "At least one 3 credit hour course must come from two of three of the groups."
       }
     ]

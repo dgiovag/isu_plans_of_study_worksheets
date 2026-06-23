@@ -267,7 +267,7 @@
         "id": "major.elective_courses",
         "title": "Elective courses",
         "fill": "open",
-        "count": 16,
+        "minimum_hours": 16,
         "note": "At least two courses must have labs. Please consult your academic advisor."
       },
       {

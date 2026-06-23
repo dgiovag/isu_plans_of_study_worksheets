@@ -274,14 +274,14 @@
         "id": "major.agribusiness_electives",
         "title": "Agribusiness electives",
         "fill": "open",
-        "count": 9,
+        "minimum_hours": 9,
         "note": "Complete 9 credit hours of additional Agribusiness electives (consult your advisor)"
       },
       {
         "id": "major.animal_science_electives",
         "title": "Animal science electives",
         "fill": "open",
-        "count": 9,
+        "minimum_hours": 9,
         "note": "Any of the following courses can fulfill the animal science electives requirement if they have not been previously used in the student's plan: AGR 220, AGR 236, AGR 271, AGR 283, AGR 285, AGR 286, AGR 292, AGR 308, AGR 309, AGR 325, AGR 326, AGR 375. Consult with your advisor regarding any additional elective options."
       },
       {

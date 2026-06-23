@@ -13,6 +13,14 @@ const { renderOpenConstrained }                  = require('./render-open-constr
 const { renderRepeat }                           = require('./render-repeat-pdf');
 const { renderEscrow }                           = require('./render-escrow-pdf');
 
+// Compute blank row count for open/open_constrained groups.
+// When minimum_hours is set (credit-hour requirement), derive rows from hours;
+// otherwise use count directly. Assumes 3 credit hours per course.
+function openRowCount(group) {
+  if (group.minimum_hours) return Math.ceil(group.minimum_hours / 3);
+  return group.count || 1;
+}
+
 // Minimum vertical space to reserve before starting a group:
 // group title bar + table header row + at least three data rows.
 const MIN_GROUP_SPACE = L.GROUP_TITLE_H + L.TABLE_HDR_H + 3 * L.ROW_H;
@@ -30,8 +38,8 @@ function estimateGroupHeight(group) {
   const noteH  = group.note ? 20 : 0; // buffer for wrapped note text
   switch (group.fill) {
     case 'repeat':         return base + noteH + (group.semesters || 1) * L.ROW_H;
-    case 'open':           return base + noteH + (group.count || 1) * L.ROW_H;
-    case 'open_constrained': return base + noteH + (group.count || 1) * L.ROW_H + 10;
+    case 'open':           return base + noteH + openRowCount(group) * L.ROW_H;
+    case 'open_constrained': return base + noteH + openRowCount(group) * L.ROW_H + 10;
     case 'choose_one':
     case 'choose_one_set': return base + noteH + (group.options || []).length * L.ROW_H;
     case 'choose_n':       return base + noteH + chooseNRowCount(group) * L.ROW_H;

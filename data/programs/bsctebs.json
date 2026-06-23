@@ -395,7 +395,7 @@
         "id": "major.biology_electives",
         "title": "Biology electives",
         "fill": "open",
-        "count": 6,
+        "minimum_hours": 6,
         "note": "Biological Sciences courses at the 100-level may not be used as electives in the major with the exception of BSC 182. TEC 310 may count as an elective. Please consult your academic advisor."
       },
       {

@@ -569,6 +569,7 @@
         "id": "major.elective_courses",
         "title": "Elective courses",
         "fill": "open",
+        "minimum_hours": 15,
         "note": "Complete an additional 15 credit hours in Art courses"
       }
     ]

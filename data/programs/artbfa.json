@@ -144,14 +144,14 @@
         "id": "major.studio_arts_disciplines_3d_elect",
         "title": "Studio arts disciplines 3D electives",
         "fill": "open",
-        "count": 6,
+        "minimum_hours": 6,
         "note": "Complete 6 credit hours from the following studio arts disciplines (ceramics, expanded media, metalwork and jewelry design, glass, sculpture, wood/metal)"
       },
       {
         "id": "major.studio_arts_disciplines_2d_elect",
         "title": "Studio arts disciplines 2D electives",
         "fill": "open",
-        "count": 6,
+        "minimum_hours": 6,
         "note": "Complete 6 credit hours from the following studio arts disciplines (drawing, intaglio, lithography, painting, photography, video)"
       },
       {
@@ -172,14 +172,14 @@
         "id": "major.elective_courses",
         "title": "Elective courses",
         "fill": "open",
-        "count": 3,
+        "minimum_hours": 3,
         "note": "Complete 3 credit hours of Art or Art History electives (consult with a faculty member to determine an appropriate elective)"
       },
       {
         "id": "major.specialization_electives",
         "title": "Specialization electives",
         "fill": "open",
-        "count": 33,
+        "minimum_hours": 33,
         "note": "Complete 33 additional credit hours in a specialization in any discipline area (a specialization that combines must be approved by faculty mentors and the B.F.A. Committee of the School of Art)"
       }
     ]

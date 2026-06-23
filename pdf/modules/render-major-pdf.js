@@ -58,12 +58,18 @@ function renderMajor(ctx, startY, program, courseMap, fonts) {
 
 // Semantic split: predetermined groups (fixed/repeat) → col A,
 // choice groups → col B. Falls back to sequential height-balance
-// when either bucket would be empty.
+// when either bucket would be empty or the split is badly skewed (>2x).
 function semanticSplit(groups) {
   const col1Groups = groups.filter(g => FIXED_FILLS.has(g.fill));
   const col2Groups = groups.filter(g => !FIXED_FILLS.has(g.fill));
 
   if (col1Groups.length === 0 || col2Groups.length === 0) {
+    return sequentialSplit(groups);
+  }
+
+  const h1 = col1Groups.reduce((s, g) => s + estimateGroupHeight(g), 0);
+  const h2 = col2Groups.reduce((s, g) => s + estimateGroupHeight(g), 0);
+  if (Math.max(h1, h2) > 2 * Math.min(h1, h2)) {
     return sequentialSplit(groups);
   }
 

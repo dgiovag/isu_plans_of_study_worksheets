@@ -385,6 +385,7 @@
         "id": "major.elective_courses",
         "title": "Elective courses",
         "fill": "open",
+        "minimum_hours": 37,
         "note": "Complete additional Biology electives to achieve the 37 credit hour minimum in Biological Sciences"
       },
       {

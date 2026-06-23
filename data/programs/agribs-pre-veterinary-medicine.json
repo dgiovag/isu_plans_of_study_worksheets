@@ -317,7 +317,7 @@
         "id": "major.animal_science_electives",
         "title": "Animal Science electives",
         "fill": "open",
-        "count": 3,
+        "minimum_hours": 3,
         "note": "Any of the following courses can fulfill the animal science electives requirement if they have not been previously used in the student's plan: AGR 220, AGR 236, AGR 271, AGR 283, AGR 285, AGR 286, AGR 308, AGR 309, AGR 325, AGR 326, AGR 375."
       },
       {

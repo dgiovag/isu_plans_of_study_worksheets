@@ -487,6 +487,7 @@
         "id": "major.music_education_electives",
         "title": "Music education electives",
         "fill": "open",
+        "minimum_hours": 5,
         "note": "Complete an additional 5 credit hours of Music Education electives"
       },
       {

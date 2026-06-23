@@ -371,14 +371,14 @@
         "id": "major.applied_jazz_music",
         "title": "Applied jazz music",
         "fill": "open",
-        "count": 8,
+        "minimum_hours": 8,
         "note": "Complete 8 credit hours MUS 138A70 and MUS 238A70 of which 4 credit hours (2 semesters) must be at the 200 level)"
       },
       {
         "id": "major.jazz_ensemble",
         "title": "Jazz ensemble",
         "fill": "open",
-        "count": 8,
+        "minimum_hours": 8,
         "note": "Complete 8 credit hours (minimum 1 credit hour per semester) Jazz Ensemble I or II (MUS 139A70; MUS 239A70)"
       },
       {

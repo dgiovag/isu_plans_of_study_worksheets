@@ -387,6 +387,7 @@
         "id": "major.required_courses_2",
         "title": "Required courses",
         "fill": "open",
+        "minimum_hours": 8,
         "note": "Learn about equivalent route options to satisfy this requirement: https://business.illinoisstate.edu/academics/international-business-major/"
       },
       {

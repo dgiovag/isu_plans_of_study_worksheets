@@ -400,6 +400,7 @@
         "id": "major.applied_music",
         "title": "Applied Music",
         "fill": "open",
+        "minimum_hours": 12,
         "note": "Applied music options: MUS 131/231, MUS 133/233, MUS 134/234, MUS 135/235, MUS 136/236, MUS 137/237, MUS 138/238"
       },
       {

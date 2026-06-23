@@ -126,13 +126,26 @@ function ruleSlug(name) {
 
 // Try to parse a course count and credit minimum from a freeformText value string.
 // "Complete 5 (15 credit hours)…" → { count: 5, minimum_hours: 15 }
+// "Complete 6 credit hours…"      → { count: null, minimum_hours: 6 }
+// "Complete 1 additional elective" → { count: 1, minimum_hours: null }
 function parseFreeformCounts(text) {
-  const countMatch = (text || '').match(/complete\s+(\d+)/i);
-  const creditsMatch = (text || '').match(/\((\d+)\s+credit\s+hours?\)/i);
-  return {
-    count:         countMatch   ? parseInt(countMatch[1],   10) : null,
-    minimum_hours: creditsMatch ? parseInt(creditsMatch[1], 10) : null,
-  };
+  const t = text || '';
+  // Credit hours in parens: "Complete 5 (15 credit hours)" — both count and hours explicit.
+  const parenthesizedHrs = t.match(/\((\d+)\s+credit\s+hours?\)/i);
+  if (parenthesizedHrs) {
+    const minimum_hours = parseInt(parenthesizedHrs[1], 10);
+    const courseMatch   = t.match(/complete\s+(\d+)/i);
+    return { count: courseMatch ? parseInt(courseMatch[1], 10) : null, minimum_hours };
+  }
+  // Credit hours inline: "Complete 6 credit hours" or "33 additional credit hours".
+  // One optional intervening word covers "additional", "more", etc.
+  const hrsMatch = t.match(/(\d+)(?:\s+\w+)?\s+credit\s+hours?/i);
+  if (hrsMatch) {
+    return { count: null, minimum_hours: parseInt(hrsMatch[1], 10) };
+  }
+  // Plain course count: "Complete 3 courses" or "Complete 1 additional elective".
+  const courseMatch = t.match(/complete\s+(\d+)/i);
+  return { count: courseMatch ? parseInt(courseMatch[1], 10) : null, minimum_hours: null };
 }
 
 // Returns { groups: [...schema group objects], courseGroupIds: Set<string> }

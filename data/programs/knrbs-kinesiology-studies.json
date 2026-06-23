@@ -188,7 +188,7 @@
         "id": "major.kinesiology_electives",
         "title": "Kinesiology electives",
         "fill": "open",
-        "count": 19,
+        "minimum_hours": 20,
         "note": "A minimum of 9 credit hours must be upper-division (200- or 300-level) courses 6 credit hours must be at the 300-level"
       }
     ]

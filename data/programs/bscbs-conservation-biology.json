@@ -429,6 +429,7 @@
         "id": "major.biology_electives",
         "title": "Biology electives",
         "fill": "open",
+        "minimum_hours": 38,
         "note": "Complete additional Conservation Biology electives to total 38 Biology credit hours"
       },
       {

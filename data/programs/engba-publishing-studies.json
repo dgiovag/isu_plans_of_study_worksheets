@@ -270,7 +270,7 @@
         "id": "major.british_literature_american_lite",
         "title": " British literature, American literature, global literature, children's literature, women's literature electives",
         "fill": "open",
-        "count": 6,
+        "minimum_hours": 6,
         "note": "British Literatures and Cultures: ENG 110, ENG 213, ENG 214, ENG 216, ENG 217, ENG 218, ENG 219, ENG 222, ENG 311, ENG 320, ENG 322, ENG 329, ENG 378 American Literatures and Cultures: ENG 130, ENG 165, ENG 231, ENG 232, ENG 233, ENG 234, ENG 236, ENG 265, ENG 266, ENG 267, ENG 332, ENG 365 Global Literatures and Cultures: ENG 150, ENG 206, ENG 206A01, ENG 206A02, ENG 206A03, ENG 206A04, ENG 250, ENG 252, ENG 255, ENG 261, ENG 352 Children's Literature: ENG 170, ENG 271, ENG 272, ENG 370, ENG 372, ENG 373, ENG 374, ENG 375 Women's Literature: ENG 160, ENG 260, ENG 261, ENG 262, ENG 360"
       },
       {
@@ -297,7 +297,7 @@
         "id": "major.english_elective",
         "title": "English elective",
         "fill": "open",
-        "count": 3,
+        "minimum_hours": 3,
         "note": "Complete 3 credit hours in additional senior college-level (200 or 300-level) English elective"
       }
     ]
