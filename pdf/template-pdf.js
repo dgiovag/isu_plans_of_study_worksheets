@@ -50,7 +50,7 @@ async function buildOnePDF(program, track) {
 
   const afterHeader     = drawHeader(page, prog, track, fonts, wordmarkImage);
   const afterDisclaimer = drawDisclaimer(page, afterHeader, fonts);
-  const bodyY           = drawStudentInfo(page, form, afterDisclaimer, fonts);
+  const bodyY           = afterDisclaimer - 5;
 
   // Course IDs that appear in any gen-ed auto_fulfilled_by — used by both
   // renderers to bold cross-counted rows on each side of the chart.
