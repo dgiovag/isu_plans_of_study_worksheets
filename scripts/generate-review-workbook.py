@@ -194,10 +194,12 @@ STRUCTURAL_GAPS = [
         "issue_type": ISSUE_CREDIT,
         "group_id": "major.art_history_elective_courses",
         "description": (
-            "12 elective courses (ART 240-281) assigned 3 credit hours each based on "
-            "standard course format. Advisor: verify actual credit values and confirm "
-            "whether any per-group minimum applies (catalog lists three groups of courses "
-            "but does not explicitly state a distribution requirement)."
+            "12 elective courses (ART 240-281) assigned 3 credit hours each. "
+            "Per-group minimum (at least 1 from each of Groups 1-3) is confirmed from "
+            "catalog and now encoded as choose_n_grouped. "
+            "10 of 12 courses are absent from the CourseDog active catalog (only ART 280 "
+            "and ART 281 are verified). Advisor: confirm actual credit values for "
+            "ART 240, 241, 242, 244, 263, 264, 265, 266, 267, and 279."
         ),
     },
     {
@@ -243,17 +245,6 @@ STRUCTURAL_GAPS = [
             "38 courses are in a flat required list. The catalog describes a phased structure "
             "(pre-nursing foundation, nursing core, clinical). Advisor: identify which courses "
             "belong to each phase so the JSON can be split into phases[]."
-        ),
-    },
-    {
-        "program_id": "accntcybs-financial-accounting",
-        "college": "College of Business",
-        "issue_type": ISSUE_CATALOG,
-        "group_id": "isu.mathematics / iai.mathematics",
-        "description": (
-            "MAT 121 carries CourseDog attribute GE14-QR (Quantitative Reasoning), not "
-            "GE14-MAT (Mathematics). Advisor: confirm whether MAT 121 satisfies the "
-            "Mathematics gen-ed requirement or only presupposes it."
         ),
     },
 ]

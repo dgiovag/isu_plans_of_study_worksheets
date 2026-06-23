@@ -4,7 +4,26 @@ This document captures the current project state and the next steps to pick up i
 
 ---
 
-## What Was Done This Session
+## What Was Done This Session (2026-06-23)
+
+### Catalog research + issue triage (3 issues)
+Ran sub-agents to fetch ISU catalog and CourseDog cache for the three "quick lookup" issues:
+
+- **MAT 121 (accntcybs) — CLOSED.** GE14-QR confirmed → quantitative_reasoning only, not mathematics. JSON was already correct. Bonus: MAT 121 carries BSMT (B.S. SMT req); MAT 145 does not.
+- **ENG 145A13 IAI IC2 — CONFIRMED.** ENG 145A13 carries identical IAI IC2 attribute as ENG 145. The `choose_one` in accntcybs and the `auto_fulfilled_by` in accbsmpa are both correct. Flag: accbsmpa has ENG 145A13 with `fulfills: ["major.required_courses"]` but no major slot for it — needs departmental clarification before fixing.
+- **Nursing escrow (nurbsn-r-n-to-b-s-n) — STAYS OPEN.** Catalog text says 34 credits twice; individual CourseDog records sum to 32. Discrepancy in the source data itself. `total_credits: 34` and the advisor note are correct. MCN must clarify.
+- **Art history elective grouping — RESOLVED.** Catalog explicitly requires at least 1 from each of 3 groups. Changed `choose_n` → `choose_n_grouped` with `minimum_picks: 1` per sub-group. Credit values for 10 of 12 courses remain unverifiable from CourseDog.
+
+### Files changed
+- `data/programs/artba-art-history.json` — `choose_n` → `choose_n_grouped`
+- `scripts/generate-review-workbook.py` — removed MAT 121 issue; updated artba credit_assumption description
+- `CLAUDE.md`, `docs/handoff.md` — updated gap table and resolved gaps
+
+Issue count: 8 → **7**.
+
+---
+
+## What Was Done Previous Session
 
 ### Commits landed
 Four commits pushed to `main`:
@@ -47,25 +66,30 @@ Working tree is clean. All output is up to date.
 
 ## Remaining Scraper Gaps (Issue Log rows)
 
+7 open issues — all require advisor judgment or a call to the department.
+
 | Program | Issue type | What's needed |
 |---|---|---|
 | `accntcybs-financial-accounting` | `structural_gap` | Split `major.required_courses` into `choose_one` slots for math/writing/IT options |
 | `artba-art-history` | `catalog_verify` | Confirm whether language sequence (FRE/GER/ITA/SPA 111/112/115) must be same language across all three levels |
-| `artba-art-history` | `credit_assumption` | Verify credit values for 12 elective courses (ART 240–281) and any per-group distribution requirement |
-| `nurbsn-r-n-to-b-s-n` | `credit_assumption` | Confirm total escrow credits: individual courses sum to 32, catalog says 34 |
+| `artba-art-history` | `credit_assumption` | Verify credit values for ART 240/241/242/244/263/264/265/266/267/279 (absent from CourseDog active catalog; ART 280/281 confirmed 3 credits). Per-group structure now encoded correctly. |
+| `nurbsn-r-n-to-b-s-n` | `credit_assumption` | Catalog says 34 total escrow credits; individual course records sum to 32 — discrepancy exists in CourseDog source. Mennonite College of Nursing must confirm. |
 | `tchecebs-pedagogy` | `structural_gap` | Confirm whether 9 `choose_n(1)` groups are independent choices or specialty track bundles |
 | `musbm-composition-theory-emphasis` | `structural_gap` | Confirm credit range, total hours, and level-progression rule for applied music / ensembles |
 | `nurbsn-traditional-prelicensure` | `structural_gap` | Split 38-course flat list into phases (foundation / nursing core / clinical) |
-| `accntcybs-financial-accounting` | `catalog_verify` | MAT 121 has `GE14-QR` not `GE14-MAT` — confirm whether it satisfies or presupposes the math gen-ed |
+
+### Closed this session
+- `accntcybs` MAT 121 — confirmed: GE14-QR encoding correct, no change needed
+- `artba` elective per-group minimum — confirmed from catalog, encoded as `choose_n_grouped`
 
 ---
 
 ## Immediate Next Task
 
-Send `output/review/advisor-review.xlsx` to advisors for the 8 open issues above, then work through structural gaps as responses come in. Priority order by complexity:
+Send `output/review/advisor-review.xlsx` to advisors for the 7 open issues, then work through structural gaps as responses come in. Priority order by complexity:
 
-1. **Quick / catalog lookup:** `nurbsn-r-n-to-b-s-n` escrow total, `accntcybs` MAT 121, `artba` credit assumptions
-2. **Advisor call required:** `artba` language constraint, `tchecebs` track structure, `nurbsn-traditional` phase split
+1. **Advisor call / catalog lookup:** `artba` language constraint and elective credits, `nurbsn-r-n-to-b-s-n` escrow total (call MCN)
+2. **Advisor call required:** `tchecebs` track structure, `nurbsn-traditional` phase split
 3. **Hard / schema work:** `musbm` repeat groups, `accntcybs` inline choose_ones
 
 ---

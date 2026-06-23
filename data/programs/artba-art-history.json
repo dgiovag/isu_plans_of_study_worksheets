@@ -379,24 +379,45 @@
       {
         "id": "major.art_history_elective_courses",
         "title": "Art history elective courses",
-        "fill": "choose_n",
+        "fill": "choose_n_grouped",
         "n": 5,
         "minimum_hours": 15,
-        "options": [
-          "ART240",
-          "ART241",
-          "ART242",
-          "ART244",
-          "ART263",
-          "ART264",
-          "ART265",
-          "ART266",
-          "ART267",
-          "ART279",
-          "ART280",
-          "ART281"
+        "sub_groups": [
+          {
+            "id": "major.art_history_elective_group_1",
+            "title": "Group 1",
+            "minimum_picks": 1,
+            "options": [
+              "ART240",
+              "ART241",
+              "ART242",
+              "ART244",
+              "ART263"
+            ]
+          },
+          {
+            "id": "major.art_history_elective_group_2",
+            "title": "Group 2",
+            "minimum_picks": 1,
+            "options": [
+              "ART264",
+              "ART265",
+              "ART266",
+              "ART267"
+            ]
+          },
+          {
+            "id": "major.art_history_elective_group_3",
+            "title": "Group 3",
+            "minimum_picks": 1,
+            "options": [
+              "ART279",
+              "ART280",
+              "ART281"
+            ]
+          }
         ],
-        "note": "ADVISOR NOTE: credits assumed 3 each (verify). Catalog groups these as Group 1 (ART 240-263), Group 2 (ART 264-267), Group 3 (ART 279-281) — confirm whether a per-group minimum applies."
+        "note": "ADVISOR NOTE: credits assumed 3 each — 10 of 12 courses absent from CourseDog active catalog; verify actual credit values with advisor."
       },
       {
         "id": "major.art_history_seminar_courses",

@@ -194,15 +194,15 @@ These structural features cannot be derived from CourseDog and must be added man
 | Program (new ID) | Gap | What to add |
 |---|---|---|
 | accntcybs-financial-accounting | Inline choose_ones in the required block | Split `major.required_courses` into separate `choose_one` slots for math/writing/IT options |
-| artba-art-history | Language sequence consistency constraint | Inline choose_ones for FRE/GER/ITA/SPA 111/112/115 already encoded by scraper; elective group restructured to `choose_n`. Remaining: advisor must confirm whether same-language constraint applies across all three levels before encoding in `major.constraints` |
+| artba-art-history | Language sequence consistency constraint | Inline choose_ones for FRE/GER/ITA/SPA 111/112/115 already encoded by scraper; elective group restructured to `choose_n_grouped` (3 groups, min 1 each — confirmed from catalog). Remaining: advisor must confirm whether same-language constraint applies across all three levels before encoding in `major.constraints`. Credit values for ART 240/241/242/244/263/264/265/266/267/279 still unverified (absent from CourseDog active catalog). |
 | tchecebs-pedagogy | Elective track | Replace generic `choose_n` groups with `choose_one_track` and proper slot labels |
 | musbm-composition-theory-emphasis | Applied music & ensembles | Change `open` groups to `repeat` with credit ranges; add course options from catalog |
 | nurbsn-traditional-prelicensure | Phase structure | Split flat `major.required_courses` into `phases: [{foundation}, {nursing_core}, {clinical}]` |
 | nurbsn-r-n-to-b-s-n | Escrow credit total | Escrow group added; individual course credits from legacy data sum to 32, catalog note says 34 — Mennonite College of Nursing must confirm |
-| accntcybs-financial-accounting | Math gen-ed | MAT 121 carries `GE14-QR` (not `GE14-MAT`) in CourseDog — verify whether it satisfies or presupposes the math requirement |
-
 **Resolved gaps (no longer require annotation):**
-- `auto_fulfilled_by` vs `exempt` — 998 gen-ed groups verified by course-level `fulfills` data (CourseDog attributes confirm satisfaction). The `generate-review-workbook.py` script now skips verified groups automatically. Remaining issue log has 8 rows, all requiring advisor or catalog lookup.
+- `auto_fulfilled_by` vs `exempt` — 998 gen-ed groups verified by course-level `fulfills` data (CourseDog attributes confirm satisfaction). The `generate-review-workbook.py` script now skips verified groups automatically. Remaining issue log has 7 rows, all requiring advisor or catalog lookup.
+- `accntcybs` MAT 121 math gen-ed — confirmed correct: MAT 121 carries `GE14-QR` (quantitative_reasoning only); `isu.mathematics` is not satisfied by MAT 121 and requires a separate course. JSON encoding is accurate. Additionally, MAT 121 carries `BSMT` (B.S. SMT requirement); MAT 145 does not.
+- `artba` art history elective grouping — confirmed: catalog explicitly requires at least 1 course from each of 3 groups. Encoded as `choose_n_grouped` with `minimum_picks: 1` per sub-group.
 
 ## Working Instructions
 
