@@ -1,0 +1,714 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "geolbs",
+    "title": "Geology",
+    "sequence": "Traditional Sequence",
+    "degree": "B.S.",
+    "department": "GEOAO",
+    "college": "College of Arts and Sciences",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/GEOLBS",
+    "minimum_major_hours": 65,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "CHE140",
+      "code": "CHE 140",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "CHE141",
+      "code": "CHE 141",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
+      ]
+    },
+    {
+      "id": "GEO100",
+      "code": "GEO 100",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "GEO102",
+      "code": "GEO 102",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "GEO202",
+      "code": "GEO 202",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
+      ]
+    },
+    {
+      "id": "GEO207",
+      "code": "GEO 207",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
+      ]
+    },
+    {
+      "id": "GEO276",
+      "code": "GEO 276",
+      "credits": 3,
+      "fulfills": [
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO280",
+      "code": "GEO 280",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
+      ]
+    },
+    {
+      "id": "GEO285",
+      "code": "GEO 285",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "GEO290",
+      "code": "GEO 290",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "GEO295",
+      "code": "GEO 295",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "GEO296",
+      "code": "GEO 296",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "GEO301",
+      "code": "GEO 301",
+      "credits": 3,
+      "fulfills": [
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO306A13",
+      "code": "GEO 306A13",
+      "credits": 3,
+      "fulfills": [
+        "major.track_i_traditional_geology"
+      ]
+    },
+    {
+      "id": "GEO306A15",
+      "code": "GEO 306A15",
+      "credits": 3,
+      "fulfills": [
+        "major.track_i_traditional_geology"
+      ]
+    },
+    {
+      "id": "GEO306A19",
+      "code": "GEO 306A19",
+      "credits": 4,
+      "fulfills": [
+        "major.track_i_traditional_geology"
+      ]
+    },
+    {
+      "id": "GEO306A27",
+      "code": "GEO 306A27",
+      "credits": 3,
+      "fulfills": [
+        "major.track_i_traditional_geology"
+      ]
+    },
+    {
+      "id": "GEO314",
+      "code": "GEO 314",
+      "credits": 3,
+      "fulfills": [
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO318",
+      "code": "GEO 318",
+      "credits": 3,
+      "fulfills": [
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO319",
+      "code": "GEO 319",
+      "credits": 3,
+      "fulfills": [
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO321",
+      "code": "GEO 321",
+      "credits": 3,
+      "fulfills": [
+        "major.track_i_traditional_geology"
+      ]
+    },
+    {
+      "id": "GEO323",
+      "code": "GEO 323",
+      "credits": 3,
+      "fulfills": [
+        "major.track_i_traditional_geology",
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO325",
+      "code": "GEO 325",
+      "credits": 3,
+      "fulfills": [
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO341",
+      "code": "GEO 341",
+      "credits": 3,
+      "fulfills": [
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO360",
+      "code": "GEO 360",
+      "credits": 3,
+      "fulfills": [
+        "major.track_i_traditional_geology",
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO361",
+      "code": "GEO 361",
+      "credits": 3,
+      "fulfills": [
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO362",
+      "code": "GEO 362",
+      "credits": 3,
+      "fulfills": [
+        "major.track_i_traditional_geology"
+      ]
+    },
+    {
+      "id": "GEO363",
+      "code": "GEO 363",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "GEO365",
+      "code": "GEO 365",
+      "credits": 3,
+      "fulfills": [
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO380",
+      "code": "GEO 380",
+      "credits": 3,
+      "fulfills": [
+        "major.track_i_traditional_geology",
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO382",
+      "code": "GEO 382",
+      "credits": 3,
+      "fulfills": [
+        "major.track_i_traditional_geology",
+        "major.track_ii_environmental_geology"
+      ]
+    },
+    {
+      "id": "GEO385",
+      "code": "GEO 385",
+      "credits": 4,
+      "fulfills": [
+        "major.track_i_traditional_geology"
+      ]
+    },
+    {
+      "id": "GEO395",
+      "code": "GEO 395",
+      "credits": 6,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "MAT145",
+      "code": "MAT 145",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses",
+        "isu.mathematics",
+        "iai.mathematics"
+      ]
+    },
+    {
+      "id": "MAT146",
+      "code": "MAT 146",
+      "credits": 4,
+      "fulfills": [
+        "major.track_i_traditional_geology",
+        "major.track_ii_environmental_geology",
+        "isu.quantitative_reasoning",
+        "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
+      ]
+    },
+    {
+      "id": "PHY108",
+      "code": "PHY 108",
+      "credits": 5,
+      "fulfills": [
+        "major.required_courses",
+        "major.track_ii_environmental_geology",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "PHY109",
+      "code": "PHY 109",
+      "credits": 5,
+      "fulfills": [
+        "major.track_i_traditional_geology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
+      ]
+    },
+    {
+      "id": "PHY110",
+      "code": "PHY 110",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses",
+        "major.track_ii_environmental_geology",
+        "isu.natural_science",
+        "iai.physical_life_sciences"
+      ]
+    },
+    {
+      "id": "PHY111",
+      "code": "PHY 111",
+      "credits": 4,
+      "fulfills": [
+        "major.track_i_traditional_geology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Traditional Sequence",
+    "minimum_hours": 65,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "fill": "choose_one",
+            "options": [
+              "GEO100",
+              "GEO102",
+              "GEO207"
+            ]
+          },
+          {
+            "course_id": "GEO202"
+          },
+          {
+            "course_id": "GEO280"
+          },
+          {
+            "course_id": "GEO285"
+          },
+          {
+            "course_id": "GEO290"
+          },
+          {
+            "course_id": "GEO295"
+          },
+          {
+            "course_id": "GEO296"
+          },
+          {
+            "course_id": "GEO363"
+          },
+          {
+            "course_id": "GEO395"
+          },
+          {
+            "course_id": "CHE140"
+          },
+          {
+            "course_id": "CHE141"
+          },
+          {
+            "course_id": "MAT145"
+          },
+          {
+            "fill": "choose_one",
+            "options": [
+              "PHY108",
+              "PHY110"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "major.complete_5_courses_min_15_credit",
+        "title": "Complete 5 courses (min. 15 credit hours) from one single track below",
+        "fill": "open"
+      },
+      {
+        "id": "major.track_i_traditional_geology",
+        "title": "Track I - Traditional Geology",
+        "fill": "choose_n",
+        "options": [
+          "GEO306A13",
+          "GEO306A15",
+          "GEO306A19",
+          "GEO306A27",
+          "GEO321",
+          "GEO323",
+          "GEO360",
+          "GEO362",
+          "GEO380",
+          "GEO382",
+          "GEO385",
+          "MAT146",
+          "PHY109",
+          "PHY111"
+        ]
+      },
+      {
+        "id": "major.track_ii_environmental_geology",
+        "title": "Track II - Environmental Geology",
+        "fill": "choose_n",
+        "options": [
+          "GEO276",
+          "GEO301",
+          "GEO314",
+          "GEO318",
+          "GEO319",
+          "GEO323",
+          "GEO325",
+          "GEO341",
+          "GEO360",
+          "GEO361",
+          "GEO365",
+          "GEO380",
+          "GEO382",
+          "MAT146",
+          "PHY108",
+          "PHY110"
+        ]
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MAT145"
+            ]
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences",
+            "auto_fulfilled_by": [
+              "GEO102",
+              "CHE140",
+              "PHY108",
+              "PHY110"
+            ]
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MAT146"
+            ]
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "GEO207",
+              "GEO202"
+            ]
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1,
+            "auto_fulfilled_by": [
+              "MAT145",
+              "MAT146"
+            ]
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7,
+            "auto_fulfilled_by": [
+              "GEO100",
+              "GEO102",
+              "CHE140",
+              "PHY108",
+              "PHY110"
+            ]
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts"
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required"
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "bs_smt",
+        "title": "B.S. — Science, Math, & Technology",
+        "note": "Required beyond Gen Ed for B.S. degree",
+        "applies_when": {
+          "degree": "B.S."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

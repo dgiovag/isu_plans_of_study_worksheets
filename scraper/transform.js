@@ -51,6 +51,14 @@ function parseDegree(degreeDesignation) {
   return DEGREE_MAP[code] ?? degreeDesignation ?? '';
 }
 
+function graduationFlagsFromAttr(attrString) {
+  if (attrString.startsWith('AMAL - AMALI'))  return ['amali'];
+  if (attrString.startsWith('IDEA - IDEAS'))  return ['ideas'];
+  if (attrString.startsWith('BSMT - BS-SMT')) return ['bs_smt'];
+  if (attrString.startsWith('WLDR - BAWLDR')) return ['ba_wl'];
+  return [];
+}
+
 // ---------------------------------------------------------------------------
 // Courses map
 // ---------------------------------------------------------------------------
@@ -367,7 +375,10 @@ function buildCoursesSection(majorGroups, coursesMap, warnings) {
     if (c.credits === 0) {
       warnings.push(`REVIEW ${courseId}: credits resolved to 0 — CourseDog may store variable credits; set manually`);
     }
-    courses.push({ id: courseId, code: c.code, credits: c.credits, fulfills });
+    const gradFlags = [...new Set(c.attributes.flatMap(a => graduationFlagsFromAttr(a)))];
+    const entry = { id: courseId, code: c.code, credits: c.credits, fulfills };
+    if (gradFlags.length) entry.graduation_flags = gradFlags;
+    courses.push(entry);
   }
 
   courses.sort((a, b) => a.code.localeCompare(b.code));

@@ -60,6 +60,9 @@
       "credits": 4,
       "fulfills": [
         "major.math_and_science_electives"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -320,6 +323,9 @@
       "fulfills": [
         "major.math_and_science_electives",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -340,6 +346,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -606,6 +615,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -857,7 +869,9 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "GEO202"
+            ]
           },
           {
             "id": "isu.social_sciences",

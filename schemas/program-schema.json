@@ -197,6 +197,14 @@
         "note": {
           "type": "string",
           "description": "Display note (e.g., 'no more than 3 credit hours')"
+        },
+        "graduation_flags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["amali", "ideas", "bs_smt", "ba_wl"]
+          },
+          "description": "Graduation requirements this course can satisfy"
         }
       }
     },

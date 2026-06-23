@@ -21,6 +21,9 @@
       "fulfills": [
         "major.complete_3_credits_of_math_or_sc",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -39,6 +42,9 @@
       "credits": 4,
       "fulfills": [
         "major.complete_3_credits_of_math_or_sc"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -131,6 +137,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -437,6 +446,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -454,6 +466,9 @@
       "fulfills": [
         "major.complete_3_credits_of_math_or_sc",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -463,6 +478,9 @@
       "fulfills": [
         "major.complete_3_credits_of_math_or_sc",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -472,6 +490,9 @@
       "fulfills": [
         "major.complete_3_credits_of_math_or_sc",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -712,7 +733,12 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "BSC145",
+              "PHY205",
+              "PHY207",
+              "PHY208"
+            ]
           },
           {
             "id": "isu.social_sciences",

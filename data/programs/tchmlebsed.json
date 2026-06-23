@@ -60,6 +60,9 @@
       "credits": 3,
       "fulfills": [
         "major.elective"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -145,6 +148,9 @@
         "major.elective_for_the_english_languag",
         "isu.humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -199,6 +205,9 @@
         "major.required_courses_for_the_social_",
         "isu.social_sciences",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -333,6 +342,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -390,6 +402,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses_for_the_english_2"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -809,7 +824,12 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "ENG143",
+              "GEO135",
+              "ECO101",
+              "ECO102"
+            ]
           }
         ]
       },

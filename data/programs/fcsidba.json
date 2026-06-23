@@ -1,0 +1,521 @@
+{
+  "$schema_version": "1.0",
+  "program": {
+    "id": "fcsidba",
+    "title": "Interior Design",
+    "sequence": "Interior Design Sequence",
+    "degree": "B.A.",
+    "department": "FCSAO",
+    "college": "Applied Science and Technology",
+    "catalog_year": "2026-2027",
+    "catalog_url": "https://catalog.illinoisstate.edu/programs/FCSIDBA",
+    "minimum_major_hours": 64,
+    "minimum_total_hours": 120,
+    "minimum_senior_hours": 40
+  },
+  "courses": [
+    {
+      "id": "ART155",
+      "code": "ART 155",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following",
+        "isu.fine_arts",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ART156",
+      "code": "ART 156",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following",
+        "isu.fine_arts",
+        "iai.humanities_fine_arts"
+      ]
+    },
+    {
+      "id": "ART275",
+      "code": "ART 275",
+      "credits": 3,
+      "fulfills": [
+        "major.complete_one_of_the_following",
+        "isu.fine_arts",
+        "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
+      ]
+    },
+    {
+      "id": "FCS100",
+      "code": "FCS 100",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS104",
+      "code": "FCS 104",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS116",
+      "code": "FCS 116",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS200",
+      "code": "FCS 200",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS216",
+      "code": "FCS 216",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS218",
+      "code": "FCS 218",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS242",
+      "code": "FCS 242",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS246",
+      "code": "FCS 246",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS300A04",
+      "code": "FCS 300A04",
+      "credits": 1,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS301",
+      "code": "FCS 301",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS338",
+      "code": "FCS 338",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS340",
+      "code": "FCS 340",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS345",
+      "code": "FCS 345",
+      "credits": 2,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS346",
+      "code": "FCS 346",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS347",
+      "code": "FCS 347",
+      "credits": 2,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS348",
+      "code": "FCS 348",
+      "credits": 2,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS352",
+      "code": "FCS 352",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS370",
+      "code": "FCS 370",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS375",
+      "code": "FCS 375",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS376",
+      "code": "FCS 376",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    },
+    {
+      "id": "FCS398A04",
+      "code": "FCS 398A04",
+      "credits": 4,
+      "fulfills": [
+        "major.required_courses"
+      ]
+    }
+  ],
+  "major": {
+    "title": "Interior Design Sequence",
+    "minimum_hours": 64,
+    "groups": [
+      {
+        "id": "major.required_courses",
+        "title": "Required courses",
+        "fill": "fixed",
+        "slots": [
+          {
+            "course_id": "FCS100"
+          },
+          {
+            "course_id": "FCS104"
+          },
+          {
+            "course_id": "FCS116"
+          },
+          {
+            "course_id": "FCS200"
+          },
+          {
+            "course_id": "FCS216"
+          },
+          {
+            "course_id": "FCS218"
+          },
+          {
+            "course_id": "FCS242"
+          },
+          {
+            "course_id": "FCS246"
+          },
+          {
+            "course_id": "FCS300A04"
+          },
+          {
+            "course_id": "FCS301"
+          },
+          {
+            "course_id": "FCS338"
+          },
+          {
+            "course_id": "FCS340"
+          },
+          {
+            "course_id": "FCS345"
+          },
+          {
+            "course_id": "FCS346"
+          },
+          {
+            "course_id": "FCS347"
+          },
+          {
+            "course_id": "FCS348"
+          },
+          {
+            "course_id": "FCS352"
+          },
+          {
+            "course_id": "FCS370"
+          },
+          {
+            "course_id": "FCS375"
+          },
+          {
+            "course_id": "FCS376"
+          },
+          {
+            "course_id": "FCS398A04"
+          }
+        ]
+      },
+      {
+        "id": "major.complete_one_of_the_following",
+        "title": "Complete one of the following",
+        "fill": "choose_n",
+        "n": 1,
+        "options": [
+          "ART155",
+          "ART156",
+          "ART275"
+        ],
+        "note": "Possible minors based on individual interests: Technology, Art, or Business. Recommended electives: FCS 303, FCS 334, FCS 377; TEC 317, TEC 322"
+      }
+    ]
+  },
+  "general_education": {
+    "tracks": [
+      {
+        "id": "isu",
+        "title": "ISU General Education Program",
+        "summary": "13 courses / 39 credit hours",
+        "type": "course_based",
+        "groups": [
+          {
+            "id": "isu.communication_composition",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 2
+          },
+          {
+            "id": "isu.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.natural_science",
+            "title": "Natural Science",
+            "fill": "open",
+            "count": 2,
+            "constraint": "Must be from 2 different sciences"
+          },
+          {
+            "id": "isu.us_traditions",
+            "title": "United States Traditions",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.individuals_civic_life",
+            "title": "Individuals & Civic Life",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.fine_arts",
+            "title": "Fine Arts",
+            "fill": "open",
+            "count": 1,
+            "minimum_hours": 3,
+            "auto_fulfilled_by": [
+              "ART155",
+              "ART156",
+              "ART275"
+            ]
+          },
+          {
+            "id": "isu.humanities",
+            "title": "Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.language_humanities",
+            "title": "Language in the Humanities",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.quantitative_reasoning",
+            "title": "Quantitative Reasoning",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.science_math_technology",
+            "title": "Science, Math, & Technology",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "isu.social_sciences",
+            "title": "Social Sciences",
+            "fill": "open",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": "iai",
+        "title": "IAI Transferable General Education Core",
+        "summary": "12-13 courses / 37-41 credit hours",
+        "type": "course_based",
+        "eligibility_note": "At least one transfer course must articulate to an IAI core requirement.",
+        "groups": [
+          {
+            "id": "iai.communication",
+            "title": "Communication & Composition",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Grade of C or better required in ENG 101 and ENG 145 or equivalents"
+          },
+          {
+            "id": "iai.mathematics",
+            "title": "Mathematics",
+            "fill": "open",
+            "count": 1
+          },
+          {
+            "id": "iai.physical_life_sciences",
+            "title": "Physical & Life Sciences",
+            "fill": "open",
+            "count": 2,
+            "constraint": "1 life science + 1 physical science; at least 1 with lab",
+            "minimum_hours": 7
+          },
+          {
+            "id": "iai.humanities_fine_arts",
+            "title": "Humanities & Fine Arts",
+            "fill": "open",
+            "count": 3,
+            "constraint": "At least 1 humanities + 1 fine arts",
+            "auto_fulfilled_by": [
+              "ART155",
+              "ART156",
+              "ART275"
+            ]
+          },
+          {
+            "id": "iai.social_sciences",
+            "title": "Social & Behavioral Sciences",
+            "fill": "open",
+            "count": 3,
+            "constraint": "Two different disciplines required"
+          }
+        ]
+      },
+      {
+        "id": "associates",
+        "title": "Completed Associate's Degree",
+        "summary": "Baccalaureate-oriented A.A. or A.S. fulfills ISU Gen Ed",
+        "type": "metadata_only",
+        "fields": [
+          {
+            "id": "degree_type",
+            "label": "Degree type",
+            "type": "select",
+            "options": [
+              "A.A.",
+              "A.S."
+            ],
+            "required": true
+          },
+          {
+            "id": "field",
+            "label": "Field of study",
+            "type": "text"
+          },
+          {
+            "id": "institution",
+            "label": "Institution",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": "date_awarded",
+            "label": "Date awarded",
+            "type": "text"
+          },
+          {
+            "id": "includes_iai_gecc",
+            "label": "Includes IAI GECC",
+            "type": "select",
+            "options": [
+              "yes",
+              "no"
+            ],
+            "note": "Required for A.S. degrees from Illinois institutions"
+          }
+        ]
+      }
+    ]
+  },
+  "graduation_requirements": {
+    "trackable": [
+      {
+        "id": "hours_120",
+        "title": "120 minimum total credit hours",
+        "note": "Total earned hours toward the degree"
+      },
+      {
+        "id": "hours_40_senior",
+        "title": "40 senior college hours",
+        "note": "Of the 120, at least 40 must be 200-300 level"
+      },
+      {
+        "id": "amali",
+        "title": "AMALI requirement",
+        "note": "May be fulfilled by certain Gen Ed and/or major courses"
+      },
+      {
+        "id": "ideas",
+        "title": "IDEAS requirement",
+        "note": "Inclusion, Diversity, Equity & Access"
+      },
+      {
+        "id": "ba_world_language",
+        "title": "B.A. — World Language",
+        "note": "Intermediate proficiency or equivalent required for B.A. degree",
+        "applies_when": {
+          "degree": "B.A."
+        }
+      }
+    ],
+    "narrative": [
+      "Students may apply for and receive two bachelor's degrees at the same time.",
+      "Some majors complete other types of degrees that do not include additional graduation requirements (e.g., B.S. in Ed., B.S.N.)."
+    ]
+  }
+}

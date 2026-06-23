@@ -7,7 +7,7 @@
     "degree": "B.S.",
     "department": "HSCAO",
     "college": "Applied Science and Technology",
-    "catalog_year": "2026-2027",
+    "catalog_year": "2025-2026",
     "catalog_url": "https://catalog.illinoisstate.edu/programs/MEDLABSCBS",
     "minimum_major_hours": 82,
     "minimum_total_hours": 120,
@@ -21,6 +21,9 @@
       "fulfills": [
         "major.microbiology_elective",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -31,6 +34,9 @@
         "major.science_electives",
         "isu.science_math_technology",
         "iai.physical_life_sciences"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -83,6 +89,9 @@
       "credits": 3,
       "fulfills": [
         "major.science_electives"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -125,6 +134,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -141,6 +153,9 @@
       "credits": 5,
       "fulfills": [
         "major.chemistry_electives"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -149,6 +164,9 @@
       "credits": 3,
       "fulfills": [
         "major.chemistry_electives"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -157,6 +175,9 @@
       "credits": 1,
       "fulfills": [
         "major.chemistry_electives"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -175,6 +196,9 @@
         "major.statistics_math_elective",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -406,6 +430,9 @@
         "major.statistics_math_elective",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -436,6 +463,9 @@
         "major.statistics_math_elective",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     }
   ],
@@ -673,7 +703,10 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "BSC170",
+              "BSC160"
+            ]
           },
           {
             "id": "isu.social_sciences",

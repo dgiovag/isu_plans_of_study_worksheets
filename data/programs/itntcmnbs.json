@@ -46,6 +46,9 @@
         "major.complete_1_of_the_following_4",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -285,6 +288,9 @@
         "major.complete_1_of_the_following_3",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -293,6 +299,9 @@
       "credits": 4,
       "fulfills": [
         "major.complete_1_of_the_following_3"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -303,6 +312,9 @@
         "major.complete_1_of_the_following_4",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -313,6 +325,9 @@
         "major.complete_1_of_the_following_4",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     }
   ],
@@ -526,7 +541,9 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "IT214"
+            ]
           },
           {
             "id": "isu.social_sciences",
