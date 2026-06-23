@@ -134,10 +134,12 @@ The **schema is the contract** between the scraper and both renderers. All compo
 - Three gen-ed tracks per program: `isu`, `iai`, `ad` (AD track shows IAI groups + associates credential fields)
 - Page breaks: independent pagination per column (`leftCtx`/`rightCtx` share doc/form, separate page refs); whole-table break estimation prevents headers from being orphaned at page bottom
 - `open` / `open_constrained` groups collapse the Requirement column (no label needed)
-- Graduation requirements panel: in left column below gen-ed, narrow mode (no note column)
+- Graduation requirements panel: in left column below gen-ed; requirements covered by a major course render as shaded reference rows ("via COURSE1, COURSE2") instead of checkboxes; a key legend is appended when any flags are present
 - College requirements panel: full-width, only rendered when program has `college_requirements`
 - Compliance requirements panel: full-width, grouped by category, only when present
-- Tested against all 7 schema programs — 21 PDFs (3 per program) build without errors
+- `graduation_flags` (AMALI/IDEAS/SMT/WL) displayed as small gray parenthetical tags on major course rows; filtered by degree type so B.A. programs never show SMT tags and vice versa
+- `choose_n` groups compute row count from `minimum_hours` when `n` is absent (`Math.ceil(hours/3)`), giving enough blank rows for hour-constrained elective blocks
+- Tested against all 300 active programs — 900 PDFs (3 per program) build without errors
 
 ## Building Worksheets
 

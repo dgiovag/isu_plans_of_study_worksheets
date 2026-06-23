@@ -6,122 +6,90 @@ This document captures the current project state and the next steps to pick up i
 
 ## What Was Done This Session (2026-06-23)
 
-### PDF renderer UX improvements (4 commits)
+### Graduation flags — schema, data, PDF renderer (4 commits)
 
-**Auto-fulfilled row indicator** (`9ffec87`)
-- Removed pre-checked AcroForm checkboxes on gen-ed rows with `auto_fulfilled_by`.
-- Replaced with bold label text: gen-ed side shows the course code(s) bold, and the corresponding slot(s) in the major column are also bolded.
-- Cross-reference set is built once in `template-pdf.js` (`buildXrefCourseIds`) and threaded through both render contexts via `ctx.xrefCourseIds`.
-- `render-open-pdf.js` passes `{ bold: true }` to `makeRow`; `render-fixed-pdf.js` checks `ctx.xrefCourseIds` per slot; `row-pdf.js` switches to `fonts.bold` when `opts.bold`.
+**Schema** (`fd7cf65`)
+- Added optional `graduation_flags: ["amali"|"ideas"|"bs_smt"|"ba_wl"]` array to the `Course` definition in `schemas/program-schema.json`.
 
-**Page-break quality** (`744bbd8`)
-- `MIN_GROUP_SPACE` raised to `GROUP_TITLE_H + TABLE_HDR_H + 3 × ROW_H` — groups no longer start unless 3 rows fit.
-- Widow protection added in `renderSlots` (render-fixed-pdf.js): when 2 rows remain, forces a break to keep them together rather than splitting the last one.
+**Scraper + data** (`fd7cf65`)
+- `scraper/transform.js`: added `graduationFlagsFromAttr()` that maps CourseDog attribute strings (`AMAL - AMALI`, `IDEA - IDEAS`, `BSMT - BS-SMT`, `WLDR - BAWLDR`) to flag keys; wired into `buildCoursesSection`.
+- Re-scraped all 300 programs from cached raw data. 500 course entries across 96 programs now carry `graduation_flags`.
+- Backfilled `minimum_hours` on 52 `choose_n` groups whose hour requirement was encoded in the group title but missing from the JSON (CourseDog `restriction` field was null for those rules).
 
-**`choose_n` height estimator fix + bold cross-ref** (`b436f96`)
-- `estimateGroupHeight` for `choose_n` was using `group.options.length` (number of available options) instead of `group.n` (number of blank slots rendered). For accntcybs Senior Electives this was 9 vs 2, causing a 105pt false overestimate and a spurious page break.
-- `buildXrefCourseIds` + bold threading implemented (described above).
+**PDF renderer** (`6f792a5`, `8f43f38`)
+- `template-pdf.js`: `buildGradFlagsMap()` builds a `Map<courseId, flags[]>` filtered by degree type (uses `graduation_requirements.trackable` to decide which flags are applicable — B.A. programs never show SMT tags, B.S. programs never show WL tags). Threaded onto both render contexts as `ctx.gradFlagsMap`.
+- `row-pdf.js`: `makeRow` gains `opts.flagTag` — renders a small gray parenthetical at `footnote` size (6.5pt) inline with the last label line if it fits, or on a new line below.
+- `render-fixed-pdf.js`: looks up `ctx.gradFlagsMap` per slot and passes `flagTag` to `makeRow`. Flag abbreviations: `AMALI`, `IDEAS`, `SMT`, `WL`.
+- `render-choose-n-pdf.js`: `chooseNRowCount(group)` helper — prefers `group.n`, falls back to `Math.ceil(group.minimum_hours / 3)`, defaults to 1. Exported and used by the height estimator in `render-group-pdf.js`.
+- `render-graduation-pdf.js`: requirements covered by a major course now render as shaded reference rows (gray background, filled indicator box, "via COURSE1, COURSE2 +N more" note) instead of blank checkboxes. A key legend (`Key: AMALI = … · IDEAS = … · SMT = … · WL = …`) is appended below the panel whenever at least one flag appears in the program.
 
-All 300 programs × 3 tracks = 900 PDFs build clean.
+All 900 PDFs (300 programs × 3 tracks) build clean.
 
 ---
 
-## Immediate Next Task — Graduation Flags in Course Data
+## Immediate Next Task — HTML Renderer: Graduation Flags
 
 ### Goal
-Eliminate most of the Graduation Requirements table by annotating AMALI, IDEAS, B.S. SMT, and B.A. World Language flags inline on major courses in both renderers. If a major course satisfies AMALI, the advisor sees it directly on the row — no separate checklist item needed for programs where the major covers it.
+Mirror the PDF's `graduation_flags` display in the HTML renderer. Advisors using the web version should see the same AMALI/IDEAS/SMT/WL tags on course rows, and the same "satisfied by major" indicator in the graduation requirements panel.
 
-### What the data looks like in CourseDog
+### What to change
 
-Attribute strings on courses (from raw cache):
+**Chunk 1 — Course row tags**
 
-| Requirement | Attribute prefix | Example course | Full attribute string |
-|---|---|---|---|
-| AMALI | `AMAL - AMALI` | GEO 135 | `"AMAL - AMALI (AMALI Degree Requirement)"` |
-| IDEAS | `IDEA - IDEAS` | SED 344 | `"IDEA - IDEAS (IDEAS Graduation Requirement)"` |
-| B.S. SMT | `BSMT - BS-SMT` | BSC 219 | `"BSMT - BS-SMT (BS-SMT Degree Requirement)"` |
-| B.A. WL | `WLDR - BAWLDR` | FRE 115 | `"WLDR - BAWLDR (BA World Language Degree Req)"` |
+The relevant HTML render modules are those that emit course code labels for fixed slots:
+- `renderer/modules/render-fixed.js` — most major course rows
+- `renderer/modules/render-choose-n.js` — elective pick rows (if they list specific courses)
 
-Counts across all cached programs: 65 AMALI, 26 IDEAS, 52 SMT, 12 WL (FRE/GER/ITA/SPA 112/115/116).
+At build time, a `gradFlagsMap` (courseId → flags[]) should be computed from the program data — same filtering logic as `buildGradFlagsMap` in `template-pdf.js` (check `graduation_requirements.trackable` to suppress inapplicable flags). This map is already available during rendering since both renderers receive the full program object.
 
-These attributes are already stored in `c.attributes[]` on each raw course object and are available in `coursesMap` via `buildCoursesMap` in `transform.js`. They are **not** currently propagated to the output JSON.
+Display: a small `<span class="grad-flag">AMALI</span>` (or similar) appended after the course code in the label cell. Style it in the CSS as muted/gray, small font (matching the PDF's footnote-size aesthetic). Multiple flags on one course: separate spans or join with `·`.
 
-### Step 1 — Schema update (`schemas/program-schema.json`)
+**Chunk 2 — Graduation requirements panel**
 
-Add an optional `graduation_flags` field to the `Course` definition:
+The HTML renderer has a graduation requirements section. Apply the same "satisfied by major" shading logic:
+- If a course in the program carries the matching flag, show the row as pre-satisfied with a note listing the course codes.
+- If not covered, keep the checkbox.
+- Add the same key legend below the panel.
 
-```json
-"graduation_flags": {
-  "type": "array",
-  "items": {
-    "type": "string",
-    "enum": ["amali", "ideas", "bs_smt", "ba_wl"]
-  },
-  "description": "Graduation requirements this course can satisfy"
-}
-```
+Find the graduation panel in `renderer/modules/` — likely `render-graduation.js` or similar.
 
-### Step 2 — Scraper update (`scraper/transform.js`)
+**Chunk 3 — CSS**
 
-Add a helper alongside `attributeToGenedIds`:
-
-```js
-function graduationFlagsFromAttr(attrString) {
-  if (attrString.startsWith('AMAL - AMALI'))   return ['amali'];
-  if (attrString.startsWith('IDEA - IDEAS'))    return ['ideas'];
-  if (attrString.startsWith('BSMT - BS-SMT'))  return ['bs_smt'];
-  if (attrString.startsWith('WLDR - BAWLDR'))  return ['ba_wl'];
-  return [];
-}
-```
-
-In `buildCoursesSection`, after building `fulfills`, also compute graduation flags and add them to each course object:
-
-```js
-const gradFlags = [...new Set(c.attributes.flatMap(a => graduationFlagsFromAttr(a)))];
-if (gradFlags.length) entry.graduation_flags = gradFlags;
-```
-
-### Step 3 — Re-scrape all programs
-
-```bash
-node scraper/scrape.js --all   # or loop over all program codes
-```
-
-The raw cache is current; re-scraping will just re-run `transform.js` and rewrite the JSON files. No new API calls needed for programs already in the cache.
-
-Validate after:
-```bash
-npx ajv-cli validate -s schemas/program-schema.json -d "data/programs/*.json" --spec=draft2020 --strict=false
-```
-
-### Step 4 — PDF renderer
-
-In `render-fixed-pdf.js` (`renderSlots`), after the existing `ctx.xrefCourseIds` bold check, look up the course's `graduation_flags` from the courses array and render a compact tag after the label.
-
-**Where to get flags per slot:** The `courses` array in the program JSON has entries with `graduation_flags`. Build a `flagsMap: Map<courseId, string[]>` in `template-pdf.js` alongside `xrefCourseIds`, and attach it to both contexts as `ctx.gradFlagsMap`.
-
-**Display:** A small gray parenthetical appended to the label, e.g. `"ECO 101  (AMALI)"` — rendered at `L.FONT.footnote` size (6.5pt) to the right of the course code, or on a second line in the label cell if the row wraps. Keep it terse: `AMALI`, `IDEAS`, `SMT`, `WL` (4 chars max).
-
-**Graduation panel simplification:** Once flags are rendered inline, update `render-graduation-pdf.js` to suppress or replace the checkbox row for requirements that are covered by at least one major course. For example, if any course in the program has `"amali"` in `graduation_flags`, show the AMALI row as a reference note ("satisfied by [course]") rather than a blank checkbox. If no major course covers it, keep the checkbox so the advisor knows to find one outside the major.
-
-### Step 5 — HTML renderer
-
-Parallel change to the HTML renderer. The runtime already handles `auto_fulfilled_by` cross-references; add a `graduation_flags` display alongside course labels in `renderer/modules/`. The exact module depends on which fill types render course codes — likely `render-fixed.js` and `render-choose-n.js`.
+Add styles for `.grad-flag` (the inline tag) and the "satisfied" graduation row state. Keep them visually consistent with the PDF: muted gray, small, parenthetical feel.
 
 ---
 
-## Current State
+## Data Gaps Remaining (108 choose_n groups — no hours in title or API)
 
-Working tree: clean (all changes committed to `main`).
+These groups still show only 1 blank row because the hour requirement isn't in CourseDog or parseable from the title. Require manual catalog lookup and annotation of `minimum_hours` directly in the JSON:
 
-PDF output: all 900 PDFs (300 programs × 3 tracks) current in `output/pdf/`.
+Most impactful:
+- `ctkba-animation-entertainment-arts` / `ctkbs-animation-entertainment-arts` — `additional_elective_courses` (catalog: 12 hrs)
+- `accbsmpa` variants — `300-level accounting elective courses`
+- `antba` / `antbs` variants — `Electives`
+- `comstba` / `comstbs` variants — named elective groups
+- `engba` creative writing / publishing / technical writing — named elective groups
+- `hisba` / `hisbs` variants — `Non-Western history electives`, `U.S. history electives`
+
+Full list of 108 is obtainable by running:
+```bash
+node -e "
+const fs = require('fs'), path = require('path');
+const dir = 'data/programs';
+for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json'))) {
+  const d = JSON.parse(fs.readFileSync(path.join(dir, f)));
+  for (const g of (d.major?.groups || []))
+    if (g.fill === 'choose_n' && !g.n && !g.minimum_hours)
+      console.log(f, g.id, '|', g.title);
+}
+"
+```
 
 ---
 
 ## Open Scraper Gaps (Issue Log — 7 rows)
 
-All require advisor judgment or a departmental call. Nothing automated can resolve them.
+All require advisor judgment or a departmental call.
 
 | Program | Issue type | What's needed |
 |---|---|---|
@@ -132,6 +100,14 @@ All require advisor judgment or a departmental call. Nothing automated can resol
 | `tchecebs-pedagogy` | `structural_gap` | Confirm whether 9 `choose_n(1)` groups are independent choices or specialty track bundles |
 | `musbm-composition-theory-emphasis` | `structural_gap` | Confirm credit range, total hours, and level-progression rule for applied music / ensembles |
 | `nurbsn-traditional-prelicensure` | `structural_gap` | Split 38-course flat list into phases (foundation / nursing core / clinical) |
+
+---
+
+## Current State
+
+Working tree: clean (all changes committed to `main`).
+
+PDF output: all 900 PDFs (300 programs × 3 tracks) current in `output/pdf/`.
 
 ---
 
