@@ -20,6 +20,9 @@
       "credits": 3,
       "fulfills": [
         "major.professional_education_requireme"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -326,6 +329,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -358,6 +364,9 @@
       "credits": 3,
       "fulfills": [
         "major.professional_education_requireme"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -634,8 +643,7 @@
             "id": "isu.social_sciences",
             "title": "Social Sciences",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           }
         ]
       },

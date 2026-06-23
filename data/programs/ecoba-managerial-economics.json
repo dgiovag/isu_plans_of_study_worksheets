@@ -58,6 +58,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -74,6 +77,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -170,6 +176,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -188,6 +197,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -224,6 +236,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     }
   ],
@@ -383,7 +398,11 @@
             "title": "Quantitative Reasoning",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "MAT121",
+              "ECO138",
+              "MGT100"
+            ]
           },
           {
             "id": "isu.science_math_technology",

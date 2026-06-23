@@ -47,6 +47,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -57,6 +60,9 @@
         "major.required_courses",
         "isu.social_sciences",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -66,6 +72,9 @@
       "fulfills": [
         "major.required_courses",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {

@@ -30,6 +30,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -50,6 +53,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -59,6 +65,9 @@
       "fulfills": [
         "major.required_courses",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -67,6 +76,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -101,6 +113,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -483,8 +498,7 @@
             "id": "isu.science_math_technology",
             "title": "Science, Math, & Technology",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.social_sciences",

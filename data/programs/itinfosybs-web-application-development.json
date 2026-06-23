@@ -7,7 +7,7 @@
     "degree": "B.S.",
     "department": "ITAO",
     "college": "Applied Science and Technology",
-    "catalog_year": "2026-2027",
+    "catalog_year": "2025-2026",
     "catalog_url": "https://catalog.illinoisstate.edu/programs/ITINFOSYBS",
     "minimum_major_hours": 82,
     "minimum_total_hours": 120,
@@ -74,6 +74,9 @@
         "major.complete_1_of_the_following_2",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -114,6 +117,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_1_of_the_following_4"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -303,6 +309,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -313,6 +322,9 @@
         "major.complete_1_of_the_following_2",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -339,6 +351,9 @@
         "major.complete_1_of_the_following_2",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     }
   ],
@@ -416,8 +431,7 @@
         "fill": "choose_n",
         "options": [
           "IT398"
-        ],
-        "minimum_hours": 6
+        ]
       },
       {
         "id": "major.complete_1_of_the_following",
@@ -558,7 +572,9 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "IT214"
+            ]
           },
           {
             "id": "isu.social_sciences",

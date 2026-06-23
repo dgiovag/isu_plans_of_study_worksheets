@@ -40,6 +40,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -64,6 +67,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -72,6 +78,9 @@
       "credits": 1,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -198,6 +207,9 @@
         "major.required_courses_outside_of_chem",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -216,6 +228,9 @@
       "credits": 5,
       "fulfills": [
         "major.required_courses_outside_of_chem"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -225,6 +240,9 @@
       "fulfills": [
         "major.required_courses_outside_of_chem",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -251,6 +269,9 @@
       "credits": 3,
       "fulfills": [
         "major.professional_education_requireme"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -484,7 +505,9 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "PHY208"
+            ]
           },
           {
             "id": "isu.social_sciences",

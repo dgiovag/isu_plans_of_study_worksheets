@@ -31,6 +31,9 @@
         "major.required_courses",
         "isu.social_sciences",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -40,6 +43,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -75,6 +81,9 @@
       "fulfills": [
         "major.complete_one_regional_elective",
         "isu.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -84,6 +93,9 @@
       "fulfills": [
         "major.complete_one_regional_elective",
         "isu.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -93,6 +105,9 @@
       "fulfills": [
         "major.complete_one_regional_elective",
         "isu.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -221,6 +236,9 @@
       "credits": 3,
       "fulfills": [
         "major.electives"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -489,7 +507,12 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "GEO135",
+              "GEO235A01",
+              "GEO235A02",
+              "GEO235A04"
+            ]
           }
         ]
       },

@@ -66,6 +66,9 @@
       "credits": 4,
       "fulfills": [
         "major.complete_9_hours_of_the_followin"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -146,6 +149,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -228,6 +234,9 @@
       "credits": 5,
       "fulfills": [
         "major.complete_9_hours_of_the_followin"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     }
   ],
@@ -323,8 +332,7 @@
           "KNR345",
           "KNR359",
           "PHY109"
-        ],
-        "minimum_hours": 9
+        ]
       }
     ]
   },
@@ -402,8 +410,7 @@
             "id": "isu.science_math_technology",
             "title": "Science, Math, & Technology",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.social_sciences",

@@ -72,6 +72,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -114,6 +117,9 @@
         "major.required_courses",
         "isu.individuals_civic_life",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -138,6 +144,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -154,6 +163,9 @@
       "credits": 3,
       "fulfills": [
         "major.300_and_400_level_elective_cours"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {

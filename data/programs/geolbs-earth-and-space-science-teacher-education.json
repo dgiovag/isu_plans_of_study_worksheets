@@ -84,6 +84,9 @@
       "credits": 4,
       "fulfills": [
         "major.chemistry_physics_and_biology_el"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -145,6 +148,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -154,6 +160,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -163,6 +172,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -179,6 +191,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -375,6 +390,9 @@
       "credits": 5,
       "fulfills": [
         "major.chemistry_physics_and_biology_el"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -384,6 +402,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -393,6 +414,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -452,6 +476,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -701,7 +728,13 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "GEO207",
+              "GEO202",
+              "GEO211",
+              "PHY208",
+              "PHY205"
+            ]
           },
           {
             "id": "isu.social_sciences",

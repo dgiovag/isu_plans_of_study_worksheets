@@ -21,6 +21,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -31,6 +34,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -82,6 +88,9 @@
       "fulfills": [
         "major.electives",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -236,6 +245,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -246,6 +258,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -272,6 +287,9 @@
       "fulfills": [
         "major.electives",
         "isu.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -420,8 +438,7 @@
             "id": "isu.individuals_civic_life",
             "title": "Individuals & Civic Life",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.fine_arts",

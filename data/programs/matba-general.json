@@ -65,6 +65,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -74,6 +77,9 @@
       "fulfills": [
         "major.required_courses",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -82,6 +88,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -311,8 +320,7 @@
           "MAT362",
           "MAT363"
         ],
-        "note": "All electives cannot be from the same elective group. Elective groups are listed below. Please consult your academic advisor. Algebra MAT 330 MAT 336 MAT 337 MAT 338 Analysis MAT 340 MAT 341 MAT 345 MAT 347 MAT 349 Discrete MAT 361 MAT 362 MAT 363 Statistics MAT 351 Research MAT 268",
-        "minimum_hours": 11
+        "note": "All electives cannot be from the same elective group. Elective groups are listed below. Please consult your academic advisor. Algebra MAT 330 MAT 336 MAT 337 MAT 338 Analysis MAT 340 MAT 341 MAT 345 MAT 347 MAT 349 Discrete MAT 361 MAT 362 MAT 363 Statistics MAT 351 Research MAT 268"
       }
     ]
   },
@@ -390,8 +398,7 @@
             "id": "isu.science_math_technology",
             "title": "Science, Math, & Technology",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.social_sciences",

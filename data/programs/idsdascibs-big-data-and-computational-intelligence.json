@@ -7,7 +7,7 @@
     "degree": "B.S.",
     "department": "IDSAO",
     "college": "Office of the Provost",
-    "catalog_year": "2026-2027",
+    "catalog_year": "2025-2026",
     "catalog_url": "https://catalog.illinoisstate.edu/programs/IDSDASCIBS",
     "minimum_major_hours": 0,
     "minimum_total_hours": 120,
@@ -129,6 +129,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -138,6 +141,9 @@
       "fulfills": [
         "major.required_courses",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -146,6 +152,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {

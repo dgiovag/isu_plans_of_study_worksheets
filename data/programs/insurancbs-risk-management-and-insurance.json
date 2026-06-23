@@ -82,20 +82,14 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
       "id": "ENG145",
       "code": "ENG 145",
-      "credits": 3,
-      "fulfills": [
-        "major.required_courses",
-        "iai.communication"
-      ]
-    },
-    {
-      "id": "ENG145A13",
-      "code": "ENG 145A13",
       "credits": 3,
       "fulfills": [
         "major.required_courses",
@@ -124,6 +118,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -294,6 +291,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -314,6 +314,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -330,6 +333,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -363,6 +369,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -373,6 +382,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     }
   ],
@@ -580,7 +592,10 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "ECO101",
+              "ECO102"
+            ]
           }
         ]
       },
@@ -713,7 +728,7 @@
       },
       {
         "id": "bs_smt",
-        "title": "B.S. \u2014 Science, Math, & Technology",
+        "title": "B.S. — Science, Math, & Technology",
         "note": "Required beyond Gen Ed for B.S. degree",
         "applies_when": {
           "degree": "B.S."

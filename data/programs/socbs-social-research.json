@@ -30,6 +30,9 @@
         "major.required_courses",
         "isu.individuals_civic_life",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -54,6 +57,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {

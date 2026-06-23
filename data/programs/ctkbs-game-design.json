@@ -66,6 +66,9 @@
         "major.complete_2_of_the_following_from",
         "isu.fine_arts",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -90,6 +93,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -122,6 +128,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_12_hours_from_the_follo"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -310,6 +319,9 @@
       "fulfills": [
         "major.complete_2_of_the_following_from",
         "isu.fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -360,6 +372,9 @@
       "fulfills": [
         "major.complete_2_of_the_following_from",
         "isu.fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -369,6 +384,9 @@
       "fulfills": [
         "major.complete_2_of_the_following_from",
         "isu.fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     }
   ],
@@ -484,8 +502,7 @@
           "IT164",
           "IT168"
         ],
-        "note": "Multiple enrollments are allowed in CTK 380 with different decimalized topic courses. See Course Finder for course options. A course cannot satisfy more than one requirement in the sequence.",
-        "minimum_hours": 12
+        "note": "Multiple enrollments are allowed in CTK 380 with different decimalized topic courses. See Course Finder for course options. A course cannot satisfy more than one requirement in the sequence."
       }
     ]
   },
@@ -534,7 +551,15 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "ART155",
+              "ART156",
+              "ART275",
+              "MUS152",
+              "MUS275",
+              "THE275A01",
+              "THE275A02"
+            ]
           },
           {
             "id": "isu.humanities",

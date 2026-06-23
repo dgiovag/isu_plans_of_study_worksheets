@@ -103,6 +103,9 @@
       "fulfills": [
         "major.complete_1_of_the_following_cjs_",
         "major.complete_21_hours_from_the_follo"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -201,6 +204,9 @@
       "fulfills": [
         "major.complete_1_of_the_following_cjs_",
         "major.complete_21_hours_from_the_follo"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -218,6 +224,9 @@
       "fulfills": [
         "major.complete_1_of_the_following_cjs_",
         "major.complete_21_hours_from_the_follo"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -292,6 +301,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_21_hours_from_the_follo"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -425,6 +437,9 @@
         "major.required_courses",
         "isu.individuals_civic_life",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     }
   ],

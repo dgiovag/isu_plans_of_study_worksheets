@@ -207,6 +207,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -442,7 +445,10 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "MUS157",
+              "MUS275A01"
+            ]
           },
           {
             "id": "isu.humanities",

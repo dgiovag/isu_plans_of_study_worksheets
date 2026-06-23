@@ -30,6 +30,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -58,6 +61,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -67,6 +73,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -83,6 +92,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -424,6 +436,9 @@
         "major.track_ii_environmental_geology",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -443,6 +458,9 @@
       "fulfills": [
         "major.track_i_traditional_geology",
         "major.track_ii_environmental_geology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -462,6 +480,9 @@
       "fulfills": [
         "major.track_i_traditional_geology",
         "major.track_ii_environmental_geology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     }
   ],
@@ -677,7 +698,10 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "GEO207",
+              "GEO202"
+            ]
           },
           {
             "id": "isu.social_sciences",

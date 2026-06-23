@@ -40,6 +40,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -56,6 +59,9 @@
       "credits": 4,
       "fulfills": [
         "major.botany_taxon_group_elective"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -72,6 +78,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -104,6 +113,9 @@
       "credits": 4,
       "fulfills": [
         "major.zoology_taxon_group_elective"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -112,6 +124,9 @@
       "credits": 4,
       "fulfills": [
         "major.conceptual_group_elective"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -160,6 +175,9 @@
       "credits": 4,
       "fulfills": [
         "major.botany_taxon_group_elective"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -222,6 +240,9 @@
       "credits": 4,
       "fulfills": [
         "major.chemistry_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -230,6 +251,9 @@
       "credits": 5,
       "fulfills": [
         "major.organic_chemistry_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -238,6 +262,9 @@
       "credits": 3,
       "fulfills": [
         "major.organic_chemistry_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -246,6 +273,9 @@
       "credits": 1,
       "fulfills": [
         "major.organic_chemistry_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -266,6 +296,9 @@
         "major.math_options",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -286,6 +319,9 @@
         "major.math_options",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -530,8 +566,7 @@
             "id": "isu.science_math_technology",
             "title": "Science, Math, & Technology",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.social_sciences",

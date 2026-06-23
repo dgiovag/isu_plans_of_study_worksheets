@@ -29,6 +29,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -190,6 +193,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -207,6 +213,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     }
   ],

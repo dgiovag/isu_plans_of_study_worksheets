@@ -52,6 +52,9 @@
       "credits": 4,
       "fulfills": [
         "major.introductory_agriculture_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -76,6 +79,9 @@
       "credits": 3,
       "fulfills": [
         "major.animal_products_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -100,6 +106,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -226,6 +235,9 @@
       "credits": 4,
       "fulfills": [
         "major.chemistry_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     }
   ],
@@ -404,8 +416,7 @@
             "id": "isu.quantitative_reasoning",
             "title": "Quantitative Reasoning",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.science_math_technology",

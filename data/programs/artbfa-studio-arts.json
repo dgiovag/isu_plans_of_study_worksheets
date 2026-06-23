@@ -7,7 +7,7 @@
     "degree": "B.F.A.",
     "department": "ARTAO",
     "college": "Wonsook Kim Coll of Fine Arts",
-    "catalog_year": "2026-2027",
+    "catalog_year": "2025-2026",
     "catalog_url": "https://catalog.illinoisstate.edu/programs/ARTBFA",
     "minimum_major_hours": 83,
     "minimum_total_hours": 120,
@@ -229,7 +229,10 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "ART155",
+              "ART156"
+            ]
           },
           {
             "id": "isu.humanities",

@@ -95,6 +95,9 @@
         "major.introductory_literary_and_cultur",
         "isu.humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -122,6 +125,9 @@
       "fulfills": [
         "major.introductory_literary_and_cultur",
         "isu.language_humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -260,7 +266,12 @@
             "title": "Language in the Humanities",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "ENG124",
+              "ENG125",
+              "LAN125",
+              "IDS121A29"
+            ]
           },
           {
             "id": "isu.quantitative_reasoning",

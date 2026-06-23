@@ -53,6 +53,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -62,6 +65,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -132,6 +138,9 @@
       "credits": 4,
       "fulfills": [
         "major.chemistry_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -140,6 +149,9 @@
       "credits": 5,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -357,8 +369,7 @@
             "id": "isu.quantitative_reasoning",
             "title": "Quantitative Reasoning",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.science_math_technology",

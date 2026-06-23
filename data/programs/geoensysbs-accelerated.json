@@ -28,6 +28,9 @@
       "credits": 4,
       "fulfills": [
         "major.track_a_generalist"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -47,6 +50,9 @@
       "fulfills": [
         "major.track_a_generalist",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -125,6 +131,9 @@
       "credits": 4,
       "fulfills": [
         "major.track_a_generalist"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -180,6 +189,9 @@
       "fulfills": [
         "major.complete_1_of_the_following",
         "major.track_c_environmental_systems_an"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -207,6 +219,9 @@
       "fulfills": [
         "major.track_a_generalist",
         "major.track_c_environmental_systems_an"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -342,6 +357,9 @@
         "major.required_courses",
         "isu.social_sciences",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -361,6 +379,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -707,6 +728,9 @@
         "major.track_c_environmental_systems_an",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -752,6 +776,9 @@
       "fulfills": [
         "major.complete_1_of_the_following",
         "major.track_c_environmental_systems_an"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -771,6 +798,9 @@
       "fulfills": [
         "major.complete_1_of_the_following",
         "major.track_c_environmental_systems_an"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -1208,7 +1238,9 @@
             "title": "Quantitative Reasoning",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "MAT146"
+            ]
           },
           {
             "id": "isu.science_math_technology",

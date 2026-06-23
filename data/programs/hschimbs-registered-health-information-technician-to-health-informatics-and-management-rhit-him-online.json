@@ -7,7 +7,7 @@
     "degree": "B.S.",
     "department": "HSCAO",
     "college": "Applied Science and Technology",
-    "catalog_year": "2026-2027",
+    "catalog_year": "2025-2026",
     "catalog_url": "https://catalog.illinoisstate.edu/programs/HSCHIMBS",
     "minimum_major_hours": 71,
     "minimum_total_hours": 120,
@@ -190,8 +190,7 @@
             "id": "isu.science_math_technology",
             "title": "Science, Math, & Technology",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.social_sciences",

@@ -7,7 +7,7 @@
     "degree": "B.S.N.",
     "department": "MCNAO",
     "college": "Mennonite College of Nursing",
-    "catalog_year": "2026-2027",
+    "catalog_year": "2025-2026",
     "catalog_url": "https://catalog.illinoisstate.edu/programs/NURBSN",
     "minimum_major_hours": 96,
     "minimum_total_hours": 120,
@@ -21,6 +21,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -50,16 +53,6 @@
       ]
     },
     {
-      "id": "CHE112",
-      "code": "CHE 112",
-      "credits": 1,
-      "fulfills": [
-        "major.required_courses",
-        "isu.natural_science",
-        "iai.physical_life_sciences"
-      ]
-    },
-    {
       "id": "ECO138",
       "code": "ECO 138",
       "credits": 3,
@@ -67,6 +60,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -102,6 +98,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -328,6 +327,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -348,6 +350,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -719,7 +724,7 @@
       },
       {
         "id": "bs_smt",
-        "title": "B.S. \u2014 Science, Math, & Technology",
+        "title": "B.S. — Science, Math, & Technology",
         "note": "Required beyond Gen Ed for B.S. degree",
         "applies_when": {
           "degree": "B.S."

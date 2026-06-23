@@ -59,6 +59,9 @@
         "major.global_literature_and_u_s_ethnic",
         "isu.humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -76,6 +79,9 @@
       "fulfills": [
         "major.global_literature_and_u_s_ethnic",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -85,6 +91,9 @@
       "fulfills": [
         "major.global_literature_and_u_s_ethnic",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -94,6 +103,9 @@
       "fulfills": [
         "major.global_literature_and_u_s_ethnic",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -103,6 +115,9 @@
       "fulfills": [
         "major.global_literature_and_u_s_ethnic",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -313,6 +328,9 @@
       "fulfills": [
         "major.american_literature_electives",
         "major.global_literature_and_u_s_ethnic"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -322,6 +340,9 @@
       "fulfills": [
         "major.american_literature_electives",
         "major.global_literature_and_u_s_ethnic"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -813,8 +834,7 @@
             "id": "isu.language_humanities",
             "title": "Language in the Humanities",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.quantitative_reasoning",

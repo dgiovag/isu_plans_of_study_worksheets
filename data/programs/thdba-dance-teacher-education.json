@@ -180,6 +180,9 @@
       "credits": 3,
       "fulfills": [
         "major.professional_education_requireme"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -397,8 +400,7 @@
             "title": "Fine Arts",
             "fill": "open",
             "count": 1,
-            "minimum_hours": 3,
-            "exempt": true
+            "minimum_hours": 3
           },
           {
             "id": "isu.humanities",

@@ -166,6 +166,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses_2"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {

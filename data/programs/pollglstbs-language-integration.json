@@ -214,6 +214,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     }
   ],

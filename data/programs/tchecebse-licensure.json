@@ -73,6 +73,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_one_of_the_following_2"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -128,6 +131,9 @@
         "major.complete_one_of_the_following_9",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -138,6 +144,9 @@
         "major.required_courses",
         "isu.social_sciences",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -147,6 +156,9 @@
       "fulfills": [
         "major.complete_one_of_the_following_6",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -156,6 +168,9 @@
       "fulfills": [
         "major.complete_one_of_the_following_6",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -222,6 +237,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.us_traditions"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -647,7 +665,13 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "CSD115",
+              "GEO135",
+              "ECO101",
+              "ECO102",
+              "ECO103"
+            ]
           }
         ]
       },

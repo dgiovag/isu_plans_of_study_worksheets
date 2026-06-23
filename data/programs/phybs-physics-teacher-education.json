@@ -40,6 +40,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -69,6 +72,9 @@
         "major.required_courses",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -78,6 +84,9 @@
       "fulfills": [
         "major.required_courses",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -104,6 +113,9 @@
       "credits": 4,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -121,6 +133,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -241,6 +256,9 @@
       "credits": 3,
       "fulfills": [
         "major.professional_education_courses"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -350,10 +368,8 @@
       {
         "id": "major.required_course_2",
         "title": "Required Course",
-        "fill": "open_constrained",
-        "count": 1,
-        "constraint": "Complete one 200-level CHE or 200-level BSC course",
-        "level": "200"
+        "fill": "open",
+        "note": "Complete one 200-level CHE or 200-level BSC course"
       },
       {
         "id": "major.professional_education_courses",
@@ -459,7 +475,9 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "PHY205"
+            ]
           },
           {
             "id": "isu.social_sciences",

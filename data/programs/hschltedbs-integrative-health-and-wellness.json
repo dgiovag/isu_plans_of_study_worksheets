@@ -44,6 +44,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -288,8 +291,7 @@
             "id": "isu.individuals_civic_life",
             "title": "Individuals & Civic Life",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.fine_arts",

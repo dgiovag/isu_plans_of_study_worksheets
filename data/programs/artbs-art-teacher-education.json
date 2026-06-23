@@ -216,6 +216,9 @@
       "credits": 3,
       "fulfills": [
         "major.education_electives"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -248,6 +251,9 @@
       "credits": 3,
       "fulfills": [
         "major.professional_education_requireme"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -280,6 +286,9 @@
       "credits": 3,
       "fulfills": [
         "major.education_electives"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -519,7 +528,10 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "ART155",
+              "ART156"
+            ]
           },
           {
             "id": "isu.humanities",

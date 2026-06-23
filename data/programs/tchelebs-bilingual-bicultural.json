@@ -56,6 +56,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_one_of_the_following"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -121,6 +124,9 @@
         "major.required_courses",
         "isu.social_sciences",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -130,6 +136,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -140,6 +149,9 @@
         "major.required_courses",
         "isu.humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -248,6 +260,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.us_traditions"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -258,6 +273,9 @@
         "major.complete_one_of_the_following_7",
         "isu.language_humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "ba_wl"
       ]
     },
     {
@@ -267,6 +285,9 @@
       "fulfills": [
         "major.complete_one_of_the_following_7",
         "isu.language_humanities"
+      ],
+      "graduation_flags": [
+        "ba_wl"
       ]
     },
     {
@@ -371,6 +392,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -672,8 +696,7 @@
             "id": "isu.quantitative_reasoning",
             "title": "Quantitative Reasoning",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.science_math_technology",

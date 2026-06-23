@@ -20,6 +20,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses_2"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -69,6 +72,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "ba_wl"
       ]
     },
     {
@@ -79,6 +85,9 @@
         "major.required_courses",
         "isu.language_humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "ba_wl"
       ]
     },
     {
@@ -88,6 +97,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.language_humanities"
+      ],
+      "graduation_flags": [
+        "ba_wl"
       ]
     },
     {
@@ -136,6 +148,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -195,6 +210,9 @@
       "fulfills": [
         "major.complete_one_of_the_following",
         "major.elective_courses"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -204,6 +222,9 @@
       "fulfills": [
         "major.complete_one_of_the_following",
         "major.elective_courses"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -212,6 +233,9 @@
       "credits": 18,
       "fulfills": [
         "major.elective_courses"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -439,8 +463,7 @@
             "id": "isu.humanities",
             "title": "Humanities",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.language_humanities",

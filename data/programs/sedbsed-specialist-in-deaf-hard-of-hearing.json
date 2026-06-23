@@ -29,6 +29,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_one_of_the_following"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -64,6 +67,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.us_traditions"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {

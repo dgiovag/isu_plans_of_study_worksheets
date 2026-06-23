@@ -178,6 +178,9 @@
         "major.elective_4",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -202,6 +205,9 @@
       "credits": 3,
       "fulfills": [
         "major.elective"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -238,6 +244,9 @@
         "major.elective_3",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -266,6 +275,9 @@
         "major.elective_4",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -291,6 +303,9 @@
       "fulfills": [
         "major.elective_4",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -301,6 +316,9 @@
         "major.elective_4",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -309,6 +327,9 @@
       "credits": 3,
       "fulfills": [
         "major.professional_education_courses"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -564,7 +585,10 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "ECO101",
+              "ECO102"
+            ]
           }
         ]
       },

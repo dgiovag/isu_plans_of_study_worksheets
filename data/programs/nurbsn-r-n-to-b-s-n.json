@@ -7,7 +7,7 @@
     "degree": "B.S.N.",
     "department": "MCNAO",
     "college": "Mennonite College of Nursing",
-    "catalog_year": "2026-2027",
+    "catalog_year": "2025-2026",
     "catalog_url": "https://catalog.illinoisstate.edu/programs/NURBSN",
     "minimum_major_hours": 65,
     "minimum_total_hours": 120,
@@ -85,54 +85,6 @@
       "fulfills": [
         "major.required_courses"
       ]
-    },
-    {
-      "id": "NUR229",
-      "code": "NUR 229",
-      "credits": 6,
-      "fulfills": [
-        "major.escrow"
-      ]
-    },
-    {
-      "id": "NUR231",
-      "code": "NUR 231",
-      "credits": 7,
-      "fulfills": [
-        "major.escrow"
-      ]
-    },
-    {
-      "id": "NUR314",
-      "code": "NUR 314",
-      "credits": 4,
-      "fulfills": [
-        "major.escrow"
-      ]
-    },
-    {
-      "id": "NUR316",
-      "code": "NUR 316",
-      "credits": 4,
-      "fulfills": [
-        "major.escrow"
-      ]
-    },
-    {
-      "id": "NUR317",
-      "code": "NUR 317",
-      "credits": 4,
-      "fulfills": [
-        "major.escrow"
-      ]
-    },
-    {
-      "id": "NUR325",
-      "code": "NUR 325",
-      "credits": 7,
-      "fulfills": [
-        "major.escrow"
-      ]
     }
   ],
   "major": {
@@ -172,27 +124,7 @@
             "course_id": "NUR341"
           }
         ],
-        "note": "To be admitted to the R.N. to B.S.N. Sequence students must have completed the Associate Degree in Arts (A.A.) or an Associated Degree in Science (A.S.) or a specified portion of the IAI General Education Core Curriculum. External Transfers into this sequence may use all of the following courses in combination to fulfill the IAI Life Science requirement: Microbiology- BSC 160 or BSC 260 ; Anatomy and Physiology I- BSC 181 or KNR 181 / KNR 183 ; Anatomy and Physiology II- BSC 182 or KNR 182 / KNR 184 . This waiver is also fulfilled if the student completed a Microbiology and two Anatomy/Physiology courses that transfer into Illinois State University as electives. RN to BSN students must maintain a 2.0 cumulative ISU GPA. Obtaining a D or F in any two nursing major courses or in the same nursing major course twice will result in a dismissal from the major and a major change to undeclared at ISU. Students in the RN to BSN Sequence are expected to follow an approved plan of study developed in consultation with the student at the time of admission. Any student who does not adhere to their approved plan of study, or who has been academically dismissed from the major, must reapply to the college. Readmission will be granted on a selective basis. Application timeframes and processes are available from the nursing academic advisor."
-      },
-      {
-        "id": "major.escrow",
-        "title": "Escrow credit",
-        "fill": "escrow",
-        "trigger_courses": [
-          "NUR223",
-          "NUR227",
-          "NUR236"
-        ],
-        "granted_courses": [
-          "NUR229",
-          "NUR231",
-          "NUR314",
-          "NUR316",
-          "NUR317",
-          "NUR325"
-        ],
-        "total_credits": 34,
-        "note": "Diploma school or Associate Degree nursing courses are held in escrow until successful completion of NUR 223, NUR 227, and NUR 236. Upon completion, 34 credits are placed on the transcript. ADVISOR NOTE: individual course credit totals from legacy data sum to 32 — verify total with Mennonite College of Nursing."
+        "note": "To be admitted to the R.N. to B.S.N. Sequence students must have completed the Associate Degree in Arts (A.A.) or an Associated Degree in Science (A.S.) or a specified portion of the IAI General Education Core Curriculum. External Transfers into this sequence may use all of the following courses in combination to fulfill the IAI Life Science requirement: Microbiology- BSC 160 or BSC 260 ; Anatomy and Physiology I- BSC 181 or KNR 181 / KNR 183 ; Anatomy and Physiology II- BSC 182 or KNR 182 / KNR 184 . This waiver is also fulfilled if the student completed a Microbiology and two Anatomy/Physiology courses that transfer into Illinois State University as electives. Diploma school or Associate Degree nursing courses are “held in Escrow” for the student until successful completion of three specified Nursing upper-division courses: NUR 223 , NUR 227 , and NUR 236 . Once these three courses have been successfully completed through enrollment, thirty-four (34) credits are placed on the student’s transcript for the following Nursing courses: NUR 229 , NUR 231 , NUR 314 , NUR 316 , NUR 317 , and NUR 325 . RN to BSN students must maintain a 2.0 cumulative ISU GPA. Obtaining a D or F in any two nursing major courses or in the same nursing major course twice will result in a dismissal from the major and a major change to undeclared at ISU. External Transfers into this sequence may use all of the following courses in combination to fulfill the IAI Life Science requirement: BSC 160 or BSC 260; BSC 181 or KNR 181/183; BSC 182 or KNR 182/184. This waiver is also fulfilled if the student completed a Microbiology and two Anatomy/Physiology courses that transfer into Illinois State University as electives. Students in the RN to BSN Sequence are expected to follow an approved plan of study developed in consultation with the student at the time of admission. Any student who does not adhere to their approved plan of study, or who has been academically dismissed from the major, must reapply to the college. Readmission will be granted on a selective basis. Application timeframes and processes are available from the nursing academic advisor."
       }
     ]
   },

@@ -245,6 +245,9 @@
         "major.complete_2_of_the_following",
         "isu.fine_arts",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -309,6 +312,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -341,6 +347,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_19_hours_of_the_followi"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -531,6 +540,9 @@
       "fulfills": [
         "major.complete_2_of_the_following",
         "isu.fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -610,6 +622,9 @@
       "fulfills": [
         "major.complete_2_of_the_following",
         "isu.fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -619,6 +634,9 @@
       "fulfills": [
         "major.complete_2_of_the_following",
         "isu.fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -765,8 +783,7 @@
           "DAN106",
           "DAN119"
         ],
-        "note": "No more than 6 credit hours can be from one discipline.",
-        "minimum_hours": 9
+        "note": "No more than 6 credit hours can be from one discipline."
       },
       {
         "id": "major.complete_19_hours_of_the_followi",
@@ -784,8 +801,7 @@
           "CTK390",
           "CTK398"
         ],
-        "note": "Multiple enrollments are allowed in CTK 380 with different decimalized topic courses. See Course Finder for course options. A course cannot satisfy more than one requirement in the sequence.",
-        "minimum_hours": 19
+        "note": "Multiple enrollments are allowed in CTK 380 with different decimalized topic courses. See Course Finder for course options. A course cannot satisfy more than one requirement in the sequence."
       },
       {
         "id": "major.ctk_400_level_electives",
@@ -840,7 +856,15 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "ART155",
+              "ART156",
+              "ART275",
+              "MUS152",
+              "MUS275",
+              "THE275A01",
+              "THE275A02"
+            ]
           },
           {
             "id": "isu.humanities",

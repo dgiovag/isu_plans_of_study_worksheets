@@ -339,8 +339,7 @@
           "THE237",
           "THE251",
           "THE261"
-        ],
-        "minimum_hours": 9
+        ]
       }
     ]
   },
@@ -388,8 +387,7 @@
             "title": "Fine Arts",
             "fill": "open",
             "count": 1,
-            "minimum_hours": 3,
-            "exempt": true
+            "minimum_hours": 3
           },
           {
             "id": "isu.humanities",

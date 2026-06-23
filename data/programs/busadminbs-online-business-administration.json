@@ -52,6 +52,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -77,6 +80,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.social_sciences"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -109,6 +115,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -291,7 +300,9 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "MGT120"
+            ]
           }
         ]
       },

@@ -72,6 +72,9 @@
       "credits": 3,
       "fulfills": [
         "major.students_must_complete_all_of_th"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -114,6 +117,9 @@
         "major.students_must_complete_all_of_th",
         "isu.individuals_civic_life",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -138,6 +144,9 @@
       "credits": 3,
       "fulfills": [
         "major.students_must_complete_all_of_th"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -154,6 +163,9 @@
       "credits": 3,
       "fulfills": [
         "major.students_must_complete_an_additi_2"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {

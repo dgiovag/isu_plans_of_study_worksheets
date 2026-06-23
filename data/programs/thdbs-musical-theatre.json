@@ -360,8 +360,7 @@
           "DAN307",
           "DAN319"
         ],
-        "note": "One course (2 credit hours) must be at the 200- or 300-level.",
-        "minimum_hours": 4
+        "note": "One course (2 credit hours) must be at the 200- or 300-level."
       }
     ]
   },
@@ -409,8 +408,7 @@
             "title": "Fine Arts",
             "fill": "open",
             "count": 1,
-            "minimum_hours": 3,
-            "exempt": true
+            "minimum_hours": 3
           },
           {
             "id": "isu.humanities",

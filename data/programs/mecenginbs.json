@@ -629,8 +629,7 @@
           "MEC365",
           "ELE225",
           "ELE290"
-        ],
-        "minimum_hours": 6
+        ]
       },
       {
         "id": "major.complete_3_credits_of_math_or_sc",
@@ -651,8 +650,7 @@
           "MAT345",
           "MAT350",
           "MAT362"
-        ],
-        "minimum_hours": 3
+        ]
       }
     ]
   },

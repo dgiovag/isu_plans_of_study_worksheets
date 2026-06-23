@@ -74,6 +74,9 @@
         "major.electives",
         "isu.fine_arts",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     }
   ],
@@ -188,7 +191,11 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "ART155",
+              "ART156",
+              "ART275"
+            ]
           },
           {
             "id": "isu.humanities",

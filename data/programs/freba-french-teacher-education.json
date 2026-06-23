@@ -20,6 +20,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_professional_education_"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -45,6 +48,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "ba_wl"
       ]
     },
     {
@@ -55,6 +61,9 @@
         "major.required_courses",
         "isu.language_humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "ba_wl"
       ]
     },
     {
@@ -143,6 +152,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_18_hours_of_fre_electiv"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -151,6 +163,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_18_hours_of_fre_electiv"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -286,8 +301,7 @@
           "FRE340",
           "FRE385",
           "FRE386"
-        ],
-        "minimum_hours": 18
+        ]
       },
       {
         "id": "major.required_professional_education_",
@@ -368,8 +382,7 @@
             "id": "isu.humanities",
             "title": "Humanities",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.language_humanities",

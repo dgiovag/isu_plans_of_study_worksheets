@@ -86,6 +86,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -368,7 +371,9 @@
             "title": "Social Sciences",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "FCS224"
+            ]
           }
         ]
       },

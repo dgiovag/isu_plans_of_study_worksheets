@@ -50,6 +50,9 @@
         "major.required_100_level_surveys",
         "isu.humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -60,6 +63,9 @@
         "major.required_100_level_surveys",
         "isu.humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -70,6 +76,9 @@
         "major.required_100_level_surveys",
         "isu.humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -80,6 +89,9 @@
         "major.required_100_level_surveys",
         "isu.humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -90,6 +102,9 @@
         "major.required_100_level_surveys",
         "isu.humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -100,6 +115,9 @@
         "major.required_100_level_surveys",
         "isu.humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -153,6 +171,9 @@
       "credits": 3,
       "fulfills": [
         "major.u_s_history_electives"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -209,6 +230,9 @@
       "credits": 3,
       "fulfills": [
         "major.u_s_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -289,6 +313,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -297,6 +324,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -305,6 +335,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -313,6 +346,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -321,6 +357,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -329,6 +368,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -337,6 +379,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -361,6 +406,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -369,6 +417,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -385,6 +436,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -401,6 +455,9 @@
       "credits": 3,
       "fulfills": [
         "major.u_s_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -473,6 +530,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -481,6 +541,9 @@
       "credits": 3,
       "fulfills": [
         "major.non_western_history_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -726,7 +789,10 @@
             "title": "United States Traditions",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "HIS135",
+              "HIS136"
+            ]
           },
           {
             "id": "isu.individuals_civic_life",

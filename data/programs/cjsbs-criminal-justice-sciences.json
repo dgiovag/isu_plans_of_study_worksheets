@@ -120,6 +120,9 @@
       "fulfills": [
         "major.complete_1_of_the_following_cjs_",
         "major.complete_21_hours_from_the_follo"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -217,6 +220,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_1_of_the_following_cjs_"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -234,6 +240,9 @@
       "fulfills": [
         "major.complete_1_of_the_following_cjs_",
         "major.complete_21_hours_from_the_follo"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -340,6 +349,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_21_hours_from_the_follo"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -366,6 +378,9 @@
         "major.required_courses",
         "isu.individuals_civic_life",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     }
   ],
@@ -458,8 +473,7 @@
           "CJS369",
           "CJS398A02"
         ],
-        "note": "Students seeking enrollment in CJS 398A01 and CJS 398A02 must complete necessary paperwork for application to the internship which will be received during mandatory meetings set by the Internship Coordinator. To be eligible, the student must have: (1) completed 60 semester hours, (2) an overall and major GPA of 2.00 at the time referrals are made. Students who have significant professional experience in the criminal justice system or related field, may apply for an exemption to the internship requirement. If approved, students must take 6 hours of coursework approved by the academic advisor. Students eligible for an internship will, with the assistance of the internship coordinator, choose an agency from a list of approved agencies. Students may also participate in out-of-state internships. For additional information visit the CJS Department website.",
-        "minimum_hours": 21
+        "note": "Students seeking enrollment in CJS 398A01 and CJS 398A02 must complete necessary paperwork for application to the internship which will be received during mandatory meetings set by the Internship Coordinator. To be eligible, the student must have: (1) completed 60 semester hours, (2) an overall and major GPA of 2.00 at the time referrals are made. Students who have significant professional experience in the criminal justice system or related field, may apply for an exemption to the internship requirement. If approved, students must take 6 hours of coursework approved by the academic advisor. Students eligible for an internship will, with the assistance of the internship coordinator, choose an agency from a list of approved agencies. Students may also participate in out-of-state internships. For additional information visit the CJS Department website."
       }
     ]
   },

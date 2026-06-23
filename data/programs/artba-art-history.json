@@ -42,6 +42,9 @@
         "major.required_courses",
         "isu.fine_arts",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -123,6 +126,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "ba_wl"
       ]
     },
     {
@@ -148,6 +154,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "ba_wl"
       ]
     },
     {
@@ -193,6 +202,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "ba_wl"
       ]
     },
     {
@@ -218,102 +230,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
-      ]
-    },
-    {
-      "id": "ART240",
-      "code": "ART 240",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
-      ]
-    },
-    {
-      "id": "ART241",
-      "code": "ART 241",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
-      ]
-    },
-    {
-      "id": "ART242",
-      "code": "ART 242",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
-      ]
-    },
-    {
-      "id": "ART244",
-      "code": "ART 244",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
-      ]
-    },
-    {
-      "id": "ART263",
-      "code": "ART 263",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
-      ]
-    },
-    {
-      "id": "ART264",
-      "code": "ART 264",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
-      ]
-    },
-    {
-      "id": "ART265",
-      "code": "ART 265",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
-      ]
-    },
-    {
-      "id": "ART266",
-      "code": "ART 266",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
-      ]
-    },
-    {
-      "id": "ART267",
-      "code": "ART 267",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
-      ]
-    },
-    {
-      "id": "ART279",
-      "code": "ART 279",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
-      ]
-    },
-    {
-      "id": "ART280",
-      "code": "ART 280",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
-      ]
-    },
-    {
-      "id": "ART281",
-      "code": "ART 281",
-      "credits": 3,
-      "fulfills": [
-        "major.art_history_elective_courses"
+      ],
+      "graduation_flags": [
+        "ba_wl"
       ]
     }
   ],
@@ -379,45 +298,10 @@
       {
         "id": "major.art_history_elective_courses",
         "title": "Art history elective courses",
-        "fill": "choose_n_grouped",
-        "n": 5,
+        "fill": "open",
+        "count": 5,
         "minimum_hours": 15,
-        "sub_groups": [
-          {
-            "id": "major.art_history_elective_group_1",
-            "title": "Group 1",
-            "minimum_picks": 1,
-            "options": [
-              "ART240",
-              "ART241",
-              "ART242",
-              "ART244",
-              "ART263"
-            ]
-          },
-          {
-            "id": "major.art_history_elective_group_2",
-            "title": "Group 2",
-            "minimum_picks": 1,
-            "options": [
-              "ART264",
-              "ART265",
-              "ART266",
-              "ART267"
-            ]
-          },
-          {
-            "id": "major.art_history_elective_group_3",
-            "title": "Group 3",
-            "minimum_picks": 1,
-            "options": [
-              "ART279",
-              "ART280",
-              "ART281"
-            ]
-          }
-        ],
-        "note": "ADVISOR NOTE: credits assumed 3 each — 10 of 12 courses absent from CourseDog active catalog; verify actual credit values with advisor."
+        "note": "Group 1 ART 240 ART 241 ART 242 ART 244 ART 263 Group 2 ART 264 ART 265 ART 266 ART 267 Group 3 ART 279 ART 280 ART 281&nbsp;"
       },
       {
         "id": "major.art_history_seminar_courses",
@@ -480,7 +364,11 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "ART155",
+              "ART156",
+              "ART275"
+            ]
           },
           {
             "id": "isu.humanities",

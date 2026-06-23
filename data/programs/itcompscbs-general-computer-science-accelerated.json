@@ -7,7 +7,7 @@
     "degree": "B.S.",
     "department": "ITAO",
     "college": "Applied Science and Technology",
-    "catalog_year": "2026-2027",
+    "catalog_year": "2025-2026",
     "catalog_url": "https://catalog.illinoisstate.edu/programs/ITCOMPSCBS",
     "minimum_major_hours": 83,
     "minimum_total_hours": 120,
@@ -50,6 +50,9 @@
       "credits": 4,
       "fulfills": [
         "major.complete_8_hours_of_the_followin"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -417,6 +420,9 @@
         "major.complete_the_following",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -443,6 +449,9 @@
         "major.complete_1_of_the_following_2",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -461,6 +470,9 @@
       "credits": 4,
       "fulfills": [
         "major.complete_8_hours_of_the_followin"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     }
   ],
@@ -547,8 +559,7 @@
         "options": [
           "IT398",
           "IT398"
-        ],
-        "minimum_hours": 6
+        ]
       },
       {
         "id": "major.complete_6_hours_of_the_followin_2",
@@ -568,8 +579,7 @@
           "IT456",
           "IT388",
           "IT487"
-        ],
-        "minimum_hours": 6
+        ]
       },
       {
         "id": "major.complete_1_of_the_following",
@@ -613,8 +623,7 @@
           "CHE141",
           "PHY110",
           "PHY111"
-        ],
-        "minimum_hours": 8
+        ]
       }
     ]
   },
@@ -700,7 +709,9 @@
             "title": "Science, Math, & Technology",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "IT214"
+            ]
           },
           {
             "id": "isu.social_sciences",

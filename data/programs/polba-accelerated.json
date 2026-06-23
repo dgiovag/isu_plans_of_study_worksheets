@@ -7,7 +7,7 @@
     "degree": "B.A.",
     "department": "POLAO",
     "college": "College of Arts and Sciences",
-    "catalog_year": "2026-2027",
+    "catalog_year": "2025-2026",
     "catalog_url": "https://catalog.illinoisstate.edu/programs/POLBA",
     "minimum_major_hours": 40,
     "minimum_total_hours": 120,
@@ -47,6 +47,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.quantitative_reasoning"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -57,6 +60,9 @@
         "major.required_courses",
         "isu.social_sciences",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -66,6 +72,9 @@
       "fulfills": [
         "major.required_courses",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {

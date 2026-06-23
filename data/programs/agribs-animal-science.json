@@ -52,6 +52,9 @@
       "credits": 4,
       "fulfills": [
         "major.introductory_agriculture_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -84,6 +87,9 @@
       "credits": 3,
       "fulfills": [
         "major.required_courses"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -182,6 +188,9 @@
       "credits": 4,
       "fulfills": [
         "major.chemistry_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -190,6 +199,9 @@
       "credits": 5,
       "fulfills": [
         "major.organic_chemistry_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -198,6 +210,9 @@
       "credits": 3,
       "fulfills": [
         "major.organic_chemistry_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -206,6 +221,9 @@
       "credits": 1,
       "fulfills": [
         "major.organic_chemistry_options"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -232,6 +250,9 @@
         "major.statistics_options",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -262,6 +283,9 @@
         "major.statistics_options",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     }
   ],
@@ -464,7 +488,10 @@
             "title": "Quantitative Reasoning",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "ECO138",
+              "MGT100"
+            ]
           },
           {
             "id": "isu.science_math_technology",

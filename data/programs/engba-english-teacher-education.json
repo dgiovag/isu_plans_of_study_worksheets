@@ -58,6 +58,9 @@
         "major.american_literature_elective",
         "isu.humanities",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -75,6 +78,9 @@
       "fulfills": [
         "major.nonwestern_literature_elective",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -84,6 +90,9 @@
       "fulfills": [
         "major.nonwestern_literature_elective",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -93,6 +102,9 @@
       "fulfills": [
         "major.nonwestern_literature_elective",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -102,6 +114,9 @@
       "fulfills": [
         "major.nonwestern_literature_elective",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -247,6 +262,9 @@
       "credits": 3,
       "fulfills": [
         "major.american_literature_elective"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -256,6 +274,9 @@
       "fulfills": [
         "major.american_literature_elective",
         "major.nonwestern_literature_elective"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -482,6 +503,9 @@
       "credits": 3,
       "fulfills": [
         "major.professional_education_requireme"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -734,8 +758,7 @@
             "id": "isu.language_humanities",
             "title": "Language in the Humanities",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.quantitative_reasoning",

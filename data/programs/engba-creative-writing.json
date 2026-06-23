@@ -37,6 +37,9 @@
       "fulfills": [
         "major.nonwestern_literature_electives",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -46,6 +49,9 @@
       "fulfills": [
         "major.nonwestern_literature_electives",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -55,6 +61,9 @@
       "fulfills": [
         "major.nonwestern_literature_electives",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -64,6 +73,9 @@
       "fulfills": [
         "major.nonwestern_literature_electives",
         "isu.humanities"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -145,6 +157,9 @@
       "credits": 3,
       "fulfills": [
         "major.nonwestern_literature_electives"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -153,6 +168,9 @@
       "credits": 3,
       "fulfills": [
         "major.nonwestern_literature_electives"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -444,8 +462,7 @@
             "id": "isu.language_humanities",
             "title": "Language in the Humanities",
             "fill": "open",
-            "count": 1,
-            "exempt": true
+            "count": 1
           },
           {
             "id": "isu.quantitative_reasoning",

@@ -162,6 +162,9 @@
         "major.elective_courses",
         "isu.fine_arts",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -172,6 +175,9 @@
         "major.elective_courses",
         "isu.fine_arts",
         "iai.humanities_fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -181,6 +187,9 @@
       "fulfills": [
         "major.elective_courses",
         "isu.us_traditions"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -198,6 +207,9 @@
       "credits": 3,
       "fulfills": [
         "major.elective_courses"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -272,6 +284,9 @@
       "fulfills": [
         "major.world_arts_elective_courses",
         "isu.fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -281,6 +296,9 @@
       "fulfills": [
         "major.world_arts_elective_courses",
         "isu.fine_arts"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -536,7 +554,14 @@
             "fill": "open",
             "count": 1,
             "minimum_hours": 3,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "MUS153",
+              "MUS154",
+              "MUS157",
+              "MUS159",
+              "MUS275",
+              "MUS275A01"
+            ]
           },
           {
             "id": "isu.humanities",

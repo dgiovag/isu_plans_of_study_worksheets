@@ -76,6 +76,9 @@
       "credits": 3,
       "fulfills": [
         "major.complete_one_of_the_following_3"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -151,6 +154,9 @@
         "major.required_courses",
         "isu.social_sciences",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "amali"
       ]
     },
     {
@@ -160,6 +166,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.science_math_technology"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -216,6 +225,9 @@
         "major.complete_one_of_the_following_2",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -253,6 +265,9 @@
         "major.complete_one_of_the_following_2",
         "isu.quantitative_reasoning",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -262,6 +277,9 @@
       "fulfills": [
         "major.complete_one_of_the_following_2",
         "iai.mathematics"
+      ],
+      "graduation_flags": [
+        "bs_smt"
       ]
     },
     {
@@ -333,6 +351,9 @@
       "fulfills": [
         "major.required_courses",
         "isu.us_traditions"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -397,6 +418,9 @@
       "credits": 3,
       "fulfills": [
         "major.elective_track_required_course"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -740,7 +764,10 @@
             "title": "Quantitative Reasoning",
             "fill": "open",
             "count": 1,
-            "exempt": true
+            "auto_fulfilled_by": [
+              "MAT121",
+              "MAT146"
+            ]
           },
           {
             "id": "isu.science_math_technology",

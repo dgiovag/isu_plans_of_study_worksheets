@@ -77,6 +77,9 @@
       "credits": 3,
       "fulfills": [
         "major.elective_courses"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -117,6 +120,9 @@
       "credits": 3,
       "fulfills": [
         "major.elective_courses"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -125,6 +131,9 @@
       "credits": 3,
       "fulfills": [
         "major.elective_courses"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     },
     {
@@ -176,6 +185,9 @@
         "major.required_courses",
         "isu.individuals_civic_life",
         "iai.social_sciences"
+      ],
+      "graduation_flags": [
+        "ideas"
       ]
     }
   ],
