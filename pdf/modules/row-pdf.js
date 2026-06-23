@@ -36,7 +36,7 @@ function breakIfNeeded(ctx, y, neededH, fonts) {
  * @param {string}  rowId   unique AcroForm field name prefix
  * @param {string}  label   text shown in the requirement column
  * @param {object}  fonts   { reg, bold }
- * @param {object}  opts    { preChecked, exempt, autoFulfilled }
+ * @param {object}  opts    { exempt }
  * @returns {number}        y coordinate below this row
  */
 function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
@@ -67,7 +67,6 @@ function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
     page.drawRectangle({ x: x + 1, y: cbY, width: cbSize, height: cbSize, color: L.GRAY_BORDER });
   } else {
     const cb = form.createCheckBox(sanitizeId(rowId) + '_check');
-    if (opts.preChecked) cb.check();
     cb.addToPage(page, {
       x: x + 1, y: cbY, width: cbSize, height: cbSize,
       borderWidth: 0.5, borderColor: L.GRAY_BORDER, backgroundColor: L.WHITE,
