@@ -198,9 +198,11 @@ These structural features cannot be derived from CourseDog and must be added man
 | tchecebs-pedagogy | Elective track | Replace generic `choose_n` groups with `choose_one_track` and proper slot labels |
 | musbm-composition-theory-emphasis | Applied music & ensembles | Change `open` groups to `repeat` with credit ranges; add course options from catalog |
 | nurbsn-traditional-prelicensure | Phase structure | Split flat `major.required_courses` into `phases: [{foundation}, {nursing_core}, {clinical}]` |
-| ALL | exempt vs auto_fulfilled_by | Every `auto_fulfilled_by` warning needs catalog verification — some should become `exempt: true` |
-| ACC MAT 121 | Math gen-ed | MAT 121 carries `GE14-QR` (not `GE14-MAT`) in CourseDog — verify whether it satisfies or presupposes the math requirement |
 | nurbsn-r-n-to-b-s-n | Escrow credit total | Escrow group added; individual course credits from legacy data sum to 32, catalog note says 34 — Mennonite College of Nursing must confirm |
+| accntcybs-financial-accounting | Math gen-ed | MAT 121 carries `GE14-QR` (not `GE14-MAT`) in CourseDog — verify whether it satisfies or presupposes the math requirement |
+
+**Resolved gaps (no longer require annotation):**
+- `auto_fulfilled_by` vs `exempt` — 998 gen-ed groups verified by course-level `fulfills` data (CourseDog attributes confirm satisfaction). The `generate-review-workbook.py` script now skips verified groups automatically. Remaining issue log has 8 rows, all requiring advisor or catalog lookup.
 
 ## Working Instructions
 

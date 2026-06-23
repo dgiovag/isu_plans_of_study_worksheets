@@ -7,84 +7,66 @@ This document captures the current project state and the next steps to pick up i
 ## What Was Done This Session
 
 ### Commits landed
-Three commits pushed to `main`:
-- `5b9d259` — Scraper gap fixes (artba-art-history, nurbsn-r-n-to-b-s-n, phybs-physics-teacher-education) + CLAUDE.md
-- `4879623` — 297 scraped program JSONs (all active ISU undergrad programs)
-- `5a26eb6` — Advisor review scripts, build-index, and previous handoff doc
+Four commits pushed to `main`:
+- `99ca0fd` — Fix missing ENG145A13/CHE112 course entries in 3 programs
+- `b711629` — Drop verified auto_fulfilled_by rows from issue log (workbook script)
+- `ecdeac1` — Apply gen-ed catalog exemptions to 222 programs
+- `63dc86d` — Add gen-ed exemptions pipeline (scrape-gened-exemptions.js, apply-gened-fixes.js)
 
-### Gen-Ed Exemptions Pipeline (implemented, not yet committed)
+### auto_fulfilled_by verification (completed)
+Analysed all 998 `auto_fulfilled_by` groups remaining after the gen-ed exemptions pipeline.
 
-Two new scripts in `scraper/`:
+**Finding:** 998/998 are confirmed correct — every listed course is affirmatively required by the major AND carries the matching gen-ed CourseDog attribute (`fulfills` array includes both `major.*` and the gen-ed group ID).
 
-**`scraper/scrape-gened-exemptions.js`**
-- Fetches the ISU gen-ed exemption table from the undergraduate catalog
-- Parses the H3/UL structure (3 HTML patterns: `<ul>/<li>`, `<p>` for Business/Nursing, nested ULs for Fine Arts)
-- Writes `scraper/raw/gened-exemptions.json` (57 entries across 7 colleges)
-- Run: `node scraper/scrape-gened-exemptions.js` (caches HTML; `--no-cache` to re-fetch)
+**Three scraping gaps fixed** (courses that were in `auto_fulfilled_by` but missing from the program's `courses` list):
+- `ENG 145A13` added to `accbsmpa-accountancy-and-information-systems` and `insurancbs-risk-management-and-insurance` — Writing for Business & Government Organizations, AND-paired with ENG 145, both carry IAI IC2
+- `CHE 112` added to `nurbsn-traditional-prelicensure` — Fundamentals of Chemistry Lab, lecture+lab pair with CHE 110, both carry GE14-NSAC
 
-**`scraper/apply-gened-fixes.js`**
-- Pass A: reads `gened-exemptions.json`, sets `exempt: true` on matching ISU gen-ed groups
-- Pass B: consistency cleanup — removes stale `auto_fulfilled_by` from groups already marked `exempt`
-- Run: `node scraper/apply-gened-fixes.js` (dry run) / `--write` (apply) / `--program <id>` (one program)
-- Applied `--write` this session: **222 groups updated across 222 programs**
+**Workbook script updated** (`scripts/generate-review-workbook.py`):
+- `is_afb_verified()` helper skips any `auto_fulfilled_by` group where all courses pass the fulfills check
+- Fixed misleading issue description ("change to exempt: true" → correct explanation of satisfy vs. presuppose)
+- Summary now reports verified count alongside flagged count
 
-**Important conceptual distinction confirmed this session:**
-- `exempt: true` = gen-ed category is **waived** for this major (catalog policy, student doesn't need a course)
-- `auto_fulfilled_by` = gen-ed category **is still required**, but automatically satisfied by a course already required by the major
-- These are NOT interchangeable. Pass B does NOT convert `auto_fulfilled_by` → `exempt`. It only removes `auto_fulfilled_by` when the group is already `exempt` (redundant data cleanup).
+### Issue Log: 8 rows (down from ~1,006)
+All remaining issues require advisor or catalog lookup — nothing automated can resolve them. See `STRUCTURAL_GAPS` in the workbook script for full descriptions.
 
-**Title aliases resolved:** 10 catalog-page name mismatches encoded in `TITLE_ALIASES` in `apply-gened-fixes.js`. Two entries (`Kinesiology and Recreation`, `Information Technology`) map to multiple program titles (array values).
-
-**Intentionally unmatched:** `College of Arts and Sciences / Interdisciplinary Studies / European Studies` — IDS programs are under `Office of the Provost`, European Studies sequence no longer in catalog data, not well-suited to worksheet format. Documented in script comment.
-
-### Impact on auto_fulfilled_by issue count
-- Before: 1,118 `auto_fulfilled_by` instances across all programs
-- After: **998 remaining** (120 removed by Pass A)
-  - 569 on ISU track (these go to advisors for manual review)
-  - 429 on IAI/AD tracks
-- The review workbook has NOT been regenerated yet — still shows the old 1,118 count
+### Output rebuilt
+All 300 HTML worksheets, 900 PDFs, and the advisor review workbook are current as of this session.
 
 ---
 
-## Files to Commit (uncommitted)
+## Current State
 
-**Commit 1 — Gen-ed exemption pipeline scripts**
-```
-scraper/scrape-gened-exemptions.js
-scraper/apply-gened-fixes.js
-```
+Working tree is clean. All output is up to date.
 
-**Commit 2 — 222 program JSONs updated with exempt:true**
-```
-data/programs/*.json   (222 modified files)
-```
-
-**Then regenerate the review workbook:**
-```bash
-python3 scripts/generate-review-workbook.py
-```
-(output/ is gitignored, so the xlsx doesn't commit — just regenerate locally before sending to advisors)
+**Advisor review workbook:** `output/review/advisor-review.xlsx`
+- Sheet 1: 300 programs (Pending / Approved / Changes Needed dropdown)
+- Sheet 2: 8 issues — all structural gaps needing advisor judgment
 
 ---
 
-## Immediate Next Task: Regenerate Review Workbook
+## Remaining Scraper Gaps (Issue Log rows)
 
-After committing, run `python3 scripts/generate-review-workbook.py` to refresh the advisor workbook with the reduced issue count (~998 instead of 1,118 auto_fulfilled_by rows, plus the structural gaps).
-
-Then assess: of the 569 remaining `auto_fulfilled_by` on ISU track, how many are genuinely resolvable vs. need advisor judgment? The IAI/AD track instances (429) may need a separate analysis pass.
-
----
-
-## Remaining Scraper Gaps (from CLAUDE.md)
-
-| Program | Gap | Complexity |
+| Program | Issue type | What's needed |
 |---|---|---|
-| `accntcybs-financial-accounting` | Inline `choose_one` slots in `major.required_courses` (math/writing/IT options) | Medium |
-| `artba-art-history` | Language consistency constraint across FRE/GER/ITA/SPA 111/112/115 | Advisor call |
-| `tchecebs-pedagogy` | 9 `choose_n(1)` groups may be teaching-specialty track bundles | Hard |
-| `musbm-composition-theory-emphasis` | `applied_music` / `performance_ensembles` open → `repeat` with credit ranges | Hard |
-| `nurbsn-traditional-prelicensure` | 38-course flat list needs splitting into phases | Hard |
-| `nurbsn-r-n-to-b-s-n` | Escrow credit total discrepancy (32 vs 34) — advisor check | Quick |
+| `accntcybs-financial-accounting` | `structural_gap` | Split `major.required_courses` into `choose_one` slots for math/writing/IT options |
+| `artba-art-history` | `catalog_verify` | Confirm whether language sequence (FRE/GER/ITA/SPA 111/112/115) must be same language across all three levels |
+| `artba-art-history` | `credit_assumption` | Verify credit values for 12 elective courses (ART 240–281) and any per-group distribution requirement |
+| `nurbsn-r-n-to-b-s-n` | `credit_assumption` | Confirm total escrow credits: individual courses sum to 32, catalog says 34 |
+| `tchecebs-pedagogy` | `structural_gap` | Confirm whether 9 `choose_n(1)` groups are independent choices or specialty track bundles |
+| `musbm-composition-theory-emphasis` | `structural_gap` | Confirm credit range, total hours, and level-progression rule for applied music / ensembles |
+| `nurbsn-traditional-prelicensure` | `structural_gap` | Split 38-course flat list into phases (foundation / nursing core / clinical) |
+| `accntcybs-financial-accounting` | `catalog_verify` | MAT 121 has `GE14-QR` not `GE14-MAT` — confirm whether it satisfies or presupposes the math gen-ed |
+
+---
+
+## Immediate Next Task
+
+Send `output/review/advisor-review.xlsx` to advisors for the 8 open issues above, then work through structural gaps as responses come in. Priority order by complexity:
+
+1. **Quick / catalog lookup:** `nurbsn-r-n-to-b-s-n` escrow total, `accntcybs` MAT 121, `artba` credit assumptions
+2. **Advisor call required:** `artba` language constraint, `tchecebs` track structure, `nurbsn-traditional` phase split
+3. **Hard / schema work:** `musbm` repeat groups, `accntcybs` inline choose_ones
 
 ---
 
@@ -95,5 +77,5 @@ Then assess: of the 569 remaining `auto_fulfilled_by` on ISU track, how many are
 - Never switch to Opus.
 - User commits manually via GitHub Desktop; always suggest a commit message after changes.
 - Output files go to `output/html/` and `output/pdf/` by default.
-- The review workbook and guide are in `output/review/` — regenerated by the two Python scripts.
+- The review workbook is in `output/review/` — regenerated by `python3 scripts/generate-review-workbook.py`.
 - `scraper/raw/` is gitignored; HTML cache and JSON outputs live there and are not committed.
