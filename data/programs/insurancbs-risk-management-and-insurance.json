@@ -94,6 +94,15 @@
       ]
     },
     {
+      "id": "ENG145A13",
+      "code": "ENG 145A13",
+      "credits": 3,
+      "fulfills": [
+        "major.required_courses",
+        "iai.communication"
+      ]
+    },
+    {
       "id": "FIL185",
       "code": "FIL 185",
       "credits": 3,
@@ -704,7 +713,7 @@
       },
       {
         "id": "bs_smt",
-        "title": "B.S. — Science, Math, & Technology",
+        "title": "B.S. \u2014 Science, Math, & Technology",
         "note": "Required beyond Gen Ed for B.S. degree",
         "applies_when": {
           "degree": "B.S."
