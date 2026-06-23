@@ -1,6 +1,6 @@
 'use strict';
 
-const { makeRow, totalWidth } = require('./row-pdf');
+const { makeRow, totalWidth, noCourseWidths } = require('./row-pdf');
 const { drawTableHeaders, drawNote } = require('./table-pdf');
 const { closeTable } = require('./render-fixed-pdf');
 
@@ -21,11 +21,15 @@ function renderRepeat(ctx, x, y, widths, group, courseMap, fonts) {
     y = drawNote(ctx.page, x, y, noteParts.join(' · '), colW, fonts);
   }
 
-  y = drawTableHeaders(ctx.page, x, y, widths, fonts);
+  const hoursPerRow = group.credits_per_semester || course?.credits || null;
+  const w = noCourseWidths(widths);
+
+  y = drawTableHeaders(ctx.page, x, y, w, fonts);
   for (let i = 0; i < semesters; i++) {
-    y = makeRow(ctx, x, y, widths, `${group.id}.${i}`, `${code} (Sem ${i + 1})`, fonts);
+    const rowOpts = hoursPerRow != null ? { hours: hoursPerRow } : {};
+    y = makeRow(ctx, x, y, w, `${group.id}.${i}`, `${code} (Sem ${i + 1})`, fonts, rowOpts);
   }
-  return closeTable(ctx.page, x, y, widths);
+  return closeTable(ctx.page, x, y, w);
 }
 
 module.exports = { renderRepeat };

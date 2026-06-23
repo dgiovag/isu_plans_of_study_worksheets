@@ -45,7 +45,7 @@ async function buildOnePDF(program, track) {
 
   const courseMap = resolveCourses(program);
 
-  const page = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
+  const page = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]); // landscape 792×612
   const form = doc.getForm();
 
   const afterHeader     = drawHeader(page, prog, track, fonts, wordmarkImage);
@@ -157,11 +157,12 @@ function drawDisclaimer(page, topY, fonts) {
 
 // Draws student info labels + AcroForm text fields; returns body start y.
 function drawStudentInfo(page, form, topY, fonts) {
+  // Four fields distributed across the full content width (720pt landscape)
   const FIELDS = [
-    { name: 'student.name',    label: 'Student Name', x: L.MARGIN.left,       width: 178 },
-    { name: 'student.id',      label: 'Student ID',   x: L.MARGIN.left + 188, width: 100 },
-    { name: 'student.advisor', label: 'Advisor',      x: L.MARGIN.left + 298, width: 148 },
-    { name: 'student.date',    label: 'Date',         x: L.MARGIN.left + 456, width:  84 },
+    { name: 'student.name',    label: 'Student Name', x: L.MARGIN.left,       width: 180 },
+    { name: 'student.id',      label: 'Student ID',   x: L.MARGIN.left + 190, width: 120 },
+    { name: 'student.advisor', label: 'Advisor',      x: L.MARGIN.left + 320, width: 210 },
+    { name: 'student.date',    label: 'Date',         x: L.MARGIN.left + 540, width: 180 },
   ];
 
   const FIELD_H   = 16;

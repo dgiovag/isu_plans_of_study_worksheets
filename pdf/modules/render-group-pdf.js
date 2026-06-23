@@ -103,4 +103,4 @@ function renderUnknown(page, x, y, widths, fillType, fonts) {
   return y - 14;
 }
 
-module.exports = { renderGroup };
+module.exports = { renderGroup, estimateGroupHeight };

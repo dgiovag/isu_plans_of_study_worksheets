@@ -2,10 +2,9 @@
 
 const L = require('../layout');
 const { drawSectionTitle, drawNote } = require('./table-pdf');
-const { renderGroup }               = require('./render-group-pdf');
-const { wrapText }                  = require('./row-pdf');
+const { renderGroup, estimateGroupHeight } = require('./render-group-pdf');
+const { wrapText } = require('./row-pdf');
 
-// Maps PDF track key → data track id to look up in general_education.tracks
 const DATA_TRACK = { isu: 'isu', iai: 'iai', ad: 'iai' };
 
 const SECTION_TITLES = {
@@ -15,60 +14,104 @@ const SECTION_TITLES = {
 };
 
 /**
- * Renders the full gen-ed column (left column) for the given track.
- * Uses a separate ctx from the major column so page breaks are independent.
+ * Renders the gen-ed left half with two balanced sub-columns.
+ * Section title spans the full half width; groups are split at the height
+ * midpoint (preserving natural order) and rendered side-by-side.
  */
-function renderGenEd(ctx, y, program, track, courseMap, fonts) {
-  const x      = L.MARGIN.left;
-  const widths = L.COL_WIDTHS.left;
-  const ge     = program.general_education || { tracks: [] };
+function renderGenEd(ctx, startY, program, track, courseMap, fonts) {
+  const halfX = L.MARGIN.left;
+  const ge    = program.general_education || { tracks: [] };
 
-  y = drawSectionTitle(ctx.page, x, y, SECTION_TITLES[track], L.COL_LEFT_WIDTH, fonts);
+  let y = drawSectionTitle(ctx.page, halfX, startY, SECTION_TITLES[track], L.HALF_WIDTH, fonts);
 
-  // Completion programs: gen-ed satisfied by admission requirement
   if (ge.assumed_complete && track !== 'ad') {
-    return renderAssumedComplete(ctx.page, x, y, ge, fonts);
+    return renderAssumedComplete(ctx.page, halfX, y, ge, fonts);
   }
 
-  // Associate's degree track: credential fields first, then IAI groups
   if (track === 'ad') {
     const assocTrack = (ge.tracks || []).find(t => t.id === 'associates');
     if (assocTrack && assocTrack.fields && assocTrack.fields.length > 0) {
-      y = renderAssociatesFields(ctx, x, y, assocTrack, fonts);
+      y = renderAssociatesFields(ctx, halfX, y, assocTrack, fonts);
       y -= 4;
     }
   }
 
-  // Find the course-based track data
   const dataTrackId = DATA_TRACK[track];
   const dataTrack   = (ge.tracks || []).find(t => t.id === dataTrackId);
 
   if (!dataTrack || !dataTrack.groups || dataTrack.groups.length === 0) {
     ctx.page.drawText('No course-based general education requirements for this track.', {
-      x: x + 4, y: y - 10,
+      x: halfX + 4, y: y - 10,
       size: L.FONT.footnote, font: fonts.reg, color: L.GRAY_TEXT,
     });
     return y - 14;
   }
 
-  for (const group of dataTrack.groups) {
-    y = renderGroup(ctx, x, y, widths, group, courseMap, fonts);
-    y -= 3;
+  const groups    = dataTrack.groups;
+  const subWidths = L.COL_WIDTHS.sub;
+  const x1        = halfX;
+  const x2        = halfX + L.SUB_COL_WIDTH + L.SUB_GAP;
+
+  if (groups.length === 1) {
+    y = renderGroup(ctx, x1, y, subWidths, groups[0], courseMap, fonts);
+    return y;
   }
 
-  return y;
+  const { col1Groups, col2Groups } = sequentialSplit(groups);
+
+  // Independent rendering contexts — share doc/form, track pages separately.
+  const ctx1 = { ...ctx };
+  const ctx2 = { ...ctx };
+
+  let y1 = y;
+  for (const group of col1Groups) {
+    y1 = renderGroup(ctx1, x1, y1, subWidths, group, courseMap, fonts);
+    y1 -= 3;
+  }
+
+  let y2 = y;
+  for (const group of col2Groups) {
+    y2 = renderGroup(ctx2, x2, y2, subWidths, group, courseMap, fonts);
+    y2 -= 3;
+  }
+
+  // Propagate sub-col A's page back so graduation renders on the right page.
+  ctx.page = ctx1.page;
+  return Math.min(y1, y2);
 }
 
-// Gray info block for programs where gen-ed is assumed satisfied on admission.
+// Split groups into two sequential sub-column lists at the height midpoint.
+// Groups stay in their natural order within each sub-column.
+function sequentialSplit(groups) {
+  const heights  = groups.map(estimateGroupHeight);
+  const total    = heights.reduce((a, b) => a + b, 0);
+  const half     = total / 2;
+
+  let acc      = 0;
+  let splitIdx = groups.length;
+  for (let i = 0; i < groups.length; i++) {
+    acc += heights[i];
+    if (acc >= half) { splitIdx = i + 1; break; }
+  }
+
+  // Guard: keep at least one group per column when there are 2+ groups.
+  if (splitIdx >= groups.length) splitIdx = groups.length - 1;
+
+  return {
+    col1Groups: groups.slice(0, splitIdx),
+    col2Groups: groups.slice(splitIdx),
+  };
+}
+
 function renderAssumedComplete(page, x, y, ge, fonts) {
   const noteText = ge.assumed_via === 'admission_requirement'
     ? "General Education requirements are satisfied by the Associate's Degree required for program admission."
     : 'General Education requirements are assumed complete.';
 
-  const lines  = wrapText(fonts.reg, noteText, L.FONT.footnote, L.COL_LEFT_WIDTH - 8);
+  const lines  = wrapText(fonts.reg, noteText, L.FONT.footnote, L.HALF_WIDTH - 8);
   const blockH = lines.length * 8 + 10;
 
-  page.drawRectangle({ x, y: y - blockH, width: L.COL_LEFT_WIDTH, height: blockH, color: L.GRAY_BG });
+  page.drawRectangle({ x, y: y - blockH, width: L.HALF_WIDTH, height: blockH, color: L.GRAY_BG });
   let ty = y - 8;
   for (const line of lines) {
     page.drawText(line, { x: x + 4, y: ty, size: L.FONT.footnote, font: fonts.reg, color: L.GRAY_TEXT });
@@ -77,15 +120,13 @@ function renderAssumedComplete(page, x, y, ge, fonts) {
   return y - blockH - 4;
 }
 
-// AcroForm text fields for Associate's degree credential metadata.
 function renderAssociatesFields(ctx, x, y, assocTrack, fonts) {
   const { page, form } = ctx;
   const fields  = assocTrack.fields || [];
-  const colW    = L.COL_LEFT_WIDTH;
+  const colW    = L.HALF_WIDTH;
   const FIELD_H = 14;
-  const ROW_H   = FIELD_H + 11; // field + label + gap
+  const ROW_H   = FIELD_H + 11;
 
-  // Pair fields into rows of two
   const rows = [];
   for (let i = 0; i < fields.length; i += 2) rows.push(fields.slice(i, i + 2));
 

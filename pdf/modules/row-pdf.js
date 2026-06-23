@@ -122,21 +122,34 @@ function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
     const fieldY  = bot + (rowHeight - fieldH) / 2;
     const courseX = x + widths.check + widths.req;
 
-    const tf = form.createTextField(sanitizeId(rowId) + '_course');
-    tf.addToPage(page, {
-      x: courseX, y: fieldY, width: widths.course - 1, height: fieldH,
-      borderWidth: 0.3, borderColor: L.GRAY_BORDER, backgroundColor: L.WHITE,
-    });
+    if (widths.course > 0) {
+      const tf = form.createTextField(sanitizeId(rowId) + '_course');
+      tf.addToPage(page, {
+        x: courseX, y: fieldY, width: widths.course - 1, height: fieldH,
+        borderWidth: 0.3, borderColor: L.GRAY_BORDER, backgroundColor: L.WHITE,
+      });
+    }
+
+    if (widths.hours > 0) {
+      const hf = form.createTextField(sanitizeId(rowId) + '_hours');
+      hf.addToPage(page, {
+        x: courseX + widths.course, y: fieldY, width: widths.hours - 1, height: fieldH,
+        borderWidth: 0.3, borderColor: L.GRAY_BORDER, backgroundColor: L.WHITE,
+      });
+      if (opts.hours != null) hf.setText(String(opts.hours));
+    }
+
+    const hoursOffset = widths.hours || 0;
 
     const gf = form.createTextField(sanitizeId(rowId) + '_grade');
     gf.addToPage(page, {
-      x: courseX + widths.course, y: fieldY, width: widths.grade - 1, height: fieldH,
+      x: courseX + widths.course + hoursOffset, y: fieldY, width: widths.grade - 1, height: fieldH,
       borderWidth: 0.3, borderColor: L.GRAY_BORDER, backgroundColor: L.WHITE,
     });
 
     const tf2 = form.createTextField(sanitizeId(rowId) + '_term');
     tf2.addToPage(page, {
-      x: courseX + widths.course + widths.grade, y: fieldY, width: widths.term, height: fieldH,
+      x: courseX + widths.course + hoursOffset + widths.grade, y: fieldY, width: widths.term, height: fieldH,
       borderWidth: 0.3, borderColor: L.GRAY_BORDER, backgroundColor: L.WHITE,
     });
   }
@@ -166,7 +179,7 @@ function sanitizeId(id) {
 }
 
 function totalWidth(widths) {
-  return widths.check + widths.req + widths.course + widths.grade + widths.term;
+  return widths.check + widths.req + widths.course + (widths.hours || 0) + widths.grade + widths.term;
 }
 
 function formatOption(opt, courseMap) {
@@ -188,4 +201,11 @@ function noReqWidths(widths) {
   return { ...widths, req: 0, course: widths.course + widths.req };
 }
 
-module.exports = { makeRow, breakIfNeeded, wrapText, sanitizeId, totalWidth, formatOption, noReqWidths };
+// Returns a copy of widths with the course write-in field removed.
+// The course column width folds into req, giving more room for the label.
+// Use for fixed/repeat groups where the course is already predetermined.
+function noCourseWidths(widths) {
+  return { ...widths, course: 0, req: widths.req + widths.course };
+}
+
+module.exports = { makeRow, breakIfNeeded, wrapText, sanitizeId, totalWidth, formatOption, noReqWidths, noCourseWidths };

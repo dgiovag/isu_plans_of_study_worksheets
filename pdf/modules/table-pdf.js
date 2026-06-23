@@ -55,12 +55,13 @@ function drawTableHeaders(page, x, y, widths, fonts) {
 
   page.drawRectangle({ x, y: y - H, width: colW, height: H, color: L.GRAY_BG });
 
-  const textY = y - H + 3;
+  const textY   = y - H + 3;
+  const hoursOff = widths.hours || 0;
   const headers = [
-    ...(widths.req > 0 ? [{ label: 'Requirement', x: x + widths.check + 2 }] : []),
-    { label: 'Course', x: x + widths.check + widths.req },
-    { label: 'Gr',     x: x + widths.check + widths.req + widths.course },
-    { label: 'Term',   x: x + widths.check + widths.req + widths.course + widths.grade },
+    { label: 'Course', x: x + widths.check + 2 },
+    ...(hoursOff > 0 ? [{ label: 'Hr',   x: x + widths.check + widths.req + widths.course }] : []),
+    { label: 'Gr',   x: x + widths.check + widths.req + widths.course + hoursOff },
+    { label: 'Term', x: x + widths.check + widths.req + widths.course + hoursOff + widths.grade },
   ];
   for (const h of headers) {
     page.drawText(h.label, { x: h.x, y: textY, size: L.FONT.tableHeader, font: fonts.bold, color: L.BLACK });
