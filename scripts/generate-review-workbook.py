@@ -259,18 +259,39 @@ STRUCTURAL_GAPS = [
 ]
 
 
+def is_afb_verified(group, course_fulfills):
+    """Return True if every course in auto_fulfilled_by is confirmed by fulfills data.
+
+    A course is confirmed when its fulfills list includes both a major.* group
+    (affirmatively required by the major) and the gen-ed group ID (affirmatively
+    meets that gen-ed requirement per CourseDog attributes).
+    """
+    gid = group.get("id", "")
+    for cid in group.get("auto_fulfilled_by", []):
+        f = course_fulfills.get(cid, set())
+        has_major = any(x.startswith("major.") for x in f)
+        has_gened = gid in f
+        if not (has_major and has_gened):
+            return False
+    return True
+
+
 def collect_auto_fulfilled_issues(programs):
-    """Return one issue row per auto_fulfilled_by entry across all programs."""
+    """Return issue rows only for auto_fulfilled_by groups not verified by fulfills data."""
     issues = []
-    college_map = {d["program"]["id"]: d["program"].get("college", "") for d in programs}
+    skipped = 0
 
     for data in programs:
         pid     = data["program"]["id"]
         college = data["program"].get("college", "")
+        course_fulfills = {c["id"]: set(c.get("fulfills", [])) for c in data.get("courses", [])}
 
         for group in iter_all_groups(data):
             afb = group.get("auto_fulfilled_by", [])
             if not afb:
+                continue
+            if is_afb_verified(group, course_fulfills):
+                skipped += 1
                 continue
             courses_str = ", ".join(afb)
             issues.append({
@@ -281,11 +302,13 @@ def collect_auto_fulfilled_issues(programs):
                 "description": (
                     f"auto_fulfilled_by: {courses_str}. "
                     f"Verify whether these courses satisfy or merely presuppose '{group.get('id', '')}'. "
-                    "If they genuinely satisfy it, change to exempt: true."
+                    "If they satisfy it, the annotation is correct. "
+                    "If they only presuppose it (student must still take the gen-ed separately), "
+                    "remove auto_fulfilled_by."
                 ),
             })
 
-    return issues
+    return issues, skipped
 
 
 def build_sheet2(wb, programs):
@@ -304,7 +327,8 @@ def build_sheet2(wb, programs):
     )
     ws.add_data_validation(dv_resolved)
 
-    all_issues = STRUCTURAL_GAPS + collect_auto_fulfilled_issues(programs)
+    auto_issues, skipped = collect_auto_fulfilled_issues(programs)
+    all_issues = STRUCTURAL_GAPS + auto_issues
 
     for i, issue in enumerate(all_issues, 2):
         ws.cell(i, 1, issue["program_id"])
@@ -325,7 +349,7 @@ def build_sheet2(wb, programs):
     for row in ws.iter_rows(min_row=2):
         ws.row_dimensions[row[0].row].height = 42
 
-    return ws
+    return ws, skipped
 
 
 # ── main ──────────────────────────────────────────────────────────────────────
@@ -343,21 +367,22 @@ def main():
     wb.remove(wb.active)  # remove default sheet
 
     build_sheet1(wb, programs)
-    build_sheet2(wb, programs)
+    _, skipped = build_sheet2(wb, programs)
 
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     wb.save(args.out)
     print(f"Wrote {args.out}")
 
-    # Summary
-    auto_count = sum(
+    auto_total = sum(
         1
         for data in programs
         for group in iter_all_groups(data)
         if group.get("auto_fulfilled_by")
     )
+    auto_flagged = auto_total - skipped
     print(f"  Sheet 1: {len(programs)} programs")
-    print(f"  Sheet 2: {len(STRUCTURAL_GAPS)} structural gaps + {auto_count} auto_fulfilled_by items")
+    print(f"  Sheet 2: {len(STRUCTURAL_GAPS)} structural gaps + {auto_flagged} unverified auto_fulfilled_by"
+          f" ({skipped} verified by fulfills data, omitted)")
 
 
 if __name__ == "__main__":
