@@ -1,6 +1,7 @@
 'use strict';
 
 const L = require('../layout');
+const { pageAt } = require('./page-pool');
 
 const LINE_H = L.FONT.tableBody + 2.5; // vertical step between wrapped label lines
 
@@ -8,19 +9,19 @@ const LINE_H = L.FONT.tableBody + 2.5; // vertical step between wrapped label li
 const CONTINUATION_Y = L.PAGE_HEIGHT - L.MARGIN.top - 16;
 
 /**
- * If `y - neededH` would fall below the bottom margin, adds a new page to
- * ctx.doc, updates ctx.page, and returns the reset y for the new page.
+ * If `y - neededH` would fall below the bottom margin, advances this context to
+ * the next page in the shared pool (creating it only if no other context has
+ * already), updates ctx.page/ctx.pageIdx, and returns the reset y for that page.
  * Otherwise returns y unchanged.
+ *
+ * Contexts share `ctx.pool` by reference, so two columns that both overflow land
+ * on the same physical page instead of each appending one of their own.
  */
 function breakIfNeeded(ctx, y, neededH, fonts) {
   if (y - neededH >= L.MARGIN.bottom) return y;
 
-  ctx.page = ctx.doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]);
-
-  ctx.page.drawText('(continued)', {
-    x: L.MARGIN.left, y: L.PAGE_HEIGHT - L.MARGIN.top - 8,
-    size: 7, font: fonts.reg, color: L.GRAY_TEXT,
-  });
+  ctx.pageIdx = (ctx.pageIdx || 0) + 1;
+  ctx.page    = pageAt(ctx.pool, ctx.pageIdx, fonts);
 
   return CONTINUATION_Y;
 }

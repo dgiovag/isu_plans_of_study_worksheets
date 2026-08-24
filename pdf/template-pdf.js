@@ -11,6 +11,7 @@ const { renderGenEd }       = require('./modules/render-gened-pdf');
 const { renderGraduation }  = require('./modules/render-graduation-pdf');
 const { renderCollege }     = require('./modules/render-college-pdf');
 const { renderCompliance }  = require('./modules/render-compliance-pdf');
+const { createPagePool }    = require('./modules/page-pool');
 
 const TRACKS = ['isu', 'iai', 'ad'];
 
@@ -45,7 +46,10 @@ async function buildOnePDF(program, track) {
 
   const courseMap = resolveCourses(program);
 
-  const page = doc.addPage([L.PAGE_WIDTH, L.PAGE_HEIGHT]); // landscape 792×612
+  // Shared page pool: every column context indexes into the same page list, so
+  // simultaneous overflows continue onto one shared page 2 (see page-pool.js).
+  const pool = createPagePool(doc);
+  const page = pool.pages[0]; // landscape 792×612
   const form = doc.getForm();
 
   const afterHeader     = drawHeader(page, prog, track, fonts, wordmarkImage);
@@ -61,8 +65,8 @@ async function buildOnePDF(program, track) {
 
   // Two independent rendering contexts — same doc/form, separate page refs
   // so each column's page breaks don't interfere with each other.
-  const leftCtx  = { doc, page, form, xrefCourseIds, gradFlagsMap };
-  const rightCtx = { doc, page, form, xrefCourseIds, gradFlagsMap };
+  const leftCtx  = { doc, pool, pageIdx: 0, page, form, xrefCourseIds, gradFlagsMap };
+  const rightCtx = { doc, pool, pageIdx: 0, page, form, xrefCourseIds, gradFlagsMap };
 
   const finalGenEdY = renderGenEd(leftCtx,  bodyY, program, track, courseMap, fonts);
   const finalMajorY = renderMajor(rightCtx, bodyY, program, courseMap, fonts);
@@ -77,18 +81,17 @@ async function buildOnePDF(program, track) {
   const hasComplianceReq = !!(program.compliance_requirements && program.compliance_requirements.length);
 
   if (hasCollegeReq || hasComplianceReq) {
-    let gradPage, gradY;
-    if (leftCtx.page === rightCtx.page) {
-      gradPage = leftCtx.page;
-      gradY    = Math.min(gradLeftY, finalMajorY) - 8;
-    } else {
-      // Left column ended before right — use the right column's last page
-      // so compliance stays on page 2 rather than forcing a new page 3.
-      gradPage = rightCtx.page;
-      gradY    = finalMajorY - 8;
-    }
+    // Panels are full content width, so they must clear every column that is
+    // still drawing on the target page. Columns that finished on an *earlier*
+    // page don't constrain it.
+    const panelIdx = Math.max(leftCtx.pageIdx, rightCtx.pageIdx);
+    const blockers = [
+      ...(leftCtx.pageIdx  === panelIdx ? [gradLeftY]    : []),
+      ...(rightCtx.pageIdx === panelIdx ? [finalMajorY]  : []),
+    ];
+    const gradY = Math.min(...blockers) - 8;
 
-    const gradCtx = { doc, page: gradPage, form };
+    const gradCtx = { doc, pool, pageIdx: panelIdx, page: pool.pages[panelIdx], form };
     let panelY = renderCollege(gradCtx, gradY, program, courseMap, fonts);
     renderCompliance(gradCtx, panelY, program, fonts);
   }

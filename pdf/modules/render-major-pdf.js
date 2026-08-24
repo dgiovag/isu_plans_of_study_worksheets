@@ -51,8 +51,12 @@ function renderMajor(ctx, startY, program, courseMap, fonts) {
     y2 -= 3;
   }
 
-  // Propagate sub-col A's page so the caller can place full-width panels below.
-  ctx.page = ctx1.page;
+  // Full-width panels may follow below, so report the furthest page either
+  // sub-column reached and the lowest y still occupied on it.
+  if (ctx2.pageIdx > ctx1.pageIdx)      { ctx.pageIdx = ctx2.pageIdx; ctx.page = ctx2.page; return y2; }
+  if (ctx1.pageIdx > ctx2.pageIdx)      { ctx.pageIdx = ctx1.pageIdx; ctx.page = ctx1.page; return y1; }
+  ctx.pageIdx = ctx1.pageIdx;
+  ctx.page    = ctx1.page;
   return Math.min(y1, y2);
 }
 

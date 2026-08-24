@@ -75,8 +75,12 @@ function renderGenEd(ctx, startY, program, track, courseMap, fonts) {
     y2 -= 3;
   }
 
-  // Propagate sub-col A's page back so graduation renders on the right page.
-  ctx.page = ctx1.page;
+  // Graduation goes below this half, so it must clear both sub-columns: report
+  // the furthest page either reached, and the lowest y still occupied on it.
+  if (ctx2.pageIdx > ctx1.pageIdx)      { ctx.pageIdx = ctx2.pageIdx; ctx.page = ctx2.page; return y2; }
+  if (ctx1.pageIdx > ctx2.pageIdx)      { ctx.pageIdx = ctx1.pageIdx; ctx.page = ctx1.page; return y1; }
+  ctx.pageIdx = ctx1.pageIdx;
+  ctx.page    = ctx1.page;
   return Math.min(y1, y2);
 }
 
