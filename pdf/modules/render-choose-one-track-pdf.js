@@ -29,9 +29,15 @@ function renderChooseOneTrack(ctx, x, y, widths, group, courseMap, fonts) {
   return y;
 }
 
+// Height a track header will consume. Shared with the height estimator.
+function trackHeaderHeight(title, colW, fonts) {
+  const lines = wrapText(fonts.bold, title || '', L.FONT.groupTitle, colW - 8);
+  return Math.max(L.GROUP_TITLE_H, lines.length * (L.FONT.groupTitle + 2) + 4);
+}
+
 function drawTrackHeader(page, x, y, title, colW, fonts) {
   const lines  = wrapText(fonts.bold, title, L.FONT.groupTitle, colW - 8);
-  const height = Math.max(L.GROUP_TITLE_H, lines.length * (L.FONT.groupTitle + 2) + 4);
+  const height = trackHeaderHeight(title, colW, fonts);
 
   page.drawRectangle({ x, y: y - height, width: 3, height, color: L.RED });
   page.drawRectangle({ x: x + 3, y: y - height, width: colW - 3, height, color: L.GRAY_BG });
@@ -45,4 +51,4 @@ function drawTrackHeader(page, x, y, title, colW, fonts) {
   return y - height;
 }
 
-module.exports = { renderChooseOneTrack };
+module.exports = { renderChooseOneTrack, trackHeaderHeight };

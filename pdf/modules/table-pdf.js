@@ -26,13 +26,25 @@ function drawSectionTitle(page, x, y, title, colWidth, fonts) {
   return y - height;
 }
 
+// Height a group title bar will consume. Shared with the height estimator.
+function groupTitleHeight(title, colWidth, fonts) {
+  const lines = wrapText(fonts.bold, title || '', L.FONT.groupTitle, colWidth - 8);
+  return Math.max(L.GROUP_TITLE_H, lines.length * GROUP_LINE_H + 4);
+}
+
+// Height drawNote will consume (one 8pt step per wrapped line, plus 2pt tail).
+function noteHeight(text, colWidth, fonts) {
+  const lines = wrapText(fonts.reg, text || '', L.FONT.footnote, colWidth - 8);
+  return lines.length * 8 + 2;
+}
+
 /**
  * Draws a group title bar (dark gray, white text).
  * Height expands for long titles.
  */
 function drawGroupTitle(page, x, y, title, colWidth, fonts) {
   const lines  = wrapText(fonts.bold, title, L.FONT.groupTitle, colWidth - 8);
-  const height = Math.max(L.GROUP_TITLE_H, lines.length * GROUP_LINE_H + 4);
+  const height = groupTitleHeight(title, colWidth, fonts);
 
   page.drawRectangle({ x, y: y - height, width: colWidth, height, color: L.GRAY_TEXT });
 
@@ -89,4 +101,7 @@ function drawNote(page, x, y, text, colWidth, fonts) {
   return y - 2;
 }
 
-module.exports = { drawSectionTitle, drawGroupTitle, drawTableHeaders, drawNote };
+module.exports = {
+  drawSectionTitle, drawGroupTitle, drawTableHeaders, drawNote,
+  groupTitleHeight, noteHeight,
+};

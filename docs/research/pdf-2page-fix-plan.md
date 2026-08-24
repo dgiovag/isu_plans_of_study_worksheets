@@ -181,6 +181,7 @@ node pdf/build-pdf.js --dir data/programs/legacy --out ~/pdf_check_legacy
 |---|---|---|---|---|---|---|
 | baseline | 855 | 196 | 62 | 16 | 2 | 80 |
 | 1 — shared page pool | 855 | 246 | 30 | 0 | 0 | **30** |
+| 2 — font-aware estimation | 854 | 239 | 38 | 0 | 0 | **38** |
 
 ### Chunk 1 detail
 
@@ -208,3 +209,61 @@ nurbsn-isu.pdf   pages=3 widgets=[69, 116, 36]   <- page 1 badly underfilled
 ```
 
 Remaining overflow families: `hisba`/`hisbs` (12), `musbmed` (12), `nurbsn` (6).
+
+### Chunk 2 detail
+
+**The estimator is now exact.** Instrumented estimate-vs-actual over 12,228
+group renders across all 9 fill types present in the corpus: **0.00pt error,
+every group, every type.** Before Chunk 2 the errors were:
+
+| fill | avg error | % underestimated | worst |
+|---|---|---|---|
+| `choose_n` | +20.9pt | 99% | +192pt |
+| `open` | +7.3pt | 21% | +234pt |
+| `fixed` | +2.8pt | 25% | +62pt |
+
+Two field-name bugs also fixed: `choose_n_grouped` read `group.groups` (correct:
+`sub_groups`) and `choose_one_track` read `t.slots` (correct: `track.courses`).
+Both silently predicted **zero rows** for those groups.
+
+Found and fixed a real rendering bug: escrow `group.note` was drawn twice — once
+by `renderGroup`'s `drawNote`, once inside `renderEscrow`'s block. Confirmed via
+`pdftotext -layout` on `nursing-rn-bsn-isu.pdf` (the note appeared on two
+separate lines); now appears once.
+
+**Legacy set — the only files exercising the other 7 fill types — improved:**
+
+| set | 1pg | 2pg | 3pg |
+|---|---|---|---|
+| legacy, Chunk 1 | 9 | 9 | 3 |
+| legacy, Chunk 2 | 9 | 12 | **0** |
+
+The three 3-page files were all `ece-pedagogy-bs` (`choose_one_track`) — fixed
+directly by the `t.slots` → `track.courses` correction.
+
+**Headline metric regressed on the active catalog: 30 → 38.** 37 files grew (29
+at 1→2: `artba-art-history` ×2, `ctkba` ×10, `ctkbs` ×10, `engba` ×7; 8 at 2→3:
+`hisba`/`hisbs` general-history `ad`/`iai`), 28 shrank (`agribs` ×7,
+`intlbusba`/`intlbusbs` ×6, `phybs` ×3, `bscbs` ×3, and 9 others at 2→1).
+
+Two coupled mechanisms, both expected:
+
+1. `renderGroup` now reserves the *true* (larger) height before drawing, so
+   `breakIfNeeded` fires **earlier and more often**. Groups that previously
+   squeezed onto page 1 by luck now break preemptively.
+2. `sequentialSplit` balances the two sub-columns **by height** — the wrong
+   objective for minimizing page count. When both columns are balanced and the
+   total slightly exceeds page-1 capacity, *both* break to page 2 instead of one
+   column absorbing the excess.
+
+Per-page widget counts confirm the pages are underfilled, not overfull:
+
+```
+engba-general-isu.pdf         pages=2 widgets=[132, 3]        <- 3 widgets on page 2
+hisba-general-history-ad.pdf  pages=3 widgets=[82, 15, 3]     <- only 82 on page 1
+nurbsn-isu.pdf                pages=3 widgets=[69, 116, 36]   <- page 1 ~40% empty
+```
+
+Chunk 2 is a **prerequisite**, not a win on its own: accurate heights are what
+make a page-count-minimizing packer possible. Chunk 3 is what converts the
+accuracy into fewer pages.

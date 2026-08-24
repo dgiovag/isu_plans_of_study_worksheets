@@ -2,7 +2,7 @@
 
 const L = require('../layout');
 const { drawSectionTitle } = require('./table-pdf');
-const { renderGroup, estimateGroupHeight } = require('./render-group-pdf');
+const { renderGroup, estimateGroupHeight, heightEnv } = require('./render-group-pdf');
 
 // Groups whose courses are predetermined — no student choice needed.
 const FIXED_FILLS = new Set(['fixed', 'repeat']);
@@ -33,7 +33,8 @@ function renderMajor(ctx, startY, program, courseMap, fonts) {
     return y;
   }
 
-  const { col1Groups, col2Groups } = semanticSplit(groups);
+  const env = heightEnv(ctx, subWidths, courseMap, fonts);
+  const { col1Groups, col2Groups } = semanticSplit(groups, env);
 
   // Independent contexts — share doc/form, track pages separately.
   const ctx1 = { ...ctx };
@@ -63,26 +64,26 @@ function renderMajor(ctx, startY, program, courseMap, fonts) {
 // Semantic split: predetermined groups (fixed/repeat) → col A,
 // choice groups → col B. Falls back to sequential height-balance
 // when either bucket would be empty or the split is badly skewed (>2x).
-function semanticSplit(groups) {
+function semanticSplit(groups, env) {
   const col1Groups = groups.filter(g => FIXED_FILLS.has(g.fill));
   const col2Groups = groups.filter(g => !FIXED_FILLS.has(g.fill));
 
   if (col1Groups.length === 0 || col2Groups.length === 0) {
-    return sequentialSplit(groups);
+    return sequentialSplit(groups, env);
   }
 
-  const h1 = col1Groups.reduce((s, g) => s + estimateGroupHeight(g), 0);
-  const h2 = col2Groups.reduce((s, g) => s + estimateGroupHeight(g), 0);
+  const h1 = col1Groups.reduce((s, g) => s + estimateGroupHeight(g, env), 0);
+  const h2 = col2Groups.reduce((s, g) => s + estimateGroupHeight(g, env), 0);
   if (Math.max(h1, h2) > 2 * Math.min(h1, h2)) {
-    return sequentialSplit(groups);
+    return sequentialSplit(groups, env);
   }
 
   return { col1Groups, col2Groups };
 }
 
 // Sequential split at height midpoint, preserving program order.
-function sequentialSplit(groups) {
-  const heights = groups.map(estimateGroupHeight);
+function sequentialSplit(groups, env) {
+  const heights = groups.map(g => estimateGroupHeight(g, env));
   const total   = heights.reduce((a, b) => a + b, 0);
   const half    = total / 2;
 

@@ -40,10 +40,12 @@ function breakIfNeeded(ctx, y, neededH, fonts) {
  * @param {object}  opts    { exempt, bold }
  * @returns {number}        y coordinate below this row
  */
-function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
-  const colW = totalWidth(widths);
-
-  // Word-wrap the label; row height expands to fit.
+/**
+ * Resolves how a row's label wraps and how tall the row therefore is.
+ * Single source of truth shared by makeRow (which draws it) and the height
+ * estimator (which must predict it) — keep them from drifting apart.
+ */
+function labelLayout(label, widths, fonts, opts = {}) {
   const labelFont  = opts.bold ? fonts.bold : fonts.reg;
   const labelLines = wrapText(labelFont, label, L.FONT.tableBody, widths.req - 3);
 
@@ -58,7 +60,21 @@ function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
   }
 
   const extraLines = (tagText && !tagInline) ? 1 : 0;
-  const rowHeight  = Math.max(L.ROW_H, (labelLines.length + extraLines) * LINE_H + 3);
+  const height     = Math.max(L.ROW_H, (labelLines.length + extraLines) * LINE_H + 3);
+
+  return { labelFont, labelLines, tagText, tagInline, height };
+}
+
+// Height makeRow will consume for this label. Used by the estimator.
+function rowHeight(label, widths, fonts, opts) {
+  return labelLayout(label, widths, fonts, opts).height;
+}
+
+function makeRow(ctx, x, y, widths, rowId, label, fonts, opts = {}) {
+  const colW = totalWidth(widths);
+
+  const { labelFont, labelLines, tagText, tagInline, height: rowHeight } =
+    labelLayout(label, widths, fonts, opts);
 
   y = breakIfNeeded(ctx, y, rowHeight, fonts);
 
@@ -209,4 +225,7 @@ function noCourseWidths(widths) {
   return { ...widths, course: 0, req: widths.req + widths.course };
 }
 
-module.exports = { makeRow, breakIfNeeded, wrapText, sanitizeId, totalWidth, formatOption, noReqWidths, noCourseWidths };
+module.exports = {
+  makeRow, breakIfNeeded, wrapText, sanitizeId, totalWidth, formatOption,
+  noReqWidths, noCourseWidths, labelLayout, rowHeight, LINE_H,
+};

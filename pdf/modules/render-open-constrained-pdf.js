@@ -3,11 +3,7 @@
 const { makeRow, totalWidth, noReqWidths } = require('./row-pdf');
 const { drawTableHeaders, drawNote }       = require('./table-pdf');
 const { closeTable }                       = require('./render-fixed-pdf');
-
-function openRowCount(group) {
-  if (group.minimum_hours) return Math.ceil(group.minimum_hours / 3);
-  return group.count || 1;
-}
+const { openRowCount }                     = require('./render-open-pdf');
 
 function renderOpenConstrained(ctx, x, y, widths, group, courseMap, fonts) {
   const count = openRowCount(group);

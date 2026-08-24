@@ -36,9 +36,15 @@ function renderChooseNGrouped(ctx, x, y, widths, group, courseMap, fonts) {
   return closeTable(ctx.page, x, y, widths);
 }
 
+// Height a sub-group header will consume. Shared with the height estimator.
+function subHeaderHeight(title, colW, fonts) {
+  const lines = wrapText(fonts.bold, title || '', L.FONT.footnote, colW - 8);
+  return Math.max(10, lines.length * 8 + 3);
+}
+
 function drawSubHeader(page, x, y, title, colW, fonts) {
   const lines  = wrapText(fonts.bold, title, L.FONT.footnote, colW - 8);
-  const height = Math.max(10, lines.length * 8 + 3);
+  const height = subHeaderHeight(title, colW, fonts);
 
   page.drawRectangle({ x, y: y - height, width: colW, height, color: L.GRAY_BG });
   for (let i = 0; i < lines.length; i++) {
@@ -50,4 +56,4 @@ function drawSubHeader(page, x, y, title, colW, fonts) {
   return y - height;
 }
 
-module.exports = { renderChooseNGrouped };
+module.exports = { renderChooseNGrouped, subHeaderHeight };

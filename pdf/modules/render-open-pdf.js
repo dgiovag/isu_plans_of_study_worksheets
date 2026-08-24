@@ -63,4 +63,4 @@ function renderOpen(ctx, x, y, widths, group, courseMap, fonts) {
   return closeTable(ctx.page, x, y, w);
 }
 
-module.exports = { renderOpen };
+module.exports = { renderOpen, openRowCount };

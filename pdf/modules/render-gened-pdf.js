@@ -2,7 +2,7 @@
 
 const L = require('../layout');
 const { drawSectionTitle, drawNote } = require('./table-pdf');
-const { renderGroup, estimateGroupHeight } = require('./render-group-pdf');
+const { renderGroup, estimateGroupHeight, heightEnv } = require('./render-group-pdf');
 const { wrapText } = require('./row-pdf');
 
 const DATA_TRACK = { isu: 'isu', iai: 'iai', ad: 'iai' };
@@ -57,7 +57,8 @@ function renderGenEd(ctx, startY, program, track, courseMap, fonts) {
     return y;
   }
 
-  const { col1Groups, col2Groups } = sequentialSplit(groups);
+  const env = heightEnv(ctx, subWidths, courseMap, fonts);
+  const { col1Groups, col2Groups } = sequentialSplit(groups, env);
 
   // Independent rendering contexts — share doc/form, track pages separately.
   const ctx1 = { ...ctx };
@@ -86,8 +87,8 @@ function renderGenEd(ctx, startY, program, track, courseMap, fonts) {
 
 // Split groups into two sequential sub-column lists at the height midpoint.
 // Groups stay in their natural order within each sub-column.
-function sequentialSplit(groups) {
-  const heights  = groups.map(estimateGroupHeight);
+function sequentialSplit(groups, env) {
+  const heights  = groups.map(g => estimateGroupHeight(g, env));
   const total    = heights.reduce((a, b) => a + b, 0);
   const half     = total / 2;
 
