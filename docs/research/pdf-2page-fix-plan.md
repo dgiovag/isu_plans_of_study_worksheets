@@ -185,6 +185,7 @@ node pdf/build-pdf.js --dir data/programs/legacy --out ~/pdf_check_legacy
 | 3 — page-count-minimizing packer | 919 | 191 | 21 | 0 | 0 | **21** |
 | 4a — compact auto-fulfilled labels | **999** | 132 | 0 | 0 | 0 | **0** |
 | 5 — budget check + `--strict` | 999 | 132 | 0 | 0 | 0 | **0** (enforced) |
+| 4b — graduation space reservation | 999 | 132 | 0 | 0 | 0 | **0** (no output change) |
 
 ### Chunk 1 detail
 
@@ -374,11 +375,7 @@ measurement; `choose_one_set` does not occur in any program data.
 
 ### Still open
 
-- **4b — graduation panel space reservation.** No longer needed for the metric,
-  but the panel is still placed after the fact at `min(y) − 8` with no space
-  reserved, so it can be orphaned onto its own page. That is the failure mode
-  that produced `tchmlebs-ad`, and the scraper regenerates data biannually, so it
-  can recur. Insurance, not a fix.
+- ~~**4b — graduation panel space reservation.**~~ Done, see below.
 - ~~**5 — pre-layout budget check + `--strict`.**~~ Done, see below.
 
 ### Chunk 5 detail — the budget is now enforced, not just satisfied
@@ -423,7 +420,37 @@ Nursing is attributed to `major requirements`, also correct. Without `--strict`
 the same diagnostic prints as a warning and the build still succeeds, so the
 biannual scrape surfaces drift without breaking a routine rebuild.
 
-## Final state
+### Chunk 4b detail — the panel now has reserved space, and it provably binds
+
+The graduation panel was still placed after the fact: `renderGenEd` returned a y,
+`template-pdf.js` drew the panel from there, and nothing had reserved the room.
+Two changes:
+
+1. `graduationHeight(program, colWidth, fonts, gradFlagsMap)` in
+   render-graduation-pdf.js mirrors `renderGraduation`'s drawing sequence (section
+   title via the new shared `sectionTitleHeight`, one `ROW_H` per applicable
+   trackable item, key legend when any flag is used, 6pt tail). `renderGenEd`
+   passes it to `packTwoColumns` as `footerH`.
+2. `score()` computes the room left below the deepest sub-column and counts a
+   split that cannot fit the footer as needing **one more page**. Since page count
+   outranks balance, the packer will now trade column balance to keep the panel
+   attached, and will only orphan it when no split can hold it.
+
+Also closed two unchecked draws in `renderGraduation`: the section title and the
+key legend were emitted at whatever y arrived, with no `breakIfNeeded`, so either
+could land below the bottom margin. Both are now guarded — the title reserves
+`titleH + ROW_H`, so a panel head is never separated from its first row.
+
+**Output is byte-for-byte unchanged in layout: 0 of 1131 files differ** under
+`pdftotext -layout`, and all 1131 page counts match. That is the expected result —
+Chunk 4a reclaimed enough room that the panel already fit everywhere.
+
+To prove the reservation is live rather than dead code, the build was re-run with
+`footerH` tripled: **50 of 150 sampled files changed their column split.** The
+constraint is wired all the way through the packer and binds as soon as the panel
+grows or the columns tighten; at today's real panel height it simply has slack.
+
+Legacy set unchanged at 9/12/0.
 
 | requirement | result |
 |---|---|

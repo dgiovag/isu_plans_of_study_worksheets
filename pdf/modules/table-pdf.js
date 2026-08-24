@@ -6,13 +6,19 @@ const { totalWidth, wrapText } = require('./row-pdf');
 const TITLE_LINE_H = L.FONT.sectionTitle + 2.5;
 const GROUP_LINE_H = L.FONT.groupTitle + 2;
 
+// Height a section title bar will consume. Shared with the height estimator.
+function sectionTitleHeight(title, colWidth, fonts) {
+  const lines = wrapText(fonts.bold, (title || '').toUpperCase(), L.FONT.sectionTitle, colWidth - 10);
+  return Math.max(L.SECTION_HDR_H, lines.length * TITLE_LINE_H + 6);
+}
+
 /**
  * Draws a full-width section title bar (red, white text).
  * Height expands for long titles.
  */
 function drawSectionTitle(page, x, y, title, colWidth, fonts) {
   const lines  = wrapText(fonts.bold, title.toUpperCase(), L.FONT.sectionTitle, colWidth - 10);
-  const height = Math.max(L.SECTION_HDR_H, lines.length * TITLE_LINE_H + 6);
+  const height = sectionTitleHeight(title, colWidth, fonts);
 
   page.drawRectangle({ x, y: y - height, width: colWidth, height, color: L.RED });
 
@@ -103,5 +109,5 @@ function drawNote(page, x, y, text, colWidth, fonts) {
 
 module.exports = {
   drawSectionTitle, drawGroupTitle, drawTableHeaders, drawNote,
-  groupTitleHeight, noteHeight,
+  sectionTitleHeight, groupTitleHeight, noteHeight,
 };

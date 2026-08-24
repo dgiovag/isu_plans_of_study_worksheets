@@ -4,6 +4,7 @@ const L = require('../layout');
 const { drawSectionTitle, drawNote } = require('./table-pdf');
 const { renderGroup, heightEnv } = require('./render-group-pdf');
 const { packTwoColumns } = require('./pack-columns');
+const { graduationHeight } = require('./render-graduation-pdf');
 const { wrapText } = require('./row-pdf');
 
 const DATA_TRACK = { isu: 'isu', iai: 'iai', ad: 'iai' };
@@ -58,8 +59,12 @@ function renderGenEd(ctx, startY, program, track, courseMap, fonts) {
     return y;
   }
 
+  // The graduation panel is drawn below this half at whatever y we return, with
+  // no pagination of its own worth speaking of, so reserve its height here.
+  const footerH = graduationHeight(program, L.COL_LEFT_WIDTH, fonts, ctx.gradFlagsMap);
+
   const env = heightEnv(ctx, subWidths, courseMap, fonts);
-  const { col1Groups, col2Groups } = packTwoColumns(groups, env, y);
+  const { col1Groups, col2Groups } = packTwoColumns(groups, env, y, [], footerH);
 
   // Independent rendering contexts — share doc/form, track pages separately.
   const ctx1 = { ...ctx };

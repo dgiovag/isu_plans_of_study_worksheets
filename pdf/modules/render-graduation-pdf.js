@@ -2,7 +2,7 @@
 
 const L = require('../layout');
 const { breakIfNeeded, sanitizeId, wrapText } = require('./row-pdf');
-const { drawSectionTitle } = require('./table-pdf');
+const { drawSectionTitle, sectionTitleHeight } = require('./table-pdf');
 
 const CHECK_W      = 10;
 const NOTE_MIN_WIDTH = 400; // notes only shown in wide (full-width) mode
@@ -15,6 +15,9 @@ const GRAD_ITEM_FLAG = {
   bs_smt:           'bs_smt',
   ba_world_language: 'ba_wl',
 };
+
+// Order the key legend lists flags in.
+const FLAG_ORDER = ['amali', 'ideas', 'bs_smt', 'ba_wl'];
 
 // Human-readable key entries shown at the bottom of the panel.
 const FLAG_KEY_LABELS = {
@@ -47,6 +50,31 @@ function buildFlagCoursesMap(program, gradFlagsMap) {
   return out;
 }
 
+/**
+ * Vertical space renderGraduation will consume, mirroring its drawing sequence
+ * exactly. The gen-ed packer reserves this so a dense page 1 cannot orphan the
+ * panel onto a page of its own (see pack-columns.js `footerH`).
+ */
+function graduationHeight(program, colWidth, fonts, gradFlagsMap) {
+  const grad = program.graduation_requirements;
+  if (!grad) return 0;
+
+  const trackable   = (grad.trackable || []).filter(item => appliesToProgram(item, program));
+  const flagCourses = buildFlagCoursesMap(program, gradFlagsMap);
+
+  let h = sectionTitleHeight('Graduation Requirements', colWidth, fonts);
+  h += trackable.length * L.ROW_H;
+
+  const usedFlags = FLAG_ORDER.filter(f => flagCourses.has(f));
+  if (usedFlags.length > 0) {
+    const keyText  = 'Key: ' + usedFlags.map(f => FLAG_KEY_LABELS[f]).join('  ·  ');
+    const keyLines = wrapText(fonts.reg, keyText, L.FONT.footnote, colWidth - 4);
+    h += 4 + keyLines.length * (L.FONT.footnote + 1.5) + 2;
+  }
+
+  return h + 6;
+}
+
 function renderGraduation(ctx, x, y, colWidth, program, fonts) {
   const grad = program.graduation_requirements;
   if (!grad) return y;
@@ -54,6 +82,11 @@ function renderGraduation(ctx, x, y, colWidth, program, fonts) {
   const showNotes   = colWidth >= NOTE_MIN_WIDTH;
   const trackable   = (grad.trackable || []).filter(item => appliesToProgram(item, program));
   const flagCourses = buildFlagCoursesMap(program, ctx.gradFlagsMap);
+
+  // Never draw the panel head below the bottom margin: the title bar and first
+  // row were previously emitted at whatever y gen-ed finished at, unchecked.
+  const titleH = sectionTitleHeight('Graduation Requirements', colWidth, fonts);
+  y = breakIfNeeded(ctx, y, titleH + L.ROW_H, fonts);
 
   y = drawSectionTitle(ctx.page, x, y, 'Graduation Requirements', colWidth, fonts);
 
@@ -132,10 +165,11 @@ function renderGraduation(ctx, x, y, colWidth, program, fonts) {
   }
 
   // Key legend — only shown when at least one flag appears in this program.
-  const usedFlags = ['amali', 'ideas', 'bs_smt', 'ba_wl'].filter(f => flagCourses.has(f));
+  const usedFlags = FLAG_ORDER.filter(f => flagCourses.has(f));
   if (usedFlags.length > 0) {
     const keyText = 'Key: ' + usedFlags.map(f => FLAG_KEY_LABELS[f]).join('  ·  ');
     const keyLines = wrapText(fonts.reg, keyText, L.FONT.footnote, colWidth - 4);
+    y = breakIfNeeded(ctx, y, 4 + keyLines.length * (L.FONT.footnote + 1.5) + 2, fonts);
     y -= 4;
     for (const line of keyLines) {
       y -= L.FONT.footnote + 1.5;
@@ -150,4 +184,4 @@ function renderGraduation(ctx, x, y, colWidth, program, fonts) {
   return y - 6;
 }
 
-module.exports = { renderGraduation };
+module.exports = { renderGraduation, graduationHeight };

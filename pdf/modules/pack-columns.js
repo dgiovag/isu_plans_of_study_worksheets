@@ -67,18 +67,35 @@ function simulateColumn(groups, env, startY) {
  *   1. pages    — physical pages this half needs (the whole point)
  *   2. spread   — how uneven the two columns are on their final page
  * `spread` only breaks ties, so balance never costs a page.
+ *
+ * `footerH` is height that must still fit *below* both sub-columns once they
+ * finish — the graduation panel in the gen-ed half. A split that leaves no room
+ * for it is scored as needing one more page, which is exactly what happens at
+ * render time, so the packer stops choosing splits that orphan the panel.
  */
-function score(col1Groups, col2Groups, env, startY) {
+function score(col1Groups, col2Groups, env, startY, footerH = 0) {
   const s1 = simulateColumn(col1Groups, env, startY);
   const s2 = simulateColumn(col2Groups, env, startY);
-  const pages = Math.max(s1.pages, s2.pages);
+  let pages = Math.max(s1.pages, s2.pages);
 
   // Compare fill depth on the last page both columns share; when they finish on
   // different pages, the one that finished earlier is treated as fully drained.
   const depth1 = s1.lastPageIdx === s2.lastPageIdx ? s1.endY : L.MARGIN.bottom;
   const depth2 = s2.lastPageIdx === s1.lastPageIdx ? s2.endY : L.MARGIN.bottom;
 
-  return { pages, spread: Math.abs(depth1 - depth2), s1, s2 };
+  // The footer starts where the deepest column left off — the same y renderGenEd
+  // returns to template-pdf.js.
+  let footerRoom = Infinity;
+  if (footerH > 0) {
+    const deepIdx = Math.max(s1.lastPageIdx, s2.lastPageIdx);
+    footerRoom = Math.min(
+      s1.lastPageIdx === deepIdx ? s1.endY : Infinity,
+      s2.lastPageIdx === deepIdx ? s2.endY : Infinity,
+    ) - L.MARGIN.bottom;
+    if (footerRoom < footerH) pages += 1;
+  }
+
+  return { pages, spread: Math.abs(depth1 - depth2), footerRoom, s1, s2 };
 }
 
 function better(a, b) {
@@ -95,9 +112,12 @@ function better(a, b) {
  * if it needs no more pages than the best contiguous split, so a preferred
  * grouping is kept whenever it is free and dropped when it would cost a page.
  *
+ * `footerH` reserves room below both columns for a panel that follows (see
+ * `score`). Pass 0 when nothing follows the half.
+ *
  * Returns { col1Groups, col2Groups, pages }.
  */
-function packTwoColumns(groups, env, startY, candidates = []) {
+function packTwoColumns(groups, env, startY, candidates = [], footerH = 0) {
   if (groups.length === 0) return { col1Groups: [], col2Groups: [], pages: 1 };
   if (groups.length === 1) return { col1Groups: groups, col2Groups: [], pages: 1 };
 
@@ -108,14 +128,14 @@ function packTwoColumns(groups, env, startY, candidates = []) {
   for (let i = 1; i < groups.length; i++) {
     const col1Groups = groups.slice(0, i);
     const col2Groups = groups.slice(i);
-    const s = score(col1Groups, col2Groups, env, startY);
+    const s = score(col1Groups, col2Groups, env, startY, footerH);
     if (better(s, best)) { best = s; bestSplit = { col1Groups, col2Groups }; }
   }
 
   // Preferred non-contiguous assignments win ties, never cost a page.
   for (const cand of candidates) {
     if (cand.col1Groups.length === 0 || cand.col2Groups.length === 0) continue;
-    const s = score(cand.col1Groups, cand.col2Groups, env, startY);
+    const s = score(cand.col1Groups, cand.col2Groups, env, startY, footerH);
     if (s.pages <= best.pages) { best = s; bestSplit = cand; }
   }
 
