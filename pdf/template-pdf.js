@@ -12,6 +12,7 @@ const { renderGraduation }  = require('./modules/render-graduation-pdf');
 const { renderCollege }     = require('./modules/render-college-pdf');
 const { renderCompliance }  = require('./modules/render-compliance-pdf');
 const { createPagePool }    = require('./modules/page-pool');
+const { budgetReport }      = require('./modules/page-budget');
 
 const TRACKS = ['isu', 'iai', 'ad'];
 
@@ -21,12 +22,20 @@ const TRACK_LABELS = {
   ad:  "Associate's Degree (IAI)",
 };
 
+/**
+ * Renders all three gen-ed tracks.
+ * Returns { pdfs: {track: bytes}, reports: [budgetReport] } — the reports let
+ * the CLI enforce the two-page budget (see modules/page-budget.js).
+ */
 async function buildPDFs(program) {
-  const result = {};
+  const pdfs    = {};
+  const reports = [];
   for (const track of TRACKS) {
-    result[track] = await buildOnePDF(program, track);
+    const { bytes, report } = await buildOnePDF(program, track);
+    pdfs[track] = bytes;
+    reports.push(report);
   }
-  return result;
+  return { pdfs, reports };
 }
 
 async function buildOnePDF(program, track) {
@@ -69,6 +78,7 @@ async function buildOnePDF(program, track) {
   const rightCtx = { doc, pool, pageIdx: 0, page, form, xrefCourseIds, gradFlagsMap };
 
   const finalGenEdY = renderGenEd(leftCtx,  bodyY, program, track, courseMap, fonts);
+  const genEdPage   = leftCtx.pageIdx + 1; // capture before graduation advances leftCtx
   const finalMajorY = renderMajor(rightCtx, bodyY, program, courseMap, fonts);
 
   // Graduation goes in the left column below gen-ed (narrow, no note column).
@@ -79,6 +89,8 @@ async function buildOnePDF(program, track) {
   // Only render them if either is present for this program.
   const hasCollegeReq    = !!program.college_requirements;
   const hasComplianceReq = !!(program.compliance_requirements && program.compliance_requirements.length);
+
+  let panelBucket = null;
 
   if (hasCollegeReq || hasComplianceReq) {
     // Panels are full content width, so they must clear every column that is
@@ -93,10 +105,19 @@ async function buildOnePDF(program, track) {
 
     const gradCtx = { doc, pool, pageIdx: panelIdx, page: pool.pages[panelIdx], form };
     let panelY = renderCollege(gradCtx, gradY, program, courseMap, fonts);
-    renderCompliance(gradCtx, panelY, program, fonts);
+    panelY = renderCompliance(gradCtx, panelY, program, fonts);
+    panelBucket = { name: 'college/compliance panels', page: gradCtx.pageIdx + 1, endY: panelY };
   }
 
-  return doc.save();
+  // Every independently paginated region, for the two-page budget check.
+  const report = budgetReport(track, pool.pages.length, [
+    { name: 'general education',       page: genEdPage,            endY: finalGenEdY },
+    { name: 'major requirements',      page: rightCtx.pageIdx + 1, endY: finalMajorY },
+    { name: 'graduation requirements', page: leftCtx.pageIdx + 1,  endY: gradLeftY   },
+    panelBucket,
+  ]);
+
+  return { bytes: await doc.save(), report };
 }
 
 // Draws the top header block; returns the y-coordinate immediately below it.

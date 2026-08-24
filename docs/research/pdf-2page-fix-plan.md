@@ -184,6 +184,7 @@ node pdf/build-pdf.js --dir data/programs/legacy --out ~/pdf_check_legacy
 | 2 — font-aware estimation | 854 | 239 | 38 | 0 | 0 | **38** |
 | 3 — page-count-minimizing packer | 919 | 191 | 21 | 0 | 0 | **21** |
 | 4a — compact auto-fulfilled labels | **999** | 132 | 0 | 0 | 0 | **0** |
+| 5 — budget check + `--strict` | 999 | 132 | 0 | 0 | 0 | **0** (enforced) |
 
 ### Chunk 1 detail
 
@@ -378,7 +379,63 @@ measurement; `choose_one_set` does not occur in any program data.
   reserved, so it can be orphaned onto its own page. That is the failure mode
   that produced `tchmlebs-ad`, and the scraper regenerates data biannually, so it
   can recur. Insurance, not a fix.
-- **5 — pre-layout budget check + `--strict`.** 0 overflows is currently a
-  *measured* property, not a *guaranteed* one. Chunk 5 adds the per-program
-  diagnostic (naming the overflowing bucket and shortfall) and a flag that fails
-  the build, which is what turns "0 today" into "loud failure if data drifts".
+- ~~**5 — pre-layout budget check + `--strict`.**~~ Done, see below.
+
+### Chunk 5 detail — the budget is now enforced, not just satisfied
+
+New `pdf/modules/page-budget.js`. The check deliberately uses the **actual
+rendered page count**, not a re-prediction from estimate-height.js. The estimator
+is exact today, but it is a *model* of the renderer and a model can drift from
+what it models; page count cannot drift — it is what the file contains.
+
+The estimator's per-bucket numbers are still what makes a failure actionable, so
+each of the four independently paginated regions (gen-ed, major, graduation,
+college/compliance) reports the page it finished on and the y it finished at. The
+report names the region furthest past the budget and how much height landed
+beyond it.
+
+`--strict` exits non-zero. Rendering is untouched — Chunk 5 is pure plumbing, and
+all 1131 page counts are identical to Chunk 4.
+
+```
+$ node pdf/build-pdf.js --all --strict
+Page counts: 1pg: 999  ·  2pg: 132
+All worksheets fit the 2-page budget (one sheet, front and back).
+$ echo $?
+0
+```
+
+Failure path verified by temporarily setting `PAGE_BUDGET = 1`, which makes the
+132 two-page worksheets overflow. It correctly attributes each one and exits 1
+under `--strict`:
+
+```
+physics-teacher-ed-bs-iai: 2 pages — "college/compliance panels" ran onto page 2,
+                                     354pt past the budget
+      general education          ends page 1 at y=290
+      major requirements         ends page 1 at y=94
+      graduation requirements    ends page 1 at y=191
+      college/compliance panels  ends page 2 at y=206
+```
+
+That attribution is right: `phybs` is the one program with `college_requirements`.
+Nursing is attributed to `major requirements`, also correct. Without `--strict`
+the same diagnostic prints as a warning and the build still succeeds, so the
+biannual scrape surfaces drift without breaking a routine rebuild.
+
+## Final state
+
+| requirement | result |
+|---|---|
+| Every PDF ≤ 2 pages | **0 of 1131 over**, max page count 2 |
+| Guaranteed, not incidental | `--strict` fails the build; diagnostic names the bucket and shortfall |
+| No regression vs baseline | **0 files grew** at any chunk; 1pg 855 → **999** |
+| Readability floor 7.5pt / ROW_H 15 | **untouched** |
+| All 10 fill types | render correctly; estimator exact on the 9 that are measurable |
+| AcroForm only, no PDF JS | unchanged |
+| Landscape letter | unchanged |
+| No per-program JSON overrides | none — all logic in `pdf/` |
+
+No exception list was needed: measured content demand never exceeded 2-page
+capacity for any program, so every overflow was a layout-mechanics defect and all
+80 were fixed as such.

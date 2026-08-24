@@ -147,8 +147,11 @@ The **schema is the contract** between the scraper and both renderers. All compo
 - `graduation_flags` (AMALI/IDEAS/SMT/WL) displayed as small gray parenthetical tags on major course rows; filtered by degree type so B.A. programs never show SMT tags and vice versa
 - `choose_n` groups compute row count from `minimum_hours` when `n` is absent (`Math.ceil(hours/3)`), giving enough blank rows for hour-constrained elective blocks
 - `open` / `open_constrained` groups also derive row count from `minimum_hours` when present (`Math.ceil(hours/3)`), falling back to `count`; `parseFreeformCounts` in transform.js correctly routes "X credit hours" → `minimum_hours` and "complete X" → `count`
-- Tested against all 300 active programs — 900 PDFs (3 per program) build without errors
-- Some content-heavy programs still overflow onto a second page — known issue for a future session
+- Tested against all 377 program files — 1131 PDFs (3 per program) build without errors
+- **Two-page budget enforced.** Every worksheet fits one sheet, front and back: 999 at 1 page, 132 at 2, none over. `--strict` exits non-zero if any program breaks the budget, and the diagnostic names which region overflowed and by how much (`pdf/modules/page-budget.js`)
+- Height estimation is exact, not approximate: `pdf/modules/estimate-height.js` mirrors each `render-*-pdf.js` renderer and reuses its own height helper, verified at 0.00pt error across all measurable fill types
+- Sub-column division is chosen by `pdf/modules/pack-columns.js`, which simulates every order-preserving split and ranks them on **page count first**, balance only as a tie-break. The major half's fixed-vs-choice grouping is a preference: honored when free, dropped when it would cost a page
+- All four column contexts share one page pool (`pdf/modules/page-pool.js`), so simultaneous overflows land on the same physical page instead of each adding one
 
 ## Building Worksheets
 
@@ -163,9 +166,14 @@ node renderer/build.js --program accntcybs-financial-accounting   # one program
 # PDF
 node pdf/build-pdf.js --all                                       # all programs → output/pdf/
 node pdf/build-pdf.js --program accntcybs-financial-accounting    # one program
+node pdf/build-pdf.js --all --strict                              # fail the build if any PDF >2 pages
 ```
 
 Both scripts accept `--out <dir>` to override the default output directory.
+
+`build-pdf.js` always prints the page-count distribution when it finishes. Use
+`--strict` in the biannual re-scrape pipeline so catalog growth that breaks the
+two-page budget fails loudly instead of silently shipping a page 3.
 
 ## Running the Prototype
 
