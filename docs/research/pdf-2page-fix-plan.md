@@ -183,6 +183,7 @@ node pdf/build-pdf.js --dir data/programs/legacy --out ~/pdf_check_legacy
 | 1 — shared page pool | 855 | 246 | 30 | 0 | 0 | **30** |
 | 2 — font-aware estimation | 854 | 239 | 38 | 0 | 0 | **38** |
 | 3 — page-count-minimizing packer | 919 | 191 | 21 | 0 | 0 | **21** |
+| 4a — compact auto-fulfilled labels | **999** | 132 | 0 | 0 | 0 | **0** |
 
 ### Chunk 1 detail
 
@@ -327,3 +328,57 @@ panel** (3 widgets, or 1 for `tchmlebs-ad`). Two contributing causes:
 
 Fixing (1) is expected to resolve the 20 `hisba`/`hisbs` files directly, since it
 reclaims most of a column each.
+
+### Chunk 4a detail — **target met, 0 PDFs over 2 pages**
+
+`renderOpen`'s "more satisfying courses than slots" branch now lists the courses
+**once in a note** and keeps the rows short (`Course #1`, `Course #2`, …), which
+is the same idiom `choose_n` already uses for its option list. No information is
+lost: the full course list is still printed verbatim, just once instead of once
+per row.
+
+```
+Humanities & Fine Arts
+Satisfied by: HIS 135, HIS 136, HIS 101, HIS 102, HIS 104A01, HIS 104A02,
+HIS 104A03, HIS 104A04, HIS 104A05, HIS 104A06
+  Course #1   [Hr] [Gr] [Term]
+  Course #2   [Hr] [Gr] [Term]
+  Course #3   [Hr] [Gr] [Term]
+```
+
+That group went from ~480pt (three ~150pt rows, each holding the whole list) to
+~60pt — roughly 420pt reclaimed, most of a column. `openHeight` in
+estimate-height.js mirrors the change, so the packer plans against real heights.
+
+**Result: 919/191/21 → 999/132/0.** All 20 `hisba`/`hisbs` files dropped from 3
+pages to **1**; `tchmlebs-ad` dropped 3 → 2.
+
+| check | result |
+|---|---|
+| >2 pages, full catalog | **0 of 1131** |
+| max page count | **2** |
+| grew vs Chunk 3 | **0 files** |
+| grew vs Chunk 1 (baseline-safe) | **0 files** |
+| 1-page count | 855 baseline → **999** (+144) |
+| legacy set (all 10 fill types) | 9/12/0, builds clean |
+| font/row-height changes | **none** — readability floor untouched |
+| per-program JSON overrides | **none** |
+
+Estimator re-verified after the change: **0.00pt error, 0 mismatches** over
+12,093 active-catalog renders (`open`, `choose_n`, `fixed`) and 255 legacy renders
+(`choose_one`, `choose_n_grouped`, `escrow`, `exempt`, `open_constrained`,
+`repeat`, plus the above). `choose_one_track` renders correctly but its group
+always spans a page break, so it is excluded from direct estimate-vs-actual
+measurement; `choose_one_set` does not occur in any program data.
+
+### Still open
+
+- **4b — graduation panel space reservation.** No longer needed for the metric,
+  but the panel is still placed after the fact at `min(y) − 8` with no space
+  reserved, so it can be orphaned onto its own page. That is the failure mode
+  that produced `tchmlebs-ad`, and the scraper regenerates data biannually, so it
+  can recur. Insurance, not a fix.
+- **5 — pre-layout budget check + `--strict`.** 0 overflows is currently a
+  *measured* property, not a *guaranteed* one. Chunk 5 adds the per-program
+  diagnostic (naming the overflowing bucket and shortfall) and a flag that fails
+  the build, which is what turns "0 today" into "loud failure if data drifts".

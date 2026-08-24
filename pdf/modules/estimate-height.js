@@ -177,11 +177,19 @@ function openHeight(group, env) {
   if (courseRefs.length) {
     const codeOf = id => { const c = courseMap && courseMap[id]; return c ? c.code : id; };
     let h = 0;
+
+    // More courses than slots: one note listing them all, then short rows.
+    if (courseRefs.length > count) {
+      h += noteHeight(`Satisfied by: ${courseRefs.map(codeOf).join(', ')}`,
+                      totalWidth(widths), fonts);
+      for (let i = 0; i < count; i++) {
+        h += rowHeight(`Course #${i + 1}`, widths, fonts, { bold: true });
+      }
+      return h;
+    }
+
     for (let i = 0; i < count; i++) {
-      let label;
-      if (courseRefs.length > count)    label = courseRefs.map(codeOf).join(' / ');
-      else if (i < courseRefs.length)   label = codeOf(courseRefs[i]);
-      else                              label = group.title;
+      const label = i < courseRefs.length ? codeOf(courseRefs[i]) : group.title;
       h += rowHeight(label, widths, fonts, { bold: true });
     }
     return h;

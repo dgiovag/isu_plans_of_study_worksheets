@@ -1,8 +1,8 @@
 'use strict';
 
-const { makeRow, noReqWidths } = require('./row-pdf');
-const { drawTableHeaders }     = require('./table-pdf');
-const { closeTable }           = require('./render-fixed-pdf');
+const { makeRow, noReqWidths, totalWidth } = require('./row-pdf');
+const { drawTableHeaders, drawNote }       = require('./table-pdf');
+const { closeTable }                       = require('./render-fixed-pdf');
 
 function openRowCount(group) {
   if (group.minimum_hours) return Math.ceil(group.minimum_hours / 3);
@@ -38,17 +38,26 @@ function renderOpen(ctx, x, y, widths, group, courseMap, fonts) {
 
   if (ao.autoFulfilledCourses) {
     const courseIds = ao.autoFulfilledCourses;
+    const codeOf    = id => { const c = courseMap[id]; return c ? c.code : id; };
+
+    // More satisfying courses than slots: any `count` of them will do, so there
+    // is no course to name per row. Listing them once in a note is the same
+    // idiom choose_n uses. (Stamping the whole list into every row's label, as
+    // this used to, wraps to ~15 lines per row in a 172pt sub-column — a
+    // three-row group rendered ~480pt tall, nearly a full column.)
+    if (courseIds.length > count) {
+      const colW = totalWidth(widths);
+      y = drawNote(ctx.page, x, y, `Satisfied by: ${courseIds.map(codeOf).join(', ')}`, colW, fonts);
+      y = drawTableHeaders(ctx.page, x, y, widths, fonts);
+      for (let i = 0; i < count; i++) {
+        y = makeRow(ctx, x, y, widths, `${group.id}.${i}`, `Course #${i + 1}`, fonts, { bold: true });
+      }
+      return closeTable(ctx.page, x, y, widths);
+    }
+
     y = drawTableHeaders(ctx.page, x, y, widths, fonts);
     for (let i = 0; i < count; i++) {
-      let label;
-      if (courseIds.length > count) {
-        label = courseIds.map(id => { const c = courseMap[id]; return c ? c.code : id; }).join(' / ');
-      } else if (i < courseIds.length) {
-        const c = courseMap[courseIds[i]];
-        label = c ? c.code : courseIds[i];
-      } else {
-        label = group.title;
-      }
+      const label = i < courseIds.length ? codeOf(courseIds[i]) : group.title;
       y = makeRow(ctx, x, y, widths, `${group.id}.${i}`, label, fonts, { bold: true });
     }
     return closeTable(ctx.page, x, y, widths);
