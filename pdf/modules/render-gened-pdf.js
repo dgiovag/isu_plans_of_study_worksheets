@@ -2,7 +2,8 @@
 
 const L = require('../layout');
 const { drawSectionTitle, drawNote } = require('./table-pdf');
-const { renderGroup, estimateGroupHeight, heightEnv } = require('./render-group-pdf');
+const { renderGroup, heightEnv } = require('./render-group-pdf');
+const { packTwoColumns } = require('./pack-columns');
 const { wrapText } = require('./row-pdf');
 
 const DATA_TRACK = { isu: 'isu', iai: 'iai', ad: 'iai' };
@@ -14,9 +15,9 @@ const SECTION_TITLES = {
 };
 
 /**
- * Renders the gen-ed left half with two balanced sub-columns.
- * Section title spans the full half width; groups are split at the height
- * midpoint (preserving natural order) and rendered side-by-side.
+ * Renders the gen-ed left half as two sub-columns. The section title spans the
+ * full half width; groups keep their natural order and are divided by
+ * packTwoColumns, which picks the split that needs the fewest pages.
  */
 function renderGenEd(ctx, startY, program, track, courseMap, fonts) {
   const halfX = L.MARGIN.left;
@@ -58,7 +59,7 @@ function renderGenEd(ctx, startY, program, track, courseMap, fonts) {
   }
 
   const env = heightEnv(ctx, subWidths, courseMap, fonts);
-  const { col1Groups, col2Groups } = sequentialSplit(groups, env);
+  const { col1Groups, col2Groups } = packTwoColumns(groups, env, y);
 
   // Independent rendering contexts — share doc/form, track pages separately.
   const ctx1 = { ...ctx };
@@ -83,29 +84,6 @@ function renderGenEd(ctx, startY, program, track, courseMap, fonts) {
   ctx.pageIdx = ctx1.pageIdx;
   ctx.page    = ctx1.page;
   return Math.min(y1, y2);
-}
-
-// Split groups into two sequential sub-column lists at the height midpoint.
-// Groups stay in their natural order within each sub-column.
-function sequentialSplit(groups, env) {
-  const heights  = groups.map(g => estimateGroupHeight(g, env));
-  const total    = heights.reduce((a, b) => a + b, 0);
-  const half     = total / 2;
-
-  let acc      = 0;
-  let splitIdx = groups.length;
-  for (let i = 0; i < groups.length; i++) {
-    acc += heights[i];
-    if (acc >= half) { splitIdx = i + 1; break; }
-  }
-
-  // Guard: keep at least one group per column when there are 2+ groups.
-  if (splitIdx >= groups.length) splitIdx = groups.length - 1;
-
-  return {
-    col1Groups: groups.slice(0, splitIdx),
-    col2Groups: groups.slice(splitIdx),
-  };
 }
 
 function renderAssumedComplete(page, x, y, ge, fonts) {

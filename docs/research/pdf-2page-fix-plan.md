@@ -182,6 +182,7 @@ node pdf/build-pdf.js --dir data/programs/legacy --out ~/pdf_check_legacy
 | baseline | 855 | 196 | 62 | 16 | 2 | 80 |
 | 1 — shared page pool | 855 | 246 | 30 | 0 | 0 | **30** |
 | 2 — font-aware estimation | 854 | 239 | 38 | 0 | 0 | **38** |
+| 3 — page-count-minimizing packer | 919 | 191 | 21 | 0 | 0 | **21** |
 
 ### Chunk 1 detail
 
@@ -267,3 +268,62 @@ nurbsn-isu.pdf                pages=3 widgets=[69, 116, 36]   <- page 1 ~40% emp
 Chunk 2 is a **prerequisite**, not a win on its own: accurate heights are what
 make a page-count-minimizing packer possible. Chunk 3 is what converts the
 accuracy into fewer pages.
+
+### Chunk 3 detail
+
+New `pdf/modules/pack-columns.js`. Key realization: because a sub-column
+paginates deterministically once its group list is fixed, the search space is
+**one-dimensional** — a single order-preserving split index. So rather than
+guessing at a midpoint, simulate all n−1 candidate splits and keep the best,
+ranked on **page count first, column balance only as a tie-break**. n ≤ ~20, so
+brute force is free.
+
+The major half's semantic fixed-vs-choice grouping is now offered to the packer
+as a *preference*: used whenever it needs no more pages than the best
+order-preserving split, silently dropped when it would cost a page. This
+replaces the old ad-hoc ">2× skew" fallback with a direct test of the thing we
+actually care about.
+
+Also fixed a regression introduced in Chunk 2: `renderGroup` reserved
+`Math.min(estimate, MAX_COL_H)`, so a group taller than a full column still
+triggered a page break — wasting the rest of the current page for no gain, since
+the group cannot fit on any single page either way. Restored the behaviour the
+surrounding comment already described (fall back to `MIN_GROUP_SPACE`, start the
+group here, let its rows flow). `simulateColumn` mirrors this, including
+modelling the group's internal flow across pages.
+
+Effect on the worst offender:
+
+```
+nurbsn-isu.pdf   Chunk 2: pages=3 widgets=[69, 116, 36]
+                 Chunk 3: pages=2 widgets=[161, 60]
+```
+
+**Result: >2pg 38 → 21, and 1pg 854 → 919 — 64 more programs now fit on a single
+page than at baseline (855).** Zero 1-page regressions: no file that fit on one
+page at baseline needs more than one now. Nine files grew 2→3 (`hisba`/`hisbs`
+general-history ×8, `tchmlebs-ad`), all already inside the residual overflow set.
+Legacy set holds at 9/12/0. Page-1 fill visually confirmed dense with no column
+overlap.
+
+### Residual 21 — diagnosed, both causes are Chunk 4
+
+Every remaining overflow has a **last page containing nothing but the graduation
+panel** (3 widgets, or 1 for `tchmlebs-ad`). Two contributing causes:
+
+1. **Pathological `open` labels (20 of 21 — all `hisba`/`hisbs` `ad`/`iai`).**
+   `renderOpen`'s "more auto-fulfilling courses than slots" branch joins *every*
+   course code into one label: `HIS 135 / HIS 136 / HIS 101 / HIS 102 /
+   HIS 104A01 / … / HIS 104A06`. Wrapped into a 172pt sub-column that is ~15
+   lines per row, so a 3-row group renders **~480pt tall** — nearly a full
+   column — for what should be three ~15pt rows. The estimator predicts this
+   correctly (which is why the packer isolates the group on its own page); the
+   *rendering* is the defect. Fix: truncate to a few codes plus `+N more`, the
+   pattern the graduation panel already uses.
+2. **Graduation panel placement.** The panel is positioned below the gen-ed half
+   at `min(y) − 8` after the fact, with no space reserved for it, so when the
+   packer fills page 1 densely the panel gets pushed onto a page of its own.
+   `tchmlebs-ad` is purely this.
+
+Fixing (1) is expected to resolve the 20 `hisba`/`hisbs` files directly, since it
+reclaims most of a column each.

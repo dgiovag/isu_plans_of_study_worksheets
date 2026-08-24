@@ -228,4 +228,5 @@ function noCourseWidths(widths) {
 module.exports = {
   makeRow, breakIfNeeded, wrapText, sanitizeId, totalWidth, formatOption,
   noReqWidths, noCourseWidths, labelLayout, rowHeight, LINE_H,
+  CONTINUATION_Y,
 };

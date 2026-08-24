@@ -2,7 +2,8 @@
 
 const L = require('../layout');
 const { drawSectionTitle } = require('./table-pdf');
-const { renderGroup, estimateGroupHeight, heightEnv } = require('./render-group-pdf');
+const { renderGroup, heightEnv } = require('./render-group-pdf');
+const { packTwoColumns } = require('./pack-columns');
 
 // Groups whose courses are predetermined — no student choice needed.
 const FIXED_FILLS = new Set(['fixed', 'repeat']);
@@ -34,7 +35,7 @@ function renderMajor(ctx, startY, program, courseMap, fonts) {
   }
 
   const env = heightEnv(ctx, subWidths, courseMap, fonts);
-  const { col1Groups, col2Groups } = semanticSplit(groups, env);
+  const { col1Groups, col2Groups } = packTwoColumns(groups, env, y, semanticCandidates(groups));
 
   // Independent contexts — share doc/form, track pages separately.
   const ctx1 = { ...ctx };
@@ -61,44 +62,14 @@ function renderMajor(ctx, startY, program, courseMap, fonts) {
   return Math.min(y1, y2);
 }
 
-// Semantic split: predetermined groups (fixed/repeat) → col A,
-// choice groups → col B. Falls back to sequential height-balance
-// when either bucket would be empty or the split is badly skewed (>2x).
-function semanticSplit(groups, env) {
+// The major half reads better with predetermined groups (fixed/repeat) in sub-col
+// A and choice groups in sub-col B. Offered to the packer as a preference: it is
+// used whenever it needs no more pages than the best order-preserving split, and
+// silently dropped when it would cost a page.
+function semanticCandidates(groups) {
   const col1Groups = groups.filter(g => FIXED_FILLS.has(g.fill));
   const col2Groups = groups.filter(g => !FIXED_FILLS.has(g.fill));
-
-  if (col1Groups.length === 0 || col2Groups.length === 0) {
-    return sequentialSplit(groups, env);
-  }
-
-  const h1 = col1Groups.reduce((s, g) => s + estimateGroupHeight(g, env), 0);
-  const h2 = col2Groups.reduce((s, g) => s + estimateGroupHeight(g, env), 0);
-  if (Math.max(h1, h2) > 2 * Math.min(h1, h2)) {
-    return sequentialSplit(groups, env);
-  }
-
-  return { col1Groups, col2Groups };
-}
-
-// Sequential split at height midpoint, preserving program order.
-function sequentialSplit(groups, env) {
-  const heights = groups.map(g => estimateGroupHeight(g, env));
-  const total   = heights.reduce((a, b) => a + b, 0);
-  const half    = total / 2;
-
-  let acc = 0, splitIdx = groups.length;
-  for (let i = 0; i < groups.length; i++) {
-    acc += heights[i];
-    if (acc >= half) { splitIdx = i + 1; break; }
-  }
-
-  if (splitIdx >= groups.length) splitIdx = groups.length - 1;
-
-  return {
-    col1Groups: groups.slice(0, splitIdx),
-    col2Groups: groups.slice(splitIdx),
-  };
+  return [{ col1Groups, col2Groups }];
 }
 
 function flattenMajorGroups(major) {

@@ -12,7 +12,7 @@ const { renderOpen }                             = require('./render-open-pdf');
 const { renderOpenConstrained }                  = require('./render-open-constrained-pdf');
 const { renderRepeat }                           = require('./render-repeat-pdf');
 const { renderEscrow }                           = require('./render-escrow-pdf');
-const { estimateGroupHeight }                    = require('./estimate-height');
+const { estimateGroupHeight, MIN_GROUP_SPACE }   = require('./estimate-height');
 
 // Maximum height of a continuation column — anything taller can never fit on
 // a single page, so we fall back to MIN_GROUP_SPACE for those.
@@ -32,10 +32,13 @@ function renderGroup(ctx, x, y, widths, group, courseMap, fonts) {
   const colW = totalWidth(widths);
 
   // If the whole group fits on a fresh page, break before the title so the
-  // table never splits. If it's too tall to ever fit on one page, fall back
-  // to just ensuring title + header + one row aren't orphaned.
+  // table never splits. If it's taller than a fresh column it cannot fit on any
+  // single page, so breaking gains nothing and merely wastes the rest of this
+  // one — start it here and let its rows flow, reserving only enough space that
+  // the title + header + first rows aren't orphaned.
   const env     = heightEnv(ctx, widths, courseMap, fonts);
-  const neededH = Math.min(estimateGroupHeight(group, env), MAX_COL_H);
+  const estH    = estimateGroupHeight(group, env);
+  const neededH = estH > MAX_COL_H ? MIN_GROUP_SPACE : estH;
   y = breakIfNeeded(ctx, y, neededH, fonts);
 
   if (group.exempt) {
